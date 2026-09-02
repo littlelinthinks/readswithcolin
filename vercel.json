@@ -1,8 +1,0 @@
-# 静态站点：无需构建命令，Vercel 直接提供文件
-
-[build]
-  command = ""
-  output = "/"
-
-[framework]
-  name = "plain"
