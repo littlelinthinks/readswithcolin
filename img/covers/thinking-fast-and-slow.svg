@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 615 922" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C5D4E0"/>
+      <stop offset="100%" stop-color="#8FA4B8"/>
+    </linearGradient>
+    <linearGradient id="s2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3E5A4A"/>
+      <stop offset="100%" stop-color="#2B3A2E"/>
+    </linearGradient>
+  </defs>
+  <rect width="615" height="922" fill="url(#bg1)"/>
+
+  <!-- System 1 圆弧（快） -->
+  <g transform="translate(180,260)">
+    <circle r="90" fill="none" stroke="#3E5A4A" stroke-width="3" stroke-dasharray="20 8" opacity="0.8"/>
+    <text x="0" y="-15" text-anchor="middle" font-family="Georgia, serif" font-size="18" letter-spacing="4" fill="#2B3A2E">SYSTEM  I</text>
+    <text x="0" y="18" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-style="italic" fill="#2B3A2E" opacity="0.7">fast</text>
+  </g>
+
+  <!-- System 2 矩形（慢） -->
+  <g transform="translate(435,260)">
+    <rect x="-90" y="-90" width="180" height="180" fill="url(#s2)"/>
+    <text x="0" y="-15" text-anchor="middle" font-family="Georgia, serif" font-size="18" letter-spacing="4" fill="#D4E0CB">SYSTEM  II</text>
+    <text x="0" y="18" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-style="italic" fill="#D4E0CB" opacity="0.8">slow</text>
+  </g>
+
+  <!-- 连接符号 -->
+  <line x1="270" y1="260" x2="345" y2="260" stroke="#3E5A4A" stroke-width="2" opacity="0.5"/>
+
+  <!-- 书脊线 -->
+  <line x1="80" y1="450" x2="535" y2="450" stroke="#3E5A4A" stroke-width="1" opacity="0.3"/>
+
+  <!-- 标题 -->
+  <text x="307" y="530" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="#1F2D32">Thinking,</text>
+  <text x="307" y="582" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="#1F2D32">Fast &amp; Slow</text>
+
+  <!-- 中文 -->
+  <text x="307" y="640" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="6" fill="#3E5A4A" opacity="0.85">思考 · Thinking</text>
+
+  <!-- 副标题 -->
+  <line x1="220" y1="680" x2="395" y2="680" stroke="#3E5A4A" stroke-width="1"/>
+  <text x="307" y="715" text-anchor="middle" font-family="Georgia, serif" font-size="17" font-style="italic" fill="#3E5A4A">A Landmark Book</text>
+  <text x="307" y="738" text-anchor="middle" font-family="Georgia, serif" font-size="17" font-style="italic" fill="#3E5A4A">on How We Make</text>
+  <text x="307" y="761" text-anchor="middle" font-family="Georgia, serif" font-size="17" font-style="italic" fill="#3E5A4A">Decisions</text>
+
+  <!-- 作者 -->
+  <text x="307" y="860" text-anchor="middle" font-family="Georgia, serif" font-size="14" letter-spacing="3" fill="#5B7A64">DANIEL</text>
+  <text x="307" y="882" text-anchor="middle" font-family="Georgia, serif" font-size="14" letter-spacing="3" fill="#5B7A64">KAHNEMAN</text>
+</svg>

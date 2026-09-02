@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 615 922" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg-eye" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8E0C7"/>
+      <stop offset="100%" stop-color="#C9BC9B"/>
+    </linearGradient>
+  </defs>
+  <rect width="615" height="922" fill="url(#bg-eye)"/>
+
+  <!-- 同心眼纹 + 反向虹膜 -->
+  <g transform="translate(307,250)">
+    <!-- 眼眶（不封闭，抗拒「被围观」） -->
+    <path d="M -130 0 Q -65 -85 0 -85 Q 90 -85 130 0" fill="none" stroke="#3E5A4A" stroke-width="3"/>
+    <path d="M -130 0 Q -65 85 0 85 Q 90 85 130 0" fill="none" stroke="#3E5A4A" stroke-width="3"/>
+    <!-- 瞳孔：被一道斜线划过（人为打断） -->
+    <circle r="42" fill="#3E5A4A"/>
+    <circle r="22" fill="#1F2D24"/>
+    <line x1="-65" y1="-50" x2="65" y2="50" stroke="#C9A961" stroke-width="6"/>
+    <!-- 视线的两条散射线（注意力的破碎感） -->
+    <line x1="160" y1="-15" x2="240" y2="-50" stroke="#3E5A4A" stroke-width="1" opacity="0.5"/>
+    <line x1="160" y1="15" x2="240" y2="50" stroke="#3E5A4A" stroke-width="1" opacity="0.5"/>
+    <line x1="-160" y1="-15" x2="-240" y2="-50" stroke="#3E5A4A" stroke-width="1" opacity="0.5"/>
+    <line x1="-160" y1="15" x2="-240" y2="50" stroke="#3E5A4A" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- 标题 -->
+  <text x="307" y="450" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="#2B3A2E">Indistractable</text>
+  <text x="307" y="520" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-style="italic" fill="#3E5A4A" opacity="0.85">How to Control Your Attention</text>
+  <text x="307" y="548" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-style="italic" fill="#3E5A4A" opacity="0.85">and Choose Your Life</text>
+
+  <!-- 中文 -->
+  <line x1="220" y1="600" x2="395" y2="600" stroke="#3E5A4A" stroke-width="1"/>
+  <text x="307" y="650" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="6" fill="#3E5A4A" opacity="0.85">不可打扰 · Indistractable</text>
+
+  <!-- 副标题 -->
+  <text x="307" y="700" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-style="italic" fill="#5B7A64" opacity="0.85">— a field guide to keeping</text>
+  <text x="307" y="722" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-style="italic" fill="#5B7A64" opacity="0.85">your attention where you want it —</text>
+
+  <!-- 作者 -->
+  <text x="307" y="870" text-anchor="middle" font-family="Georgia, serif" font-size="16" letter-spacing="4" fill="#5B7A64">NIR EYAL</text>
+</svg>

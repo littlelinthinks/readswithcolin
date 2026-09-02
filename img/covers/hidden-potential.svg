@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 615 922" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg-h" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C7D8C5"/>
+      <stop offset="100%" stop-color="#8FB094"/>
+    </linearGradient>
+  </defs>
+  <rect width="615" height="922" fill="url(#bg-h)"/>
+
+  <!-- 拼图碎片（隐藏潜能的整合） -->
+  <g transform="translate(307,260)" stroke="#3E5A4A" stroke-width="1.5" fill="none">
+    <!-- 4 块互锁的方块 -->
+    <rect x="-100" y="-60" width="100" height="100" fill="#A8C19B" stroke-width="2"/>
+    <rect x="0" y="-60" width="100" height="100" fill="#8FB094" stroke-width="2"/>
+    <rect x="-100" y="40" width="100" height="100" fill="#B5CDB0" stroke-width="2"/>
+    <!-- 第 4 块：虚线（未完成） -->
+    <rect x="0" y="40" width="100" height="100" fill="none" stroke-dasharray="8 6" stroke-width="2"/>
+    <!-- 第 4 块里面隐藏的「+」号 -->
+    <line x1="20" y1="90" x2="80" y2="90" stroke="#5B7A64" stroke-width="3"/>
+    <line x1="50" y1="60" x2="50" y2="120" stroke="#5B7A64" stroke-width="3"/>
+  </g>
+
+  <!-- 标题 -->
+  <text x="307" y="490" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="50" font-weight="700" fill="#2B3A2E">Hidden</text>
+  <text x="307" y="548" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="50" font-weight="700" fill="#2B3A2E">Potential</text>
+
+  <!-- 中文 -->
+  <text x="307" y="610" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="6" fill="#3E5A4A" opacity="0.85">隐藏潜能 · Hidden</text>
+
+  <!-- 副标题 -->
+  <line x1="230" y1="645" x2="385" y2="645" stroke="#3E5A4A" stroke-width="1"/>
+  <text x="307" y="682" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-style="italic" fill="#3E5A4A">The Science of</text>
+  <text x="307" y="705" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-style="italic" fill="#3E5A4A">Achieving Great Things</text>
+
+  <!-- 作者 -->
+  <text x="307" y="870" text-anchor="middle" font-family="Georgia, serif" font-size="16" letter-spacing="4" fill="#5B7A64">ADAM GRANT</text>
+</svg>

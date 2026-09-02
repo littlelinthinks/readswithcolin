@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 615 922" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4E0CB"/>
+      <stop offset="100%" stop-color="#A8C19B"/>
+    </linearGradient>
+    <pattern id="circles" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <circle cx="50" cy="50" r="2" fill="#5B7A64" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="615" height="922" fill="url(#bg)"/>
+  <rect width="615" height="922" fill="url(#circles)"/>
+
+  <!-- 顶部图标：四圈递进（1% 复利） -->
+  <g transform="translate(307,180)" stroke="#5B7A64" fill="none" stroke-width="2.5">
+    <circle r="22"/>
+    <circle r="44" opacity="0.7"/>
+    <circle r="68" opacity="0.5"/>
+    <circle r="92" opacity="0.3"/>
+    <circle r="9" fill="#3E5A4A" stroke="none"/>
+  </g>
+  <text x="307" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="14" letter-spacing="6" fill="#3E5A4A" opacity="0.6">SMALL · DAILY · COMPOUND</text>
+
+  <!-- 书脊分隔线 -->
+  <line x1="80" y1="430" x2="535" y2="430" stroke="#5B7A64" stroke-width="1" opacity="0.3"/>
+
+  <!-- 标题 -->
+  <text x="307" y="510" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700" fill="#2B3A2E">Atomic</text>
+  <text x="307" y="580" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700" fill="#2B3A2E">Habits</text>
+
+  <!-- 中文：英文为主，中文为副，避免纯渲染问题 -->
+  <text x="307" y="650" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="6" fill="#3E5A4A" opacity="0.85">原子 · Habits</text>
+
+  <!-- 副标题 -->
+  <line x1="240" y1="680" x2="375" y2="680" stroke="#5B7A64" stroke-width="1"/>
+  <text x="307" y="715" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-style="italic" fill="#3E5A4A" opacity="0.85">An Easy &amp; Proven Way</text>
+  <text x="307" y="738" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-style="italic" fill="#3E5A4A" opacity="0.85">to Build Good Habits &amp;</text>
+  <text x="307" y="761" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-style="italic" fill="#3E5A4A" opacity="0.85">Break Bad Ones</text>
+
+  <!-- 作者 -->
+  <text x="307" y="860" text-anchor="middle" font-family="Georgia, serif" font-size="16" letter-spacing="4" fill="#5B7A64">JAMES  CLEAR</text>
+</svg>

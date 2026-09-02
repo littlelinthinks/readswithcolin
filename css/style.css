@@ -664,6 +664,44 @@ img { max-width: 100%; height: auto; display: block; }
 @media (max-width: 560px) { .post-nav { flex-direction: column; } }
 
 /* 文章内订阅框 */
+.post-byline {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 56px 0 0;
+  padding: 24px 28px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.post-byline .post-byline-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--border);
+  flex: none;
+  padding: 6px;
+}
+.post-byline-name {
+  font-family: "Playfair Display", Georgia, "Noto Serif SC", serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.post-byline-tag {
+  font-size: 13.5px;
+  color: var(--text-light);
+  font-style: italic;
+  font-family: "Playfair Display", "Noto Serif SC", serif;
+}
+@media (max-width: 600px) {
+  .post-byline { padding: 18px; gap: 12px; }
+  .post-byline .post-byline-avatar { width: 44px; height: 44px; }
+  .post-byline-name { font-size: 16px; }
+}
+
 .post-subscribe {
   margin: 44px 0 8px;
   background: #fff;
@@ -1012,17 +1050,18 @@ html[lang="zh"] .post-body p { line-height: 1.95; }
 .archive-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 22px 24px;
+  gap: 12px;
+  padding: 22px 22px 18px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: #fff;
-  transition: border-color .18s, transform .18s;
+  transition: border-color .18s, transform .18s, box-shadow .18s;
   color: var(--text);
 }
 .archive-card:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(28, 27, 24, .06);
   text-decoration: none;
 }
 .archive-card-meta {
@@ -1030,8 +1069,60 @@ html[lang="zh"] .post-body p { line-height: 1.95; }
   color: var(--text-faint);
 }
 .archive-card-meta .dot { margin: 0 6px; }
+
+/* Hero: 封面 + slogan 双栏 */
+.archive-card-hero {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 12px;
+  align-items: stretch;
+}
+.archive-card-cover {
+  width: 100%;
+  aspect-ratio: 165 / 250;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(28, 27, 24, .12);
+  display: block;
+  background: var(--bg-soft);
+}
+.archive-card-slogan {
+  background: #d8d4ca;
+  border-radius: 4px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+.archive-card-slogan-quote {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 44px;
+  line-height: 1;
+  color: rgba(43, 42, 38, .28);
+  font-style: italic;
+  margin-right: 4px;
+  margin-top: -8px;
+}
+.archive-card-slogan-text {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* 中文版 slogan 用思源宋体 */
+html[lang="zh"] .archive-card-slogan-text {
+  font-family: "Noto Serif SC", "Songti SC", serif;
+  font-style: normal;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
 .archive-card h3 {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.35;
   margin: 0;
@@ -1043,10 +1134,104 @@ html[lang="zh"] .post-body p { line-height: 1.95; }
   line-height: 1.55;
   margin: 0;
 }
+
+/* 底部：作者署名 + 点赞心 */
+.archive-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
 .archive-card-author {
-  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
   color: var(--accent);
-  margin-top: 6px;
+  font-weight: 600;
+}
+.archive-card-author .archive-card-avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--border);
+  flex: none;
+}
+.archive-card-author-name {
+  text-transform: uppercase;
+}
+
+.archive-card-heart {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-faint);
+  font-size: 13px;
+  font-family: inherit;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: color .15s, transform .12s, background .15s;
+}
+.archive-card-heart svg {
+  display: block;
+  transition: transform .15s ease;
+}
+.archive-card-heart:hover {
+  color: #e0464e;
+  background: rgba(224, 70, 78, .06);
+}
+.archive-card-heart:hover svg {
+  transform: scale(1.08);
+}
+.archive-card-heart.liked {
+  color: #e0464e;
+}
+.archive-card-heart.liked svg {
+  transform: scale(1.05);
+}
+.archive-card-heart.pulse {
+  animation: heartPulse .35s ease;
+}
+.archive-card-heart .heart-count {
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  color: var(--text-light);
+}
+.archive-card-heart.liked .heart-count {
+  color: #e0464e;
+  font-weight: 600;
+}
+@keyframes heartPulse {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.25); }
+  60%  { transform: scale(.95); }
+  100% { transform: scale(1); }
+}
+
+/* 移动端：封面+slogan 改为上下堆叠 */
+@media (max-width: 600px) {
+  .archive-card-hero {
+    grid-template-columns: 90px 1fr;
+    gap: 10px;
+  }
+  .archive-card-slogan-quote { font-size: 32px; margin-top: -4px; }
+  .archive-card-slogan-text { font-size: 12.5px; }
+}
+@media (max-width: 420px) {
+  .archive-card-hero {
+    grid-template-columns: 1fr;
+  }
+  .archive-card-cover {
+    max-width: 160px;
+    margin: 0 auto;
+  }
 }
 
 .archive-empty {

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 615 922" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E0DAC5"/>
+      <stop offset="60%" stop-color="#D5CFB8"/>
+      <stop offset="100%" stop-color="#3E5A4A"/>
+    </linearGradient>
+  </defs>
+  <rect width="615" height="922" fill="url(#lake)"/>
+
+  <!-- 山脉轮廓 -->
+  <g stroke="#3E5A4A" fill="none" stroke-width="1.5" opacity="0.7">
+    <path d="M 0 380 L 100 280 L 200 350 L 300 270 L 400 360 L 500 290 L 615 350"/>
+    <!-- 倒影 -->
+    <path d="M 0 380 L 100 480 L 200 410 L 300 490 L 400 400 L 500 470 L 615 410" opacity="0.25"/>
+  </g>
+
+  <!-- 太阳 -->
+  <circle cx="440" cy="170" r="34" fill="#C9A961" opacity="0.55"/>
+  <circle cx="440" cy="170" r="50" fill="none" stroke="#C9A961" stroke-width="1" opacity="0.35"/>
+
+  <!-- 水波 -->
+  <g stroke="#5B7A64" stroke-width="1" fill="none" opacity="0.3">
+    <path d="M 80 540 Q 200 535 320 540 T 540 540"/>
+    <path d="M 50 570 Q 180 565 310 570 T 565 570"/>
+    <path d="M 100 600 Q 220 595 340 600 T 540 600"/>
+  </g>
+
+  <!-- 书脊线 -->
+  <line x1="80" y1="650" x2="535" y2="650" stroke="#3E5A4A" stroke-width="1" opacity="0.3"/>
+
+  <!-- 标题 -->
+  <text x="307" y="725" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="80" font-style="italic" font-weight="700" fill="#2B3A2E">Walden</text>
+
+  <!-- 中文 -->
+  <text x="307" y="775" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="6" fill="#3E5A4A" opacity="0.85">湖畔 · Walden</text>
+
+  <!-- 副标题 -->
+  <line x1="240" y1="800" x2="375" y2="800" stroke="#5B7A64" stroke-width="1"/>
+  <text x="307" y="822" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-style="italic" fill="#3E5A4A" opacity="0.85">Life in the Woods · 1854</text>
+
+  <!-- 作者 -->
+  <text x="307" y="880" text-anchor="middle" font-family="Georgia, serif" font-size="14" letter-spacing="4" fill="#5B7A64">HENRY DAVID THOREAU</text>
+</svg>

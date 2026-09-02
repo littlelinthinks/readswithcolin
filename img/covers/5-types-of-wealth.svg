@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 615 922" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg-w" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F2E6C5"/>
+      <stop offset="100%" stop-color="#C9A961"/>
+    </linearGradient>
+  </defs>
+  <rect width="615" height="922" fill="url(#bg-w)"/>
+
+  <!-- 五级金色阶梯 -->
+  <g transform="translate(307,290)">
+    <rect x="-180" y="0" width="60" height="30" fill="#8B7340" stroke="#5B4A28" stroke-width="1"/>
+    <rect x="-110" y="-30" width="60" height="60" fill="#A08555" stroke="#5B4A28" stroke-width="1"/>
+    <rect x="-40" y="-60" width="60" height="90" fill="#B5946B" stroke="#5B4A28" stroke-width="1"/>
+    <rect x="30" y="-90" width="60" height="120" fill="#C9A961" stroke="#5B4A28" stroke-width="1"/>
+    <rect x="100" y="-120" width="60" height="150" fill="#E5C77B" stroke="#5B4A28" stroke-width="1"/>
+    <!-- 顶部光点 -->
+    <circle cx="130" cy="-135" r="6" fill="#FFF8E0"/>
+  </g>
+
+  <!-- 标题 -->
+  <text x="307" y="490" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="700" fill="#3E3320">The 5 Types</text>
+  <text x="307" y="538" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="700" fill="#3E3320">of Wealth</text>
+
+  <!-- 中文 -->
+  <text x="307" y="600" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="6" fill="#5B4A28" opacity="0.85">五种财富 · Five Wealths</text>
+
+  <!-- 副标题 -->
+  <line x1="220" y1="640" x2="395" y2="640" stroke="#5B4A28" stroke-width="1"/>
+  <text x="307" y="675" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-style="italic" fill="#3E3320">A Transformative Guide</text>
+  <text x="307" y="697" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-style="italic" fill="#3E3320">to Designing Your Dream Life</text>
+
+  <!-- 作者 -->
+  <text x="307" y="870" text-anchor="middle" font-family="Georgia, serif" font-size="16" letter-spacing="4" fill="#5B4A28">SAHIL BLOOM</text>
+</svg>
