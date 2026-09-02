@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Reads with Colin</title>
+    <link>https://readswithcolin.com/</link>
+    <atom:link href="https://readswithcolin.com/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Books that change how you see — and what you do next. · 学而知之，忘而破之，习而新之。 A weekly letter on the books worth keeping. 每周一封推荐好书的来信。</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 27 Aug 2026 09:00:00 +0800</lastBuildDate>
+
+    <item>
+      <title>Atomic Habits, identity change and the quiet power of 1% — 《原子习惯》：身份改变，与 1% 的安静力量</title>
+      <link>https://readswithcolin.com/posts/atomic-habits.html</link>
+      <guid isPermaLink="true">https://readswithcolin.com/posts/atomic-habits.html</guid>
+      <pubDate>Thu, 27 Aug 2026 09:00:00 +0800</pubDate>
+      <description>Why the smallest choices, repeated daily, end up changing who you are. A reading note on James Clear's Atomic Habits. — 微小的选择日复一日，最终改变了你是谁。詹姆斯·克利尔《原子习惯》读书笔记。</description>
+    </item>
+
+    <item>
+      <title>Thinking, Fast and Slow — lazy brains and the anchors in your head — 《思考，快与慢》：偷懒的大脑，与你脑中的锚</title>
+      <link>https://readswithcolin.com/posts/thinking-fast-and-slow.html</link>
+      <guid isPermaLink="true">https://readswithcolin.com/posts/thinking-fast-and-slow.html</guid>
+      <pubDate>Thu, 20 Aug 2026 09:00:00 +0800</pubDate>
+      <description>Kahneman's two systems — and why the slower one deserves more of your week. — 卡尼曼的两个系统——以及为什么你的一周里，应该把更多时间留给慢的那个。</description>
+    </item>
+
+    <item>
+      <title>Walden — deliberate living and the luxury of enough — 《瓦尔登湖》：清醒地生活，与"足够"的奢侈</title>
+      <link>https://readswithcolin.com/posts/walden.html</link>
+      <guid isPermaLink="true">https://readswithcolin.com/posts/walden.html</guid>
+      <pubDate>Thu, 13 Aug 2026 09:00:00 +0800</pubDate>
+      <description>Thoreau's two-year experiment in simplifying life — and what still survives 170 years later. — 梭罗在湖畔的两年实验——以及 170 年后，依然没被时间磨掉的几句话。</description>
+    </item>
+
+  </channel>
+</rss>

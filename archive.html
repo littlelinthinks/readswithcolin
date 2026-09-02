@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive — Reads with Colin</title>
+  <meta name="description" content="Every letter ever sent — a complete archive of Reads with Colin.">
+  <meta property="og:title" content="Archive — Reads with Colin">
+  <meta property="og:description" content="Every letter ever sent. 往期档案。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://readswithcolin.com/archive.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="shortcut icon" type="image/png" href="img/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
+  <meta name="theme-color" content="#5B7A64">
+  <link rel="stylesheet" href="css/style.css">
+  <meta property="og:image" content="https://readswithcolin.com/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Reads with Colin — 错金铜鉴">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://readswithcolin.com/img/og-image.png">
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="nav-brand" href="index.html">
+      <img class="nav-logo-img" src="img/logo.svg" alt="Reads with Colin">
+      <span class="nav-logo">Reads <span class="amp">with</span> Colin</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link-plain" href="index.html">
+        <span lang="en">Latest</span>
+        <span lang="zh">最近更新</span>
+      </a>
+      <a class="nav-link-plain" href="archive.html">
+        <span lang="en">Archive</span>
+        <span lang="zh">往期</span>
+      </a>
+      <a class="nav-link-plain" href="categories.html">
+        <span lang="en">Categories</span>
+        <span lang="zh">分类</span>
+      </a>
+      <a class="nav-link-plain" href="about.html">
+        <span lang="en">About</span>
+        <span lang="zh">关于</span>
+      </a>
+      <a class="nav-link-plain" href="feed.xml" target="_blank" rel="noopener">RSS</a>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <a href="#" data-set-lang="en" class="active">EN</a>
+        <a href="#" data-set-lang="zh">中文</a>
+      </div>
+      <a class="nav-cta" href="#subscribe">
+        <span lang="en">Subscribe</span>
+        <span lang="zh">订阅</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="archive-page">
+    <header class="page-hero">
+      <h1>
+        <span lang="en">Archive</span>
+        <span lang="zh">往期档案</span>
+      </h1>
+      <p class="page-sub">
+        <span lang="en">Every letter ever sent — a complete archive.</span>
+        <span lang="zh">所有来信，一期不落。</span>
+      </p>
+    </header>
+
+    <div class="archive-toolbar">
+      <input id="archiveSearch" class="archive-search" type="search" autocomplete="off">
+      <span id="archiveCount" class="archive-count"></span>
+    </div>
+
+    <div id="archiveGrid" class="archive-grid"></div>
+
+    <p id="archiveEmpty" class="archive-empty" hidden></p>
+
+    <nav id="pagination" class="pagination" aria-label="Pagination"></nav>
+
+    <div id="subscribe" class="post-subscribe" style="margin-top:80px;">
+      <h3>
+        <span lang="en">Join the letter</span>
+        <span lang="zh">加入我们</span>
+      </h3>
+      <p>
+        <span lang="en">A little bit of daily reading goes a long way.</span>
+        <span lang="zh">每天读一点，日积月累，必有回响。</span>
+      </p>
+      <form class="subscribe-form" action="#" method="post" novalidate>
+        <input type="email" name="email" placeholder="your@email.com" aria-label="Email" required>
+        <button class="btn" type="submit">
+          <span lang="en">Subscribe</span>
+          <span lang="zh">订阅</span>
+        </button>
+      </form>
+      <div class="subscribe-success" role="status"
+           data-success-en="🎉 Thanks for subscribing — welcome aboard, reader!"
+           data-success-zh="🎉 感谢订阅，欢迎加入我们的阅读之旅！"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Reads <span class="amp" style="color:var(--accent);font-style:italic;">with</span> Colin</div>
+        <p class="footer-tag">
+          <span lang="en">Books that change how you see — and what you do next.</span>
+          <span lang="zh">学而知之，忘而破之，习而新之。</span>
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Latest</a>
+        <a href="archive.html">Archive</a>
+        <a href="categories.html">Categories</a>
+        <a href="about.html">About</a>
+        <a href="feed.xml" target="_blank" rel="noopener">RSS</a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener">Twitter/X</a>
+        <a href="https://weibo.com/" target="_blank" rel="noopener">微博</a>
+        <a href="mailto:hello@readswithcolin.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Reads with Colin. All rights reserved.</span>
+      <span>Made with 📚 &amp; ☕</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/archive.js"></script>
+</body>
+</html>
