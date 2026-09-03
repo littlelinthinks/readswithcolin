@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,6 +44,10 @@
   a { color: inherit; text-decoration: none; }
   a:hover { color: var(--red); }
 
+  /* 双语切换 */
+  html[lang="en"] [lang="zh"] { display: none !important; }
+  html[lang="zh"] [lang="en"] { display: none !important; }
+
   /* ========== Header ========== */
   .site-header {
     max-width: 1180px;
@@ -53,6 +57,7 @@
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--line);
+    gap: 16px;
   }
   .brand {
     display: flex;
@@ -67,7 +72,7 @@
   nav.primary {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 22px;
     font-size: 15px;
   }
   nav.primary a {
@@ -76,6 +81,22 @@
     font-weight: 500;
   }
   nav.primary a.active { color: var(--red); }
+  .lang-switch {
+    display: inline-flex;
+    gap: 2px;
+    font-size: 13px;
+    font-weight: 700;
+    border: 1.5px solid var(--ink);
+    border-radius: 999px;
+    padding: 2px;
+    background: #fff;
+  }
+  .lang-switch a {
+    padding: 4px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .lang-switch a.active { background: var(--ink); color: #fff; }
   nav.primary .pill {
     background: var(--ink);
     color: #fff;
@@ -86,7 +107,7 @@
   }
   nav.primary .pill:hover { background: var(--red); color: #fff; }
   @media (max-width: 860px) {
-    nav.primary { gap: 16px; }
+    nav.primary { gap: 12px; flex-wrap: wrap; }
     nav.primary a:not(.pill):not(.active) { display: none; }
   }
 
@@ -159,8 +180,11 @@
     margin: 48px 0 28px;
     padding-bottom: 12px;
     border-bottom: 2px solid var(--ink);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
   }
-  h2.section-title .num { color: var(--gold); margin-right: 6px; }
+  h2.section-title .num { color: var(--gold); font-family: Georgia, serif; margin-right: 8px; }
 
   /* ========== IDEAS (3 sections) ========== */
   .idea { margin-bottom: 36px; }
@@ -302,6 +326,17 @@
   .signoff object { width: 56px; height: 56px; border-radius: 50%; pointer-events: none; }
   .signoff .meta-name { font-style: normal; color: var(--ink); font-weight: 600; font-size: 17px; }
   .signoff .meta-role { font-style: normal; color: var(--muted); font-size: 13px; }
+  .signoff .back-link {
+    display: inline-block;
+    margin-top: 18px;
+    font-family: -apple-system, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+  }
+  .signoff .back-link:hover { color: var(--red); border-bottom-color: var(--red); }
 
   /* ========== Sidebar (right column) ========== */
   aside {
@@ -420,6 +455,14 @@
   }
   .subscribe-card .sub-ok.show { display: block; }
 
+  .what-card { background: var(--quote-bg); border-color: #D4C896; }
+  .what-card h3 { color: var(--ink); border-color: #D4C896; }
+  .what-card p { font-size: 13px; line-height: 1.7; color: var(--ink); }
+  .what-card ul { list-style: none; margin-top: 12px; font-size: 13px; }
+  .what-card li { padding: 6px 0; border-bottom: 1px dashed #D4C896; }
+  .what-card li:last-child { border-bottom: none; }
+  .what-card li strong.num { color: var(--red); font-family: Georgia, serif; }
+
   /* ========== Footer ========== */
   .site-footer {
     max-width: 1180px;
@@ -449,11 +492,15 @@
     <span>Reads <span class="red">with</span> Colin</span>
   </a>
   <nav class="primary">
-    <a href="archive.html">Archive</a>
-    <a href="categories.html">Categories</a>
+    <a href="archive.html"><span lang="en">Archive</span><span lang="zh">往期</span></a>
+    <a href="categories.html"><span lang="en">Categories</span><span lang="zh">分类</span></a>
     <a href="3-2-1.html" class="active">3-2-1</a>
-    <a href="about.html">About</a>
-    <a href="index.html#subscribe" class="pill">Subscribe</a>
+    <a href="about.html"><span lang="en">About</span><span lang="zh">关于</span></a>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <a href="#" data-set-lang="en" class="active">EN</a>
+      <a href="#" data-set-lang="zh">中文</a>
+    </div>
+    <a href="index.html#subscribe" class="pill"><span lang="en">Subscribe</span><span lang="zh">订阅</span></a>
   </nav>
 </header>
 
@@ -466,13 +513,14 @@
       <span class="pill-issue">ISSUE #01</span>
       <span>3-2-1</span>
       <span class="dot"></span>
-      <span>周四早安 · Thursday morning</span>
+      <span><span lang="en">Thursday morning</span><span lang="zh">周四早安</span></span>
       <span class="dot"></span>
-      <span>sent by <a href="about.html">Colin</a></span>
+      <span><span lang="en">sent by</span><span lang="zh">发自</span> <a href="about.html">Colin</a></span>
     </div>
 
     <h1 class="article-title">
-      3-2-1: On reading slowly, what <span class="accent">a good book</span> sounds like, and one question about your attention
+      <span lang="en">3-2-1: On reading slowly, what <span class="accent">a good book</span> sounds like, and one question about your attention</span>
+      <span lang="zh">3-2-1：慢读书、一本好书的<span class="accent">声音</span>，与一个关于你注意力的问题</span>
     </h1>
 
     <div class="dots">
@@ -485,14 +533,13 @@
     </div>
 
     <!-- ========== 3 IDEAS ========== -->
-    <h2 class="section-title"><span class="num">3</span>IDEAS FROM COLIN</h2>
+    <h2 class="section-title"><span class="num">3</span><span lang="en">IDEAS FROM COLIN</span><span lang="zh">COLIN 的 3 条思考</span></h2>
 
     <div class="idea">
       <span class="idea-num">I.</span>
       <p class="idea-body">
-        <span class="idea-quote">Read at the pace of comprehension, not the pace of pages.</span>
-        Most readers measure progress by how many pages they've turned. But the right pace is the one where every sentence still has time to land. When you feel yourself skipping ahead, that's not speed, that's a quiet alarm — your mind is asking for more time.
-        <span class="cn">大多数读者用翻过的页数衡量进度。但真正合适的节奏，是每个句子都有时间落地的节奏。当你发现自己跳着读，那不是快，那是心里在响警报 —— 你的脑子需要更多时间。</span>
+        <span lang="en"><span class="idea-quote">Read at the pace of comprehension, not the pace of pages.</span> Most readers measure progress by how many pages they've turned. But the right pace is the one where every sentence still has time to land. When you feel yourself skipping ahead, that's not speed, that's a quiet alarm — your mind is asking for more time.</span>
+        <span class="cn" lang="zh"><span class="idea-quote">以理解的节奏读，而不是翻页的节奏。</span> 大多数读者用翻过的页数衡量进度。但真正合适的节奏，是每个句子都有时间落地的节奏。当你发现自己跳着读，那不是快，那是心里在响警报 —— 你的脑子需要更多时间。</span>
       </p>
     </div>
 
@@ -501,9 +548,8 @@
     <div class="idea">
       <span class="idea-num">II.</span>
       <p class="idea-body">
-        <span class="idea-quote">A great book is one you can argue with.</span>
-        The books that change you most are rarely the ones you agree with. They're the ones that make you defensive, that interrupt your assumptions, that leave a margin-note you've been thinking about for days. Agreement is comfortable; argument is generative.
-        <span class="cn">改变你最多的书，几乎从不是你认同的书。它们是那些让你戒备、中断你的假设、让你留下批注并琢磨几天的书。认同很舒服；争论才有生成性。</span>
+        <span lang="en"><span class="idea-quote">A great book is one you can argue with.</span> The books that change you most are rarely the ones you agree with. They're the ones that make you defensive, that interrupt your assumptions, that leave a margin-note you've been thinking about for days. Agreement is comfortable; argument is generative.</span>
+        <span class="cn" lang="zh"><span class="idea-quote">一本好书，是一本你可以与之争论的书。</span> 改变你最多的书，几乎从不是你认同的书。它们是那些让你戒备、中断你的假设、让你留下批注并琢磨几天的书。认同很舒服；争论才有生成性。</span>
       </p>
     </div>
 
@@ -512,69 +558,66 @@
     <div class="idea">
       <span class="idea-num">III.</span>
       <p class="idea-body">
-        <span class="idea-quote">Reading is the cheapest form of mentorship.</span>
-        A $20 book can give you 30 years of someone's hard-won thinking. A two-hour flight can be the entire semester of a course you didn't take. Compared to therapy, coaching, or a degree, books are the most leveraged hour of learning available — and they fit in your back pocket.
-        <span class="cn">20 美元的一本书能给你一个人 30 年磨出来的思考。一段两小时的飞行，可以是一门你没上过的课的整个学期。比起咨询、教练、学位，书是杠杆率最高的学习时段 —— 而且装得进你的后口袋。</span>
+        <span lang="en"><span class="idea-quote">Reading is the cheapest form of mentorship.</span> A $20 book can give you 30 years of someone's hard-won thinking. A two-hour flight can be the entire semester of a course you didn't take. Compared to therapy, coaching, or a degree, books are the most leveraged hour of learning available — and they fit in your back pocket.</span>
+        <span class="cn" lang="zh"><span class="idea-quote">阅读是最便宜的导师。</span> 20 美元的一本书能给你一个人 30 年磨出来的思考。一段两小时的飞行，可以是一门你没上过的课的整个学期。比起咨询、教练、学位，书是杠杆率最高的学习时段 —— 而且装得进你的后口袋。</span>
       </p>
     </div>
 
     <!-- ========== 2 QUOTES ========== -->
-    <h2 class="section-title"><span class="num">2</span>QUOTES FROM BOOKS</h2>
+    <h2 class="section-title"><span class="num">2</span><span lang="en">QUOTES FROM BOOKS</span><span lang="zh">2 段书中引文</span></h2>
 
     <div class="quote-block">
       <div class="quote-meta">
         <strong>Annie Dillard</strong> · <em>The Writing Life</em> (1989)
       </div>
       <p class="quote-text">
-        How we spend our days is, of course, how we spend our lives.
-        <span class="cn">我们如何度过日子，自然就是我们如何度过一生。</span>
+        <span lang="en">How we spend our days is, of course, how we spend our lives.</span>
+        <span class="cn" lang="zh">我们如何度过日子，自然就是我们如何度过一生。</span>
       </p>
       <div class="quote-source">
-        Source: <em>The Writing Life</em>, Chapter 1
+        <span lang="en">Source:</span><span lang="zh">出处：</span><em>The Writing Life</em>, <span lang="en">Chapter 1</span><span lang="zh">第一章</span>
       </div>
     </div>
 
     <div class="quote-block">
       <div class="quote-meta">
-        <strong>村上春树</strong> · <em>当我谈跑步时我谈些什么</em> (2007)
+        <strong>村上春树</strong> · <em><span lang="en">What I Talk About When I Talk About Running</span><span lang="zh">当我谈跑步时我谈些什么</span></em> (2007)
       </div>
       <p class="quote-text">
-        Pain is inevitable. Suffering is optional.
-        <span class="cn">痛苦是不可避免的，受苦却可以选择。</span>
+        <span lang="en">Pain is inevitable. Suffering is optional.</span>
+        <span class="cn" lang="zh">痛苦是不可避免的，受苦却可以选择。</span>
       </p>
       <div class="quote-source">
-        出处：<em>当我谈跑步时我谈些什么</em>，第五章
+        <span lang="en">Source:</span><span lang="zh">出处：</span><em><span lang="en">What I Talk About When I Talk About Running</span><span lang="zh">当我谈跑步时我谈些什么</span></em>，<span lang="en">Chapter 5</span><span lang="zh">第五章</span>
       </div>
     </div>
 
     <!-- ========== 1 QUESTION ========== -->
-    <h2 class="section-title"><span class="num">1</span>QUESTION FOR YOU</h2>
+    <h2 class="section-title"><span class="num">1</span><span lang="en">QUESTION FOR YOU</span><span lang="zh">1 个问题给你</span></h2>
 
     <div class="question-block">
-      <span class="q-label">Ponder 想想</span>
+      <span class="q-label"><span lang="en">Ponder</span><span lang="zh">想想</span></span>
       <p class="q-text">
-        What is the last book you read slowly — and what did you almost miss because you weren't paying close enough attention?
-        <span class="cn">你上一次慢读一本书，是什么时候？ 因为不够留心，你差点错过了什么？</span>
+        <span lang="en">What is the last book you read slowly — and what did you almost miss because you weren't paying close enough attention?</span>
+        <span class="cn" lang="zh">你上一次慢读一本书，是什么时候？因为不够留心，你差点错过了什么？</span>
       </p>
     </div>
 
     <!-- ========== Sign-off ========== -->
     <div class="signoff">
-      <div>Until next Thursday,</div>
+      <div><span lang="en">Until next Thursday,</span><span lang="zh">下周四见，</span></div>
       <div class="name">
         <object type="image/svg+xml" data="img/logo-v6-final.svg" aria-label="Colin"></object>
         <div>
           <div class="meta-name">Colin</div>
-          <div class="meta-role">读书 · 思考 · 历史 · 成长</div>
+          <div class="meta-role"><span lang="en">Read · Think · History · Grow</span><span lang="zh">读书 · 思考 · 历史 · 成长</span></div>
         </div>
       </div>
 
       <p style="margin-top:18px;font-size:13px;color:var(--muted);font-style:italic;">
-        p.s. Reply to this email — I read every one. 如果愿意，欢迎回复邮件告诉我你的答案。
+        <span lang="en">p.s. Reply to this email — I read every one.</span><span lang="zh">附：如果愿意，欢迎回复邮件告诉我你的答案。</span>
       </p>
-      <p style="margin-top:10px;font-size:13px;">
-        <a href="index.html" style="font-family:-apple-system,sans-serif;font-weight:600;color:var(--ink);border-bottom:1px solid var(--line);">← Back to Reads with Colin 返回首页</a>
-      </p>
+      <a class="back-link" href="index.html">← <span lang="en">Back to Reads with Colin</span><span lang="zh">返回首页</span></a>
     </div>
 
   </article>
@@ -582,42 +625,35 @@
   <!-- ========== 侧栏 ========== -->
   <aside>
     <div class="archive-card">
-      <h3><span class="red">3-2-1</span> ARCHIVE</h3>
+      <h3><span class="red">3-2-1</span> <span lang="en">ARCHIVE</span><span lang="zh">往期</span></h3>
       <ul class="archive-list">
-        <li class="current"><span class="num">01</span><a href="3-2-1.html">On reading slowly…</a><span class="date">Aug 28, 2026 · 当前</span></li>
-        <li><span class="num">·</span><a>Issue #02 · 敬请期待</a><span class="date">Sep 04, 2026</span></li>
-        <li><span class="num">·</span><a>Issue #03 · 敬请期待</a><span class="date">Sep 11, 2026</span></li>
-        <li><span class="num">·</span><a>Issue #04 · 敬请期待</a><span class="date">Sep 18, 2026</span></li>
+        <li class="current"><span class="num">01</span><a href="3-2-1.html"><span lang="en">On reading slowly…</span><span lang="zh">慢读书…</span></a><span class="date">Aug 28, 2026 · <span lang="en">Current</span><span lang="zh">当前</span></span></li>
+        <li><span class="num">·</span><a><span lang="en">Issue #02 · Coming soon</span><span lang="zh">Issue #02 · 敬请期待</span></a><span class="date">Sep 04, 2026</span></li>
+        <li><span class="num">·</span><a><span lang="en">Issue #03 · Coming soon</span><span lang="zh">Issue #03 · 敬请期待</span></a><span class="date">Sep 11, 2026</span></li>
+        <li><span class="num">·</span><a><span lang="en">Issue #04 · Coming soon</span><span lang="zh">Issue #04 · 敬请期待</span></a><span class="date">Sep 18, 2026</span></li>
       </ul>
     </div>
 
     <div class="subscribe-card">
-      <h3>One idea, one book, one question. Every Thursday.</h3>
-      <p>每周一封 · 三条思考 · 两段引文 · 一个问题<br>免费 · 可随时退订 · 无广告</p>
+      <h3><span lang="en">One idea, one book, one question. Every Thursday.</span><span lang="zh">一个想法，一本书，一个问题。每周四。</span></h3>
+      <p><span lang="en">3 ideas · 2 quotes · 1 question</span><span lang="zh">每周一封 · 三条思考 · 两段引文 · 一个问题</span><br><span lang="en">Free · Unsubscribe anytime · No ads</span><span lang="zh">免费 · 可随时退订 · 无广告</span></p>
       <form onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('subok').classList.add('show'); return false;">
         <input type="email" placeholder="your@email.com" required>
-        <button type="submit">Subscribe 订阅</button>
+        <button type="submit"><span lang="en">Subscribe</span><span lang="zh">订阅</span></button>
       </form>
-      <p class="sub-ok" id="subok">🎉 感谢订阅 — 下周四见！</p>
-      <div class="small">Join 1,200+ readers · 已 1,200+ 读者订阅</div>
+      <p class="sub-ok" id="subok">🎉 <span lang="en">Thanks — see you next Thursday!</span><span lang="zh">感谢订阅 — 下周四见！</span></p>
+      <div class="small"><span lang="en">Join 1,200+ readers</span><span lang="zh">已 1,200+ 读者订阅</span></div>
     </div>
 
-    <div class="archive-card" style="background:var(--quote-bg);border-color:#D4C896;">
-      <h3 style="color:var(--ink);border-color:#D4C896;">WHAT IS 3-2-1?</h3>
-      <p style="font-size:13px;line-height:1.7;color:var(--ink);">
-        Inspired by James Clear's legendary newsletter.
-        每周四早晨一封邮件：
+    <div class="archive-card what-card">
+      <h3><span lang="en">WHAT IS 3-2-1?</span><span lang="zh">什么是 3-2-1？</span></h3>
+      <p>
+        <span lang="en">Inspired by James Clear's legendary newsletter.</span><span lang="zh">灵感来自 James Clear 的同名经典栏目。</span>
       </p>
-      <ul style="list-style:none;margin-top:12px;font-size:13px;">
-        <li style="padding:6px 0;border-bottom:1px dashed #D4C896;">
-          <strong style="color:var(--red);">3</strong> <strong>ideas from me</strong> · 我自己读到的 3 条想法
-        </li>
-        <li style="padding:6px 0;border-bottom:1px dashed #D4C896;">
-          <strong style="color:var(--red);">2</strong> <strong>quotes from books</strong> · 2 段书中引文（中英对照）
-        </li>
-        <li style="padding:6px 0;">
-          <strong style="color:var(--red);">1</strong> <strong>question for you</strong> · 1 个供你思考的问题
-        </li>
+      <ul>
+        <li><strong class="num">3</strong> <span lang="en">ideas from me</span><span lang="zh">我的 3 条想法</span></li>
+        <li><strong class="num">2</strong> <span lang="en">quotes from books (bilingual)</span><span lang="zh">2 段书中引文（中英对照）</span></li>
+        <li><strong class="num">1</strong> <span lang="en">question for you</span><span lang="zh">1 个供你思考的问题</span></li>
       </ul>
     </div>
 
@@ -626,9 +662,52 @@
 </main>
 
 <footer class="site-footer">
-  <div>© 2026 <a href="index.html">Reads with Colin</a> · 读书·思考·历史·成长</div>
-  <div>每 周 一 封 · 3 ideas · 2 quotes · 1 question</div>
+  <div>© 2026 <a href="index.html">Reads with Colin</a> · <span lang="en">Read · Think · History · Grow</span><span lang="zh">读书·思考·历史·成长</span></div>
+  <div><span lang="en">A weekly letter</span><span lang="zh">每 周 一 封</span> · 3 ideas · 2 quotes · 1 question</div>
 </footer>
+
+<!-- ========== 双语切换（自包含，与 main.js 兼容） ========== -->
+<script>
+(function () {
+  "use strict";
+  var STORAGE_KEY = "rwc-lang";
+  var SUPPORTED = { en: "en", zh: "zh", "zh-cn": "zh", "zh-hans": "zh" };
+  function detectLang() {
+    try {
+      var fromUrl = new URLSearchParams(location.search).get("lang");
+      if (fromUrl && SUPPORTED[fromUrl.toLowerCase()]) return SUPPORTED[fromUrl.toLowerCase()];
+      var saved = localStorage.getItem(STORAGE_KEY);
+      if (saved && SUPPORTED[saved]) return SUPPORTED[saved];
+    } catch (e) {}
+    var nav = (navigator.language || "en").toLowerCase();
+    if (nav.indexOf("zh") === 0) return "zh";
+    return "en";
+  }
+  function applyLang(lang) {
+    document.documentElement.setAttribute("lang", lang);
+    document.querySelectorAll(".lang-switch [data-set-lang]").forEach(function (el) {
+      el.classList.toggle("active", el.getAttribute("data-set-lang") === lang);
+    });
+    try {
+      var url = new URL(location.href);
+      if (url.searchParams.get("lang") !== lang) {
+        url.searchParams.set("lang", lang);
+        history.replaceState(null, "", url.toString());
+      }
+    } catch (e) {}
+  }
+  var lang = detectLang();
+  applyLang(lang);
+  document.querySelectorAll(".lang-switch [data-set-lang]").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      var target = el.getAttribute("data-set-lang");
+      try { localStorage.setItem(STORAGE_KEY, target); } catch (e) {}
+      applyLang(target);
+    });
+  });
+})();
+</script>
 
 </body>
 </html>

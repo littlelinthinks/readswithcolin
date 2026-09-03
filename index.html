@@ -47,6 +47,10 @@
   body { background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.65; }
   a { color: inherit; }
 
+  /* 双语切换：默认 EN 模式隐藏 zh，反之亦然 */
+  html[lang="en"] [lang="zh"] { display: none !important; }
+  html[lang="zh"] [lang="en"] { display: none !important; }
+
   /* ============ 导航 ============ */
   .nav { display: flex; align-items: center; justify-content: space-between; max-width: 1180px; margin: 0 auto; padding: 20px 24px; }
   .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
@@ -54,15 +58,19 @@
   .nav-brand .mark object { width: 100%; height: 100%; pointer-events: none; }
   .nav-brand .name { font-family: var(--serif); font-size: 21px; font-weight: 700; }
   .nav-brand .name em { color: var(--red); font-style: italic; }
-  .nav-right { display: flex; align-items: center; gap: 24px; }
+  .nav-right { display: flex; align-items: center; gap: 22px; }
   .nav-link { font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none; }
   .nav-link:hover { color: var(--red); }
+  .lang-switch { display: inline-flex; gap: 2px; font-size: 13px; font-weight: 700; border: 1.5px solid var(--ink); border-radius: 999px; padding: 2px; background: #fff; }
+  .lang-switch a { padding: 4px 10px; border-radius: 999px; text-decoration: none; color: var(--ink); cursor: pointer; }
+  .lang-switch a.active { background: var(--ink); color: #fff; }
   .nav-cta { font-size: 14px; font-weight: 700; color: #fff; text-decoration: none; background: var(--ink); padding: 9px 22px; border-radius: 999px; border: 1.5px solid var(--ink); transition: background .18s ease, border-color .18s ease; }
   .nav-cta:hover { background: var(--red); border-color: var(--red); }
   @media (max-width: 720px) {
     .nav-right { gap: 14px; }
     .nav-link { display: none; }
     .nav-link.nav-keep { display: inline; }
+    .lang-switch { display: none; }
   }
 
   /* ============ Hero ============ */
@@ -78,126 +86,108 @@
   .hero-zh { margin-top: 8px; font-size: 14px; color: var(--muted); letter-spacing: 3px; }
   .hero-form { margin-top: 32px; display: flex; gap: 0; }
   .hero-form input { width: 300px; max-width: 62vw; padding: 13px 20px; font-size: 15px; border: 1.5px solid var(--ink); border-right: none; border-radius: 999px 0 0 999px; outline: none; font-family: var(--sans); background: #fff; }
-  .hero-form button { padding: 13px 30px; font-size: 15px; font-weight: 700; color: #fff; background: var(--ink); border: 1.5px solid var(--ink); border-radius: 0 999px 999px 0; cursor: pointer; font-family: var(--sans); transition: background .18s ease, border-color .18s ease; }
+  .hero-form input:focus { border-color: var(--red); }
+  .hero-form button { padding: 13px 28px; background: var(--ink); color: #fff; border: 1.5px solid var(--ink); border-radius: 0 999px 999px 0; font-size: 14px; font-weight: 700; cursor: pointer; font-family: var(--sans); transition: background .18s ease; }
   .hero-form button:hover { background: var(--red); border-color: var(--red); }
-  .hero-note { margin-top: 14px; font-size: 13px; color: var(--muted); }
+  .hero-form.done input, .hero-form.done button { display: none; }
+  .hero-done { display: none; margin-top: 24px; font-size: 15px; color: var(--green); font-weight: 600; }
+  .hero-done.show { display: inline-block; }
+  .hero-note { margin-top: 16px; font-size: 13px; color: var(--muted); }
   .hero-logo { display: flex; justify-content: center; }
   .hero-logo object { width: 320px; max-width: 100%; filter: drop-shadow(0 14px 30px rgba(60,45,20,.18)); pointer-events: none; }
 
-  /* ============ Featured 大卡 ============ */
-  .featured-wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px 20px; }
-  .featured { background: var(--card); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; display: grid; grid-template-columns: .9fr 1.1fr; box-shadow: 0 10px 34px rgba(60,45,20,.09); }
-  @media (max-width: 880px) { .featured { grid-template-columns: 1fr; } }
-  .featured-link { display: contents; color: inherit; text-decoration: none; }
-  .featured-cover { background: linear-gradient(150deg, #EAF0EA 0%, #DEE9E0 55%, #CFE0D3 100%); display: flex; align-items: center; justify-content: center; padding: 44px 24px; position: relative; }
-  .featured-cover .label { position: absolute; top: 18px; left: 18px; font-size: 11.5px; font-weight: 800; letter-spacing: 1.5px; color: #fff; background: var(--red); padding: 5px 14px; border-radius: 999px; text-transform: uppercase; }
-  .featured-cover object { width: 200px; height: 267px; filter: drop-shadow(8px 14px 22px rgba(30,50,35,.3)); transform: rotate(-2.5deg); transition: transform .25s ease; pointer-events: none; }
-  .featured:hover .featured-cover object { transform: rotate(0deg) scale(1.03); }
-  .featured-body { padding: 44px 44px 40px; display: flex; flex-direction: column; }
-  @media (max-width: 600px) { .featured-body { padding: 30px 26px 28px; } }
-  .featured-meta { font-size: 13px; color: var(--muted); font-weight: 600; }
-  .featured-meta .cat { color: var(--green); font-weight: 700; margin-right: 10px; }
-  .featured-meta .rwc { color: var(--brown); font-weight: 800; letter-spacing: 1px; }
-  .featured-title { font-family: var(--serif); font-size: clamp(24px, 3.2vw, 32px); font-weight: 700; line-height: 1.22; margin: 12px 0 12px; letter-spacing: -.3px; }
-  .featured-teaser { font-size: 16px; color: var(--muted); }
-  .featured-quote { margin-top: 20px; padding: 14px 20px; border-left: 3px solid var(--gold); background: #FBF6EC; font-family: var(--serif); font-style: italic; font-size: 15.5px; color: #5A4E35; border-radius: 0 10px 10px 0; }
-  .featured-foot { margin-top: auto; padding-top: 26px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-  .featured-author { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; }
-  .featured-author .av { width: 32px; height: 32px; border-radius: 50%; background: var(--ink); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 15px; }
-  .read-more { font-size: 14.5px; font-weight: 700; color: var(--red); text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: 1px; }
-  .read-more:hover { border-color: var(--red); }
+  /* ============ Featured ============ */
+  .featured-wrap { max-width: 1180px; margin: 32px auto 64px; padding: 0 24px; }
+  .featured { background: var(--card); border-radius: var(--radius); overflow: hidden; box-shadow: 0 12px 40px rgba(20,17,12,.07); display: grid; grid-template-columns: .9fr 1.1fr; min-height: 380px; border: 1px solid var(--line); }
+  .featured-link { display: contents; text-decoration: none; color: inherit; }
+  .featured-cover { background: linear-gradient(135deg, #F1E7D2 0%, #E8D7B3 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; gap: 18px; position: relative; }
+  .featured-cover object { width: 100%; max-width: 220px; filter: drop-shadow(0 10px 22px rgba(0,0,0,.15)); }
+  .featured-cover .label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--red); background: #fff; padding: 5px 12px; border-radius: 4px; border: 1px solid var(--red); }
+  .featured-body { padding: 48px 44px; display: flex; flex-direction: column; justify-content: center; gap: 16px; }
+  .featured-meta { font-size: 13px; color: var(--muted); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .featured-meta .cat { color: var(--red); font-weight: 700; }
+  .featured-title { font-family: var(--serif); font-size: 32px; font-weight: 700; line-height: 1.2; letter-spacing: -.3px; }
+  .featured-teaser { font-size: 16px; color: var(--muted); line-height: 1.65; }
+  .featured-quote { font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--ink); padding-left: 14px; border-left: 3px solid var(--gold); margin-top: 6px; }
+  .featured-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; padding-top: 18px; border-top: 1px solid var(--line); }
+  .featured-author { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; }
+  .featured-author .av { width: 32px; height: 32px; border-radius: 50%; background: var(--red); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; }
+  .featured-foot .read-more { font-size: 13px; color: var(--red); font-weight: 700; }
+  @media (max-width: 880px) { .featured { grid-template-columns: 1fr; } .featured-body { padding: 28px 24px; } .featured-title { font-size: 24px; } }
 
   /* ============ 3-2-1 入口横幅 ============ */
-  .band321 { max-width: 1180px; margin: 30px auto 0; padding: 0 24px; }
-  .band321-inner { background: var(--ink); border-radius: 22px; color: #F2ECDF; padding: 40px 44px; display: grid; grid-template-columns: 1fr auto; gap: 36px; align-items: center; position: relative; overflow: hidden; }
-  @media (max-width: 880px) { .band321-inner { grid-template-columns: 1fr; padding: 32px 26px; } }
-  .band321-inner::after { content: "3·2·1"; position: absolute; right: -30px; bottom: -58px; font-family: var(--serif); font-size: 190px; font-weight: 700; color: rgba(201,166,104,.09); letter-spacing: -6px; pointer-events: none; }
-  .band321-kicker { font-size: 12px; letter-spacing: 3px; font-weight: 700; color: var(--gold); text-transform: uppercase; }
-  .band321-inner h2 { font-family: var(--serif); font-size: clamp(24px, 3vw, 30px); font-weight: 700; color: #fff; margin: 10px 0 8px; }
-  .band321-inner h2 em { color: var(--gold); font-style: italic; }
-  .band321-sub { font-size: 15px; opacity: .8; max-width: 560px; }
-  .band321-items { display: flex; gap: 26px; margin-top: 18px; flex-wrap: wrap; }
-  .band321-items .it { display: flex; align-items: baseline; gap: 8px; font-size: 13.5px; }
-  .band321-items .it b { font-family: var(--serif); font-size: 26px; color: var(--red); font-style: italic; }
-  .band321-actions { display: flex; flex-direction: column; gap: 12px; position: relative; z-index: 1; }
-  @media (max-width: 880px) { .band321-actions { flex-direction: row; flex-wrap: wrap; } }
-  .btn-321 { font-size: 14.5px; font-weight: 700; text-decoration: none; text-align: center; padding: 12px 28px; border-radius: 999px; background: var(--red); color: #fff; border: 1.5px solid var(--red); transition: background .18s ease; white-space: nowrap; }
-  .btn-321:hover { background: var(--red-dark); border-color: var(--red-dark); }
-  .btn-321.ghost { background: transparent; border-color: rgba(255,255,255,.45); color: #fff; }
-  .btn-321.ghost:hover { border-color: var(--gold); color: var(--gold); }
+  .band321 { background: var(--ink); color: var(--paper); margin: 0; padding: 64px 24px; }
+  .band321-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr .6fr; gap: 40px; align-items: center; }
+  @media (max-width: 880px) { .band321-inner { grid-template-columns: 1fr; text-align: center; } .band321-actions { justify-content: center; } }
+  .band321-kicker { display: inline-block; font-size: 12px; letter-spacing: 3px; color: var(--red); text-transform: uppercase; font-weight: 700; margin-bottom: 12px; }
+  .band321 h2 { font-family: var(--serif); font-size: clamp(28px, 4vw, 42px); font-weight: 700; line-height: 1.15; }
+  .band321 h2 em { color: var(--gold); font-style: italic; }
+  .band321-sub { margin-top: 14px; font-size: 16px; color: #C5BDA8; }
+  .band321-items { margin-top: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; }
+  .band321-items .it b { color: var(--gold); font-family: var(--serif); font-size: 19px; margin-right: 6px; }
+  .band321-actions { display: flex; flex-direction: column; gap: 10px; }
+  .btn-321 { background: var(--red); color: #fff; text-decoration: none; padding: 14px 26px; border-radius: 999px; font-size: 15px; font-weight: 700; text-align: center; transition: background .18s ease; }
+  .btn-321:hover { background: var(--red-dark); }
+  .btn-321.ghost { background: transparent; border: 1.5px solid #fff; color: #fff; }
+  .btn-321.ghost:hover { background: #fff; color: var(--ink); }
 
   /* ============ 网格列表 ============ */
-  .feed { max-width: 1180px; margin: 64px auto 0; padding: 0 24px; }
-  .feed-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 22px; }
-  .feed-head h2 { font-family: var(--serif); font-size: 27px; font-weight: 700; }
+  .feed { max-width: 1180px; margin: 0 auto; padding: 80px 24px; }
+  .feed-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 36px; border-bottom: 2px solid var(--ink); padding-bottom: 14px; }
+  .feed-head h2 { font-family: var(--serif); font-size: 28px; font-weight: 700; }
   .feed-head a { font-size: 14px; font-weight: 700; color: var(--red); text-decoration: none; }
-  .feed-head a:hover { text-decoration: underline; }
-  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 22px 20px; display: flex; gap: 18px; transition: transform .18s ease, box-shadow .18s ease; }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(60,45,20,.12); }
-  .card-cover { flex: 0 0 76px; width: 76px; height: 102px; border-radius: 3px; box-shadow: 2px 4px 10px rgba(0,0,0,.16); pointer-events: none; }
-  .card-body { min-width: 0; display: flex; flex-direction: column; }
-  .card-meta { font-size: 12px; color: var(--muted); font-weight: 600; letter-spacing: .5px; text-transform: uppercase; }
-  .card-meta .rwc { color: var(--brown); font-weight: 800; }
-  .card-title { font-size: 17px; font-weight: 800; line-height: 1.35; margin: 7px 0 7px; letter-spacing: -.2px; }
-  .card-title a { color: inherit; text-decoration: none; }
-  .card:hover .card-title a { color: var(--red); }
-  .card-teaser { font-size: 13.5px; color: var(--muted); }
-  .card-foot { margin-top: auto; padding-top: 12px; display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--muted); font-weight: 600; }
-  .card-foot .heart { color: var(--red); }
-  /* Coming soon 占位卡 */
-  .card.soon { background: #F5F1E8; border-style: dashed; border-color: #D8D0BE; }
-  .card.soon .card-cover { filter: grayscale(.85) opacity(.55); }
-  .card.soon .card-title { color: var(--muted); }
-  .card.soon:hover { transform: none; box-shadow: none; }
-  .soon-badge { display: inline-block; font-size: 10.5px; font-weight: 800; letter-spacing: 1.5px; color: var(--brown); background: #EDE4D0; border: 1px solid #DCCFA9; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; margin-top: 10px; align-self: flex-start; }
-  /* View all 导流卡 */
-  .card.viewall { background: var(--ink); border-color: var(--ink); align-items: center; justify-content: center; display: flex; }
-  .card.viewall a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-decoration: none; color: #fff; width: 100%; height: 100%; min-height: 146px; }
-  .card.viewall .va-arrow { font-family: var(--serif); font-size: 34px; color: var(--gold); }
-  .card.viewall .va-text { font-size: 14.5px; font-weight: 700; letter-spacing: .5px; }
-  .card.viewall .va-sub { font-size: 12px; opacity: .65; font-weight: 500; }
-  .card.viewall:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(20,17,12,.35); }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  @media (max-width: 880px) { .grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
 
-  /* ============ Books Wall 书墙 ============ */
-  .wall-band { margin-top: 84px; background: var(--ink); padding: 72px 24px 66px; color: #F2ECDF; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; display: flex; flex-direction: column; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(20,17,12,.1); }
+  .card-cover { width: 100%; height: 200px; display: block; pointer-events: none; }
+  .card-body { padding: 22px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+  .card-meta { font-size: 12px; color: var(--muted); display: flex; gap: 8px; align-items: center; }
+  .card-meta .rwc { background: var(--ink); color: #fff; padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 11px; letter-spacing: .5px; }
+  .card-title { font-family: var(--serif); font-size: 20px; line-height: 1.3; font-weight: 700; }
+  .card-title a { color: var(--ink); text-decoration: none; }
+  .card-title a:hover { color: var(--red); }
+  .card-teaser { font-size: 14.5px; color: var(--muted); line-height: 1.6; flex: 1; }
+  .card-foot { display: flex; justify-content: space-between; font-size: 12.5px; color: var(--muted); padding-top: 12px; border-top: 1px solid var(--line); margin-top: 4px; }
+  .card-foot .heart { color: var(--red); font-weight: 700; }
+  .card.soon { opacity: .82; background: #FAF6EC; }
+  .card.soon .card-cover { filter: grayscale(.15); }
+  .card.soon .soon-badge { display: inline-block; background: var(--gold); color: var(--ink); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-top: 6px; }
+  .card.viewall { background: var(--ink); color: #fff; border-color: var(--ink); justify-content: center; align-items: center; text-align: center; min-height: 320px; }
+  .card.viewall a { color: #fff; text-decoration: none; display: flex; flex-direction: column; gap: 10px; padding: 30px; }
+  .card.viewall .va-arrow { font-size: 38px; color: var(--gold); }
+  .card.viewall .va-text { font-family: var(--serif); font-size: 22px; font-weight: 700; }
+  .card.viewall .va-sub { font-size: 13px; color: #C5BDA8; }
+  .card.viewall:hover { background: var(--red); border-color: var(--red); }
+
+  /* ============ 书墙 ============ */
+  .wall-band { background: #1F1A14; color: var(--paper); padding: 80px 24px; }
   .wall-inner { max-width: 1180px; margin: 0 auto; text-align: center; }
-  .wall-kicker { font-size: 12.5px; letter-spacing: 3px; font-weight: 700; color: var(--gold); text-transform: uppercase; }
-  .wall-inner h2 { font-family: var(--serif); font-size: clamp(26px, 3.6vw, 34px); font-weight: 700; margin-top: 12px; color: #fff; }
+  .wall-kicker { display: inline-block; font-size: 12px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; font-weight: 700; margin-bottom: 12px; }
+  .wall-inner h2 { font-family: var(--serif); font-size: clamp(28px, 4vw, 40px); font-weight: 700; }
   .wall-inner h2 em { color: var(--gold); font-style: italic; }
-  .wall-sub { margin-top: 8px; font-size: 15px; opacity: .75; }
-  .wall { margin-top: 44px; display: flex; justify-content: center; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
-  .wall .bk { width: 132px; height: 176px; border-radius: 3px 6px 6px 3px; filter: drop-shadow(4px 10px 18px rgba(0,0,0,.45)); transition: transform .2s ease; pointer-events: none; }
-  .wall .wall-book { position: relative; }
-  .wall .wall-book:hover .bk { transform: translateY(-10px) rotate(0deg) !important; }
-  .wall .bk:nth-child(1) { transform: rotate(-4deg); }
-  .wall .wall-book:nth-child(2) .bk { transform: rotate(2deg) translateY(-8px); }
-  .wall .wall-book:nth-child(3) .bk { transform: rotate(-1deg); }
-  .wall .wall-book:nth-child(4) .bk { transform: rotate(3deg) translateY(-6px); }
-  .wall .wall-book:nth-child(5) .bk { transform: rotate(-2deg); }
-  .wall .wall-book:nth-child(6) .bk { transform: rotate(1.5deg) translateY(-10px); }
-  .wall-more { margin-top: 38px; }
-  .wall-more a { font-size: 14.5px; font-weight: 700; color: #fff; text-decoration: none; border: 1.5px solid rgba(255,255,255,.4); padding: 11px 28px; border-radius: 999px; display: inline-block; transition: all .18s ease; }
-  .wall-more a:hover { background: var(--red); border-color: var(--red); }
+  .wall-sub { margin-top: 12px; font-size: 15px; color: #B8AFA0; }
+  .wall { margin-top: 50px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; perspective: 800px; }
+  .wall-book { display: block; transition: transform .3s ease; }
+  .wall-book:hover { transform: translateY(-8px) rotate(-2deg); }
+  .wall-book .bk { width: 110px; height: 160px; filter: drop-shadow(0 8px 18px rgba(0,0,0,.4)); pointer-events: none; }
+  .wall-more { margin-top: 36px; }
+  .wall-more a { color: var(--gold); text-decoration: none; font-weight: 700; font-size: 14px; letter-spacing: 1px; }
 
   /* ============ 页脚 ============ */
-  footer { background: #EFEAE0; border-top: 1px solid var(--line); padding: 52px 24px 36px; }
-  .footer-inner { max-width: 1180px; margin: 0 auto; display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
-  .footer-brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 21px; font-weight: 700; }
+  footer { background: var(--ink); color: #C5BDA8; padding: 60px 24px 24px; }
+  .footer-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; }
+  @media (max-width: 720px) { .footer-inner { grid-template-columns: 1fr; } }
+  .footer-brand { font-family: var(--serif); font-size: 22px; font-weight: 700; color: #fff; }
   .footer-brand em { color: var(--red); font-style: italic; }
-  .footer-tag { margin-top: 12px; font-size: 14px; color: var(--muted); max-width: 330px; line-height: 1.7; }
-  .footer-cols { display: flex; gap: 64px; flex-wrap: wrap; }
-  .footer-col h4 { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
-  .footer-col a { display: block; color: var(--ink); text-decoration: none; font-size: 14px; padding: 3px 0; font-weight: 600; }
+  .footer-tag { margin-top: 10px; font-size: 14px; line-height: 1.6; }
+  .footer-col h4 { font-family: var(--sans); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+  .footer-col a { display: block; color: #C5BDA8; text-decoration: none; padding: 4px 0; font-size: 14px; }
   .footer-col a:hover { color: var(--red); }
-  .footer-bottom { max-width: 1180px; margin: 36px auto 0; border-top: 1px solid var(--line); padding-top: 18px; font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-
-  /* 订阅成功反馈 */
-  .hero-form.done { display: none; }
-  .hero-done { display: none; margin-top: 20px; font-size: 14.5px; font-weight: 700; color: var(--green); background: #EEF4EF; border: 1px solid #CDDDCE; padding: 12px 18px; border-radius: 12px; }
-  .hero-done.show { display: inline-block; }
+  .footer-bottom { max-width: 1180px; margin: 36px auto 0; padding-top: 24px; border-top: 1px solid #2A2520; display: flex; justify-content: space-between; font-size: 12.5px; color: #6E675B; }
+  @media (max-width: 720px) { .footer-bottom { flex-direction: column; gap: 10px; text-align: center; } }
 </style>
 </head>
 <body>
@@ -209,27 +199,31 @@
     <span class="name">Reads <em>with</em> Colin</span>
   </a>
   <div class="nav-right">
-    <a class="nav-link" href="archive.html">Archive</a>
-    <a class="nav-link" href="categories.html">Categories</a>
+    <a class="nav-link" href="archive.html"><span lang="en">Archive</span><span lang="zh">往期</span></a>
+    <a class="nav-link" href="categories.html"><span lang="en">Categories</span><span lang="zh">分类</span></a>
     <a class="nav-link nav-keep" href="3-2-1.html">3-2-1</a>
-    <a class="nav-link" href="about.html">About</a>
-    <a class="nav-cta" href="#subscribe">Subscribe</a>
+    <a class="nav-link" href="about.html"><span lang="en">About</span><span lang="zh">关于</span></a>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <a href="#" data-set-lang="en" class="active">EN</a>
+      <a href="#" data-set-lang="zh">中文</a>
+    </div>
+    <a class="nav-cta" href="#subscribe"><span lang="en">Subscribe</span><span lang="zh">订阅</span></a>
   </div>
 </nav>
 
 <!-- ======================= Hero ======================= -->
 <header class="hero">
   <div>
-    <span class="hero-kicker">A Weekly Letter · 每周一封</span>
-    <h1>Read books that change<br>how you <span class="red">see the world.</span></h1>
-    <p class="hero-sub">One idea, five minutes, every Thursday. 读书不是逃避世界，是带上更好的眼睛再回来。</p>
-    <p class="hero-zh">学而知之 · 忘而破之 · 习而新之</p>
+    <span class="hero-kicker"><span lang="en">A Weekly Letter</span><span lang="zh">每周一封</span></span>
+    <h1><span lang="en">Read books that change<br>how you <span class="red">see the world.</span></span><span lang="zh">读懂世界的<br>几本<span class="red">好书</span>，每周一封。</span></h1>
+    <p class="hero-sub"><span lang="en">One idea, five minutes, every Thursday.</span><span lang="zh">读书不是逃避世界，是带上更好的眼睛再回来。</span></p>
+    <p class="hero-zh"><span lang="en">学而知之 · forget · grow.</span><span lang="zh">学而知之 · 忘而破之 · 习而新之</span></p>
     <form class="hero-form" id="sub" action="#" onsubmit="event.preventDefault(); this.classList.add('done'); document.getElementById('subdone').classList.add('show'); return false;">
       <input type="email" placeholder="your@email.com" aria-label="Email" required>
-      <button type="submit">Subscribe</button>
+      <button type="submit"><span lang="en">Subscribe</span><span lang="zh">订阅</span></button>
     </form>
-    <p class="hero-done" id="subdone">🎉 Thanks for subscribing — welcome aboard, reader!</p>
-    <p class="hero-note">Join 1,200+ readers · No spam, unsubscribe anytime</p>
+    <p class="hero-done" id="subdone"><span lang="en">🎉 Thanks for subscribing — welcome aboard, reader!</span><span lang="zh">🎉 感谢订阅，欢迎加入我们的阅读之旅！</span></p>
+    <p class="hero-note"><span lang="en">Join 1,200+ readers · No spam, unsubscribe anytime</span><span lang="zh">已 1,200+ 读者订阅 · 无广告，可随时退订</span></p>
   </div>
   <div class="hero-logo">
     <object type="image/svg+xml" data="img/logo-v6-final.svg" aria-label="Reads with Colin 徽章"></object>
@@ -241,17 +235,17 @@
   <article class="featured">
     <a class="featured-link" href="posts/atomic-habits.html">
       <div class="featured-cover">
-        <span class="label">Latest · RWC #001</span>
+        <span class="label"><span lang="en">Latest</span><span lang="zh">最新</span> · RWC #001</span>
         <object type="image/svg+xml" data="img/covers/atomic-habits.svg" aria-label="Atomic Habits"></object>
       </div>
       <div class="featured-body">
-        <div class="featured-meta"><span class="cat">Habits · 习惯</span>Aug 27, 2026 · 5 min read</div>
-        <h2 class="featured-title">Atomic Habits, identity change and the quiet power of 1%</h2>
-        <p class="featured-teaser">James Clear's most-quoted idea — 1% better every day compounds into 37x in a year — is also his most quietly radical. 每天进步 1%，一年变 37 倍：这不是鸡汤，是复利。</p>
+        <div class="featured-meta"><span class="cat"><span lang="en">Habits</span><span lang="zh">习惯</span></span><span lang="en">Aug 27, 2026 · 5 min read</span><span lang="zh">2026·8·27 · 5 分钟</span></div>
+        <h2 class="featured-title"><span lang="en">Atomic Habits, identity change and the quiet power of 1%</span><span lang="zh">《原子习惯》：身份改变，与 1% 的安静力量</span></h2>
+        <p class="featured-teaser"><span lang="en">James Clear's most-quoted idea — 1% better every day compounds into 37x in a year — is also his most quietly radical.</span><span lang="zh">每天进步 1%，一年变 37 倍：这不是鸡汤，是复利，也是詹姆斯·克利尔最安静却最激进的洞见。</span></p>
         <div class="featured-quote">"You do not rise to the level of your goals. You fall to the level of your systems."</div>
         <div class="featured-foot">
           <div class="featured-author"><span class="av">C</span> Colin</div>
-          <span class="read-more">Read the letter →</span>
+          <span class="read-more"><span lang="en">Read the letter →</span><span lang="zh">阅读全文 →</span></span>
         </div>
       </div>
     </a>
@@ -262,18 +256,18 @@
 <section class="band321">
   <div class="band321-inner">
     <div>
-      <span class="band321-kicker">New · Every Thursday 早安</span>
-      <h2>Introducing <em>3-2-1 Thursday</em></h2>
-      <p class="band321-sub">Inspired by James Clear's legendary newsletter. 每周四早晨，一封给你的信：</p>
+      <span class="band321-kicker"><span lang="en">New · Every Thursday</span><span lang="zh">新栏目 · 每周四早安</span></span>
+      <h2><span lang="en">Introducing <em>3-2-1 Thursday</em></span><span lang="zh">新栏目 <em>3-2-1 Thursday</em></span></h2>
+      <p class="band321-sub"><span lang="en">Inspired by James Clear's legendary newsletter.</span><span lang="zh">灵感来自 James Clear 的同名经典栏目。每周四早晨，一封给你的信：</span></p>
       <div class="band321-items">
-        <span class="it"><b>3</b> ideas from Colin · 我的 3 条思考</span>
-        <span class="it"><b>2</b> quotes from books · 2 段书中引文</span>
-        <span class="it"><b>1</b> question for you · 1 个问题</span>
+        <span class="it"><b>3</b><span lang="en">ideas from Colin</span><span lang="zh">我的 3 条思考</span></span>
+        <span class="it"><b>2</b><span lang="en">quotes from books</span><span lang="zh">2 段书中引文</span></span>
+        <span class="it"><b>1</b><span lang="en">question for you</span><span lang="zh">1 个问题</span></span>
       </div>
     </div>
     <div class="band321-actions">
-      <a class="btn-321" href="3-2-1.html">Read Issue #01 →</a>
-      <a class="btn-321 ghost" href="#sub">Subscribe</a>
+      <a class="btn-321" href="3-2-1.html"><span lang="en">Read Issue #01 →</span><span lang="zh">读 Issue #01 →</span></a>
+      <a class="btn-321 ghost" href="#sub"><span lang="en">Subscribe</span><span lang="zh">订阅</span></a>
     </div>
   </div>
 </section>
@@ -281,66 +275,66 @@
 <!-- ======================= 网格列表 ======================= -->
 <section class="feed">
   <div class="feed-head">
-    <h2>Recent Issues</h2>
-    <a href="archive.html">View all →</a>
+    <h2><span lang="en">Recent Issues</span><span lang="zh">最近来信</span></h2>
+    <a href="archive.html"><span lang="en">View all →</span><span lang="zh">查看全部 →</span></a>
   </div>
   <div class="grid">
 
     <article class="card">
       <object class="card-cover" type="image/svg+xml" data="img/covers/thinking-fast-and-slow.svg" aria-label="Thinking Fast and Slow"></object>
       <div class="card-body">
-        <div class="card-meta"><span class="rwc">RWC #002</span> · Thinking · Aug 20</div>
-        <h3 class="card-title"><a href="posts/thinking-fast-and-slow.html">《思考，快与慢》：偷懒的大脑，与脑中的锚</a></h3>
-        <p class="card-teaser">知道此刻是哪一位在开车，就赢了一半。</p>
-        <div class="card-foot"><span>6 min</span><span class="heart">♥ 18</span></div>
+        <div class="card-meta"><span class="rwc">RWC #002</span> · <span lang="en">Thinking</span><span lang="zh">思考</span> · <span lang="en">Aug 20</span><span lang="zh">8月20日</span></div>
+        <h3 class="card-title"><a href="posts/thinking-fast-and-slow.html"><span lang="en">Thinking, Fast and Slow — the lazy brain and the anchors in your head</span><span lang="zh">《思考，快与慢》：偷懒的大脑，与脑中的锚</span></a></h3>
+        <p class="card-teaser"><span lang="en">Knowing who's driving right now is half the battle.</span><span lang="zh">知道此刻是哪一位在开车，就赢了一半。</span></p>
+        <div class="card-foot"><span><span lang="en">6 min read</span><span lang="zh">6 分钟</span></span><span class="heart">♥ 18</span></div>
       </div>
     </article>
 
     <article class="card">
       <object class="card-cover" type="image/svg+xml" data="img/covers/walden.svg" aria-label="Walden"></object>
       <div class="card-body">
-        <div class="card-meta"><span class="rwc">RWC #003</span> · Classics · Aug 13</div>
-        <h3 class="card-title"><a href="posts/walden.html">《瓦尔登湖》：清醒地生活，与"足够"的奢侈</a></h3>
-        <p class="card-teaser">170 年后，依然没被时间磨掉的几句话。</p>
-        <div class="card-foot"><span>5 min</span><span class="heart">♥ 14</span></div>
+        <div class="card-meta"><span class="rwc">RWC #003</span> · <span lang="en">Classics</span><span lang="zh">经典</span> · <span lang="en">Aug 13</span><span lang="zh">8月13日</span></div>
+        <h3 class="card-title"><a href="posts/walden.html"><span lang="en">Walden — waking up, and the luxury of "enough"</span><span lang="zh">《瓦尔登湖》：清醒地生活，与"足够"的奢侈</span></a></h3>
+        <p class="card-teaser"><span lang="en">170 years later, a few sentences that time hasn't worn away.</span><span lang="zh">170 年后，依然没被时间磨掉的几句话。</span></p>
+        <div class="card-foot"><span><span lang="en">5 min read</span><span lang="zh">5 分钟</span></span><span class="heart">♥ 14</span></div>
       </div>
     </article>
 
     <article class="card soon">
       <object class="card-cover" type="image/svg+xml" data="img/covers/indistractable.svg" aria-label="Indistractable"></object>
       <div class="card-body">
-        <div class="card-meta">Focus · 下一期预告</div>
-        <h3 class="card-title">《不可打扰》：把分心变成一个设计问题</h3>
-        <p class="card-teaser">分心不是性格缺陷，是可以被设计的系统。</p>
-        <span class="soon-badge">Coming soon</span>
+        <div class="card-meta"><span lang="en">Focus</span><span lang="zh">专注</span> · <span lang="en">Next up</span><span lang="zh">下一期预告</span></div>
+        <h3 class="card-title"><span lang="en">Indistractable — making distraction a design problem</span><span lang="zh">《不可打扰》：把分心变成一个设计问题</span></h3>
+        <p class="card-teaser"><span lang="en">Distraction isn't a personality flaw — it's a system that can be designed.</span><span lang="zh">分心不是性格缺陷，是可以被设计的系统。</span></p>
+        <span class="soon-badge"><span lang="en">Coming soon</span><span lang="zh">敬请期待</span></span>
       </div>
     </article>
 
     <article class="card soon">
       <object class="card-cover" type="image/svg+xml" data="img/covers/5-types-of-wealth.svg" aria-label="5 Types of Wealth"></object>
       <div class="card-body">
-        <div class="card-meta">Wealth · 选题中</div>
-        <h3 class="card-title">《五种财富》：财富不止一种货币</h3>
-        <p class="card-teaser">时间、社交、心智、身体、财务的复利。</p>
-        <span class="soon-badge">Coming soon</span>
+        <div class="card-meta"><span lang="en">Wealth</span><span lang="zh">财富</span> · <span lang="en">Pitching</span><span lang="zh">选题中</span></div>
+        <h3 class="card-title"><span lang="en">5 Types of Wealth — wealth isn't one currency</span><span lang="zh">《五种财富》：财富不止一种货币</span></h3>
+        <p class="card-teaser"><span lang="en">Compounding time, social, mental, physical, financial.</span><span lang="zh">时间、社交、心智、身体、财务的复利。</span></p>
+        <span class="soon-badge"><span lang="en">Coming soon</span><span lang="zh">敬请期待</span></span>
       </div>
     </article>
 
     <article class="card soon">
       <object class="card-cover" type="image/svg+xml" data="img/covers/hidden-potential.svg" aria-label="Hidden Potential"></object>
       <div class="card-body">
-        <div class="card-meta">Growth · 选题中</div>
-        <h3 class="card-title">《隐藏的潜力》：性格技能大于天赋</h3>
-        <p class="card-teaser">越努力越幸运不是鸡汤——是数据。</p>
-        <span class="soon-badge">Coming soon</span>
+        <div class="card-meta"><span lang="en">Growth</span><span lang="zh">成长</span> · <span lang="en">Pitching</span><span lang="zh">选题中</span></div>
+        <h3 class="card-title"><span lang="en">Hidden Potential — character skills beat talent</span><span lang="zh">《隐藏的潜力》：性格技能大于天赋</span></h3>
+        <p class="card-teaser"><span lang="en">"The harder you work, the luckier you get" isn't a slogan — it's data.</span><span lang="zh">越努力越幸运不是鸡汤——是数据。</span></p>
+        <span class="soon-badge"><span lang="en">Coming soon</span><span lang="zh">敬请期待</span></span>
       </div>
     </article>
 
     <article class="card viewall">
       <a href="archive.html">
         <span class="va-arrow">→</span>
-        <span class="va-text">View all issues</span>
-        <span class="va-sub">24 letters · 查看全部往期</span>
+        <span class="va-text"><span lang="en">View all issues</span><span lang="zh">查看全部往期</span></span>
+        <span class="va-sub"><span lang="en">24 letters</span><span lang="zh">共 24 封来信</span></span>
       </a>
     </article>
 
@@ -350,18 +344,18 @@
 <!-- ======================= 书墙 ======================= -->
 <section class="wall-band">
   <div class="wall-inner">
-    <div class="wall-kicker">The Shelf · 书架</div>
-    <h2>Books worth <em>keeping</em></h2>
-    <p class="wall-sub">每本书都写过一封信 · 每封信都值得再读一次</p>
+    <div class="wall-kicker"><span lang="en">The Shelf</span><span lang="zh">书架</span></div>
+    <h2><span lang="en">Books worth <em>keeping</em></span><span lang="zh">值得<em>反复翻</em>的好书</span></h2>
+    <p class="wall-sub"><span lang="en">Every book earned its own letter.</span><span lang="zh">每本书都写过一封信 · 每封信都值得再读一次</span></p>
     <div class="wall">
       <a class="wall-book" href="posts/atomic-habits.html" title="Atomic Habits"><object class="bk" type="image/svg+xml" data="img/covers/atomic-habits.svg" aria-label="Atomic Habits"></object></a>
       <a class="wall-book" href="posts/thinking-fast-and-slow.html" title="Thinking, Fast and Slow"><object class="bk" type="image/svg+xml" data="img/covers/thinking-fast-and-slow.svg" aria-label="Thinking Fast and Slow"></object></a>
       <a class="wall-book" href="posts/walden.html" title="Walden"><object class="bk" type="image/svg+xml" data="img/covers/walden.svg" aria-label="Walden"></object></a>
-      <a class="wall-book" href="archive.html" title="Indistractable · 即将上线"><object class="bk" type="image/svg+xml" data="img/covers/indistractable.svg" aria-label="Indistractable"></object></a>
-      <a class="wall-book" href="archive.html" title="5 Types of Wealth · 即将上线"><object class="bk" type="image/svg+xml" data="img/covers/5-types-of-wealth.svg" aria-label="5 Types of Wealth"></object></a>
-      <a class="wall-book" href="archive.html" title="Hidden Potential · 即将上线"><object class="bk" type="image/svg+xml" data="img/covers/hidden-potential.svg" aria-label="Hidden Potential"></object></a>
+      <a class="wall-book" href="archive.html" title="Indistractable"><object class="bk" type="image/svg+xml" data="img/covers/indistractable.svg" aria-label="Indistractable"></object></a>
+      <a class="wall-book" href="archive.html" title="5 Types of Wealth"><object class="bk" type="image/svg+xml" data="img/covers/5-types-of-wealth.svg" aria-label="5 Types of Wealth"></object></a>
+      <a class="wall-book" href="archive.html" title="Hidden Potential"><object class="bk" type="image/svg+xml" data="img/covers/hidden-potential.svg" aria-label="Hidden Potential"></object></a>
     </div>
-    <div class="wall-more"><a href="archive.html">Browse all books →</a></div>
+    <div class="wall-more"><a href="archive.html"><span lang="en">Browse all books →</span><span lang="zh">查看全部书单 →</span></a></div>
   </div>
 </section>
 
@@ -370,28 +364,71 @@
   <div class="footer-inner">
     <div>
       <div class="footer-brand">Reads <em>with</em> Colin</div>
-      <p class="footer-tag">Books that change how you see — and what you do next. 每周四 · 一个想法 · 5 分钟。</p>
+      <p class="footer-tag"><span lang="en">Books that change how you see — and what you do next.</span><span lang="zh">读书不是逃避世界，是带上更好的眼睛再回来。</span></p>
     </div>
     <div class="footer-cols">
       <div class="footer-col">
-        <h4>Explore</h4>
-        <a href="archive.html">Archive</a>
-        <a href="categories.html">Categories</a>
+        <h4><span lang="en">Explore</span><span lang="zh">浏览</span></h4>
+        <a href="archive.html"><span lang="en">Archive</span><span lang="zh">往期</span></a>
+        <a href="categories.html"><span lang="en">Categories</span><span lang="zh">分类</span></a>
         <a href="3-2-1.html">3-2-1 Thursday</a>
       </div>
       <div class="footer-col">
-        <h4>Connect</h4>
-        <a href="about.html">About Colin</a>
+        <h4><span lang="en">Connect</span><span lang="zh">联系</span></h4>
+        <a href="about.html"><span lang="en">About Colin</span><span lang="zh">关于 Colin</span></a>
         <a href="feed.xml" target="_blank" rel="noopener">RSS</a>
         <a href="mailto:hello@readswithcolin.com">Email</a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Reads with Colin. All rights reserved.</span>
-    <span>Made with 📚 &amp; ☕</span>
+    <span><span lang="en">© 2026 Reads with Colin. All rights reserved.</span><span lang="zh">© 2026 Reads with Colin · 版权所有</span></span>
+    <span><span lang="en">Made with 📚 &amp; ☕</span><span lang="zh">用 📚 &amp; ☕ 制作</span></span>
   </div>
 </footer>
+
+<!-- ======================= 双语切换（自包含，与 main.js 兼容） ======================= -->
+<script>
+(function () {
+  "use strict";
+  var STORAGE_KEY = "rwc-lang";
+  var SUPPORTED = { en: "en", zh: "zh", "zh-cn": "zh", "zh-hans": "zh" };
+  function detectLang() {
+    try {
+      var fromUrl = new URLSearchParams(location.search).get("lang");
+      if (fromUrl && SUPPORTED[fromUrl.toLowerCase()]) return SUPPORTED[fromUrl.toLowerCase()];
+      var saved = localStorage.getItem(STORAGE_KEY);
+      if (saved && SUPPORTED[saved]) return SUPPORTED[saved];
+    } catch (e) {}
+    var nav = (navigator.language || "en").toLowerCase();
+    if (nav.indexOf("zh") === 0) return "zh";
+    return "en";
+  }
+  function applyLang(lang) {
+    document.documentElement.setAttribute("lang", lang);
+    document.querySelectorAll(".lang-switch [data-set-lang]").forEach(function (el) {
+      el.classList.toggle("active", el.getAttribute("data-set-lang") === lang);
+    });
+    try {
+      var url = new URL(location.href);
+      if (url.searchParams.get("lang") !== lang) {
+        url.searchParams.set("lang", lang);
+        history.replaceState(null, "", url.toString());
+      }
+    } catch (e) {}
+  }
+  var lang = detectLang();
+  applyLang(lang);
+  document.querySelectorAll(".lang-switch [data-set-lang]").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      var target = el.getAttribute("data-set-lang");
+      try { localStorage.setItem(STORAGE_KEY, target); } catch (e) {}
+      applyLang(target);
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
