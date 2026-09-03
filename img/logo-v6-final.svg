@@ -1,0 +1,309 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" width="600" height="720">
+  <defs>
+    <radialGradient id="bgSky" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F4EDDC"/>
+    </radialGradient>
+    <linearGradient id="farMountain" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A8A296" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#A8A296" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="midMountain" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6B6358" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#3B342B"/>
+    </linearGradient>
+    <linearGradient id="riverGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C9A668" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#C9A668" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#F0DCA0" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#C9A668" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#C9A668" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="page" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF7E5"/>
+      <stop offset="100%" stop-color="#E8D4A8"/>
+    </linearGradient>
+    <linearGradient id="pageShadow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFF7E5"/>
+      <stop offset="50%" stop-color="#E8D4A8"/>
+      <stop offset="100%" stop-color="#C9A668"/>
+    </linearGradient>
+    <linearGradient id="spine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7A5A3A"/>
+      <stop offset="100%" stop-color="#3E2818"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A1714"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+    <!-- 立体建筑的侧光渐变 -->
+    <linearGradient id="wallLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E8DCC0"/>
+      <stop offset="100%" stop-color="#C8B68A"/>
+    </linearGradient>
+    <linearGradient id="wallShade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A89878"/>
+      <stop offset="100%" stop-color="#7A6A50"/>
+    </linearGradient>
+    <linearGradient id="tileRoof" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2A2520"/>
+      <stop offset="100%" stop-color="#0A0808"/>
+    </linearGradient>
+
+    <clipPath id="circleClip">
+      <circle cx="300" cy="300" r="272"/>
+    </clipPath>
+    <filter id="fogBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="lightBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+  </defs>
+
+  <!-- 底色 -->
+  <circle cx="300" cy="300" r="290" fill="url(#bgSky)"/>
+
+  <g clip-path="url(#circleClip)">
+
+    <!-- 弧形英文 -->
+    <path id="topArc" d="M 80 320 A 220 220 0 0 1 520 320" fill="none"/>
+    <text font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#0A0A0A" letter-spacing="9" font-weight="500">
+      <textPath href="#topArc" startOffset="50%" text-anchor="middle">READS WITH COLIN</textPath>
+    </text>
+
+    <!-- 顶烟 -->
+    <ellipse cx="300" cy="250" rx="280" ry="100" fill="#FFFFFF" opacity="0.85" filter="url(#fogBlur)"/>
+
+    <!-- 远山 -->
+    <g opacity="0.6">
+      <path d="M 30 320 L 90 230 L 130 285 L 175 235 L 220 290 L 270 220 L 320 290 L 380 235 L 430 290 L 480 250 L 530 285 L 570 320 Z"
+            fill="url(#farMountain)"/>
+    </g>
+
+    <!-- 中山 -->
+    <path d="M 25 360 Q 80 290 140 340 Q 200 280 260 345 Q 320 285 380 345 Q 440 285 500 345 Q 555 305 580 360 L 580 380 L 25 380 Z"
+          fill="url(#midMountain)"/>
+
+    <!-- 河流 -->
+    <path d="M 110 410 Q 170 400 220 415 Q 270 430 320 415 Q 370 400 420 415 Q 470 430 510 415"
+          fill="none" stroke="url(#riverGlow)" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 110 410 Q 170 400 220 415 Q 270 430 320 415 Q 370 400 420 415 Q 470 430 510 415"
+          fill="none" stroke="#FFE8B0" stroke-width="1.2" stroke-linecap="round" opacity="0.9" filter="url(#lightBlur)"/>
+    <path d="M 130 425 Q 185 418 235 430 Q 280 442 325 430 Q 375 418 425 430 Q 470 440 505 430"
+          fill="none" stroke="url(#riverGlow)" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+
+    <!-- 前山 -->
+    <path d="M 25 470 Q 90 450 170 455 Q 240 445 310 458 Q 380 445 450 458 Q 530 450 580 470 L 580 600 L 25 600 Z"
+          fill="url(#nearMountain)"/>
+
+    <!-- ★★★ 更生动的古建筑（带侧光/阴面/瓦垄纹理）★★★ -->
+    <g transform="translate(220, 285)">
+
+      <!-- 屋脊宝顶（细金钉，原来在屋顶的小蜡烛状——保留作为传统细节）-->
+      <!-- ★ 你说删除——所以这里什么都不画 -->
+
+      <!-- 台基（侧光）-->
+      <rect x="-10" y="78" width="200" height="14" fill="#5C4A38"/>
+      <rect x="-10" y="78" width="200" height="3" fill="#7A5A3A"/>
+      <!-- 台基阴影 -->
+      <rect x="-10" y="92" width="200" height="6" fill="#2A2018"/>
+
+      <!-- 一层（白墙 + 阴影）-->
+      <rect x="5" y="50" width="170" height="22" fill="url(#wallLight)"/>
+      <!-- 一层右侧阴影（增强立体）-->
+      <rect x="155" y="50" width="20" height="22" fill="url(#wallShade)"/>
+      <!-- 立柱（5 根）-->
+      <rect x="12" y="50" width="3.5" height="22" fill="#1A1714"/>
+      <rect x="40" y="50" width="3.5" height="22" fill="#1A1714"/>
+      <rect x="68" y="50" width="3.5" height="22" fill="#1A1714"/>
+      <rect x="96" y="50" width="3.5" height="22" fill="#1A1714"/>
+      <rect x="124" y="50" width="3.5" height="22" fill="#1A1714"/>
+      <rect x="152" y="50" width="3.5" height="22" fill="#1A1714"/>
+      <!-- 门（中央双开）-->
+      <rect x="78" y="55" width="20" height="17" fill="#3E2818"/>
+      <rect x="79" y="56" width="18" height="15" fill="#1A1008"/>
+      <line x1="88" y1="56" x2="88" y2="71" stroke="#5C4A38" stroke-width="0.8"/>
+      <!-- 门环（圆环）-->
+      <circle cx="83" cy="63" r="1.6" fill="#C9A668"/>
+      <circle cx="93" cy="63" r="1.6" fill="#C9A668"/>
+      <!-- 窗（红色装饰边框）-->
+      <rect x="22" y="55" width="14" height="13" fill="#3E2818"/>
+      <rect x="22" y="55" width="14" height="13" fill="none" stroke="#B83A2B" stroke-width="1.2"/>
+      <line x1="29" y1="55" x2="29" y2="68" stroke="#B83A2B" stroke-width="0.5"/>
+      <rect x="48" y="55" width="14" height="13" fill="#3E2818"/>
+      <rect x="48" y="55" width="14" height="13" fill="none" stroke="#B83A2B" stroke-width="1.2"/>
+      <line x1="55" y1="55" x2="55" y2="68" stroke="#B83A2B" stroke-width="0.5"/>
+      <rect x="112" y="55" width="14" height="13" fill="#3E2818"/>
+      <rect x="112" y="55" width="14" height="13" fill="none" stroke="#B83A2B" stroke-width="1.2"/>
+      <line x1="119" y1="55" x2="119" y2="68" stroke="#B83A2B" stroke-width="0.5"/>
+      <rect x="138" y="55" width="14" height="13" fill="#3E2818"/>
+      <rect x="138" y="55" width="14" height="13" fill="none" stroke="#B83A2B" stroke-width="1.2"/>
+      <line x1="145" y1="55" x2="145" y2="68" stroke="#B83A2B" stroke-width="0.5"/>
+
+      <!-- 一层斗拱 + 檐 -->
+      <rect x="0" y="46" width="180" height="3" fill="#1A1714"/>
+      <rect x="0" y="49" width="180" height="1.5" fill="#0A0808"/>
+      <!-- 大屋檐（瓦垄纹理）-->
+      <path d="M -10 46 Q 90 26 190 46 L 196 50 L -16 50 Z" fill="url(#tileRoof)"/>
+      <!-- 瓦垄纹理（横线）-->
+      <g stroke="#5C5040" stroke-width="0.3" opacity="0.5">
+        <path d="M -8 48 Q 90 28 188 48" fill="none"/>
+        <path d="M 0 47 Q 90 27 180 47" fill="none"/>
+      </g>
+      <!-- 翘角 -->
+      <path d="M -10 46 Q -22 44 -28 36" fill="none" stroke="#1A1714" stroke-width="4" stroke-linecap="round"/>
+      <path d="M 190 46 Q 202 44 208 36" fill="none" stroke="#1A1714" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="-28" cy="35" r="1.5" fill="#1A1714"/>
+      <circle cx="208" cy="35" r="1.5" fill="#1A1714"/>
+
+      <!-- 二层（白墙 + 阴影）-->
+      <rect x="20" y="22" width="140" height="22" fill="url(#wallLight)"/>
+      <rect x="148" y="22" width="12" height="22" fill="url(#wallShade)"/>
+      <!-- 二层柱（5 根）-->
+      <rect x="26" y="22" width="2.5" height="22" fill="#1A1714"/>
+      <rect x="50" y="22" width="2.5" height="22" fill="#1A1714"/>
+      <rect x="74" y="22" width="2.5" height="22" fill="#1A1714"/>
+      <rect x="98" y="22" width="2.5" height="22" fill="#1A1714"/>
+      <rect x="122" y="22" width="2.5" height="22" fill="#1A1714"/>
+      <rect x="146" y="22" width="2.5" height="22" fill="#1A1714"/>
+      <!-- 二层窗（红框）-->
+      <rect x="34" y="28" width="10" height="13" fill="#3E2818"/>
+      <rect x="34" y="28" width="10" height="13" fill="none" stroke="#B83A2B" stroke-width="1"/>
+      <rect x="58" y="28" width="10" height="13" fill="#3E2818"/>
+      <rect x="58" y="28" width="10" height="13" fill="none" stroke="#B83A2B" stroke-width="1"/>
+      <rect x="82" y="28" width="10" height="13" fill="#3E2818"/>
+      <rect x="82" y="28" width="10" height="13" fill="none" stroke="#B83A2B" stroke-width="1"/>
+      <rect x="106" y="28" width="10" height="13" fill="#3E2818"/>
+      <rect x="106" y="28" width="10" height="13" fill="none" stroke="#B83A2B" stroke-width="1"/>
+      <rect x="130" y="28" width="10" height="13" fill="#3E2818"/>
+      <rect x="130" y="28" width="10" height="13" fill="none" stroke="#B83A2B" stroke-width="1"/>
+
+      <!-- 二层檐 -->
+      <rect x="14" y="18" width="152" height="3" fill="#1A1714"/>
+      <rect x="14" y="21" width="152" height="1.5" fill="#0A0808"/>
+      <path d="M 6 18 Q 90 0 174 18 L 180 22 L 0 22 Z" fill="url(#tileRoof)"/>
+      <!-- 翘角 -->
+      <path d="M 6 18 Q -4 16 -10 10" fill="none" stroke="#1A1714" stroke-width="3" stroke-linecap="round"/>
+      <path d="M 174 18 Q 184 16 190 10" fill="none" stroke="#1A1714" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="-10" cy="9" r="1.2" fill="#1A1714"/>
+      <circle cx="190" cy="9" r="1.2" fill="#1A1714"/>
+
+      <!-- ★ 主屋顶改为更立体：八角攒尖 + 屋脊可见 -->
+      <!-- 屋顶下层（前坡）-->
+      <path d="M -10 46 L 20 -2 L 90 -28 L 160 -2 L 190 46 Z" fill="url(#tileRoof)"/>
+      <!-- 屋顶后坡（更暗，营造立体感）-->
+      <path d="M 90 -28 L 160 -2 L 90 0 Z" fill="#0A0808" opacity="0.7"/>
+      <!-- 屋顶亮线（瓦垄反光）-->
+      <path d="M -10 46 L 20 -2 L 90 -28" fill="none" stroke="#3B3328" stroke-width="0.4" opacity="0.6"/>
+      <path d="M 20 -2 L 90 -28 L 160 -2" fill="none" stroke="#3B3328" stroke-width="0.4" opacity="0.6"/>
+      <!-- 屋脊金线 -->
+      <path d="M -10 46 L 90 -28 L 190 46" fill="none" stroke="#C9A668" stroke-width="1" opacity="0.55"/>
+    </g>
+
+    <!-- ★ 副楼（同步立体化）-->
+    <g transform="translate(385, 325)">
+      <!-- 台基 -->
+      <rect x="-2" y="50" width="106" height="10" fill="#5C4A38"/>
+      <rect x="-2" y="50" width="106" height="2" fill="#7A5A3A"/>
+      <rect x="-2" y="60" width="106" height="3" fill="#2A2018"/>
+
+      <!-- 一层 -->
+      <rect x="6" y="28" width="88" height="22" fill="url(#wallLight)"/>
+      <rect x="84" y="28" width="10" height="22" fill="url(#wallShade)"/>
+      <rect x="14" y="28" width="2.5" height="22" fill="#1A1714"/>
+      <rect x="34" y="28" width="2.5" height="22" fill="#1A1714"/>
+      <rect x="54" y="28" width="2.5" height="22" fill="#1A1714"/>
+      <rect x="74" y="28" width="2.5" height="22" fill="#1A1714"/>
+      <!-- 门 -->
+      <rect x="46" y="33" width="14" height="17" fill="#3E2818"/>
+      <rect x="47" y="34" width="12" height="15" fill="#1A1008"/>
+      <circle cx="50" cy="40" r="1.2" fill="#C9A668"/>
+      <circle cx="56" cy="40" r="1.2" fill="#C9A668"/>
+      <!-- 窗 -->
+      <rect x="20" y="33" width="10" height="11" fill="#3E2818"/>
+      <rect x="20" y="33" width="10" height="11" fill="none" stroke="#B83A2B" stroke-width="0.8"/>
+      <rect x="64" y="33" width="10" height="11" fill="#3E2818"/>
+      <rect x="64" y="33" width="10" height="11" fill="none" stroke="#B83A2B" stroke-width="0.8"/>
+
+      <!-- 一层檐 -->
+      <rect x="2" y="24" width="96" height="3" fill="#1A1714"/>
+      <path d="M -4 24 Q 50 4 104 24 L 108 28 L -8 28 Z" fill="url(#tileRoof)"/>
+      <path d="M -4 24 Q -12 22 -16 16" fill="none" stroke="#1A1714" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 104 24 Q 112 22 116 16" fill="none" stroke="#1A1714" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="-16" cy="15" r="1.2" fill="#1A1714"/>
+      <circle cx="116" cy="15" r="1.2" fill="#1A1714"/>
+
+      <!-- 副楼屋顶（坡面立体）-->
+      <path d="M -4 24 L 50 -8 L 104 24 Z" fill="url(#tileRoof)"/>
+      <path d="M 50 -8 L 104 24 L 50 0 Z" fill="#0A0808" opacity="0.7"/>
+      <path d="M -4 24 L 50 -8 L 104 24" fill="none" stroke="#C9A668" stroke-width="0.8" opacity="0.5"/>
+    </g>
+
+    <!-- 烟 -->
+    <ellipse cx="160" cy="380" rx="120" ry="28" fill="#FFFFFF" opacity="0.5" filter="url(#fogBlur)"/>
+    <ellipse cx="430" cy="395" rx="120" ry="28" fill="#FFFFFF" opacity="0.5" filter="url(#fogBlur)"/>
+
+    <!-- ★★★ 底部翻开的书（更立体、更像书）★★★ -->
+    <g transform="translate(300, 495)">
+      <!-- 书下阴影 -->
+      <ellipse cx="0" cy="32" rx="172" ry="5" fill="#000000" opacity="0.22"/>
+
+      <!-- 整本书的 3D 厚度（底部） -->
+      <path d="M -172 -2 L -172 28 Q -142 38 -8 24 L -8 -6 Q -110 -8 -172 -2 Z"
+            fill="#C9A668"/>
+      <path d="M 172 -2 L 172 28 Q 142 38 8 24 L 8 -6 Q 110 -8 172 -2 Z"
+            fill="#C9A668"/>
+
+      <!-- 左页（顶部亮 → 右下角暗）-->
+      <path d="M -178 -10 Q -178 22 -148 30 Q -88 28 -8 14 L -8 -16 Q -110 -12 -178 -10 Z"
+            fill="url(#pageShadow)"/>
+      <!-- 左页纸张纹理（横线）-->
+      <g stroke="#A88D5D" stroke-width="0.5" opacity="0.55" fill="none">
+        <path d="M -150 -3 Q -90 0 -25 -7"/>
+        <path d="M -150 7 Q -90 10 -25 4"/>
+      </g>
+      <!-- 左页左缘阴影 -->
+      <path d="M -178 -10 Q -178 22 -148 30 L -148 28 Q -176 22 -178 -10 Z" fill="url(#spine)" opacity="0.45"/>
+
+      <!-- 右页 -->
+      <path d="M 178 -10 Q 178 22 148 30 Q 88 28 8 14 L 8 -16 Q 110 -12 178 -10 Z"
+            fill="url(#pageShadow)"/>
+      <!-- 右页纸张纹理 -->
+      <g stroke="#A88D5D" stroke-width="0.5" opacity="0.55" fill="none">
+        <path d="M 25 -7 Q 90 0 150 -3"/>
+        <path d="M 25 4 Q 90 10 150 7"/>
+      </g>
+      <!-- 右页右缘阴影 -->
+      <path d="M 178 -10 Q 178 22 148 30 L 148 28 Q 176 22 178 -10 Z" fill="url(#spine)" opacity="0.45"/>
+
+      <!-- 书脊（中缝，3D 凹槽）-->
+      <path d="M -8 -16 Q -8 24 0 18 Q 8 24 8 -16 Z" fill="url(#spine)"/>
+      <!-- 书脊亮线 -->
+      <path d="M -8 -16 Q 0 -8 8 -16" fill="none" stroke="#C9A668" stroke-width="0.5" opacity="0.7"/>
+      <path d="M -8 -16 Q 0 0 8 -16" fill="none" stroke="#FFFFFF" stroke-width="0.5" opacity="0.5"/>
+
+      <!-- 中缝两侧书页微微翘起的高光 -->
+      <path d="M -8 -14 Q -25 -8 -55 -10" fill="none" stroke="#FFFFFF" stroke-width="0.8" opacity="0.7"/>
+      <path d="M 8 -14 Q 25 -8 55 -10" fill="none" stroke="#FFFFFF" stroke-width="0.8" opacity="0.7"/>
+
+      <!-- 装订小钉（5 个金色小点在中缝顶部）-->
+      <circle cx="-4" cy="-12" r="0.8" fill="#C9A668"/>
+      <circle cx="0" cy="-13" r="0.8" fill="#C9A668"/>
+      <circle cx="4" cy="-12" r="0.8" fill="#C9A668"/>
+    </g>
+
+  </g>
+
+  <!-- 双圆框 -->
+  <circle cx="300" cy="300" r="290" fill="none" stroke="#0A0A0A" stroke-width="1.2" opacity="0.55"/>
+  <circle cx="300" cy="300" r="278" fill="none" stroke="#0A0A0A" stroke-width="3"/>
+  <circle cx="300" cy="300" r="265" fill="none" stroke="#0A0A0A" stroke-width="0.6" opacity="0.3"/>
+
+  <!-- 圆外文字 -->
+  <text x="300" y="640" font-family="Georgia, 'Times New Roman', serif" font-size="46" fill="#0A0A0A" text-anchor="middle" font-weight="500">Reads with Colin</text>
+  <line x1="130" y1="660" x2="220" y2="660" stroke="#0A0A0A" stroke-width="0.8" opacity="0.4"/>
+  <line x1="380" y1="660" x2="470" y2="660" stroke="#0A0A0A" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="300" cy="660" r="2" fill="#0A0A0A" opacity="0.5"/>
+  <text x="300" y="690" font-family="'Songti SC', 'STSong', 'SimSun', '宋体', serif" font-size="15" fill="#5C5040" text-anchor="middle" letter-spacing="8">读 书 · 思 考 · 历 史 · 成 长</text>
+</svg>

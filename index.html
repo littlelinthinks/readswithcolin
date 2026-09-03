@@ -1,243 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reads with Colin — A weekly letter on books worth keeping</title>
-  <meta name="description" content="Reads with Colin — a weekly letter on the books that change how you see the world, and what you do next. 每周一封推荐好书的来信。">
-  <meta property="og:title" content="Reads with Colin">
-  <meta property="og:description" content="A weekly letter on books that change how you see — and what you do next.">
-  <meta property="og:type" content="website">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png">
-  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-  <link rel="shortcut icon" type="image/png" href="img/favicon-32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
-  <meta name="theme-color" content="#5B7A64">
-  <link rel="stylesheet" href="css/style.css">
-  <meta property="og:image" content="https://readswithcolin.com/img/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Reads with Colin — 错金铜鉴">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://readswithcolin.com/img/og-image.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reads with Colin — A weekly letter on books worth keeping</title>
+<meta name="description" content="Reads with Colin — a weekly letter on the books that change how you see the world, and what you do next. 每周一封推荐好书的来信 + 3-2-1 Thursday 栏目。">
+<meta property="og:title" content="Reads with Colin">
+<meta property="og:description" content="A weekly letter on books that change how you see — and what you do next.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://readswithcolin.com/">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+<link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="shortcut icon" type="image/png" href="img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
+<meta name="theme-color" content="#14110C">
+<meta property="og:image" content="https://readswithcolin.com/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Reads with Colin — 错金铜鉴">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://readswithcolin.com/img/og-image.png">
+<style>
+  /* ============ Reads with Colin · Homepage v2 (Plan C) ============
+     自包含样式：不加载 css/style.css，避免与旧页面类名冲突
+     设计语言：米白纸底 + 黑墨 + 朱红 + 金棕（fs.blog 骨架 × ali abdaal 卡片）
+  ==================================================================== */
+  :root {
+    --ink: #14110C;
+    --muted: #6E675B;
+    --paper: #FAF7F0;
+    --card: #FFFFFF;
+    --red: #C73E2C;
+    --red-dark: #A53324;
+    --brown: #8B5E3C;
+    --gold: #C9A668;
+    --green: #4E7A5A;
+    --line: #E7E0D2;
+    --radius: 16px;
+    --sans: -apple-system, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+    --serif: Georgia, "Times New Roman", "Songti SC", serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.65; }
+  a { color: inherit; }
+
+  /* ============ 导航 ============ */
+  .nav { display: flex; align-items: center; justify-content: space-between; max-width: 1180px; margin: 0 auto; padding: 20px 24px; }
+  .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+  .nav-brand .mark { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; border: 1.5px solid var(--gold); display: inline-flex; align-items: center; justify-content: center; background: #fff; flex: 0 0 44px; }
+  .nav-brand .mark object { width: 100%; height: 100%; pointer-events: none; }
+  .nav-brand .name { font-family: var(--serif); font-size: 21px; font-weight: 700; }
+  .nav-brand .name em { color: var(--red); font-style: italic; }
+  .nav-right { display: flex; align-items: center; gap: 24px; }
+  .nav-link { font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none; }
+  .nav-link:hover { color: var(--red); }
+  .nav-cta { font-size: 14px; font-weight: 700; color: #fff; text-decoration: none; background: var(--ink); padding: 9px 22px; border-radius: 999px; border: 1.5px solid var(--ink); transition: background .18s ease, border-color .18s ease; }
+  .nav-cta:hover { background: var(--red); border-color: var(--red); }
+  @media (max-width: 720px) {
+    .nav-right { gap: 14px; }
+    .nav-link { display: none; }
+    .nav-link.nav-keep { display: inline; }
+  }
+
+  /* ============ Hero ============ */
+  .hero { max-width: 1180px; margin: 0 auto; padding: 52px 24px 60px; display: grid; grid-template-columns: 1.25fr .75fr; gap: 48px; align-items: center; }
+  @media (max-width: 880px) { .hero { grid-template-columns: 1fr; text-align: center; } .hero-form { justify-content: center; } }
+  .hero-kicker { display: inline-flex; align-items: center; gap: 10px; font-size: 12.5px; letter-spacing: 2px; font-weight: 700; color: var(--red); text-transform: uppercase; }
+  .hero-kicker::before { content: ""; width: 34px; height: 2px; background: var(--red); }
+  @media (max-width: 880px) { .hero-kicker { justify-content: center; } .hero-kicker::before { display: none; } }
+  .hero h1 { margin-top: 18px; font-family: var(--serif); font-size: clamp(36px, 5.4vw, 58px); font-weight: 700; line-height: 1.12; letter-spacing: -.5px; }
+  .hero h1 .red { color: var(--red); font-style: italic; }
+  .hero-sub { margin-top: 20px; font-size: 17.5px; color: var(--muted); max-width: 520px; }
+  @media (max-width: 880px) { .hero-sub { margin-left: auto; margin-right: auto; } }
+  .hero-zh { margin-top: 8px; font-size: 14px; color: var(--muted); letter-spacing: 3px; }
+  .hero-form { margin-top: 32px; display: flex; gap: 0; }
+  .hero-form input { width: 300px; max-width: 62vw; padding: 13px 20px; font-size: 15px; border: 1.5px solid var(--ink); border-right: none; border-radius: 999px 0 0 999px; outline: none; font-family: var(--sans); background: #fff; }
+  .hero-form button { padding: 13px 30px; font-size: 15px; font-weight: 700; color: #fff; background: var(--ink); border: 1.5px solid var(--ink); border-radius: 0 999px 999px 0; cursor: pointer; font-family: var(--sans); transition: background .18s ease, border-color .18s ease; }
+  .hero-form button:hover { background: var(--red); border-color: var(--red); }
+  .hero-note { margin-top: 14px; font-size: 13px; color: var(--muted); }
+  .hero-logo { display: flex; justify-content: center; }
+  .hero-logo object { width: 320px; max-width: 100%; filter: drop-shadow(0 14px 30px rgba(60,45,20,.18)); pointer-events: none; }
+
+  /* ============ Featured 大卡 ============ */
+  .featured-wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px 20px; }
+  .featured { background: var(--card); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; display: grid; grid-template-columns: .9fr 1.1fr; box-shadow: 0 10px 34px rgba(60,45,20,.09); }
+  @media (max-width: 880px) { .featured { grid-template-columns: 1fr; } }
+  .featured-link { display: contents; color: inherit; text-decoration: none; }
+  .featured-cover { background: linear-gradient(150deg, #EAF0EA 0%, #DEE9E0 55%, #CFE0D3 100%); display: flex; align-items: center; justify-content: center; padding: 44px 24px; position: relative; }
+  .featured-cover .label { position: absolute; top: 18px; left: 18px; font-size: 11.5px; font-weight: 800; letter-spacing: 1.5px; color: #fff; background: var(--red); padding: 5px 14px; border-radius: 999px; text-transform: uppercase; }
+  .featured-cover object { width: 200px; height: 267px; filter: drop-shadow(8px 14px 22px rgba(30,50,35,.3)); transform: rotate(-2.5deg); transition: transform .25s ease; pointer-events: none; }
+  .featured:hover .featured-cover object { transform: rotate(0deg) scale(1.03); }
+  .featured-body { padding: 44px 44px 40px; display: flex; flex-direction: column; }
+  @media (max-width: 600px) { .featured-body { padding: 30px 26px 28px; } }
+  .featured-meta { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .featured-meta .cat { color: var(--green); font-weight: 700; margin-right: 10px; }
+  .featured-meta .rwc { color: var(--brown); font-weight: 800; letter-spacing: 1px; }
+  .featured-title { font-family: var(--serif); font-size: clamp(24px, 3.2vw, 32px); font-weight: 700; line-height: 1.22; margin: 12px 0 12px; letter-spacing: -.3px; }
+  .featured-teaser { font-size: 16px; color: var(--muted); }
+  .featured-quote { margin-top: 20px; padding: 14px 20px; border-left: 3px solid var(--gold); background: #FBF6EC; font-family: var(--serif); font-style: italic; font-size: 15.5px; color: #5A4E35; border-radius: 0 10px 10px 0; }
+  .featured-foot { margin-top: auto; padding-top: 26px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .featured-author { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; }
+  .featured-author .av { width: 32px; height: 32px; border-radius: 50%; background: var(--ink); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 15px; }
+  .read-more { font-size: 14.5px; font-weight: 700; color: var(--red); text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: 1px; }
+  .read-more:hover { border-color: var(--red); }
+
+  /* ============ 3-2-1 入口横幅 ============ */
+  .band321 { max-width: 1180px; margin: 30px auto 0; padding: 0 24px; }
+  .band321-inner { background: var(--ink); border-radius: 22px; color: #F2ECDF; padding: 40px 44px; display: grid; grid-template-columns: 1fr auto; gap: 36px; align-items: center; position: relative; overflow: hidden; }
+  @media (max-width: 880px) { .band321-inner { grid-template-columns: 1fr; padding: 32px 26px; } }
+  .band321-inner::after { content: "3·2·1"; position: absolute; right: -30px; bottom: -58px; font-family: var(--serif); font-size: 190px; font-weight: 700; color: rgba(201,166,104,.09); letter-spacing: -6px; pointer-events: none; }
+  .band321-kicker { font-size: 12px; letter-spacing: 3px; font-weight: 700; color: var(--gold); text-transform: uppercase; }
+  .band321-inner h2 { font-family: var(--serif); font-size: clamp(24px, 3vw, 30px); font-weight: 700; color: #fff; margin: 10px 0 8px; }
+  .band321-inner h2 em { color: var(--gold); font-style: italic; }
+  .band321-sub { font-size: 15px; opacity: .8; max-width: 560px; }
+  .band321-items { display: flex; gap: 26px; margin-top: 18px; flex-wrap: wrap; }
+  .band321-items .it { display: flex; align-items: baseline; gap: 8px; font-size: 13.5px; }
+  .band321-items .it b { font-family: var(--serif); font-size: 26px; color: var(--red); font-style: italic; }
+  .band321-actions { display: flex; flex-direction: column; gap: 12px; position: relative; z-index: 1; }
+  @media (max-width: 880px) { .band321-actions { flex-direction: row; flex-wrap: wrap; } }
+  .btn-321 { font-size: 14.5px; font-weight: 700; text-decoration: none; text-align: center; padding: 12px 28px; border-radius: 999px; background: var(--red); color: #fff; border: 1.5px solid var(--red); transition: background .18s ease; white-space: nowrap; }
+  .btn-321:hover { background: var(--red-dark); border-color: var(--red-dark); }
+  .btn-321.ghost { background: transparent; border-color: rgba(255,255,255,.45); color: #fff; }
+  .btn-321.ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* ============ 网格列表 ============ */
+  .feed { max-width: 1180px; margin: 64px auto 0; padding: 0 24px; }
+  .feed-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 22px; }
+  .feed-head h2 { font-family: var(--serif); font-size: 27px; font-weight: 700; }
+  .feed-head a { font-size: 14px; font-weight: 700; color: var(--red); text-decoration: none; }
+  .feed-head a:hover { text-decoration: underline; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 22px 20px; display: flex; gap: 18px; transition: transform .18s ease, box-shadow .18s ease; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(60,45,20,.12); }
+  .card-cover { flex: 0 0 76px; width: 76px; height: 102px; border-radius: 3px; box-shadow: 2px 4px 10px rgba(0,0,0,.16); pointer-events: none; }
+  .card-body { min-width: 0; display: flex; flex-direction: column; }
+  .card-meta { font-size: 12px; color: var(--muted); font-weight: 600; letter-spacing: .5px; text-transform: uppercase; }
+  .card-meta .rwc { color: var(--brown); font-weight: 800; }
+  .card-title { font-size: 17px; font-weight: 800; line-height: 1.35; margin: 7px 0 7px; letter-spacing: -.2px; }
+  .card-title a { color: inherit; text-decoration: none; }
+  .card:hover .card-title a { color: var(--red); }
+  .card-teaser { font-size: 13.5px; color: var(--muted); }
+  .card-foot { margin-top: auto; padding-top: 12px; display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--muted); font-weight: 600; }
+  .card-foot .heart { color: var(--red); }
+  /* Coming soon 占位卡 */
+  .card.soon { background: #F5F1E8; border-style: dashed; border-color: #D8D0BE; }
+  .card.soon .card-cover { filter: grayscale(.85) opacity(.55); }
+  .card.soon .card-title { color: var(--muted); }
+  .card.soon:hover { transform: none; box-shadow: none; }
+  .soon-badge { display: inline-block; font-size: 10.5px; font-weight: 800; letter-spacing: 1.5px; color: var(--brown); background: #EDE4D0; border: 1px solid #DCCFA9; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; margin-top: 10px; align-self: flex-start; }
+  /* View all 导流卡 */
+  .card.viewall { background: var(--ink); border-color: var(--ink); align-items: center; justify-content: center; display: flex; }
+  .card.viewall a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-decoration: none; color: #fff; width: 100%; height: 100%; min-height: 146px; }
+  .card.viewall .va-arrow { font-family: var(--serif); font-size: 34px; color: var(--gold); }
+  .card.viewall .va-text { font-size: 14.5px; font-weight: 700; letter-spacing: .5px; }
+  .card.viewall .va-sub { font-size: 12px; opacity: .65; font-weight: 500; }
+  .card.viewall:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(20,17,12,.35); }
+
+  /* ============ Books Wall 书墙 ============ */
+  .wall-band { margin-top: 84px; background: var(--ink); padding: 72px 24px 66px; color: #F2ECDF; }
+  .wall-inner { max-width: 1180px; margin: 0 auto; text-align: center; }
+  .wall-kicker { font-size: 12.5px; letter-spacing: 3px; font-weight: 700; color: var(--gold); text-transform: uppercase; }
+  .wall-inner h2 { font-family: var(--serif); font-size: clamp(26px, 3.6vw, 34px); font-weight: 700; margin-top: 12px; color: #fff; }
+  .wall-inner h2 em { color: var(--gold); font-style: italic; }
+  .wall-sub { margin-top: 8px; font-size: 15px; opacity: .75; }
+  .wall { margin-top: 44px; display: flex; justify-content: center; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
+  .wall .bk { width: 132px; height: 176px; border-radius: 3px 6px 6px 3px; filter: drop-shadow(4px 10px 18px rgba(0,0,0,.45)); transition: transform .2s ease; pointer-events: none; }
+  .wall .wall-book { position: relative; }
+  .wall .wall-book:hover .bk { transform: translateY(-10px) rotate(0deg) !important; }
+  .wall .bk:nth-child(1) { transform: rotate(-4deg); }
+  .wall .wall-book:nth-child(2) .bk { transform: rotate(2deg) translateY(-8px); }
+  .wall .wall-book:nth-child(3) .bk { transform: rotate(-1deg); }
+  .wall .wall-book:nth-child(4) .bk { transform: rotate(3deg) translateY(-6px); }
+  .wall .wall-book:nth-child(5) .bk { transform: rotate(-2deg); }
+  .wall .wall-book:nth-child(6) .bk { transform: rotate(1.5deg) translateY(-10px); }
+  .wall-more { margin-top: 38px; }
+  .wall-more a { font-size: 14.5px; font-weight: 700; color: #fff; text-decoration: none; border: 1.5px solid rgba(255,255,255,.4); padding: 11px 28px; border-radius: 999px; display: inline-block; transition: all .18s ease; }
+  .wall-more a:hover { background: var(--red); border-color: var(--red); }
+
+  /* ============ 页脚 ============ */
+  footer { background: #EFEAE0; border-top: 1px solid var(--line); padding: 52px 24px 36px; }
+  .footer-inner { max-width: 1180px; margin: 0 auto; display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .footer-brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 21px; font-weight: 700; }
+  .footer-brand em { color: var(--red); font-style: italic; }
+  .footer-tag { margin-top: 12px; font-size: 14px; color: var(--muted); max-width: 330px; line-height: 1.7; }
+  .footer-cols { display: flex; gap: 64px; flex-wrap: wrap; }
+  .footer-col h4 { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+  .footer-col a { display: block; color: var(--ink); text-decoration: none; font-size: 14px; padding: 3px 0; font-weight: 600; }
+  .footer-col a:hover { color: var(--red); }
+  .footer-bottom { max-width: 1180px; margin: 36px auto 0; border-top: 1px solid var(--line); padding-top: 18px; font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+  /* 订阅成功反馈 */
+  .hero-form.done { display: none; }
+  .hero-done { display: none; margin-top: 20px; font-size: 14.5px; font-weight: 700; color: var(--green); background: #EEF4EF; border: 1px solid #CDDDCE; padding: 12px 18px; border-radius: 12px; }
+  .hero-done.show { display: inline-block; }
+</style>
 </head>
 <body>
 
-  <!-- ======================= 导航 ======================= -->
-  <nav class="nav">
-    <a class="nav-brand" href="index.html">
-      <img class="nav-logo-img" src="img/logo.svg" alt="Reads with Colin">
-      <span class="nav-logo">Reads <span class="amp">with</span> Colin</span>
+<!-- ======================= 导航 ======================= -->
+<nav class="nav">
+  <a class="nav-brand" href="index.html">
+    <span class="mark"><object type="image/svg+xml" data="img/logo-v6-final.svg" aria-label="logo"></object></span>
+    <span class="name">Reads <em>with</em> Colin</span>
+  </a>
+  <div class="nav-right">
+    <a class="nav-link" href="archive.html">Archive</a>
+    <a class="nav-link" href="categories.html">Categories</a>
+    <a class="nav-link nav-keep" href="3-2-1.html">3-2-1</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-cta" href="#subscribe">Subscribe</a>
+  </div>
+</nav>
+
+<!-- ======================= Hero ======================= -->
+<header class="hero">
+  <div>
+    <span class="hero-kicker">A Weekly Letter · 每周一封</span>
+    <h1>Read books that change<br>how you <span class="red">see the world.</span></h1>
+    <p class="hero-sub">One idea, five minutes, every Thursday. 读书不是逃避世界，是带上更好的眼睛再回来。</p>
+    <p class="hero-zh">学而知之 · 忘而破之 · 习而新之</p>
+    <form class="hero-form" id="sub" action="#" onsubmit="event.preventDefault(); this.classList.add('done'); document.getElementById('subdone').classList.add('show'); return false;">
+      <input type="email" placeholder="your@email.com" aria-label="Email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="hero-done" id="subdone">🎉 Thanks for subscribing — welcome aboard, reader!</p>
+    <p class="hero-note">Join 1,200+ readers · No spam, unsubscribe anytime</p>
+  </div>
+  <div class="hero-logo">
+    <object type="image/svg+xml" data="img/logo-v6-final.svg" aria-label="Reads with Colin 徽章"></object>
+  </div>
+</header>
+
+<!-- ======================= Featured 大卡 · RWC #001 ======================= -->
+<section class="featured-wrap" id="subscribe">
+  <article class="featured">
+    <a class="featured-link" href="posts/atomic-habits.html">
+      <div class="featured-cover">
+        <span class="label">Latest · RWC #001</span>
+        <object type="image/svg+xml" data="img/covers/atomic-habits.svg" aria-label="Atomic Habits"></object>
+      </div>
+      <div class="featured-body">
+        <div class="featured-meta"><span class="cat">Habits · 习惯</span>Aug 27, 2026 · 5 min read</div>
+        <h2 class="featured-title">Atomic Habits, identity change and the quiet power of 1%</h2>
+        <p class="featured-teaser">James Clear's most-quoted idea — 1% better every day compounds into 37x in a year — is also his most quietly radical. 每天进步 1%，一年变 37 倍：这不是鸡汤，是复利。</p>
+        <div class="featured-quote">"You do not rise to the level of your goals. You fall to the level of your systems."</div>
+        <div class="featured-foot">
+          <div class="featured-author"><span class="av">C</span> Colin</div>
+          <span class="read-more">Read the letter →</span>
+        </div>
+      </div>
     </a>
-    <div class="nav-links">
-      <a class="nav-link-plain" href="index.html">
-        <span lang="en">Latest</span>
-        <span lang="zh">最近更新</span>
-      </a>
-      <a class="nav-link-plain" href="archive.html">
-        <span lang="en">Archive</span>
-        <span lang="zh">往期</span>
-      </a>
-      <a class="nav-link-plain" href="categories.html">
-        <span lang="en">Categories</span>
-        <span lang="zh">分类</span>
-      </a>
-      <a class="nav-link-plain" href="about.html">
-        <span lang="en">About</span>
-        <span lang="zh">关于</span>
-      </a>
-      <a class="nav-link-plain" href="feed.xml" target="_blank" rel="noopener">RSS</a>
-      <div class="lang-switch" role="group" aria-label="Language">
-        <a href="#" data-set-lang="en" class="active">EN</a>
-        <a href="#" data-set-lang="zh">中文</a>
+  </article>
+</section>
+
+<!-- ======================= 3-2-1 Thursday 入口 ======================= -->
+<section class="band321">
+  <div class="band321-inner">
+    <div>
+      <span class="band321-kicker">New · Every Thursday 早安</span>
+      <h2>Introducing <em>3-2-1 Thursday</em></h2>
+      <p class="band321-sub">Inspired by James Clear's legendary newsletter. 每周四早晨，一封给你的信：</p>
+      <div class="band321-items">
+        <span class="it"><b>3</b> ideas from Colin · 我的 3 条思考</span>
+        <span class="it"><b>2</b> quotes from books · 2 段书中引文</span>
+        <span class="it"><b>1</b> question for you · 1 个问题</span>
       </div>
-      <a class="nav-cta" href="#subscribe">
-        <span lang="en">Subscribe</span>
-        <span lang="zh">订阅</span>
-      </a>
     </div>
-  </nav>
-
-  <!-- ======================= Hero ======================= -->
-  <header class="hero" id="subscribe">
-    <span class="hero-kicker">
-      <span lang="en">A weekly letter on books worth keeping</span>
-      <span lang="zh">每周一封 · 推荐值得留在书架上的书</span>
-    </span>
-
-    <h1>Reads with Colin</h1>
-
-    <p class="hero-tagline">
-      <span lang="en">Books that change how you see — and what you do next.</span>
-      <span lang="zh">学而知之，忘而破之，习而新之。</span>
-    </p>
-
-    <p class="hero-sub">
-      <span lang="en">Every Thursday · 5 minutes · Book notes &amp; recommendations</span>
-      <span lang="zh">每周四发出 · 每期 5 分钟 · 读书心得与书单推荐</span>
-    </p>
-
-    <p class="hero-motto">
-      <span lang="en">「 <em>By books, we come to know the world.</em> 」</span>
-      <span lang="zh">「 以<em>书</em>为鉴，可知世界。」</span>
-    </p>
-
-    <div class="subscribe-wrap">
-      <form class="subscribe-form" action="#" method="post" novalidate>
-        <input type="email" name="email" placeholder="your@email.com" aria-label="Email" required>
-        <button class="btn" type="submit">
-          <span lang="en">Subscribe</span>
-          <span lang="zh">订阅</span>
-        </button>
-      </form>
-      <p class="subscribe-note">
-        <span lang="en">Join 1,200+ readers. No spam — unsubscribe anytime.</span>
-        <span lang="zh">已有 1,200+ 位读者 · 随时退订，绝不打扰</span>
-      </p>
-      <div class="subscribe-success" role="status"
-           data-success-en="🎉 Thanks for subscribing — welcome aboard, reader!"
-           data-success-zh="🎉 感谢订阅，欢迎加入我们的阅读之旅！"></div>
-    </div>
-  </header>
-
-  <!-- ======================= 文章列表 ======================= -->
-  <main class="post-list-wrap">
-    <div class="list-heading">
-      <h2>
-        <span lang="en">Latest Issues</span>
-        <span lang="zh">最近更新</span>
-      </h2>
-      <a class="list-sub" href="archive.html">
-        <span lang="en">View all →</span>
-        <span lang="zh">查看全部 →</span>
-      </a>
-    </div>
-
-    <!-- 第 1 期 -->
-    <article class="post-card">
-      <div class="post-meta">Aug 27, 2026 <span class="dot">•</span> 5 min read</div>
-      <h3>
-        <span lang="en"><a href="posts/atomic-habits.html">Atomic Habits, identity change and the quiet power of 1%</a></span>
-        <span lang="zh"><a href="posts/atomic-habits.html">《原子习惯》：身份改变，与 1% 的安静力量</a></span>
-      </h3>
-      <p class="post-title-cn">
-        <span lang="en">Why the smallest choices, repeated daily, end up changing who you are.</span>
-        <span lang="zh">微小的选择日复一日，最终改变了你是谁。</span>
-      </p>
-      <p class="post-teaser">
-        <span lang="en">James Clear's most-quoted idea — 1% better every day compounds into 37x in a year — is also his most quietly radical.</span>
-        <span lang="zh">詹姆斯·克利尔最常被引用的那句话——每天进步 1%，一年变 37 倍——也是他最安静、却最深刻的一个洞见。</span>
-      </p>
-      <div class="post-author">
-        <span class="avatar">C</span>
-        <a href="about.html">Colin</a>
-      </div>
-    </article>
-
-    <!-- 第 2 期 -->
-    <article class="post-card">
-      <div class="post-meta">Aug 20, 2026 <span class="dot">•</span> 6 min read</div>
-      <h3>
-        <span lang="en"><a href="posts/thinking-fast-and-slow.html">Thinking, Fast and Slow — lazy brains and the anchors in your head</a></span>
-        <span lang="zh"><a href="posts/thinking-fast-and-slow.html">《思考，快与慢》：偷懒的大脑，与你脑中的锚</a></span>
-      </h3>
-      <p class="post-title-cn">
-        <span lang="en">Kahneman's two systems — and why the slower one deserves more of your week.</span>
-        <span lang="zh">卡尼曼的两个系统——以及为什么你的一周里，应该把更多时间留给慢的那个。</span>
-      </p>
-      <p class="post-teaser">
-        <span lang="en">System 1 is fast and confident; System 2 is slow and tired. Knowing which one is driving is half the battle.</span>
-        <span lang="zh">系统 1 又快又自信；系统 2 又慢又累。知道此刻是哪一位在开车，就赢了一半。</span>
-      </p>
-      <div class="post-author">
-        <span class="avatar">C</span>
-        <a href="about.html">Colin</a>
-      </div>
-    </article>
-
-    <!-- 第 3 期 -->
-    <article class="post-card">
-      <div class="post-meta">Aug 13, 2026 <span class="dot">•</span> 5 min read</div>
-      <h3>
-        <span lang="en"><a href="posts/walden.html">Walden — deliberate living and the luxury of enough</a></span>
-        <span lang="zh"><a href="posts/walden.html">《瓦尔登湖》：清醒地生活，与"足够"的奢侈</a></span>
-      </h3>
-      <p class="post-title-cn">
-        <span lang="en">Thoreau's two-year experiment in simplifying life — and what still survives 170 years later.</span>
-        <span lang="zh">梭罗在湖畔的两年实验——以及 170 年后，依然没被时间磨掉的几句话。</span>
-      </p>
-      <p class="post-teaser">
-        <span lang="en">Walden is not about leaving society. It is about choosing what to leave out — and finding that's where the life is.</span>
-        <span lang="zh">《瓦尔登湖》讲的并不是逃离社会，而是选择"留下什么"——而生活的全部意义，往往就在那些被留下的部分里。</span>
-      </p>
-      <div class="post-author">
-        <span class="avatar">C</span>
-        <a href="about.html">Colin</a>
-      </div>
-    </article>
-
-    <p class="list-end">
-      <span lang="en">— Thanks for reading —</span>
-      <span lang="zh">— 感谢读到此处 —</span>
-    </p>
-  </main>
-
-  <!-- ======================= 分享与页脚 ======================= -->
-  <div class="share-row">
-    <span class="share-label">
-      <span lang="en">Share the letter</span>
-      <span lang="zh">把这封信分享给朋友</span>
-    </span>
-    <a class="share-btn" href="https://twitter.com/intent/tweet?text=Reads%20with%20Colin" target="_blank" rel="noopener"><span class="ic">↗</span> Twitter/X</a>
-    <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank" rel="noopener"><span class="ic">in</span> LinkedIn</a>
-    <button class="share-btn copy-link" type="button"><span class="ic">⧉</span> <span lang="en">Copy link</span><span lang="zh">复制链接</span></button>
-    <a class="share-btn wechat" href="#"><span class="ic">💬</span> <span lang="zh">微信</span><span lang="en">WeChat</span></a>
-    <a class="share-btn weibo" href="https://service.weibo.com/share/share.php?url=&amp;title=Reads%20with%20Colin" target="_blank" rel="noopener"><span class="ic">W</span> <span lang="zh">微博</span><span lang="en">Weibo</span></a>
-    <a class="share-btn xhs" href="https://www.xiaohongshu.com/" target="_blank" rel="noopener"><span class="ic">📕</span> <span lang="zh">小红书</span><span lang="en">RED</span></a>
-  </div>
-
-  <!-- 微信弹层 -->
-  <div class="wx-modal" role="dialog" aria-modal="true">
-    <div class="wx-card">
-      <h4><span lang="zh">分享到微信</span><span lang="en">Share to WeChat</span></h4>
-      <p><span lang="zh">点击下方按钮复制链接，再粘贴到微信聊天或朋友圈。</span><span lang="en">Click the button below to copy the link, then paste it into WeChat.</span></p>
-      <div class="wx-link"></div>
-      <button class="wx-close" type="button">
-        <span lang="zh">关闭</span>
-        <span lang="en">Close</span>
-      </button>
+    <div class="band321-actions">
+      <a class="btn-321" href="3-2-1.html">Read Issue #01 →</a>
+      <a class="btn-321 ghost" href="#sub">Subscribe</a>
     </div>
   </div>
+</section>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand">Reads <span class="amp" style="color:var(--accent);font-style:italic;">with</span> Colin</div>
-        <p class="footer-tag">
-          <span lang="en">Books that change how you see — and what you do next.</span>
-          <span lang="zh">学而知之，忘而破之，习而新之。</span>
-        </p>
+<!-- ======================= 网格列表 ======================= -->
+<section class="feed">
+  <div class="feed-head">
+    <h2>Recent Issues</h2>
+    <a href="archive.html">View all →</a>
+  </div>
+  <div class="grid">
+
+    <article class="card">
+      <object class="card-cover" type="image/svg+xml" data="img/covers/thinking-fast-and-slow.svg" aria-label="Thinking Fast and Slow"></object>
+      <div class="card-body">
+        <div class="card-meta"><span class="rwc">RWC #002</span> · Thinking · Aug 20</div>
+        <h3 class="card-title"><a href="posts/thinking-fast-and-slow.html">《思考，快与慢》：偷懒的大脑，与脑中的锚</a></h3>
+        <p class="card-teaser">知道此刻是哪一位在开车，就赢了一半。</p>
+        <div class="card-foot"><span>6 min</span><span class="heart">♥ 18</span></div>
       </div>
-      <div class="footer-links">
-        <a href="about.html">About</a>
+    </article>
+
+    <article class="card">
+      <object class="card-cover" type="image/svg+xml" data="img/covers/walden.svg" aria-label="Walden"></object>
+      <div class="card-body">
+        <div class="card-meta"><span class="rwc">RWC #003</span> · Classics · Aug 13</div>
+        <h3 class="card-title"><a href="posts/walden.html">《瓦尔登湖》：清醒地生活，与"足够"的奢侈</a></h3>
+        <p class="card-teaser">170 年后，依然没被时间磨掉的几句话。</p>
+        <div class="card-foot"><span>5 min</span><span class="heart">♥ 14</span></div>
+      </div>
+    </article>
+
+    <article class="card soon">
+      <object class="card-cover" type="image/svg+xml" data="img/covers/indistractable.svg" aria-label="Indistractable"></object>
+      <div class="card-body">
+        <div class="card-meta">Focus · 下一期预告</div>
+        <h3 class="card-title">《不可打扰》：把分心变成一个设计问题</h3>
+        <p class="card-teaser">分心不是性格缺陷，是可以被设计的系统。</p>
+        <span class="soon-badge">Coming soon</span>
+      </div>
+    </article>
+
+    <article class="card soon">
+      <object class="card-cover" type="image/svg+xml" data="img/covers/5-types-of-wealth.svg" aria-label="5 Types of Wealth"></object>
+      <div class="card-body">
+        <div class="card-meta">Wealth · 选题中</div>
+        <h3 class="card-title">《五种财富》：财富不止一种货币</h3>
+        <p class="card-teaser">时间、社交、心智、身体、财务的复利。</p>
+        <span class="soon-badge">Coming soon</span>
+      </div>
+    </article>
+
+    <article class="card soon">
+      <object class="card-cover" type="image/svg+xml" data="img/covers/hidden-potential.svg" aria-label="Hidden Potential"></object>
+      <div class="card-body">
+        <div class="card-meta">Growth · 选题中</div>
+        <h3 class="card-title">《隐藏的潜力》：性格技能大于天赋</h3>
+        <p class="card-teaser">越努力越幸运不是鸡汤——是数据。</p>
+        <span class="soon-badge">Coming soon</span>
+      </div>
+    </article>
+
+    <article class="card viewall">
+      <a href="archive.html">
+        <span class="va-arrow">→</span>
+        <span class="va-text">View all issues</span>
+        <span class="va-sub">24 letters · 查看全部往期</span>
+      </a>
+    </article>
+
+  </div>
+</section>
+
+<!-- ======================= 书墙 ======================= -->
+<section class="wall-band">
+  <div class="wall-inner">
+    <div class="wall-kicker">The Shelf · 书架</div>
+    <h2>Books worth <em>keeping</em></h2>
+    <p class="wall-sub">每本书都写过一封信 · 每封信都值得再读一次</p>
+    <div class="wall">
+      <a class="wall-book" href="posts/atomic-habits.html" title="Atomic Habits"><object class="bk" type="image/svg+xml" data="img/covers/atomic-habits.svg" aria-label="Atomic Habits"></object></a>
+      <a class="wall-book" href="posts/thinking-fast-and-slow.html" title="Thinking, Fast and Slow"><object class="bk" type="image/svg+xml" data="img/covers/thinking-fast-and-slow.svg" aria-label="Thinking Fast and Slow"></object></a>
+      <a class="wall-book" href="posts/walden.html" title="Walden"><object class="bk" type="image/svg+xml" data="img/covers/walden.svg" aria-label="Walden"></object></a>
+      <a class="wall-book" href="archive.html" title="Indistractable · 即将上线"><object class="bk" type="image/svg+xml" data="img/covers/indistractable.svg" aria-label="Indistractable"></object></a>
+      <a class="wall-book" href="archive.html" title="5 Types of Wealth · 即将上线"><object class="bk" type="image/svg+xml" data="img/covers/5-types-of-wealth.svg" aria-label="5 Types of Wealth"></object></a>
+      <a class="wall-book" href="archive.html" title="Hidden Potential · 即将上线"><object class="bk" type="image/svg+xml" data="img/covers/hidden-potential.svg" aria-label="Hidden Potential"></object></a>
+    </div>
+    <div class="wall-more"><a href="archive.html">Browse all books →</a></div>
+  </div>
+</section>
+
+<!-- ======================= 页脚 ======================= -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Reads <em>with</em> Colin</div>
+      <p class="footer-tag">Books that change how you see — and what you do next. 每周四 · 一个想法 · 5 分钟。</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="archive.html">Archive</a>
+        <a href="categories.html">Categories</a>
+        <a href="3-2-1.html">3-2-1 Thursday</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="about.html">About Colin</a>
         <a href="feed.xml" target="_blank" rel="noopener">RSS</a>
-        <a href="https://twitter.com/" target="_blank" rel="noopener">Twitter/X</a>
         <a href="mailto:hello@readswithcolin.com">Email</a>
-        <a href="https://weibo.com/" target="_blank" rel="noopener">微博</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Reads with Colin. All rights reserved.</span>
-      <span>Made with 📚 &amp; ☕</span>
-    </div>
-  </footer>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Reads with Colin. All rights reserved.</span>
+    <span>Made with 📚 &amp; ☕</span>
+  </div>
+</footer>
 
-  <button class="back-top" aria-label="Back to top">↑</button>
-  <script src="js/main.js"></script>
 </body>
 </html>
