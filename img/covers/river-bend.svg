@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 615 922" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg-river" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EDF3EE"/>
+      <stop offset="100%" stop-color="#D5E2D8"/>
+    </linearGradient>
+    <linearGradient id="river-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A7A66"/>
+      <stop offset="100%" stop-color="#2E5A48"/>
+    </linearGradient>
+  </defs>
+  <rect width="615" height="922" fill="url(#bg-river)"/>
+
+  <!-- 峡江两岸山体 -->
+  <path d="M 0 0 L 200 0 Q 160 130 200 240 Q 150 350 220 470 L 0 470 Z" fill="#3A5A4A" opacity="0.9"/>
+  <path d="M 615 0 L 430 0 Q 470 140 420 260 Q 470 380 400 470 L 615 470 Z" fill="#2E4A3C" opacity="0.9"/>
+
+  <!-- 江水转弯：S 形河道 -->
+  <path d="M 245 0 Q 200 120 280 200 Q 360 280 300 360 Q 260 420 320 470 L 380 470 Q 320 420 360 350 Q 420 260 340 180 Q 280 110 315 0 Z" fill="url(#river-water)"/>
+
+  <!-- 江面波光 -->
+  <g stroke="#E8F0EA" stroke-width="2" opacity="0.5" fill="none">
+    <path d="M 290 240 Q 310 250 330 242"/>
+    <path d="M 275 290 Q 300 302 322 292"/>
+    <path d="M 300 330 Q 322 340 344 330"/>
+  </g>
+
+  <!-- 转弯处的小船 -->
+  <g transform="translate(308,395)">
+    <path d="M -26 0 Q 0 12 26 0 Q 0 6 -26 0 Z" fill="#1F3528"/>
+    <line x1="0" y1="0" x2="0" y2="-22" stroke="#1F3528" stroke-width="2.5"/>
+    <path d="M 1 -20 L 14 -6 L 1 -8 Z" fill="#F0E6D2"/>
+  </g>
+
+  <!-- 书脊线 -->
+  <line x1="80" y1="540" x2="535" y2="540" stroke="#3A5A4A" stroke-width="1" opacity="0.35"/>
+
+  <!-- 标题 -->
+  <text x="307" y="625" text-anchor="middle" font-family="Georgia, 'Songti SC', 'Times New Roman', serif" font-size="54" font-weight="700" fill="#1F3528" letter-spacing="4">在峡江的转弯处</text>
+
+  <!-- 副标题 -->
+  <line x1="220" y1="680" x2="395" y2="680" stroke="#3A5A4A" stroke-width="1"/>
+  <text x="307" y="718" text-anchor="middle" font-family="Georgia, serif" font-size="17" font-style="italic" fill="#3A5A4A">人生下半场，</text>
+  <text x="307" y="741" text-anchor="middle" font-family="Georgia, serif" font-size="17" font-style="italic" fill="#3A5A4A">换个地方继续发光</text>
+
+  <!-- 作者 -->
+  <text x="307" y="855" text-anchor="middle" font-family="Georgia, serif" font-size="14" letter-spacing="3" fill="#5B7A64">陈行甲</text>
+  <text x="307" y="880" text-anchor="middle" font-family="Georgia, serif" font-size="12" letter-spacing="2" fill="#7A9684">人生笔记 · 2021</text>
+</svg>

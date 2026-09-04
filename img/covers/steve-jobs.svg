@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 615 922" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg-jobs" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#26262A"/>
+      <stop offset="100%" stop-color="#121214"/>
+    </linearGradient>
+  </defs>
+  <rect width="615" height="922" fill="url(#bg-jobs)"/>
+
+  <!-- 极简苹果：一体成型轮廓 -->
+  <g transform="translate(307,255)">
+    <!-- 果身 -->
+    <path d="M 78 -22
+             C 78 -78 30 -108 -12 -92
+             C 0 -70 6 -42 2 -16
+             C -2 6 -16 22 -34 30
+             C -10 108 52 118 74 66
+             C 60 40 60 -2 78 -22 Z"
+          fill="none" stroke="#F0E6D2" stroke-width="5"/>
+    <!-- 叶柄 -->
+    <path d="M -12 -92 C -14 -122 -6 -140 8 -148"
+          fill="none" stroke="#F0E6D2" stroke-width="5" stroke-linecap="round"/>
+    <!-- 叶片 -->
+    <path d="M 8 -148 C 40 -150 58 -128 56 -100 C 26 -102 8 -124 8 -148 Z"
+          fill="#C9A668" opacity="0.9"/>
+    <!-- 咬口：右侧缺口 -->
+    <circle cx="86" cy="20" r="34" fill="#1A1A1E"/>
+    <circle cx="86" cy="20" r="34" fill="none" stroke="#F0E6D2" stroke-width="0"/>
+  </g>
+
+  <!-- 名言 -->
+  <text x="307" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-style="italic" fill="#8A8A92">"The people who are crazy enough</text>
+  <text x="307" y="454" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-style="italic" fill="#8A8A92">to think they can change the world,</text>
+  <text x="307" y="478" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-style="italic" fill="#C9A668">are the ones who do."</text>
+
+  <!-- 书脊线 -->
+  <line x1="80" y1="520" x2="535" y2="520" stroke="#F0E6D2" stroke-width="1" opacity="0.25"/>
+
+  <!-- 标题 -->
+  <text x="307" y="610" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700" fill="#F0E6D2">Steve Jobs</text>
+
+  <!-- 副标题 -->
+  <line x1="220" y1="650" x2="395" y2="650" stroke="#F0E6D2" stroke-width="1" opacity="0.3"/>
+  <text x="307" y="688" text-anchor="middle" font-family="Georgia, serif" font-size="17" font-style="italic" fill="#8A8A92">The Exclusive Biography</text>
+  <text x="307" y="711" text-anchor="middle" font-family="Georgia, serif" font-size="17" fill="#8A8A92">读的是英文原版</text>
+
+  <!-- 作者 -->
+  <text x="307" y="855" text-anchor="middle" font-family="Georgia, serif" font-size="14" letter-spacing="3" fill="#8A8A92">WALTER</text>
+  <text x="307" y="877" text-anchor="middle" font-family="Georgia, serif" font-size="14" letter-spacing="3" fill="#8A8A92">ISAACSON</text>
+</svg>

@@ -94,6 +94,15 @@
   @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
 
   .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; display: flex; flex-direction: column; }
+  .card.t-thinking { border-left: 5px solid #5B7A8C; }
+  .card.t-business { border-left: 5px solid #2B4A3A; }
+  .card.t-fiction { border-left: 5px solid #7A5548; }
+  .card.t-lives { border-left: 5px solid #8A6D3B; }
+  .card.t-mind { border-left: 5px solid #3A5A4A; }
+  .card.t-english { border-left: 5px solid #14110C; }
+  .card-author { font-size: 13.5px; color: var(--muted); font-weight: 600; margin-top: -2px; }
+  .card-title .en-title { display: block; font-size: 13px; color: var(--muted); font-family: var(--sans); font-weight: 500; margin-top: 5px; letter-spacing: .3px; }
+  .read-badge { display: inline-block; background: var(--ink); color: #fff; padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 11px; letter-spacing: .5px; }
   .card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(20,17,12,.1); }
   .card-cover { width: 100%; height: 200px; display: block; pointer-events: none; }
   .card-body { padding: 22px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
@@ -164,21 +173,24 @@
 <!-- ======================= Page Hero ======================= -->
 <header class="page-hero">
   <span class="kicker"><span lang="en">Archive</span><span lang="zh">往期档案</span></span>
-  <h1><span lang="en">Every letter, <em>every</em> page.</span><span lang="zh">每一封，<em>都</em>在。</span></h1>
-  <p class="sub"><span lang="en">A complete archive of every Reads with Colin letter, with the books that earned them.</span><span lang="zh">所有来信的完整档案，以及那些值得写一封信的书。</span></p>
+  <h1><span lang="en">Every book, <em>actually</em> read.</span><span lang="zh">每一本，<em>都</em>读过。</span></h1>
+  <p class="sub"><span lang="en">The complete shelf: 35 books read in Chinese, 3 in the original English — and the letters they inspired.</span><span lang="zh">完整书架实录：35 本亲自读完的书——中文 32 本，英文原著 3 本。</span></p>
 </header>
 
 <!-- ======================= 工具栏 ======================= -->
 <div class="toolbar">
   <div class="count">
-    <span lang="en">Showing</span><span lang="zh">共</span> <b>3</b> <span lang="en">letters · 3 books</span><span lang="zh">封信 · 3 本书</span>
+    <span lang="en">Showing</span><span lang="zh">共</span> <b>35</b> <span lang="en">books read</span><span lang="zh">本已读</span>
   </div>
-  <input id="search" type="search" placeholder="Search titles… 搜索标题">
+  <input id="search" type="search" placeholder="Search titles… 搜索书名">
   <div class="filter">
     <button class="active" data-cat="all"><span lang="en">All</span><span lang="zh">全部</span></button>
-    <button data-cat="habits"><span lang="en">Habits</span><span lang="zh">习惯</span></button>
-    <button data-cat="thinking"><span lang="en">Thinking</span><span lang="zh">思考</span></button>
-    <button data-cat="classics"><span lang="en">Classics</span><span lang="zh">经典</span></button>
+    <button data-cat="thinking"><span lang="en">Thinking</span><span lang="zh">思维</span></button>
+    <button data-cat="business"><span lang="en">Business</span><span lang="zh">商业</span></button>
+    <button data-cat="fiction"><span lang="en">Fiction</span><span lang="zh">小说</span></button>
+    <button data-cat="lives"><span lang="en">Lives</span><span lang="zh">随笔</span></button>
+    <button data-cat="mind"><span lang="en">Mind</span><span lang="zh">心智</span></button>
+    <button data-cat="english"><span lang="en">English</span><span lang="zh">英文原著</span></button>
   </div>
 </div>
 
@@ -186,69 +198,353 @@
 <section class="feed">
   <div class="grid">
 
-    <article class="card" data-cat="habits" data-text="atomic habits identity 1% systems habits 习惯 原子习惯">
-      <object class="card-cover" type="image/svg+xml" data="img/covers/atomic-habits.svg" aria-label="Atomic Habits"></object>
+    <article class="card t-thinking" data-cat="thinking" data-text="thinking fast slow kahneman system 1 system 2 thinking 思考 快与慢 卡尼曼">
       <div class="card-body">
-        <div class="card-meta"><span class="rwc">RWC #001</span> · <span lang="en">Habits</span><span lang="zh">习惯</span> · <span lang="en">Aug 27, 2026</span><span lang="zh">2026·8·27</span></div>
-        <h3 class="card-title"><a href="posts/atomic-habits.html"><span lang="en">Atomic Habits, identity change and the quiet power of 1%</span><span lang="zh">《原子习惯》：身份改变，与 1% 的安静力量</span></a></h3>
-        <p class="card-teaser"><span lang="en">1% better every day compounds into 37x in a year — not a slogan, a quietly radical idea.</span>
-          <span lang="zh">每天进步 1%，一年变 37 倍：不是口号，是安静的激进。</span></p>
-        <div class="card-foot"><span><span lang="en">5 min read</span><span lang="zh">5 分钟</span></span><span class="heart">♥ 23</span></div>
+        <div class="card-meta"><span class="read-badge">RWC #001</span><span lang="en">Thinking</span><span lang="zh">思维</span></div>
+        <h3 class="card-title"><a href="posts/thinking-fast-and-slow.html"><span lang="zh">《思考，快与慢》</span><span lang="en">Thinking, Fast and Slow</span></a></h3>
+        <p class="card-author"><span lang="en">Daniel Kahneman</span><span lang="zh">丹尼尔·卡尼曼</span></p>
+        <p class="card-teaser"><span lang="en">System 1 drives, System 2 naps. The Nobel-winning map of predictable mistakes.</span><span lang="zh">系统 1 负责开车，系统 2 负责打盹。聪明人犯错的地图。</span></p>
+        <div class="card-foot"><span><span lang="en">6 min read</span><span lang="zh">读后信 · 6 分钟</span></span><span class="heart">♥ 18</span></div>
       </div>
     </article>
 
-    <article class="card" data-cat="thinking" data-text="thinking fast slow kahneman anchors lazy brain 思考 快与慢 卡尼曼 锚">
-      <object class="card-cover" type="image/svg+xml" data="img/covers/thinking-fast-and-slow.svg" aria-label="Thinking, Fast and Slow"></object>
+    <article class="card t-thinking" data-cat="thinking" data-text="great mental models parrish first principles 思考的框架 框架 帕里什">
       <div class="card-body">
-        <div class="card-meta"><span class="rwc">RWC #002</span> · <span lang="en">Thinking</span><span lang="zh">思考</span> · <span lang="en">Aug 20, 2026</span><span lang="zh">2026·8·20</span></div>
-        <h3 class="card-title"><a href="posts/thinking-fast-and-slow.html"><span lang="en">Thinking, Fast and Slow — the lazy brain and the anchors in your head</span><span lang="zh">《思考，快与慢》：偷懒的大脑，与脑中的锚</span></a></h3>
-        <p class="card-teaser"><span lang="en">Knowing who's driving right now is half the battle.</span>
-          <span lang="zh">知道此刻是哪一位在开车，就赢了一半。</span></p>
-        <div class="card-foot"><span><span lang="en">6 min read</span><span lang="zh">6 分钟</span></span><span class="heart">♥ 18</span></div>
+        <div class="card-meta"><span lang="en">Thinking</span><span lang="zh">思维</span></div>
+        <h3 class="card-title"><a href="categories.html#thinking"><span lang="zh">《思考的框架》</span><span lang="en">The Great Mental Models</span></a></h3>
+        <p class="card-author"><span lang="en">Shane Parrish</span><span lang="zh">沙恩·帕里什</span></p>
+        <p class="card-teaser"><span lang="en">First principles, second-order thinking, the map is not the territory.</span><span lang="zh">第一性原理、二阶思维、地图不等于疆域。</span></p>
+        <div class="card-foot"><span><span lang="en">Thinking · Read</span><span lang="zh">思维 · 已读</span></span></div>
       </div>
     </article>
 
-    <article class="card" data-cat="classics" data-text="walden thoreau enough luxury classics 瓦尔登湖 梭罗 足够 经典">
-      <object class="card-cover" type="image/svg+xml" data="img/covers/walden.svg" aria-label="Walden"></object>
+    <article class="card t-thinking" data-cat="thinking" data-text="pyramid principle minto mckinsey writing 金字塔原理 明托 麦肯锡">
       <div class="card-body">
-        <div class="card-meta"><span class="rwc">RWC #003</span> · <span lang="en">Classics</span><span lang="zh">经典</span> · <span lang="en">Aug 13, 2026</span><span lang="zh">2026·8·13</span></div>
-        <h3 class="card-title"><a href="posts/walden.html"><span lang="en">Walden — waking up, and the luxury of "enough"</span><span lang="zh">《瓦尔登湖》：清醒地生活，与"足够"的奢侈</span></a></h3>
-        <p class="card-teaser"><span lang="en">170 years later, a few sentences that time hasn't worn away.</span>
-          <span lang="zh">170 年后，依然没被时间磨掉的几句话。</span></p>
-        <div class="card-foot"><span><span lang="en">5 min read</span><span lang="zh">5 分钟</span></span><span class="heart">♥ 14</span></div>
+        <div class="card-meta"><span lang="en">Thinking</span><span lang="zh">思维</span></div>
+        <h3 class="card-title"><a href="categories.html#thinking"><span lang="zh">《金字塔原理》</span><span lang="en">The Pyramid Principle</span></a></h3>
+        <p class="card-author"><span lang="en">Barbara Minto</span><span lang="zh">芭芭拉·明托</span></p>
+        <p class="card-teaser"><span lang="en">Conclusion first, everything hangs below. The McKinsey writing bible.</span><span lang="zh">结论先行，以上统下。麦肯锡的写作圣经。</span></p>
+        <div class="card-foot"><span><span lang="en">Thinking · Read</span><span lang="zh">思维 · 已读</span></span></div>
       </div>
     </article>
 
-    <article class="card soon" data-cat="focus">
-      <object class="card-cover" type="image/svg+xml" data="img/covers/indistractable.svg" aria-label="Indistractable"></object>
+    <article class="card t-thinking" data-cat="thinking" data-text="金线 冯唐 成事学 结构化思维 pyramid">
       <div class="card-body">
-        <div class="card-meta"><span lang="en">Focus</span><span lang="zh">专注</span> · <span lang="en">Coming soon</span><span lang="zh">即将上线</span></div>
-        <h3 class="card-title"><span lang="en">Indistractable — making distraction a design problem</span><span lang="zh">《不可打扰》：把分心变成一个设计问题</span></h3>
-        <p class="card-teaser"><span lang="en">Distraction isn't a personality flaw — it's a system that can be designed.</span>
-          <span lang="zh">分心不是性格缺陷，是可以被设计的系统。</span></p>
-        <span class="soon-badge"><span lang="en">Coming soon</span><span lang="zh">敬请期待</span></span>
+        <div class="card-meta"><span lang="en">Thinking</span><span lang="zh">思维</span></div>
+        <h3 class="card-title"><a href="categories.html#thinking"><span lang="zh">《金线》</span><span lang="en">The Golden Thread</span></a></h3>
+        <p class="card-author"><span lang="en">Feng Tang</span><span lang="zh">冯唐</span></p>
+        <p class="card-teaser"><span lang="en">Beyond the pyramid: structured thinking as one golden thread.</span><span lang="zh">在金字塔原理之上，结构化思维的「成事」之线。</span></p>
+        <div class="card-foot"><span><span lang="en">Thinking · Read</span><span lang="zh">思维 · 已读</span></span></div>
       </div>
     </article>
 
-    <article class="card soon" data-cat="wealth">
-      <object class="card-cover" type="image/svg+xml" data="img/covers/5-types-of-wealth.svg" aria-label="5 Types of Wealth"></object>
+    <article class="card t-thinking" data-cat="thinking" data-text="概括力 山口拓朗 一句话 总结 表达">
       <div class="card-body">
-        <div class="card-meta"><span lang="en">Wealth</span><span lang="zh">财富</span> · <span lang="en">Coming soon</span><span lang="zh">即将上线</span></div>
-        <h3 class="card-title"><span lang="en">5 Types of Wealth — wealth isn't one currency</span><span lang="zh">《五种财富》：财富不止一种货币</span></h3>
-        <p class="card-teaser"><span lang="en">Time, social, mental, physical, financial — all compounding.</span>
-          <span lang="zh">时间、社交、心智、身体、财务的复利。</span></p>
-        <span class="soon-badge"><span lang="en">Coming soon</span><span lang="zh">敬请期待</span></span>
+        <div class="card-meta"><span lang="en">Thinking</span><span lang="zh">思维</span></div>
+        <h3 class="card-title"><a href="categories.html#thinking"><span lang="zh">《概括力》</span><span lang="en">The Power of Summarizing</span></a></h3>
+        <p class="card-author"><span lang="en">Takuro Yamaguchi</span><span lang="zh">山口拓朗</span></p>
+        <p class="card-teaser"><span lang="en">Collect, sort, deliver — say it in one sentence that lands.</span><span lang="zh">收集—整理—传达，三步把话说到点子上。</span></p>
+        <div class="card-foot"><span><span lang="en">Thinking · Read</span><span lang="zh">思维 · 已读</span></span></div>
       </div>
     </article>
 
-    <article class="card soon" data-cat="growth">
-      <object class="card-cover" type="image/svg+xml" data="img/covers/hidden-potential.svg" aria-label="Hidden Potential"></object>
+    <article class="card t-thinking" data-cat="thinking" data-text="crowd le bon group psychology 乌合之众 勒庞 群体">
       <div class="card-body">
-        <div class="card-meta"><span lang="en">Growth</span><span lang="zh">成长</span> · <span lang="en">Coming soon</span><span lang="zh">即将上线</span></div>
-        <h3 class="card-title"><span lang="en">Hidden Potential — character skills beat talent</span><span lang="zh">《隐藏的潜力》：性格技能大于天赋</span></h3>
-        <p class="card-teaser"><span lang="en">The harder you work, the luckier you get — not a slogan, it's data.</span>
-          <span lang="zh">越努力越幸运不是鸡汤——是数据。</span></p>
-        <span class="soon-badge"><span lang="en">Coming soon</span><span lang="zh">敬请期待</span></span>
+        <div class="card-meta"><span lang="en">Thinking</span><span lang="zh">思维</span></div>
+        <h3 class="card-title"><a href="categories.html#thinking"><span lang="zh">《乌合之众》</span><span lang="en">The Crowd</span></a></h3>
+        <p class="card-author"><span lang="en">Gustave Le Bon</span><span lang="zh">古斯塔夫·勒庞</span></p>
+        <p class="card-teaser"><span lang="en">Written in 1895, still explains every comment section today.</span><span lang="zh">1895 年写的书，今天读还是新的。</span></p>
+        <div class="card-foot"><span><span lang="en">Thinking · Read</span><span lang="zh">思维 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-thinking" data-cat="thinking" data-text="scarcity mullainathan bandwidth 稀缺 带宽 穷忙">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Thinking</span><span lang="zh">思维</span></div>
+        <h3 class="card-title"><a href="categories.html#thinking"><span lang="zh">《稀缺》</span><span lang="en">Scarcity</span></a></h3>
+        <p class="card-author"><span lang="en">Sendhil Mullainathan</span><span lang="zh">塞德希尔·穆来纳森</span></p>
+        <p class="card-teaser"><span lang="en">Scarcity taxes your bandwidth — busy becomes a trap, not a badge.</span><span lang="zh">稀缺心态收的是「带宽税」：越忙越笨，越穷越亏。</span></p>
+        <div class="card-foot"><span><span lang="en">Thinking · Read</span><span lang="zh">思维 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-thinking" data-cat="thinking" data-text="whole new mind pink right brain concept age 全新思维 平克 右脑">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Thinking</span><span lang="zh">思维</span></div>
+        <h3 class="card-title"><a href="categories.html#thinking"><span lang="zh">《全新思维》</span><span lang="en">A Whole New Mind</span></a></h3>
+        <p class="card-author"><span lang="en">Daniel H. Pink</span><span lang="zh">丹尼尔·平克</span></p>
+        <p class="card-teaser"><span lang="en">The Conceptual Age: why right-brainers will rule the future.</span><span lang="zh">概念时代：为什么右脑思维者将统治未来。</span></p>
+        <div class="card-foot"><span><span lang="en">Thinking · Read</span><span lang="zh">思维 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-business" data-cat="business" data-text="poor charlie almanack munger latticework 穷查理宝典 芒格">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Business</span><span lang="zh">商业</span></div>
+        <h3 class="card-title"><a href="categories.html#business"><span lang="zh">《穷查理宝典》</span><span lang="en">Poor Charlie's Almanack</span></a></h3>
+        <p class="card-author"><span lang="en">Charlie Munger</span><span lang="zh">查理·芒格</span></p>
+        <p class="card-teaser"><span lang="en">Invert, always invert. The latticework of mental models, in one volume.</span><span lang="zh">反过来想，总是反过来想。多元思维格栅 + 人类误判心理学。</span></p>
+        <div class="card-foot"><span><span lang="en">Business · Read</span><span lang="zh">商业 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-business" data-cat="business" data-text="principles dalio bridgewater 原则 达利欧 桥水">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Business</span><span lang="zh">商业</span></div>
+        <h3 class="card-title"><a href="categories.html#business"><span lang="zh">《原则》</span><span lang="en">Principles</span></a></h3>
+        <p class="card-author"><span lang="en">Ray Dalio</span><span lang="zh">瑞·达利欧</span></p>
+        <p class="card-teaser"><span lang="en">Radical truth, radical transparency. Pain + reflection = progress.</span><span lang="zh">极度求真、极度透明。痛苦 + 反思 = 进步。</span></p>
+        <div class="card-foot"><span><span lang="en">Business · Read</span><span lang="zh">商业 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-business" data-cat="business" data-text="乔布斯 禅与投资 李国飞 心力">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Business</span><span lang="zh">商业</span></div>
+        <h3 class="card-title"><a href="categories.html#business"><span lang="zh">《乔布斯、禅与投资》</span><span lang="en">Jobs, Zen & Investing</span></a></h3>
+        <p class="card-author"><span lang="en">Li Guofei</span><span lang="zh">李国飞</span></p>
+        <p class="card-teaser"><span lang="en">Four powers of the mind: will, focus, creativity, insight.</span><span lang="zh">愿力、专注力、创新力、洞察力——四种心力的修炼。</span></p>
+        <div class="card-foot"><span><span lang="en">Business · Read</span><span lang="zh">商业 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-business" data-cat="business" data-text="poor economics banerjee duflo poverty 贫穷的本质 班纳吉 迪弗洛">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Business</span><span lang="zh">商业</span></div>
+        <h3 class="card-title"><a href="categories.html#business"><span lang="zh">《贫穷的本质》</span><span lang="en">Poor Economics</span></a></h3>
+        <p class="card-author"><span lang="en">Abhijit Banerjee & Esther Duflo</span><span lang="zh">阿比吉特·班纳吉 / 埃斯特·迪弗洛</span></p>
+        <p class="card-teaser"><span lang="en">Nobel laureates on why the poverty trap is about decisions, not just money.</span><span lang="zh">诺奖得主的研究：贫穷陷阱困住的不是钱，是决策环境。</span></p>
+        <div class="card-foot"><span><span lang="en">Business · Read</span><span lang="zh">商业 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-business" data-cat="business" data-text="elon musk vance silicon valley 硅谷钢铁侠 马斯克 万斯">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Business</span><span lang="zh">商业</span></div>
+        <h3 class="card-title"><a href="categories.html#business"><span lang="zh">《硅谷钢铁侠》</span><span lang="en">Elon Musk</span></a></h3>
+        <p class="card-author"><span lang="en">Ashlee Vance</span><span lang="zh">阿什利·万斯</span></p>
+        <p class="card-teaser"><span lang="en">The authorized biography. First-principles thinking, taken to extremes.</span><span lang="zh">官方授权传记。把第一性原理用到极致的偏执狂。</span></p>
+        <div class="card-foot"><span><span lang="en">Business · Read</span><span lang="zh">商业 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-business" data-cat="business" data-text="tesla insane mode mckenzie 特斯拉传 实现不可能 麦肯齐">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Business</span><span lang="zh">商业</span></div>
+        <h3 class="card-title"><a href="categories.html#business"><span lang="zh">《特斯拉传：实现不可能》</span><span lang="en">Insane Mode</span></a></h3>
+        <p class="card-author"><span lang="en">Hamish McKenzie</span><span lang="zh">哈米什·麦肯齐</span></p>
+        <p class="card-teaser"><span lang="en">How Tesla turned 'impossible' into a shipping product.</span><span lang="zh">特斯拉如何把「不可能」造出来、卖出去。</span></p>
+        <div class="card-foot"><span><span lang="en">Business · Read</span><span lang="zh">商业 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-fiction" data-cat="fiction" data-text="额尔古纳河右岸 迟子建 鄂温克 茅盾文学奖">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Fiction</span><span lang="zh">小说</span></div>
+        <h3 class="card-title"><a href="categories.html#fiction"><span lang="zh">《额尔古纳河右岸》</span><span lang="en">The Last Quarter of the Moon</span></a></h3>
+        <p class="card-author"><span lang="en">Chi Zijian</span><span lang="zh">迟子建</span></p>
+        <p class="card-teaser"><span lang="en">A ninety-year-old Ewenki woman tells a century in one day.</span><span lang="zh">一位九十岁的鄂温克老人，用一天讲完一百年。茅奖之作。</span></p>
+        <div class="card-foot"><span><span lang="en">Fiction · Read</span><span lang="zh">小说 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-fiction" data-cat="fiction" data-text="生死疲劳 莫言 六道轮回 乡土">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Fiction</span><span lang="zh">小说</span></div>
+        <h3 class="card-title"><a href="categories.html#fiction"><span lang="zh">《生死疲劳》</span><span lang="en">Life and Death Are Wearing Me Out</span></a></h3>
+        <p class="card-author"><span lang="en">Mo Yan</span><span lang="zh">莫言</span></p>
+        <p class="card-teaser"><span lang="en">Six reincarnations — donkey, ox, pig, dog, monkey — fifty years of rural China.</span><span lang="zh">六道轮回看五十年乡土中国。诺奖得主的巅峰叙事。</span></p>
+        <div class="card-foot"><span><span lang="en">Fiction · Read</span><span lang="zh">小说 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-fiction" data-cat="fiction" data-text="人生海海 麦家 上校">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Fiction</span><span lang="zh">小说</span></div>
+        <h3 class="card-title"><a href="categories.html#fiction"><span lang="zh">《人生海海》</span><span lang="en">The Sea of Life</span></a></h3>
+        <p class="card-author"><span lang="en">Mai Jia</span><span lang="zh">麦家</span></p>
+        <p class="card-teaser"><span lang="en">A colonel full of secrets, a village full of gossip. Living on takes courage.</span><span lang="zh">浑身是谜的上校，看客成堆的村庄。敢死不叫勇气，活着才是。</span></p>
+        <div class="card-foot"><span><span lang="en">Fiction · Read</span><span lang="zh">小说 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-fiction" data-cat="fiction" data-text="slaughterhouse five vonnegut dresden 五号屠场 冯内古特">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Fiction</span><span lang="zh">小说</span></div>
+        <h3 class="card-title"><a href="categories.html#fiction"><span lang="zh">《五号屠场》</span><span lang="en">Slaughterhouse-Five</span></a></h3>
+        <p class="card-author"><span lang="en">Kurt Vonnegut</span><span lang="zh">库尔特·冯内古特</span></p>
+        <p class="card-teaser"><span lang="en">So it goes. Black humor that outlives the firebombing it came from.</span><span lang="zh">「事情就是这样。」黑色幽默写尽战争的荒诞。</span></p>
+        <div class="card-foot"><span><span lang="en">Fiction · Read</span><span lang="zh">小说 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-fiction" data-cat="fiction" data-text="strait gate gide 窄门 纪德">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Fiction</span><span lang="zh">小说</span></div>
+        <h3 class="card-title"><a href="categories.html#fiction"><span lang="zh">《窄门》</span><span lang="en">Strait Is the Gate</span></a></h3>
+        <p class="card-author"><span lang="en">André Gide</span><span lang="zh">安德烈·纪德</span></p>
+        <p class="card-teaser"><span lang="en">Faith and love pull in opposite directions — into the narrow gate.</span><span lang="zh">通往幸福的门那么窄。信仰与爱的极致拉扯。诺奖之作。</span></p>
+        <div class="card-foot"><span><span lang="en">Fiction · Read</span><span lang="zh">小说 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-fiction" data-cat="fiction" data-text="遥远的救世主 豆豆 文化属性 天道 丁元英">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Fiction</span><span lang="zh">小说</span></div>
+        <h3 class="card-title"><a href="categories.html#fiction"><span lang="zh">《遥远的救世主》</span><span lang="en">The Distant Savior</span></a></h3>
+        <p class="card-author"><span lang="en">Dou Dou</span><span lang="zh">豆豆</span></p>
+        <p class="card-teaser"><span lang="en">Culture decides destiny. Strong culture, weak culture, no savior coming.</span><span lang="zh">文化属性决定命运。强势文化与弱势文化，救世主不会来。</span></p>
+        <div class="card-foot"><span><span lang="en">Fiction · Read</span><span lang="zh">小说 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-fiction" data-cat="fiction" data-text="天幕红尘 豆豆 见路不走">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Fiction</span><span lang="zh">小说</span></div>
+        <h3 class="card-title"><a href="categories.html#fiction"><span lang="zh">《天幕红尘》</span><span lang="en">Beyond the Dust of the World</span></a></h3>
+        <p class="card-author"><span lang="en">Dou Dou</span><span lang="zh">豆豆</span></p>
+        <p class="card-teaser"><span lang="en">See the road, but don't walk it — '见路不走', the philosophy finale.</span><span lang="zh">「见路不走」。豆豆三部曲的哲学收官之作。</span></p>
+        <div class="card-foot"><span><span lang="en">Fiction · Read</span><span lang="zh">小说 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-fiction" data-cat="fiction" data-text="背叛 豆豆">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Fiction</span><span lang="zh">小说</span></div>
+        <h3 class="card-title"><a href="categories.html#fiction"><span lang="zh">《背叛》</span><span lang="en">Betrayal</span></a></h3>
+        <p class="card-author"><span lang="en">Dou Dou</span><span lang="zh">豆豆</span></p>
+        <p class="card-teaser"><span lang="en">Tao without craft is still attainable; craft without Tao stops at craft.</span><span lang="zh">「有道无术，术尚可求也；有术无道，止于术。」</span></p>
+        <div class="card-foot"><span><span lang="en">Fiction · Read</span><span lang="zh">小说 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-fiction" data-cat="fiction" data-text="死比活着容易 豆豆 处女作">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Fiction</span><span lang="zh">小说</span></div>
+        <h3 class="card-title"><a href="categories.html#fiction"><span lang="zh">《死比活着容易》</span><span lang="en">Dying Is Easier Than Living</span></a></h3>
+        <p class="card-author"><span lang="en">Dou Dou</span><span lang="zh">豆豆</span></p>
+        <p class="card-teaser"><span lang="en">The debut novella — you can already see the later books in it.</span><span lang="zh">豆豆的处女作中篇，已见后来三部曲的影子。</span></p>
+        <div class="card-foot"><span><span lang="en">Fiction · Read</span><span lang="zh">小说 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-lives" data-cat="lives" data-text="在峡江的转弯处 陈行甲 公益 县委书记">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Lives</span><span lang="zh">随笔</span></div>
+        <h3 class="card-title"><a href="categories.html#lives"><span lang="zh">《在峡江的转弯处》</span><span lang="en">At the Bend of the River</span></a></h3>
+        <p class="card-author"><span lang="en">Chen Xingjia</span><span lang="zh">陈行甲</span></p>
+        <p class="card-teaser"><span lang="en">From star county secretary to public-welfare worker. Sincerity wins.</span><span lang="zh">从全国优秀县委书记到公益人。真诚是最大的必杀技。</span></p>
+        <div class="card-foot"><span><span lang="en">Lives · Read</span><span lang="zh">随笔 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-lives" data-cat="lives" data-text="刚刚说过 郭德纲 规矩">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Lives</span><span lang="zh">随笔</span></div>
+        <h3 class="card-title"><a href="categories.html#lives"><span lang="zh">《刚刚说过》</span><span lang="en">Just Said</span></a></h3>
+        <p class="card-author"><span lang="en">Guo Degang</span><span lang="zh">郭德纲</span></p>
+        <p class="card-teaser"><span lang="en">Rules of life, dinner-table etiquette, and show-business feuds, at fifty.</span><span lang="zh">五十岁郭德纲的处世规矩与江湖人情。慢火烹茶，细品是人生。</span></p>
+        <div class="card-foot"><span><span lang="en">Lives · Read</span><span lang="zh">随笔 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-lives" data-cat="lives" data-text="过得刚好 郭德纲 相声">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Lives</span><span lang="zh">随笔</span></div>
+        <h3 class="card-title"><a href="categories.html#lives"><span lang="zh">《过得刚好》</span><span lang="en">Living Just Fine</span></a></h3>
+        <p class="card-author"><span lang="en">Guo Degang</span><span lang="zh">郭德纲</span></p>
+        <p class="card-teaser"><span lang="en">The crosstalk world's rules and hearts — jokes outside, life inside.</span><span lang="zh">相声江湖的规矩与人心。段子在外，人生在内。</span></p>
+        <div class="card-foot"><span><span lang="en">Lives · Read</span><span lang="zh">随笔 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-lives" data-cat="lives" data-text="郭论 郭德纲 捡史">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Lives</span><span lang="zh">随笔</span></div>
+        <h3 class="card-title"><a href="categories.html#lives"><span lang="zh">《郭论》</span><span lang="en">Guo's Discourse</span></a></h3>
+        <p class="card-author"><span lang="en">Guo Degang</span><span lang="zh">郭德纲</span></p>
+        <p class="card-teaser"><span lang="en">History, folk customs, and street wisdom — the sweeper of folk culture.</span><span lang="zh">捡史、讲俗、拾遗。民间文化的扫地僧式讲法。</span></p>
+        <div class="card-foot"><span><span lang="en">Lives · Read</span><span lang="zh">随笔 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-mind" data-cat="mind" data-text="flow csikszentmihalyi 心流 最优体验">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Mind</span><span lang="zh">心智</span></div>
+        <h3 class="card-title"><a href="categories.html#mind"><span lang="zh">《心流》</span><span lang="en">Flow</span></a></h3>
+        <p class="card-author"><span lang="en">Mihaly Csikszentmihalyi</span><span lang="zh">米哈里·契克森米哈赖</span></p>
+        <p class="card-teaser"><span lang="en">Happiness is not having — it's being fully absorbed.</span><span lang="zh">幸福不是拥有什么，是全神贯注于什么。</span></p>
+        <div class="card-foot"><span><span lang="en">Mind · Read</span><span lang="zh">心智 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-mind" data-cat="mind" data-text="zen mind beginner suzuki 禅者的初心 铃木俊隆 初心">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Mind</span><span lang="zh">心智</span></div>
+        <h3 class="card-title"><a href="categories.html#mind"><span lang="zh">《禅者的初心》</span><span lang="en">Zen Mind, Beginner's Mind</span></a></h3>
+        <p class="card-author"><span lang="en">Shunryu Suzuki</span><span lang="zh">铃木俊隆</span></p>
+        <p class="card-teaser"><span lang="en">In the beginner's mind there are many possibilities.</span><span lang="zh">初心不是一次拥有，而是随时回去。</span></p>
+        <div class="card-foot"><span><span lang="en">Mind · Read</span><span lang="zh">心智 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-mind" data-cat="mind" data-text="molecule of more dopamine lieberman 贪婪的多巴胺 多巴胺">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Mind</span><span lang="zh">心智</span></div>
+        <h3 class="card-title"><a href="categories.html#mind"><span lang="zh">《贪婪的多巴胺》</span><span lang="en">The Molecule of More</span></a></h3>
+        <p class="card-author"><span lang="en">Daniel Z. Lieberman</span><span lang="zh">丹尼尔·利伯曼</span></p>
+        <p class="card-teaser"><span lang="en">Dopamine isn't pleasure — it's wanting. Meet your molecule of more.</span><span lang="zh">多巴胺不是快乐，是「想要」。认识你的欲望分子。</span></p>
+        <div class="card-foot"><span><span lang="en">Mind · Read</span><span lang="zh">心智 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-mind" data-cat="mind" data-text="self acceptance stahl 认同自己 自尊">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Mind</span><span lang="zh">心智</span></div>
+        <h3 class="card-title"><a href="categories.html#mind"><span lang="zh">《认同自己》</span><span lang="en">Self-Acceptance</span></a></h3>
+        <p class="card-author"><span lang="en">Stefanie Stahl</span><span lang="zh">斯蒂芬妮·斯塔尔</span></p>
+        <p class="card-teaser"><span lang="en">Where low self-esteem comes from, and the way out.</span><span lang="zh">「我不好、我不行、我不配」的根源与出路。</span></p>
+        <div class="card-foot"><span><span lang="en">Mind · Read</span><span lang="zh">心智 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-mind" data-cat="mind" data-text="fundamentals wilczek 万物原理 物理">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">Mind</span><span lang="zh">心智</span></div>
+        <h3 class="card-title"><a href="categories.html#mind"><span lang="zh">《万物原理》</span><span lang="en">Fundamentals</span></a></h3>
+        <p class="card-author"><span lang="en">Frank Wilczek</span><span lang="zh">弗兰克·维尔切克</span></p>
+        <p class="card-teaser"><span lang="en">Ten keys to reality, by a Nobel physicist. The world, explained plainly.</span><span lang="zh">诺奖物理学家的世界运行十原理。把宇宙讲明白。</span></p>
+        <div class="card-foot"><span><span lang="en">Mind · Read</span><span lang="zh">心智 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-english" data-cat="english" data-text="steve jobs isaacson apple 乔布斯 苹果">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">English</span><span lang="zh">英文原著</span></div>
+        <h3 class="card-title"><a href="categories.html#english"><span lang="zh">《Steve Jobs》</span><span lang="en">Steve Jobs</span></a></h3>
+        <p class="card-author"><span lang="en">Walter Isaacson</span><span lang="zh">沃尔特·艾萨克森</span></p>
+        <p class="card-teaser"><span lang="en">The exclusive biography, in the original: crazy ones change the world.</span><span lang="zh">唯一授权传记英文原版：疯狂到改变世界的人。</span></p>
+        <div class="card-foot"><span><span lang="en">English · Read</span><span lang="zh">英文原著 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-english" data-cat="english" data-text="book of elon jorgenson musk almanack naval 马斯克 纳瓦尔">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">English</span><span lang="zh">英文原著</span></div>
+        <h3 class="card-title"><a href="categories.html#english"><span lang="zh">《The Book of Elon》</span><span lang="en">The Book of Elon</span></a></h3>
+        <p class="card-author"><span lang="en">Eric Jorgenson</span><span lang="zh">埃里克·乔根森</span></p>
+        <p class="card-teaser"><span lang="en">By the author of The Almanack of Naval: Musk's methods, first principles.</span><span lang="zh">《纳瓦尔宝典》作者编的马斯克方法论：第一性原理与五步算法。</span></p>
+        <div class="card-foot"><span><span lang="en">English · Read</span><span lang="zh">英文原著 · 已读</span></span></div>
+      </div>
+    </article>
+
+    <article class="card t-english" data-cat="english" data-text="strictly business kwek leng beng cdl 郭令明 新加坡">
+      <div class="card-body">
+        <div class="card-meta"><span lang="en">English</span><span lang="zh">英文原著</span></div>
+        <h3 class="card-title"><a href="categories.html#english"><span lang="zh">《Strictly Business》</span><span lang="en">The Story of Kwek Leng Beng</span></a></h3>
+        <p class="card-author"><span lang="en">Singapore business biography</span><span lang="zh">（新加坡商业传记）</span></p>
+        <p class="card-teaser"><span lang="en">The story of CDL's Kwek Leng Beng — a Singapore business saga.</span><span lang="zh">新加坡城市发展集团郭令明的商业传奇。</span></p>
+        <div class="card-foot"><span><span lang="en">English · Read</span><span lang="zh">英文原著 · 已读</span></span></div>
       </div>
     </article>
 

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 615 922" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg-munger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2B4A3A"/>
+      <stop offset="100%" stop-color="#1B3026"/>
+    </linearGradient>
+  </defs>
+  <rect width="615" height="922" fill="url(#bg-munger)"/>
+
+  <!-- 多元思维模型格栅 Latticework -->
+  <g opacity="0.9">
+    <g stroke="#C9A668" stroke-width="2" opacity="0.75">
+      <line x1="155" y1="130" x2="155" y2="390"/>
+      <line x1="245" y1="130" x2="245" y2="390"/>
+      <line x1="335" y1="130" x2="335" y2="390"/>
+      <line x1="425" y1="130" x2="425" y2="390"/>
+      <line x1="515" y1="130" x2="515" y2="390"/>
+    </g>
+    <g stroke="#C9A668" stroke-width="2" opacity="0.75">
+      <line x1="100" y1="175" x2="570" y2="175"/>
+      <line x1="100" y1="260" x2="570" y2="260"/>
+      <line x1="100" y1="345" x2="570" y2="345"/>
+    </g>
+    <!-- 格栅交点：每一格一种思维模型 -->
+    <g fill="#E8DCC8">
+      <circle cx="155" cy="175" r="7"/>
+      <circle cx="335" cy="175" r="7"/>
+      <circle cx="515" cy="175" r="7"/>
+      <circle cx="245" cy="260" r="7"/>
+      <circle cx="425" cy="260" r="7"/>
+      <circle cx="155" cy="345" r="7"/>
+      <circle cx="335" cy="345" r="7"/>
+      <circle cx="515" cy="345" r="7"/>
+    </g>
+    <circle cx="245" cy="175" r="7" fill="#C73E2C"/>
+    <circle cx="425" cy="345" r="7" fill="#C73E2C"/>
+  </g>
+
+  <!-- 格栅注释 -->
+  <text x="307" y="120" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-style="italic" fill="#C9A668" opacity="0.85">The Latticework of Mental Models</text>
+
+  <!-- 书脊线 -->
+  <line x1="80" y1="450" x2="535" y2="450" stroke="#C9A668" stroke-width="1" opacity="0.4"/>
+
+  <!-- 标题 -->
+  <text x="307" y="535" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="#F0E6D2">穷查理宝典</text>
+
+  <!-- 英文 -->
+  <text x="307" y="600" text-anchor="middle" font-family="Georgia, serif" font-size="24" letter-spacing="2" fill="#C9A668" opacity="0.9">Poor Charlie's Almanack</text>
+
+  <!-- 副标题 -->
+  <line x1="220" y1="645" x2="395" y2="645" stroke="#C9A668" stroke-width="1"/>
+  <text x="307" y="685" text-anchor="middle" font-family="Georgia, serif" font-size="17" font-style="italic" fill="#D8C9A8">The Wit and Wisdom</text>
+  <text x="307" y="708" text-anchor="middle" font-family="Georgia, serif" font-size="17" font-style="italic" fill="#D8C9A8">of Charles T. Munger</text>
+
+  <!-- 作者 -->
+  <text x="307" y="850" text-anchor="middle" font-family="Georgia, serif" font-size="14" letter-spacing="3" fill="#A89678">CHARLIE</text>
+  <text x="307" y="872" text-anchor="middle" font-family="Georgia, serif" font-size="14" letter-spacing="3" fill="#A89678">MUNGER</text>
+</svg>
