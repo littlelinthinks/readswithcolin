@@ -7,47 +7,476 @@
   <meta name="description" content="About Reads with Colin — a weekly letter on books that change how you see the world. 关于 Reads with Colin：每周一封推荐好书的来信。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
   <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="shortcut icon" type="image/png" href="img/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
-  <meta name="theme-color" content="#5B7A64">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="theme-color" content="#FAF7F0">
+  <meta property="og:title" content="About | Reads with Colin">
+  <meta property="og:description" content="A weekly letter on books that change how you see the world.">
   <meta property="og:image" content="https://readswithcolin.com/img/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Reads with Colin — 错金铜鉴">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://readswithcolin.com/img/og-image.png">
+  <style>
+    /* ============ Reads with Colin · About v2 (Plan C) ============
+       统一风格：米白纸底 + 黑墨 + 朱红 + 金棕
+       与 3-2-1 页面视觉语言完全一致
+    ================================================================ */
+    :root {
+      --paper: #FAF7F0;          /* 米白纸底 */
+      --ink: #14110C;            /* 黑墨 */
+      --muted: #6B6357;           /* 次要文字 */
+      --line: #E5DFD2;            /* 分隔线 */
+      --soft: #F2EDE0;            /* 浅米色块 */
+      --red: #C73E2C;             /* 朱红 */
+      --gold: #C9A668;            /* 金棕 */
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+      --serif: "Playfair Display", "Noto Serif SC", "Songti SC", Georgia, serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: var(--red); text-decoration: none; }
+    a:hover { color: var(--ink); }
+    img { max-width: 100%; height: auto; display: block; }
+    ::selection { background: var(--gold); color: var(--ink); }
+
+    /* ============ 顶部导航 ============ */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      height: 64px;
+      background: rgba(250, 247, 240, 0.92);
+      backdrop-filter: saturate(180%) blur(12px);
+      -webkit-backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+    }
+    .nav-brand:hover { text-decoration: none; }
+    .nav-brand-img {
+      width: 28px;
+      height: 28px;
+      display: block;
+      flex: none;
+    }
+    .nav-brand-text {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .nav-brand-text .amp {
+      font-style: italic;
+      color: var(--red);
+      font-weight: 400;
+    }
+    .nav-links { display: flex; align-items: center; gap: 22px; }
+    .nav-links a {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--ink);
+      letter-spacing: 0.2px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--red); }
+    .nav-links a.active { color: var(--red); }
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      padding: 2px;
+      gap: 0;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .lang-switch a {
+      padding: 4px 10px;
+      border-radius: 999px;
+      color: var(--ink);
+      transition: all 0.2s;
+    }
+    .lang-switch a.active {
+      background: var(--ink);
+      color: var(--paper);
+    }
+    .lang-switch a:hover { color: var(--ink); }
+    .lang-switch a.active:hover { color: var(--paper); }
+    .nav-cta {
+      background: var(--ink);
+      color: var(--paper) !important;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 13.5px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      transition: all 0.2s;
+    }
+    .nav-cta:hover { background: var(--red); color: var(--paper) !important; }
+    @media (max-width: 720px) {
+      .nav { padding: 0 16px; }
+      .nav-links { gap: 12px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+    }
+
+    /* ============ 双语切换 ============ */
+    html[lang="en"] [lang="zh"] { display: none !important; }
+    html[lang="zh"] [lang="en"] { display: none !important; }
+
+    /* ============ 页面主体 ============ */
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 24px 60px;
+    }
+
+    /* ============ 顶部头像+标题 ============ */
+    .about-head {
+      text-align: center;
+      margin-bottom: 64px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--line);
+    }
+    .avatar {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--serif);
+      font-size: 38px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .avatar::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 3px solid var(--paper);
+    }
+    .about-head h1 {
+      font-family: var(--serif);
+      font-size: clamp(32px, 5vw, 42px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin: 0 0 12px;
+    }
+    .about-head h1 .accent {
+      font-style: italic;
+      color: var(--red);
+    }
+    .about-tag {
+      font-size: 16px;
+      color: var(--muted);
+      margin: 0;
+      letter-spacing: 0.5px;
+    }
+
+    /* ============ Section 标题 ============ */
+    .about-section {
+      margin-bottom: 56px;
+    }
+    .about-section h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      font-family: -apple-system, var(--sans);
+      font-size: 14px;
+      letter-spacing: 3px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin: 0 0 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--ink);
+    }
+    .about-section h2 .num {
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 700;
+      font-style: italic;
+    }
+    .about-section p {
+      margin: 0 0 16px;
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--ink);
+    }
+    .about-section p strong { color: var(--ink); font-weight: 700; }
+
+    /* ============ 引文 ============ */
+    .quote {
+      border-left: 3px solid var(--red);
+      background: var(--soft);
+      padding: 18px 22px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+    .quote p {
+      margin: 0 0 8px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+    .quote cite {
+      display: block;
+      font-size: 13.5px;
+      font-style: normal;
+      color: var(--muted);
+      letter-spacing: 0.3px;
+    }
+    .quote cite em { color: var(--ink); font-weight: 600; }
+
+    /* ============ 数字卡片 ============ */
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .fact {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .fact-num {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--red);
+      display: block;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .fact-label {
+      font-size: 12.5px;
+      color: var(--muted);
+      letter-spacing: 0.3px;
+    }
+
+    /* ============ 订阅卡片 ============ */
+    .subscribe-card {
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: 12px;
+      padding: 40px 28px;
+      text-align: center;
+      margin-top: 8px;
+    }
+    .subscribe-card h3 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      color: var(--paper);
+    }
+    .subscribe-card p {
+      color: rgba(250, 247, 240, 0.75);
+      font-size: 14.5px;
+      margin: 0 0 22px;
+    }
+    .subscribe-form {
+      display: flex;
+      max-width: 420px;
+      margin: 0 auto;
+      background: var(--paper);
+      border-radius: 999px;
+      padding: 4px;
+      gap: 0;
+    }
+    .subscribe-form input {
+      flex: 1;
+      border: 0;
+      background: transparent;
+      padding: 10px 18px;
+      font-size: 14.5px;
+      color: var(--ink);
+      outline: 0;
+      font-family: var(--sans);
+    }
+    .subscribe-form input::placeholder { color: var(--muted); }
+    .subscribe-form button {
+      background: var(--red);
+      color: var(--paper);
+      border: 0;
+      border-radius: 999px;
+      padding: 9px 22px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: var(--sans);
+      letter-spacing: 0.3px;
+      transition: background 0.2s;
+    }
+    .subscribe-form button:hover { background: #A02E1F; }
+    .subscribe-success {
+      display: none;
+      color: var(--gold);
+      font-size: 13px;
+      margin-top: 12px;
+    }
+    .subscribe-success.show { display: block; }
+    @media (max-width: 520px) {
+      .subscribe-form { flex-direction: column; border-radius: 16px; }
+      .subscribe-form input { padding: 12px 16px; }
+      .subscribe-form button { padding: 12px 16px; border-radius: 12px; }
+    }
+
+    /* ============ 联系区 ============ */
+    .contact-email {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--red);
+      display: inline-block;
+      margin-top: 8px;
+    }
+    .contact-email:hover { color: var(--ink); }
+    .ps {
+      font-size: 13.5px;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px dashed var(--line);
+    }
+
+    /* ============ 返回首页链接 ============ */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--ink);
+      padding: 10px 0;
+      margin-top: 8px;
+      border-bottom: 1px solid var(--ink);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .back-link:hover {
+      color: var(--red);
+      border-bottom-color: var(--red);
+    }
+    .back-link::before {
+      content: "←";
+      font-size: 18px;
+      transition: transform 0.2s;
+    }
+    .back-link:hover::before { transform: translateX(-3px); }
+
+    /* ============ 页脚 ============ */
+    .site-footer {
+      background: var(--ink);
+      color: rgba(250, 247, 240, 0.65);
+      padding: 56px 24px 36px;
+      margin-top: 60px;
+    }
+    .footer-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 40px;
+    }
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--paper);
+      margin-bottom: 8px;
+    }
+    .footer-brand .amp {
+      font-style: italic;
+      color: var(--red);
+      font-weight: 400;
+    }
+    .footer-tag {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: rgba(250, 247, 240, 0.55);
+      margin: 0;
+    }
+    .footer-col h4 {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 14px;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 14px;
+      color: rgba(250, 247, 240, 0.7);
+      padding: 4px 0;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--paper); }
+    .footer-bottom {
+      max-width: 720px;
+      margin: 36px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid rgba(250, 247, 240, 0.1);
+      display: flex;
+      justify-content: space-between;
+      font-size: 12.5px;
+      color: rgba(250, 247, 240, 0.45);
+    }
+    @media (max-width: 600px) {
+      .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; gap: 8px; align-items: center; text-align: center; }
+    }
+  </style>
 </head>
 <body>
 
   <nav class="nav">
     <a class="nav-brand" href="index.html">
-      <img class="nav-logo-img" src="img/logo.svg" alt="Reads with Colin">
-      <span class="nav-logo">Reads <span class="amp">with</span> Colin</span>
+      <img class="nav-brand-img" src="img/favicon.svg" alt="">
+      <span class="nav-brand-text">Reads <span class="amp">with</span> Colin</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link-plain" href="index.html">
-        <span lang="en">Latest</span>
-        <span lang="zh">最近更新</span>
-      </a>
-      <a class="nav-link-plain" href="archive.html">
-        <span lang="en">Archive</span>
-        <span lang="zh">往期</span>
-      </a>
-      <a class="nav-link-plain" href="categories.html">
-        <span lang="en">Categories</span>
-        <span lang="zh">分类</span>
-      </a>
-      <a class="nav-link-plain" href="about.html">
-        <span lang="en">About</span>
-        <span lang="zh">关于</span>
-      </a>
-      <a class="nav-link-plain" href="feed.xml" target="_blank" rel="noopener">RSS</a>
+      <a href="archive.html"><span lang="en">Archive</span><span lang="zh">往期</span></a>
+      <a href="categories.html"><span lang="en">Categories</span><span lang="zh">分类</span></a>
+      <a href="3-2-1.html">3-2-1</a>
+      <a href="about.html" class="active"><span lang="en">About</span><span lang="zh">关于</span></a>
       <div class="lang-switch" role="group" aria-label="Language">
         <a href="#" data-set-lang="en" class="active">EN</a>
         <a href="#" data-set-lang="zh">中文</a>
@@ -59,115 +488,87 @@
     </div>
   </nav>
 
-  <main class="about-page">
-    <div class="about-hero">
-      <div class="avatar-lg">C</div>
+  <main class="page">
+
+    <div class="about-head">
+      <div class="avatar">C</div>
       <h1>
-        <span lang="en">Hi, I'm Colin 👋</span>
-        <span lang="zh">你好，我是 Colin 👋</span>
+        <span lang="en">Hi, I'm Colin. <span class="accent">I write about books</span> — and what they make me do.</span>
+        <span lang="zh">你好，我是 Colin。聊聊好书<span class="accent">——</span>以及它们让我做了什么。</span>
       </h1>
       <p class="about-tag">
-        <span lang="en">Reader, note-taker, letter-writer</span>
-        <span lang="zh">读书人、笔记爱好者、写信的人</span>
+        <span lang="en">Reader · Note-taker · Letter-writer</span>
+        <span lang="zh">读书人 · 笔记爱好者 · 写信的人</span>
       </p>
     </div>
 
     <section class="about-section">
-      <h2>
-        <span lang="en">What this is</span>
-        <span lang="zh">这是什么</span>
-      </h2>
-      <div lang="en">
-        <p><strong>Reads with Colin</strong> is a weekly letter on the books that change how you see the world — and what you do next. Every Thursday, one issue: a <strong>favorite passage</strong>, <strong>two quotes</strong>, a <strong>book of the week with two lessons to chew on</strong>, plus what I'm <strong>currently reading</strong> and a <strong>reading tip</strong> you can try this week. Five minutes to read; a week to think about.</p>
-        <p>It is not a book review. It is not a list. It is a letter from a friend — a weekly note on what I read, what I underlined, and what I'd like you to underline too.</p>
-      </div>
-      <div lang="zh">
-        <p><strong>Reads with Colin</strong> 是一封每周四发出的来信，聊那些"能改变你看世界方式、也会改变你接下来所做的事"的书。每一期都有固定的栏目：<strong>本周选段</strong>、<strong>两句名言</strong>、<strong>一本好书与两条值得咀嚼的洞见</strong>，再附上我<strong>正在读的书</strong>和一条<strong>阅读小贴士</strong>。五分钟读完，够你回味一整周。</p>
-        <p>它不是书评，也不是书单——更像一位老朋友每周四的来信：聊聊这周读到的、想到的，顺便把书里最锋利的句子摘给你。</p>
-      </div>
+      <h2><span class="num">01</span><span lang="en">WHAT THIS IS</span><span lang="zh">这是什么</span></h2>
+      <p>
+        <span lang="en"><strong>Reads with Colin</strong> is a weekly letter on the books that change how you see the world — and what you do next. Every Thursday, one short issue: a <strong>favorite passage</strong>, <strong>two quotes</strong>, a <strong>book of the week with two lessons</strong>, plus what I'm <strong>currently reading</strong> and a <strong>reading tip</strong> you can try this week.</span>
+        <span lang="zh"><strong>Reads with Colin</strong> 是一封每周四发出的来信，聊那些"能改变你看世界方式、也会改变你接下来所做的事"的书。每一期都有固定的栏目：<strong>本周选段</strong>、<strong>两句名言</strong>、<strong>一本好书与两条值得咀嚼的洞见</strong>，再附上我<strong>正在读的书</strong>和一条<strong>阅读小贴士</strong>。</span>
+      </p>
+      <p>
+        <span lang="en">Five minutes to read; a week to think about. No ads, no spam — just one thoughtful letter from a friend.</span>
+        <span lang="zh">五分钟读完，够你回味一整周。没有广告，也不群发杂讯——就是一封朋友寄来的信。</span>
+      </p>
     </section>
 
     <section class="about-section">
-      <h2>
-        <span lang="en">Why I write</span>
-        <span lang="zh">为什么写</span>
-      </h2>
-      <div lang="en">
-        <p>Reading is easy. <em>Remembering</em> is the work. The hardest part of a book is keeping what you underlined, applying it on a Tuesday afternoon, and letting the rest go.</p>
-        <p>This letter is my way of fighting "I read it and forgot." <strong>The best input is input with an output attached.</strong> Every week I take the sentences that hit me and rewrite them in my own words; wherever I can't, I haven't yet understood the book.</p>
-      </div>
-      <div lang="zh">
-        <p>读书最难的不是读，而是<strong>记得住、用得上、放得下</strong>——记住好句子，用上好方法，放下读过的执念再往前走。</p>
-        <p>这封信，是我对抗"读完就忘"的方式：<strong>最好的输入，是带着输出输入。</strong> 每周把书里最触动我的部分重新讲一遍，讲不清楚的地方，就是我还没读明白的地方。</p>
-      </div>
-      <blockquote style="border-left:3px solid var(--accent);background:var(--quote-bg);padding:18px 24px;border-radius:0 10px 10px 0;margin:18px 0;">
-        <p style="margin:0;font-size:15.5px;">
+      <h2><span class="num">02</span><span lang="en">WHY I WRITE</span><span lang="zh">为什么写</span></h2>
+      <p>
+        <span lang="en">Reading is easy. <strong>Remembering</strong> is the work. The hardest part of a book is keeping what you underlined, applying it on a Tuesday afternoon, and letting the rest go.</span>
+        <span lang="zh">读书最难的不是读，而是<strong>记得住、用得上、放得下</strong>——记住好句子，用上好方法，放下读过的执念再往前走。</span>
+      </p>
+      <p>
+        <span lang="en">This letter is my way of fighting "I read it and forgot." <strong>The best input is input with an output attached.</strong> Every week I take the sentences that hit me and rewrite them in my own words; wherever I can't, I haven't yet understood the book.</span>
+        <span lang="zh">这封信，是我对抗"读完就忘"的方式：<strong>最好的输入，是带着输出输入。</strong> 每周把书里最触动我的部分重新讲一遍——讲不清楚的地方，就是我还没读明白的地方。</span>
+      </p>
+      <div class="quote">
+        <p>
           <span lang="en">"Read not to contradict and confute; nor to believe and take for granted; nor to find talk and discourse; but to weigh and consider."</span>
           <span lang="zh">"读书时不可存心诘难作者，不可尽信书上之言，亦不可只为寻章摘句，而应推敲细思。"</span>
         </p>
-        <p style="margin:8px 0 0;font-size:14px;color:var(--text-light);">
-          <span lang="en">— Francis Bacon, <em>Of Studies</em></span>
-          <span lang="zh">— 培根，《谈读书》</span>
-        </p>
-      </blockquote>
+        <cite><span lang="en">— Francis Bacon, <em>Of Studies</em></span><span lang="zh">— 培根，《谈读书》</span></cite>
+      </div>
     </section>
 
     <section class="about-section">
-      <h2>
-        <span lang="en">By the numbers</span>
-        <span lang="zh">一些数字</span>
-      </h2>
-      <div class="about-facts">
-        <div class="fact-card"><span class="fact-num">52+</span>
-          <span class="fact-label">
-            <span lang="en">Books a year</span>
-            <span lang="zh">每年共读的本书数</span>
-          </span>
+      <h2><span class="num">03</span><span lang="en">BY THE NUMBERS</span><span lang="zh">一些数字</span></h2>
+      <div class="facts">
+        <div class="fact">
+          <span class="fact-num">52+</span>
+          <span class="fact-label"><span lang="en">Books a year</span><span lang="zh">每年共读</span></span>
         </div>
-        <div class="fact-card"><span class="fact-num">5 min</span>
-          <span class="fact-label">
-            <span lang="en">Time per issue</span>
-            <span lang="zh">每期阅读时长</span>
-          </span>
+        <div class="fact">
+          <span class="fact-num">5<span style="font-size:18px;">min</span></span>
+          <span class="fact-label"><span lang="en">Per issue</span><span lang="zh">每期阅读</span></span>
         </div>
-        <div class="fact-card"><span class="fact-num">1,200+</span>
-          <span class="fact-label">
-            <span lang="en">Fellow readers</span>
-            <span lang="zh">同行读者</span>
-          </span>
+        <div class="fact">
+          <span class="fact-num">1,200+</span>
+          <span class="fact-label"><span lang="en">Fellow readers</span><span lang="zh">同行读者</span></span>
         </div>
-        <div class="fact-card"><span class="fact-num">∞</span>
-          <span class="fact-label">
-            <span lang="en">To-be-read pile</span>
-            <span lang="zh">书架上的待读之书</span>
-          </span>
+        <div class="fact">
+          <span class="fact-num">∞</span>
+          <span class="fact-label"><span lang="en">To-be-read pile</span><span lang="zh">待读书架</span></span>
         </div>
       </div>
     </section>
 
     <section class="about-section" id="subscribe">
-      <h2>
-        <span lang="en">Subscribe</span>
-        <span lang="zh">订阅</span>
-      </h2>
-      <div lang="en">
-        <p>One thoughtful 5-minute read every Thursday morning. No ads, no spam, unsubscribe anytime.</p>
-      </div>
-      <div lang="zh">
-        <p>每周四早晨，一封读书来信直达你的邮箱。没有广告，不群发杂讯，随时退订。</p>
-      </div>
-      <div class="post-subscribe" style="margin-top:24px;">
+      <h2><span class="num">04</span><span lang="en">SUBSCRIBE</span><span lang="zh">订阅</span></h2>
+      <div class="subscribe-card">
         <h3>
           <span lang="en">Join the letter</span>
           <span lang="zh">加入我们</span>
         </h3>
         <p>
-          <span lang="en">A little bit of daily reading goes a long way.</span>
-          <span lang="zh">每天读一点，日积月累，必有回响。</span>
+          <span lang="en">One thoughtful 5-minute read every Thursday morning. Unsubscribe anytime.</span>
+          <span lang="zh">每周四早晨，一封读书来信直达你的邮箱。随时退订。</span>
         </p>
         <form class="subscribe-form" action="#" method="post" novalidate>
           <input type="email" name="email" placeholder="your@email.com" aria-label="Email" required>
-          <button class="btn" type="submit">
+          <button type="submit">
             <span lang="en">Subscribe</span>
             <span lang="zh">订阅</span>
           </button>
@@ -179,44 +580,46 @@
     </section>
 
     <section class="about-section">
-      <h2>
-        <span lang="en">Say hi</span>
-        <span lang="zh">联系我</span>
-      </h2>
-      <div lang="en">
-        <p>Recommend a book, flag a bad translation, or just say hello — all welcome: <a href="mailto:hello@readswithcolin.com">hello@readswithcolin.com</a></p>
-      </div>
-      <div lang="zh">
-        <p>推荐一本书、指出一个错译、或者只是打个招呼——都欢迎：<a href="mailto:hello@readswithcolin.com">hello@readswithcolin.com</a></p>
-      </div>
-      <p style="font-size:14px;color:var(--text-faint);">
+      <h2><span class="num">05</span><span lang="en">SAY HI</span><span lang="zh">联系我</span></h2>
+      <p>
+        <span lang="en">Recommend a book, flag a bad translation, or just say hello — all welcome:</span>
+        <span lang="zh">推荐一本书、指出一个错译、或者只是打个招呼——都欢迎：</span>
+      </p>
+      <a class="contact-email" href="mailto:hello@readswithcolin.com">hello@readswithcolin.com</a>
+      <p class="ps">
         <span lang="en">P.S. The Chinese name of the letter is still up for debate. If you have a better idea, tell me.</span>
         <span lang="zh">P.S. 这封信的中文名字还没有定论。如果你有好主意，来信告诉我。</span>
       </p>
+      <a class="back-link" href="index.html">
+        <span lang="en">Back to Reads with Colin</span>
+        <span lang="zh">返回首页</span>
+      </a>
     </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
       <div>
-        <div class="footer-brand">Reads <span class="amp" style="color:var(--accent);font-style:italic;">with</span> Colin</div>
+        <div class="footer-brand">Reads <span class="amp">with</span> Colin</div>
         <p class="footer-tag">
           <span lang="en">Books that change how you see — and what you do next.</span>
           <span lang="zh">学而知之，忘而破之，习而新之。</span>
         </p>
       </div>
-            <div class="footer-links">
-        <a href="index.html">Latest</a>
-        <a href="archive.html">Archive</a>
-        <a href="categories.html">Categories</a>
-        <a href="about.html">About</a>
+      <div class="footer-col">
+        <h4><span lang="en">Browse</span><span lang="zh">浏览</span></h4>
+        <a href="archive.html"><span lang="en">Archive</span><span lang="zh">往期</span></a>
+        <a href="categories.html"><span lang="en">Categories</span><span lang="zh">分类</span></a>
+        <a href="3-2-1.html">3-2-1 Thursday</a>
+        <a href="about.html"><span lang="en">About</span><span lang="zh">关于</span></a>
+      </div>
+      <div class="footer-col">
+        <h4><span lang="en">Connect</span><span lang="zh">联系</span></h4>
+        <a href="mailto:hello@readswithcolin.com">Email</a>
         <a href="feed.xml" target="_blank" rel="noopener">RSS</a>
-        <a href="https://twitter.com/" target="_blank" rel="noopener">Twitter/X</a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener">Twitter / X</a>
         <a href="https://weibo.com/" target="_blank" rel="noopener">微博</a>
-        <a href="mailto:hello@readswithcolin.com">Email</a>
-        <a href="https://twitter.com/" target="_blank" rel="noopener">Twitter/X</a>
-        <a href="https://weibo.com/" target="_blank" rel="noopener">微博</a>
-        <a href="mailto:hello@readswithcolin.com">Email</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -225,7 +628,60 @@
     </div>
   </footer>
 
-  <button class="back-top" aria-label="Back to top">↑</button>
-  <script src="js/main.js"></script>
+  <script>
+    /* ============ Bilingual switching ============ */
+    (function() {
+      const STORAGE_KEY = 'rwc-lang';
+      const SUPPORTED = { en: 'en', zh: 'zh', 'zh-cn': 'zh', 'zh-hans': 'zh' };
+      function detectLang() {
+        try {
+          const fromUrl = new URLSearchParams(location.search).get('lang');
+          if (fromUrl && SUPPORTED[fromUrl.toLowerCase()]) return SUPPORTED[fromUrl.toLowerCase()];
+          const saved = localStorage.getItem(STORAGE_KEY);
+          if (saved && SUPPORTED[saved]) return SUPPORTED[saved];
+        } catch (e) {}
+        const nav = (navigator.language || 'en').toLowerCase();
+        if (nav.indexOf('zh') === 0) return 'zh';
+        return 'en';
+      }
+      function applyLang(lang) {
+        document.documentElement.setAttribute('lang', lang);
+        document.querySelectorAll('.lang-switch [data-set-lang]').forEach(function (el) {
+          el.classList.toggle('active', el.getAttribute('data-set-lang') === lang);
+        });
+        try {
+          const url = new URL(location.href);
+          if (url.searchParams.get('lang') !== lang) {
+            url.searchParams.set('lang', lang);
+            history.replaceState(null, '', url.toString());
+          }
+        } catch (e) {}
+        try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+      }
+      const langBtns = document.querySelectorAll('.lang-switch [data-set-lang]');
+      const lang = detectLang();
+      applyLang(lang);
+      langBtns.forEach(b => b.addEventListener('click', e => {
+        e.preventDefault();
+        applyLang(b.dataset.setLang);
+      }));
+
+      /* ============ Subscribe form success ============ */
+      const form = document.querySelector('.subscribe-form');
+      const success = document.querySelector('.subscribe-success');
+      if (form && success) {
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          const email = form.querySelector('input[type=email]').value.trim();
+          if (!email) return;
+          const cur = document.documentElement.lang || 'en';
+          success.textContent = success.dataset['success' + (cur === 'zh' ? 'Zh' : 'En')];
+          success.classList.add('show');
+          form.reset();
+          setTimeout(() => success.classList.remove('show'), 6000);
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
