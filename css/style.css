@@ -696,10 +696,28 @@ img { max-width: 100%; height: auto; display: block; }
   font-style: italic;
   font-family: "Playfair Display", "Noto Serif SC", serif;
 }
+.post-byline-links {
+  margin-top: 10px;
+  padding-top: 9px;
+  border-top: 1px dashed var(--border);
+  font-size: 12.5px;
+  color: var(--text-light);
+  line-height: 1.6;
+  font-style: normal;
+  font-family: "Noto Sans SC", -apple-system, sans-serif;
+}
+.post-byline-links a {
+  color: var(--accent);
+  font-weight: 500;
+}
+.post-byline-links a:hover {
+  color: var(--accent-dark);
+}
 @media (max-width: 600px) {
   .post-byline { padding: 18px; gap: 12px; }
   .post-byline .post-byline-avatar { width: 44px; height: 44px; }
   .post-byline-name { font-size: 16px; }
+  .post-byline-links { font-size: 12px; }
 }
 
 .post-subscribe {
