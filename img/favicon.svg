@@ -4,8 +4,8 @@
   <rect width="64" height="64" rx="12" fill="#FAF7F0"/>
   <!-- 黑墨边框 -->
   <rect x="2" y="2" width="60" height="60" rx="10" fill="none" stroke="#14110C" stroke-width="2"/>
-  <!-- 朱红 R 字母 -->
-  <text x="32" y="46" font-family="Georgia, 'Playfair Display', serif" font-size="42" font-weight="700" text-anchor="middle" fill="#C73E2C">R</text>
+  <!-- 朱红 C 字母 -->
+  <text x="32" y="46" font-family="Georgia, 'Playfair Display', serif" font-size="42" font-weight="700" text-anchor="middle" fill="#C73E2C">C</text>
   <!-- 金棕小圆点（点缀） -->
   <circle cx="48" cy="14" r="2.5" fill="#C9A668"/>
 </svg>

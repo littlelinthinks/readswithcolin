@@ -141,7 +141,7 @@
     return `
     <article class="card">
       <div class="card-body">
-        <div class="card-meta"><span lang="en">${esc(p.categoryLabel)}</span><span lang="zh">${esc(p.categoryLabelZh)}</span> · <span lang="en">Read</span><span lang="zh">已读</span></div>
+        <div class="card-meta"><span lang="en">${esc(p.categoryLabel)}</span><span lang="zh">${esc(p.categoryLabelZh)}</span></div>
         <h3 class="card-title"><a href="posts/${esc(p.slug)}.html"><span lang="en">${esc(p.titleEn)}</span><span lang="zh">《${esc(p.titleZh)}》</span></a></h3>
         <p class="card-teaser"><span lang="en">${esc(p.teaserEn)}</span><span lang="zh">${esc(p.teaserZh)}</span></p>
         <div class="card-foot"><span><span lang="en">${esc(p.authorEn)}</span><span lang="zh">${esc(p.authorZh)}</span></span></div>
