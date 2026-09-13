@@ -4,6 +4,35 @@
   "note": "Reads with Colin · 书评数据源。由 posts/*.html 提取生成。",
   "items": [
     {
+      "slug": "os-mtzdbiyi",
+      "rwcNumber": 37,
+      "category": "名人传记",
+      "categoryLabel": "名人传记",
+      "categoryLabelZh": "名人传记",
+      "titleEn": "马斯克的成功，在于坚持",
+      "titleZh": "马斯克的成功，在于坚持",
+      "authorEn": "Colin",
+      "authorZh": "小Lin思考",
+      "teaserEn": "马斯克在众多质疑声中，和一次次失败之后，仍然说了已经：我永不放弃。",
+      "teaserZh": "马斯克在众多质疑声中，和一次次失败之后，仍然说了已经：我永不放弃。",
+      "greetingEn": "Hello —",
+      "greetingZh": "你好 —",
+      "introEn": "",
+      "introZh": "马斯克在众多质疑声中，和一次次失败之后，仍然说了已经：我永不放弃。",
+      "quote": {
+        "textEn": "",
+        "textZh": "",
+        "srcEn": "",
+        "srcZh": ""
+      },
+      "readMin": 4,
+      "cover": "",
+      "featured": false,
+      "publishedAt": "2026-09-13",
+      "isNew": true,
+      "source": "pwa"
+    },
+    {
       "slug": "os-mtzc2jip",
       "rwcNumber": 36,
       "category": "thinking",
