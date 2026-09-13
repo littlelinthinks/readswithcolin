@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "categories": [
+    {
+      "slug": "thinking",
+      "labelEn": "Mental Models",
+      "labelZh": "思维方法"
+    },
+    {
+      "slug": "business",
+      "labelEn": "Business & Investing",
+      "labelZh": "商业投资"
+    },
+    {
+      "slug": "fiction",
+      "labelEn": "Fiction",
+      "labelZh": "小说文学"
+    },
+    {
+      "slug": "lives",
+      "labelEn": "Lives & Essays",
+      "labelZh": "人物随笔"
+    },
+    {
+      "slug": "mind",
+      "labelEn": "Mind & Zen",
+      "labelZh": "心智修炼"
+    },
+    {
+      "slug": "english",
+      "labelEn": "Read in English",
+      "labelZh": "英文原著"
+    }
+  ]
+}
