@@ -17,9 +17,14 @@
     return [p.titleEn, p.titleZh, p.authorEn, p.authorZh, p.teaserEn, p.teaserZh, p.categoryLabel].join(' ').toLowerCase();
   }
 
+  function coverOf(p) {
+    return 'img/covers/' + esc(p.slug) + '.svg';
+  }
+
   function cardHTML(p) {
     return `
     <article class="card t-${esc(p.category)}" data-cat="${esc(p.category)}" data-text="${esc(getSearchText(p))}">
+      <div class="card-cover"><img class="jkt" src="${coverOf(p)}" alt="${esc(p.titleEn)}"></div>
       <div class="card-body">
         <div class="card-meta">
           <span class="read-badge">RWC #${String(p.rwcNumber).padStart(3, '0')}</span>
@@ -104,6 +109,7 @@
   function categoriesCardHTML(p) {
     return `
     <article class="card t-${esc(p.category)}">
+      <div class="card-cover"><img class="jkt" src="${coverOf(p)}" alt="${esc(p.titleEn)}"></div>
       <div class="card-body">
         <div class="card-meta"><span class="ctag ct-${esc(p.category)}"><span lang="en">${esc(p.categoryLabel)}</span><span lang="zh">${esc(p.categoryLabelZh)}</span></span></div>
         <h3 class="card-title"><a href="posts/${esc(p.slug)}.html"><span lang="zh">《${esc(p.titleZh)}》</span><span lang="en">${esc(p.titleEn)}</span></a></h3>
@@ -140,6 +146,7 @@
   function indexCardHTML(p) {
     return `
     <article class="card">
+      <div class="card-cover"><img class="jkt" src="${coverOf(p)}" alt="${esc(p.titleEn)}"></div>
       <div class="card-body">
         <div class="card-meta"><span lang="en">${esc(p.categoryLabel)}</span><span lang="zh">${esc(p.categoryLabelZh)}</span></div>
         <h3 class="card-title"><a href="posts/${esc(p.slug)}.html"><span lang="en">${esc(p.titleEn)}</span><span lang="zh">《${esc(p.titleZh)}》</span></a></h3>
@@ -160,7 +167,7 @@
     if (featuredLink && featured) {
       featuredLink.href = `posts/${featured.slug}.html`;
       const cover = document.getElementById('featuredCover');
-      if (cover) cover.setAttribute('data', featured.cover);
+      if (cover) cover.setAttribute('src', coverOf(featured));
       const meta = document.getElementById('featuredMeta');
       if (meta) {
         meta.innerHTML = `<span class="cat"><span lang="en">${esc(featured.categoryLabel)}</span><span lang="zh">${esc(featured.categoryLabelZh)}</span></span><span lang="en"> · ${featured.readMin} min read</span><span lang="zh"> · ${featured.readMin} 分钟</span>`;
@@ -188,14 +195,12 @@
       }
     }
 
-    // 书墙：最近的 6 本
+    // 书墙：最近的 6 本（真实书封）
     const wall = document.querySelector('.wall');
     if (wall) {
       wall.innerHTML = sorted.slice(0, 6).map(p => `
         <a class="wall-book" href="posts/${esc(p.slug)}.html" title="${esc(p.titleEn)} / ${esc(p.titleZh)}">
-          <div class="bk" style="width:110px;height:160px;background:linear-gradient(135deg,#3A3A3A 0%,#1F1F1F 100%);display:flex;align-items:center;justify-content:center;padding:12px;text-align:center;color:#fff;font-size:12px;line-height:1.4;border-radius:4px;box-shadow:0 8px 18px rgba(0,0,0,.4);">
-            <span lang="zh">${esc(p.titleZh)}</span><span lang="en">${esc(p.titleEn)}</span>
-          </div>
+          <img class="jkt-wall" src="${coverOf(p)}" alt="${esc(p.titleEn)}">
         </a>
       `).join('');
     }

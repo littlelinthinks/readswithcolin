@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 440" width="300" height="440">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#44505E"/>
-      <stop offset="1" stop-color="#2A313A"/>
+      <stop offset="0" stop-color="#7A6B53"/>
+      <stop offset="1" stop-color="#4A4133"/>
     </linearGradient>
   </defs>
   <rect x="14" y="8" width="272" height="424" rx="6" fill="url(#g)"/>
@@ -10,7 +10,6 @@
   <rect x="14" y="8" width="272" height="424" rx="6" fill="none" stroke="#FAF7F0" stroke-opacity="0.25" stroke-width="1.5"/>
   <text x="150" y="44" text-anchor="middle" font-family="Georgia, serif" font-size="13" letter-spacing="3" fill="#E9DFC9">READS WITH COLIN</text>
   <line x1="60" y1="58" x2="240" y2="58" stroke="#E9DFC9" stroke-opacity="0.4" stroke-width="1"/>
-  <text x="150" y="408" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#E9DFC9">RWC #033</text>
-  <line x1="90" y1="420" x2="210" y2="420" stroke="#E9DFC9" stroke-opacity="0.4" stroke-width="1"/>
-  <text x="150" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#FAF7F0">Steve Jobs</text><text x="150" y="183" text-anchor="middle" font-family="'Songti SC', serif" font-size="16" fill="#E9DFC9">史蒂夫·乔布斯</text>
+  <text x="150" y="210" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#FAF7F0">Featured</text>
+  <text x="150" y="240" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#E9DFC9">Book Cover</text>
 </svg>

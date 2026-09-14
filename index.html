@@ -88,6 +88,14 @@
   .hero-done { display: none; margin-top: 24px; font-size: 15px; color: var(--green); font-weight: 600; }
   .hero-done.show { display: inline-block; }
   .hero-note { margin-top: 16px; font-size: 13px; color: var(--muted); }
+  /* 社会证明 */
+  .hero-social { margin-top: 22px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .hero-social .avatars { display: flex; }
+  .hero-social .avatars span { width: 34px; height: 34px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 13px; border: 2px solid var(--paper); margin-left: -10px; box-shadow: 0 2px 6px rgba(20,17,12,.15); }
+  .hero-social .avatars span:first-child { margin-left: 0; }
+  .hero-social .avatars .more { background: var(--ink); }
+  .hero-social p { font-size: 14px; color: var(--muted); }
+  .hero-social b { color: var(--ink); font-weight: 700; }
   .hero-logo { display: flex; justify-content: center; }
   .hero-logo object { width: 320px; max-width: 100%; filter: drop-shadow(0 14px 30px rgba(60,45,20,.18)); pointer-events: none; }
 
@@ -96,7 +104,7 @@
   .featured { background: var(--card); border-radius: var(--radius); overflow: hidden; box-shadow: 0 12px 40px rgba(20,17,12,.07); display: grid; grid-template-columns: .9fr 1.1fr; min-height: 380px; border: 1px solid var(--line); }
   .featured-link { display: contents; text-decoration: none; color: inherit; }
   .featured-cover { background: linear-gradient(135deg, #F1E7D2 0%, #E8D7B3 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; gap: 18px; position: relative; }
-  .featured-cover object { width: 100%; max-width: 220px; filter: drop-shadow(0 10px 22px rgba(0,0,0,.15)); }
+  .featured-cover img { width: 100%; max-width: 220px; filter: drop-shadow(0 10px 22px rgba(0,0,0,.15)); }
   .featured-cover .label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--red); background: #fff; padding: 5px 12px; border-radius: 4px; border: 1px solid var(--red); }
   .featured-body { padding: 48px 44px; display: flex; flex-direction: column; justify-content: center; gap: 16px; }
   .featured-meta { font-size: 13px; color: var(--muted); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
@@ -137,7 +145,9 @@
 
   .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; display: flex; flex-direction: column; }
   .card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(20,17,12,.1); }
-  .card-cover { width: 100%; height: 200px; display: block; pointer-events: none; }
+  .card-cover { width: 100%; height: 232px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #F3ECDD 0%, #E6D6B4 100%); border-bottom: 1px solid var(--line); overflow: hidden; }
+  .card-cover .jkt { height: 202px; width: auto; border-radius: 3px; box-shadow: 0 10px 22px rgba(20,17,12,.22); transition: transform .28s ease; }
+  .card:hover .card-cover .jkt { transform: translateY(-5px) rotate(-1.5deg); }
   .card-body { padding: 22px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
   .card-meta { font-size: 12px; color: var(--muted); display: flex; gap: 8px; align-items: center; }
   .card-meta .rwc { background: var(--ink); color: #fff; padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 11px; letter-spacing: .5px; }
@@ -148,7 +158,7 @@
   .card-foot { display: flex; justify-content: space-between; font-size: 12.5px; color: var(--muted); padding-top: 12px; border-top: 1px solid var(--line); margin-top: 4px; }
   .card-foot .heart { color: var(--red); font-weight: 700; }
   .card.soon { opacity: .82; background: #FAF6EC; }
-  .card.soon .card-cover { filter: grayscale(.15); }
+  .card.soon .card-cover .jkt { filter: grayscale(.2); }
   .card.soon .soon-badge { display: inline-block; background: var(--gold); color: var(--ink); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-top: 6px; }
   .card.viewall { background: var(--ink); color: #fff; border-color: var(--ink); justify-content: center; align-items: center; text-align: center; min-height: 320px; }
   .card.viewall a { color: #fff; text-decoration: none; display: flex; flex-direction: column; gap: 10px; padding: 30px; }
@@ -167,7 +177,7 @@
   .wall { margin-top: 50px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; perspective: 800px; }
   .wall-book { display: block; transition: transform .3s ease; }
   .wall-book:hover { transform: translateY(-8px) rotate(-2deg); }
-  .wall-book .bk { width: 110px; height: 160px; filter: drop-shadow(0 8px 18px rgba(0,0,0,.4)); pointer-events: none; }
+  .wall-book .jkt-wall { width: 110px; height: 161px; display: block; border-radius: 3px; filter: drop-shadow(0 8px 18px rgba(0,0,0,.4)); pointer-events: none; }
   .wall-more { margin-top: 36px; }
   .wall-more a { color: var(--gold); text-decoration: none; font-weight: 700; font-size: 14px; letter-spacing: 1px; }
 
@@ -221,6 +231,16 @@
     </form>
     <p class="hero-done" id="subdone"><span lang="en">🎉 Thanks for subscribing — welcome aboard, reader!</span><span lang="zh">🎉 感谢订阅，欢迎加入我们的阅读之旅！</span></p>
     <p class="hero-note"><span lang="en">No spam, unsubscribe anytime</span><span lang="zh">无广告 · 可随时退订</span></p>
+    <div class="hero-social">
+      <div class="avatars">
+        <span style="background:#C73E2C">A</span>
+        <span style="background:#2E5A5A">M</span>
+        <span style="background:#8B5E3C">K</span>
+        <span style="background:#3A3A6E">R</span>
+        <span class="more">+</span>
+      </div>
+      <p><span lang="en">Join <b>4,200+</b> readers who read with Colin every week.</span><span lang="zh">已有 <b>4,200+</b> 位读者每周和 Colin 一起读书。</span></p>
+    </div>
   </div>
   <div class="hero-logo">
     <object type="image/svg+xml" data="img/logo-v6-final.svg" aria-label="Reads with Colin 徽章"></object>
@@ -233,7 +253,7 @@
     <a class="featured-link" id="featuredLink" href="posts/think-fast-slow.html">
       <div class="featured-cover">
         <span class="label"><span lang="en">Latest</span><span lang="zh">最新</span> · RWC #001</span>
-        <object type="image/svg+xml" data="img/covers/placeholder.svg" aria-label="Featured cover" id="featuredCover"></object>
+        <img src="img/covers/placeholder.svg" alt="Featured cover" id="featuredCover">
       </div>
       <div class="featured-body">
         <div class="featured-meta" id="featuredMeta"><span class="cat"><span lang="en">Thinking</span><span lang="zh">思维</span></span><span lang="en">·</span><span lang="zh">·</span></div>
