@@ -388,14 +388,15 @@
   .archive-list li.current .num { background: var(--red); }
 
   .subscribe-card {
-    background: var(--ink);
-    color: var(--bg);
+    background: var(--paper);
+    color: var(--ink);
+    border: 1px solid var(--line);
     border-radius: 12px;
     padding: 28px 24px;
     text-align: center;
   }
   .subscribe-card h3 {
-    color: var(--bg);
+    color: var(--ink);
     font-family: Georgia, serif;
     font-size: 22px;
     font-weight: 400;
@@ -406,16 +407,16 @@
   .subscribe-card p {
     font-family: -apple-system, sans-serif;
     font-size: 13px;
-    color: #C5BDA8;
+    color: var(--muted);
     line-height: 1.6;
     margin-bottom: 18px;
   }
   .subscribe-card input {
     width: 100%;
     padding: 12px 16px;
-    border: 1px solid #333;
-    background: #1a1a1a;
-    color: #fff;
+    border: 1px solid var(--line);
+    background: var(--card);
+    color: var(--ink);
     border-radius: 6px;
     font-size: 14px;
     font-family: -apple-system, sans-serif;
@@ -439,7 +440,7 @@
   .subscribe-card .small {
     margin-top: 14px;
     font-size: 11px;
-    color: #888;
+    color: var(--muted);
   }
   .subscribe-card .sub-ok {
     display: none;
@@ -641,7 +642,7 @@
     <div class="archive-card what-card">
       <h3><span lang="en">WHAT IS 3-2-1?</span><span lang="zh">什么是 3-2-1？</span></h3>
       <p>
-        <span lang="en">Inspired by James Clear's legendary newsletter.</span><span lang="zh">灵感来自 James Clear 的同名经典栏目。</span>
+        <span lang="en">Mind Fuel: 3 ideas, 2 quotes, 1 question every issue.</span><span lang="zh">思维加油站：每次 3 个观点、2 句名言、1 个提问。</span>
       </p>
       <ul>
         <li><strong class="num">3</strong> <span lang="en">ideas from me</span><span lang="zh">我的 3 条想法</span></li>

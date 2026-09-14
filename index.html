@@ -119,20 +119,19 @@
   @media (max-width: 880px) { .featured { grid-template-columns: 1fr; } .featured-body { padding: 28px 24px; } .featured-title { font-size: 24px; } }
 
   /* ============ 3-2-1 入口横幅 ============ */
-  .band321 { background: var(--ink); color: var(--paper); margin: 0; padding: 64px 24px; }
+  .band321 { background: var(--paper); color: var(--ink); margin: 0; padding: 64px 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .band321-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr .6fr; gap: 40px; align-items: center; }
   @media (max-width: 880px) { .band321-inner { grid-template-columns: 1fr; text-align: center; } .band321-actions { justify-content: center; } }
-  .band321-kicker { display: inline-block; font-size: 12px; letter-spacing: 3px; color: var(--red); text-transform: uppercase; font-weight: 700; margin-bottom: 12px; }
   .band321 h2 { font-family: var(--serif); font-size: clamp(28px, 4vw, 42px); font-weight: 700; line-height: 1.15; }
-  .band321 h2 em { color: var(--gold); font-style: italic; }
-  .band321-sub { margin-top: 14px; font-size: 16px; color: #C5BDA8; }
+  .band321 h2 em { color: var(--red); font-style: italic; }
+  .band321-sub { margin-top: 14px; font-size: 17px; color: var(--muted); }
   .band321-items { margin-top: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; }
-  .band321-items .it b { color: var(--gold); font-family: var(--serif); font-size: 19px; margin-right: 6px; }
+  .band321-items .it b { color: var(--red); font-family: var(--serif); font-size: 19px; margin-right: 6px; }
   .band321-actions { display: flex; flex-direction: column; gap: 10px; }
   .btn-321 { background: var(--red); color: #fff; text-decoration: none; padding: 14px 26px; border-radius: 999px; font-size: 15px; font-weight: 700; text-align: center; transition: background .18s ease; }
   .btn-321:hover { background: var(--red-dark); }
-  .btn-321.ghost { background: transparent; border: 1.5px solid #fff; color: #fff; }
-  .btn-321.ghost:hover { background: #fff; color: var(--ink); }
+  .btn-321.ghost { background: transparent; border: 1.5px solid var(--ink); color: var(--ink); }
+  .btn-321.ghost:hover { background: var(--ink); color: var(--paper); }
 
   /* ============ 网格列表 ============ */
   .feed { max-width: 1180px; margin: 0 auto; padding: 80px 24px; }
@@ -160,12 +159,12 @@
   .card.soon { opacity: .82; background: #FAF6EC; }
   .card.soon .card-cover .jkt { filter: grayscale(.2); }
   .card.soon .soon-badge { display: inline-block; background: var(--gold); color: var(--ink); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-top: 6px; }
-  .card.viewall { background: var(--ink); color: #fff; border-color: var(--ink); justify-content: center; align-items: center; text-align: center; min-height: 320px; }
-  .card.viewall a { color: #fff; text-decoration: none; display: flex; flex-direction: column; gap: 10px; padding: 30px; }
-  .card.viewall .va-arrow { font-size: 38px; color: var(--gold); }
+  .card.viewall { background: var(--card); color: var(--ink); border-color: var(--line); justify-content: center; align-items: center; text-align: center; min-height: 320px; }
+  .card.viewall a { color: var(--ink); text-decoration: none; display: flex; flex-direction: column; gap: 10px; padding: 30px; }
+  .card.viewall .va-arrow { font-size: 38px; color: var(--red); }
   .card.viewall .va-text { font-family: var(--serif); font-size: 22px; font-weight: 700; }
-  .card.viewall .va-sub { font-size: 13px; color: #C5BDA8; }
-  .card.viewall:hover { background: var(--red); border-color: var(--red); }
+  .card.viewall .va-sub { font-size: 13px; color: var(--muted); }
+  .card.viewall:hover { background: var(--gold); border-color: var(--gold); color: var(--ink); }
 
   /* ============ 书墙 ============ */
   .wall-band { background: #1F1A14; color: var(--paper); padding: 80px 24px; }
@@ -273,13 +272,12 @@
 <section class="band321">
   <div class="band321-inner">
     <div>
-      <span class="band321-kicker"><span lang="en">New · Every Thursday</span><span lang="zh">新栏目 · 每周四早安</span></span>
-      <h2><span lang="en">Introducing <em>3-2-1 Thursday</em></span><span lang="zh">新栏目 <em>3-2-1 Thursday</em></span></h2>
-      <p class="band321-sub"><span lang="en">Inspired by James Clear's legendary newsletter.</span><span lang="zh">灵感来自 James Clear 的同名经典栏目。每周四早晨，一封给你的信：</span></p>
+      <h2><span lang="en">Mind Fuel</span><span lang="zh">思维加油站</span></h2>
+      <p class="band321-sub"><span lang="en">3 ideas, 2 quotes, 1 question every issue.</span><span lang="zh">每次 3 个观点、2 句名言、1 个提问。</span></p>
       <div class="band321-items">
-        <span class="it"><b>3</b><span lang="en">ideas from Colin</span><span lang="zh">我的 3 条思考</span></span>
-        <span class="it"><b>2</b><span lang="en">quotes from books</span><span lang="zh">2 段书中引文</span></span>
-        <span class="it"><b>1</b><span lang="en">question for you</span><span lang="zh">1 个问题</span></span>
+        <span class="it"><b>3</b><span lang="en">ideas</span><span lang="zh">个观点</span></span>
+        <span class="it"><b>2</b><span lang="en">quotes</span><span lang="zh">句名言</span></span>
+        <span class="it"><b>1</b><span lang="en">question</span><span lang="zh">个提问</span></span>
       </div>
     </div>
     <div class="band321-actions">
