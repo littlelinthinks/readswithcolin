@@ -114,28 +114,29 @@
   .card.soon .card-cover .jkt { filter: grayscale(.2); }
   .card.soon .soon-badge { display: inline-block; background: var(--gold); color: var(--ink); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-top: 6px; }
 
-  /* ============ 3-2-1 Thursday 入口（卡片化 · 方案 B） ============ */
-  .band321 { background: var(--paper); color: var(--ink); margin: 0; padding: 72px 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .band321-inner { max-width: 1180px; margin: 0 auto; }
-  .band321-kicker { display: inline-block; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--red); font-weight: 700; margin-bottom: 12px; }
-  .band321 h2 { font-family: var(--serif); font-size: clamp(28px, 4vw, 42px); font-weight: 700; line-height: 1.15; }
-  .band321 h2 em { color: var(--red); font-style: italic; }
+  /* ============ 3-2-1 Thursday 入口（Atoms 风 · 居中软面板） ============ */
+  .band321 { background: var(--paper); color: var(--ink); margin: 0; padding: 64px 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .band321-panel { max-width: 1080px; margin: 0 auto; background: var(--card); border: 1px solid var(--line); border-radius: 32px; padding: 56px 40px; box-shadow: 0 20px 60px rgba(20,17,12,.06); text-align: center; }
+  .band321-inner { max-width: 100%; margin: 0 auto; text-align: center; }
+  .band321-kicker { display: inline-block; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 12px; }
+  .band321 h2 { font-family: var(--serif); font-size: clamp(30px, 4.4vw, 46px); font-weight: 700; line-height: 1.15; }
+  .band321 h2 em { color: var(--gold); font-style: italic; }
   .band321-sub { margin-top: 14px; font-size: 17px; color: var(--muted); }
-  .band321-cards { margin-top: 36px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .band321-cards { margin-top: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   @media (max-width: 880px) { .band321-cards { grid-template-columns: 1fr; } }
-  .mfu-card { background: var(--card, #fff); border: 1px solid var(--line); border-radius: 14px; padding: 30px 26px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; box-shadow: 0 6px 18px rgba(20,17,12,.05); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
-  .mfu-card:hover { transform: translateY(-8px); box-shadow: 0 18px 44px rgba(20,17,12,.12); border-color: var(--gold); }
-  .mfu-num { font-family: var(--serif); font-size: 56px; font-weight: 700; line-height: 1; color: var(--red); }
-  .mfu-labels { display: flex; align-items: baseline; gap: 7px; }
+  .mfu-card { background: var(--paper); border: none; border-radius: 20px; padding: 32px 24px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; transition: transform .25s ease, box-shadow .25s ease; }
+  .mfu-card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(20,17,12,.08); }
+  .mfu-num { font-family: var(--serif); font-size: 52px; font-weight: 700; line-height: 1; color: var(--gold); }
+  .mfu-labels { display: flex; align-items: baseline; justify-content: center; gap: 7px; }
   .mfu-labels .en { font-family: var(--sans); font-size: 13px; letter-spacing: 3px; font-weight: 700; color: var(--ink); }
   .mfu-labels .zh { font-size: 13px; color: var(--muted); }
   .mfu-desc { font-size: 14px; color: var(--muted); margin-top: 2px; }
-  .band321-actions { margin-top: 34px; display: flex; gap: 12px; flex-wrap: wrap; }
-  .btn-321 { background: var(--red); color: #fff; text-decoration: none; padding: 14px 26px; border-radius: 999px; font-size: 15px; font-weight: 700; text-align: center; transition: background .18s ease; }
-  .btn-321:hover { background: var(--red-dark); }
-  .btn-321.ghost { background: transparent; border: 1.5px solid var(--ink); color: var(--ink); }
-  .btn-321.ghost:hover { background: var(--ink); color: var(--paper); }
-
+  .band321-actions { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .btn-321 { background: var(--gold); color: #fff; text-decoration: none; padding: 14px 28px; border-radius: 999px; font-size: 15px; font-weight: 700; text-align: center; box-shadow: 0 8px 20px rgba(201,166,104,.35); transition: transform .18s ease, box-shadow .18s ease, background .18s ease; }
+  .btn-321:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(201,166,104,.45); }
+  .btn-321.ghost { background: transparent; border: 1.5px solid var(--ink); color: var(--ink); box-shadow: none; }
+  .btn-321.ghost:hover { background: var(--ink); color: var(--paper); transform: none; box-shadow: none; }
+  @media (max-width: 640px) { .band321-panel { padding: 36px 20px; border-radius: 24px; } }
 
   /* ============ 页脚（浅色 · 三栏 + 社交） ============ */
   .nf { background: var(--card, #FFFFFF); border-top: 1px solid var(--line); padding: 60px 24px 28px; }
@@ -221,6 +222,7 @@
 
 <!-- ======================= 3-2-1 入口（与首页一致） ======================= -->
 <section class="band321">
+  <div class="band321-panel">
   <div class="band321-inner">
     <span class="band321-kicker"><span lang="en">New · Every Thursday</span><span lang="zh">新栏目 · 每周四早安</span></span>
     <h2><span lang="en">Mind Fuel</span><span lang="zh">思维加油站</span></h2>
@@ -246,6 +248,7 @@
       <a class="btn-321" href="3-2-1.html"><span lang="en">Read Issue #01 →</span><span lang="zh">读 Issue #01 →</span></a>
       <a class="btn-321 ghost" href="index.html#subscribe"><span lang="en">Subscribe</span><span lang="zh">订阅</span></a>
     </div>
+  </div>
   </div>
 </section>
 
