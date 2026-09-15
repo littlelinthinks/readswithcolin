@@ -167,18 +167,18 @@
   .card.viewall:hover { background: var(--gold); border-color: var(--gold); color: var(--ink); }
 
   /* ============ 书墙 ============ */
-  .wall-band { background: #1F1A14; color: var(--paper); padding: 80px 24px; }
+  .wall-band { background: var(--paper); color: var(--ink); padding: 80px 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .wall-inner { max-width: 1180px; margin: 0 auto; text-align: center; }
-  .wall-kicker { display: inline-block; font-size: 12px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; font-weight: 700; margin-bottom: 12px; }
+  .wall-kicker { display: inline-block; font-size: 12px; letter-spacing: 3px; color: var(--red); text-transform: uppercase; font-weight: 700; margin-bottom: 12px; }
   .wall-inner h2 { font-family: var(--serif); font-size: clamp(28px, 4vw, 40px); font-weight: 700; }
-  .wall-inner h2 em { color: var(--gold); font-style: italic; }
-  .wall-sub { margin-top: 12px; font-size: 15px; color: #B8AFA0; }
+  .wall-inner h2 em { color: var(--red); font-style: italic; }
+  .wall-sub { margin-top: 12px; font-size: 15px; color: var(--muted); }
   .wall { margin-top: 50px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; perspective: 800px; }
   .wall-book { display: block; transition: transform .3s ease; }
   .wall-book:hover { transform: translateY(-8px) rotate(-2deg); }
-  .wall-book .jkt-wall { width: 110px; height: 161px; display: block; border-radius: 3px; filter: drop-shadow(0 8px 18px rgba(0,0,0,.4)); pointer-events: none; }
+  .wall-book .jkt-wall { width: 110px; height: 161px; display: block; border-radius: 3px; filter: drop-shadow(0 8px 18px rgba(20,17,12,.22)); pointer-events: none; }
   .wall-more { margin-top: 36px; }
-  .wall-more a { color: var(--gold); text-decoration: none; font-weight: 700; font-size: 14px; letter-spacing: 1px; }
+  .wall-more a { color: var(--red); text-decoration: none; font-weight: 700; font-size: 14px; letter-spacing: 1px; }
 
   /* ============ 页脚 ============ */
   footer { background: var(--ink); color: #C5BDA8; padding: 60px 24px 24px; }
@@ -317,7 +317,7 @@
     <div class="wall">
       <!-- Wall books rendered from data/posts.json -->
     </div>
-    <div class="wall-more"><a href="archive.html"><span lang="en">Browse all 35 books →</span><span lang="zh">查看全部 <span class="js-count">—</span> 本 →</span></a></div>
+    <div class="wall-more"><a href="archive.html"><span lang="en">Browse all <span class="js-count">—</span> books →</span><span lang="zh">查看全部 <span class="js-count">—</span> 本 →</span></a></div>
   </div>
 </section>
 
