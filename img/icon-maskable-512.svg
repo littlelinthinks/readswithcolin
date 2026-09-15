@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Reads with Colin">
+  <rect width="512" height="512" fill="#FAF7F0"/>
+  <g transform="translate(96,96) scale(5)">
+    <rect width="64" height="64" rx="12" fill="#FAF7F0"/>
+    <rect x="2" y="2" width="60" height="60" rx="10" fill="none" stroke="#14110C" stroke-width="2"/>
+    <text x="32" y="46" font-family="Georgia, serif" font-size="42" font-weight="700" text-anchor="middle" fill="#C73E2C">C</text>
+    <circle cx="48" cy="14" r="2.5" fill="#C9A668"/>
+  </g>
+</svg>
