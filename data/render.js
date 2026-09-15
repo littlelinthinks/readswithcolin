@@ -18,6 +18,8 @@
   }
 
   function coverOf(p) {
+    // 优先使用 posts.json 里的真实封面（jpg/png/webp）；否则回退占位 svg
+    if (p.cover && p.cover.indexOf('.svg') === -1) return p.cover;
     return 'img/covers/' + esc(p.slug) + '.svg';
   }
 
@@ -104,6 +106,7 @@
     }
 
     render(sorted);
+    document.querySelectorAll('.js-count').forEach(el => el.textContent = sorted.length);
   }
 
   function categoriesCardHTML(p) {

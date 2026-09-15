@@ -26,7 +26,7 @@
         "srcZh": "— 丹尼尔·卡尼曼，《思考，快与慢》"
       },
       "readMin": 5,
-      "cover": "img/covers/think-fast-slow.svg",
+      "cover": "img/covers/think-fast-slow.jpeg",
       "featured": true,
       "publishedAt": "2026-01-01",
       "isNew": false
@@ -54,7 +54,7 @@
         "srcZh": "— 沙恩·帕里什，《思考的框架》"
       },
       "readMin": 5,
-      "cover": "img/covers/great-mental-models.svg",
+      "cover": "img/covers/great-mental-models.jpg",
       "featured": false,
       "publishedAt": "2026-02-02",
       "isNew": false
@@ -82,7 +82,7 @@
         "srcZh": "— 芭芭拉·明托，《金字塔原理》"
       },
       "readMin": 5,
-      "cover": "img/covers/pyramid-principle.svg",
+      "cover": "img/covers/pyramid-principle.jpg",
       "featured": false,
       "publishedAt": "2026-03-03",
       "isNew": false
@@ -110,7 +110,7 @@
         "srcZh": "— 冯唐，《金线》"
       },
       "readMin": 5,
-      "cover": "img/covers/golden-thread.svg",
+      "cover": "img/covers/golden-thread.jpg",
       "featured": false,
       "publishedAt": "2026-04-04",
       "isNew": false
@@ -138,7 +138,7 @@
         "srcZh": "— 山口拓朗，《概括力》"
       },
       "readMin": 5,
-      "cover": "img/covers/power-of-summarizing.svg",
+      "cover": "img/covers/power-of-summarizing.jpg",
       "featured": false,
       "publishedAt": "2026-05-05",
       "isNew": false
@@ -166,7 +166,7 @@
         "srcZh": "— 古斯塔夫·勒庞，《乌合之众》"
       },
       "readMin": 5,
-      "cover": "img/covers/the-crowd.svg",
+      "cover": "img/covers/the-crowd.jpg",
       "featured": false,
       "publishedAt": "2026-06-06",
       "isNew": false
@@ -194,7 +194,7 @@
         "srcZh": "— 塞德希尔·穆来纳森，《稀缺》"
       },
       "readMin": 5,
-      "cover": "img/covers/scarcity.svg",
+      "cover": "img/covers/scarcity.jpg",
       "featured": false,
       "publishedAt": "2026-07-07",
       "isNew": false
@@ -222,7 +222,7 @@
         "srcZh": "— 丹尼尔·平克，《全新思维》"
       },
       "readMin": 5,
-      "cover": "img/covers/a-whole-new-mind.svg",
+      "cover": "img/covers/a-whole-new-mind.png",
       "featured": false,
       "publishedAt": "2026-08-08",
       "isNew": false
@@ -250,7 +250,7 @@
         "srcZh": "— 查理·芒格，《穷查理宝典》"
       },
       "readMin": 5,
-      "cover": "img/covers/poor-charlies-almanack.svg",
+      "cover": "img/covers/poor-charlies-almanack.jpg",
       "featured": false,
       "publishedAt": "2026-09-09",
       "isNew": false
@@ -278,7 +278,7 @@
         "srcZh": "— 瑞·达利欧，《原则》"
       },
       "readMin": 5,
-      "cover": "img/covers/principles.svg",
+      "cover": "img/covers/principles.jpg",
       "featured": false,
       "publishedAt": "2026-10-10",
       "isNew": false
@@ -306,7 +306,7 @@
         "srcZh": "— 李国飞，《乔布斯、禅与投资》"
       },
       "readMin": 5,
-      "cover": "img/covers/jobs-zen-investing.svg",
+      "cover": "img/covers/jobs-zen-investing.jpg",
       "featured": false,
       "publishedAt": "2026-11-11",
       "isNew": false
@@ -334,7 +334,7 @@
         "srcZh": "— 阿比吉特·班纳吉 / 埃斯特·迪弗洛，《贫穷的本质》"
       },
       "readMin": 5,
-      "cover": "img/covers/poor-economics.svg",
+      "cover": "img/covers/poor-economics.jpg",
       "featured": false,
       "publishedAt": "2026-12-12",
       "isNew": false
@@ -390,7 +390,7 @@
         "srcZh": "— 哈米什·麦肯齐，《特斯拉传：实现不可能》"
       },
       "readMin": 5,
-      "cover": "img/covers/insane-mode.svg",
+      "cover": "img/covers/insane-mode.jpg",
       "featured": false,
       "publishedAt": "2026-02-14",
       "isNew": false
@@ -418,7 +418,7 @@
         "srcZh": "— 迟子建，《额尔古纳河右岸》"
       },
       "readMin": 5,
-      "cover": "img/covers/last-quarter-of-the-moon.svg",
+      "cover": "img/covers/last-quarter-of-the-moon.jpeg",
       "featured": false,
       "publishedAt": "2026-03-15",
       "isNew": false
@@ -446,7 +446,7 @@
         "srcZh": "— 莫言，《生死瘦劳》"
       },
       "readMin": 5,
-      "cover": "img/covers/life-death-wearing-me-out.svg",
+      "cover": "img/covers/life-death-wearing-me-out.jpg",
       "featured": false,
       "publishedAt": "2026-04-16",
       "isNew": false
@@ -474,7 +474,7 @@
         "srcZh": "— 库尔特·冯内古特，《五号屠场》"
       },
       "readMin": 5,
-      "cover": "img/covers/slaughterhouse-five.svg",
+      "cover": "img/covers/slaughterhouse-five.jpg",
       "featured": false,
       "publishedAt": "2026-06-18",
       "isNew": false
@@ -502,7 +502,7 @@
         "srcZh": "— 安德烈·纪德，《窄门》"
       },
       "readMin": 5,
-      "cover": "img/covers/strait-is-the-gate.svg",
+      "cover": "img/covers/strait-is-the-gate.jpg",
       "featured": false,
       "publishedAt": "2026-07-19",
       "isNew": false
@@ -530,7 +530,7 @@
         "srcZh": "— 豆豆，《遥远的救世主》"
       },
       "readMin": 5,
-      "cover": "img/covers/distant-savior.svg",
+      "cover": "img/covers/distant-savior.jpeg",
       "featured": false,
       "publishedAt": "2026-08-20",
       "isNew": false
@@ -558,7 +558,7 @@
         "srcZh": "— 豆豆，《天幕红尘》"
       },
       "readMin": 5,
-      "cover": "img/covers/beyond-dust-world.svg",
+      "cover": "img/covers/beyond-dust-world.jpg",
       "featured": false,
       "publishedAt": "2026-09-21",
       "isNew": false
@@ -586,7 +586,7 @@
         "srcZh": "— 豆豆，《背叛》"
       },
       "readMin": 5,
-      "cover": "img/covers/betrayal.svg",
+      "cover": "img/covers/betrayal.jpeg",
       "featured": false,
       "publishedAt": "2026-10-22",
       "isNew": false
@@ -614,7 +614,7 @@
         "srcZh": "— 豆豆，《死比活着容易》"
       },
       "readMin": 5,
-      "cover": "img/covers/dying-easier-living.svg",
+      "cover": "img/covers/dying-easier-living.png",
       "featured": false,
       "publishedAt": "2026-11-23",
       "isNew": false
@@ -642,7 +642,7 @@
         "srcZh": "— 陈行甲，《在峡江的转弯处》"
       },
       "readMin": 5,
-      "cover": "img/covers/bend-of-the-river.svg",
+      "cover": "img/covers/bend-of-the-river.jpg",
       "featured": false,
       "publishedAt": "2026-12-24",
       "isNew": false
@@ -670,7 +670,7 @@
         "srcZh": "— 郭德纲，《刚刚说过》"
       },
       "readMin": 5,
-      "cover": "img/covers/just-said.svg",
+      "cover": "img/covers/just-said.jpg",
       "featured": false,
       "publishedAt": "2026-01-25",
       "isNew": false
@@ -698,7 +698,7 @@
         "srcZh": "— 郭德纲，《过得刚好》"
       },
       "readMin": 5,
-      "cover": "img/covers/living-just-fine.svg",
+      "cover": "img/covers/living-just-fine.jpg",
       "featured": false,
       "publishedAt": "2026-02-26",
       "isNew": false
@@ -726,7 +726,7 @@
         "srcZh": "— 郭德纲，《郭论》"
       },
       "readMin": 5,
-      "cover": "img/covers/guos-discourse.svg",
+      "cover": "img/covers/guos-discourse.jpg",
       "featured": false,
       "publishedAt": "2026-03-27",
       "isNew": false
@@ -754,7 +754,7 @@
         "srcZh": "— 米哈里·契克森米哈赖，《心流》"
       },
       "readMin": 5,
-      "cover": "img/covers/flow.svg",
+      "cover": "img/covers/flow.jpg",
       "featured": false,
       "publishedAt": "2026-04-28",
       "isNew": false
@@ -782,7 +782,7 @@
         "srcZh": "— 铃木俊隆，《禅者的初心》"
       },
       "readMin": 5,
-      "cover": "img/covers/zen-mind-beginners-mind.svg",
+      "cover": "img/covers/zen-mind-beginners-mind.jpg",
       "featured": false,
       "publishedAt": "2026-05-01",
       "isNew": false
@@ -810,7 +810,7 @@
         "srcZh": "— 丹尼尔·利伯曼，《贪婪的多巴胺》"
       },
       "readMin": 5,
-      "cover": "img/covers/molecule-of-more.svg",
+      "cover": "img/covers/molecule-of-more.jpg",
       "featured": false,
       "publishedAt": "2026-06-02",
       "isNew": false
@@ -838,7 +838,7 @@
         "srcZh": "— 斯蒂芬妮·斯塔尔，《认同自己》"
       },
       "readMin": 5,
-      "cover": "img/covers/self-acceptance.svg",
+      "cover": "img/covers/self-acceptance.jpg",
       "featured": false,
       "publishedAt": "2026-07-03",
       "isNew": false
@@ -866,7 +866,7 @@
         "srcZh": "— 弗兰克·维尔切克，《万物原理》"
       },
       "readMin": 5,
-      "cover": "img/covers/fundamentals.svg",
+      "cover": "img/covers/fundamentals.jpg",
       "featured": false,
       "publishedAt": "2026-08-04",
       "isNew": false
@@ -894,7 +894,7 @@
         "srcZh": "— 沃尔特·艾萨克森，《史蒂夫·乔布斯》"
       },
       "readMin": 5,
-      "cover": "img/covers/steve-jobs.svg",
+      "cover": "img/covers/steve-jobs.jpg",
       "featured": false,
       "publishedAt": "2026-09-05",
       "isNew": false
@@ -922,7 +922,7 @@
         "srcZh": "— 埃里克·乔根森，《马斯克之书》"
       },
       "readMin": 5,
-      "cover": "img/covers/book-of-elon.svg",
+      "cover": "img/covers/book-of-elon.webp",
       "featured": false,
       "publishedAt": "2026-10-06",
       "isNew": false
@@ -950,7 +950,7 @@
         "srcZh": "— （新加坡商业传记），《纯商业：郭令明的故事》"
       },
       "readMin": 5,
-      "cover": "img/covers/strictly-business-kwek.svg",
+      "cover": "img/covers/strictly-business-kwek.jpeg",
       "featured": false,
       "publishedAt": "2026-11-07",
       "isNew": false
