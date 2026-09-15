@@ -166,6 +166,7 @@
 </style>
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
 
@@ -367,5 +368,12 @@
   }
 })();
 </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function () {});
+      });
+    }
+  </script>
 </body>
 </html>
