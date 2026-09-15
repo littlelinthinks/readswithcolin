@@ -123,34 +123,53 @@
   .card.soon .card-cover .jkt { filter: grayscale(.2); }
   .card.soon .soon-badge { display: inline-block; background: var(--gold); color: var(--ink); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-top: 6px; }
 
-  /* 3-2-1 入口（同首页） */
-  .band321 { background: var(--ink); color: var(--paper); margin: 0; padding: 64px 24px; }
-  .band321-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr .6fr; gap: 40px; align-items: center; }
-  @media (max-width: 880px) { .band321-inner { grid-template-columns: 1fr; text-align: center; } .band321-actions { justify-content: center; } }
-  .band321-kicker { display: inline-block; font-size: 12px; letter-spacing: 3px; color: var(--red); text-transform: uppercase; font-weight: 700; margin-bottom: 12px; }
+  /* ============ 3-2-1 Thursday 入口（卡片化 · 方案 B） ============ */
+  .band321 { background: var(--paper); color: var(--ink); margin: 0; padding: 72px 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .band321-inner { max-width: 1180px; margin: 0 auto; }
+  .band321-kicker { display: inline-block; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--red); font-weight: 700; margin-bottom: 12px; }
   .band321 h2 { font-family: var(--serif); font-size: clamp(28px, 4vw, 42px); font-weight: 700; line-height: 1.15; }
-  .band321 h2 em { color: var(--gold); font-style: italic; }
-  .band321-sub { margin-top: 14px; font-size: 16px; color: #C5BDA8; }
-  .band321-items { margin-top: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; }
-  .band321-items .it b { color: var(--gold); font-family: var(--serif); font-size: 19px; margin-right: 6px; }
-  .band321-actions { display: flex; flex-direction: column; gap: 10px; }
+  .band321 h2 em { color: var(--red); font-style: italic; }
+  .band321-sub { margin-top: 14px; font-size: 17px; color: var(--muted); }
+  .band321-cards { margin-top: 36px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 880px) { .band321-cards { grid-template-columns: 1fr; } }
+  .mfu-card { background: var(--card, #fff); border: 1px solid var(--line); border-radius: 14px; padding: 30px 26px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; box-shadow: 0 6px 18px rgba(20,17,12,.05); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .mfu-card:hover { transform: translateY(-8px); box-shadow: 0 18px 44px rgba(20,17,12,.12); border-color: var(--gold); }
+  .mfu-num { font-family: var(--serif); font-size: 56px; font-weight: 700; line-height: 1; color: var(--red); }
+  .mfu-labels { display: flex; align-items: baseline; gap: 7px; }
+  .mfu-labels .en { font-family: var(--sans); font-size: 13px; letter-spacing: 3px; font-weight: 700; color: var(--ink); }
+  .mfu-labels .zh { font-size: 13px; color: var(--muted); }
+  .mfu-desc { font-size: 14px; color: var(--muted); margin-top: 2px; }
+  .band321-actions { margin-top: 34px; display: flex; gap: 12px; flex-wrap: wrap; }
   .btn-321 { background: var(--red); color: #fff; text-decoration: none; padding: 14px 26px; border-radius: 999px; font-size: 15px; font-weight: 700; text-align: center; transition: background .18s ease; }
   .btn-321:hover { background: var(--red-dark); }
-  .btn-321.ghost { background: transparent; border: 1.5px solid #fff; color: #fff; }
-  .btn-321.ghost:hover { background: #fff; color: var(--ink); }
+  .btn-321.ghost { background: transparent; border: 1.5px solid var(--ink); color: var(--ink); }
+  .btn-321.ghost:hover { background: var(--ink); color: var(--paper); }
 
-  /* 页脚（同首页） */
-  footer { background: var(--ink); color: #C5BDA8; padding: 60px 24px 24px; }
-  .footer-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; }
-  @media (max-width: 720px) { .footer-inner { grid-template-columns: 1fr; } }
-  .footer-brand { font-family: var(--serif); font-size: 22px; font-weight: 700; color: #fff; }
-  .footer-brand em { color: var(--red); font-style: italic; }
-  .footer-tag { margin-top: 10px; font-size: 14px; line-height: 1.6; }
-  .footer-col h4 { font-family: var(--sans); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
-  .footer-col a { display: block; color: #C5BDA8; text-decoration: none; padding: 4px 0; font-size: 14px; }
-  .footer-col a:hover { color: var(--red); }
-  .footer-bottom { max-width: 1180px; margin: 36px auto 0; padding-top: 24px; border-top: 1px solid #2A2520; display: flex; justify-content: space-between; font-size: 12.5px; color: #6E675B; }
-  @media (max-width: 720px) { .footer-bottom { flex-direction: column; gap: 10px; text-align: center; } }
+
+  /* ============ 页脚（浅色 · 三栏 + 社交） ============ */
+  .nf { background: var(--card, #FFFFFF); border-top: 1px solid var(--line); padding: 60px 24px 28px; }
+  .nf-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.7fr 1fr 1fr; gap: 48px; }
+  .nf-brand { font-family: var(--serif); font-size: 24px; font-weight: 700; color: var(--ink); }
+  .nf-brand em { color: var(--red); font-style: italic; }
+  .nf-tag { margin-top: 14px; font-size:14px; color: var(--muted); max-width: 320px; line-height: 1.7; }
+  .nf-social { margin-top: 22px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .nf-social a, .nf-social .ph { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--paper, #FAF7F0); border: 1px solid var(--line); color: var(--ink); text-decoration: none; transition: all .18s ease; }
+  .nf-social a:hover { border-color: var(--red); color: var(--red); transform: translateY(-3px); background: #fff; }
+  .nf-social .ph { opacity: .35; cursor: help; font-size: 13px; font-weight: 700; font-family: var(--sans); }
+  .nf-social svg { width: 18px; height: 18px; fill: currentColor; }
+  .nf-col h4 { font-family: var(--sans); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .nf-col a { display: block; color: var(--ink); text-decoration: none; font-size: 14px; padding: 5px 0; transition: color .15s ease; }
+  .nf-col a:hover { color: var(--red); }
+  .nf-bottom { max-width: 1180px; margin: 40px auto 0; padding-top: 22px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; font-size: 12.5px; color: var(--muted); }
+  @media (max-width: 760px) { .nf-inner { grid-template-columns: 1fr; gap: 30px; } .nf-bottom { flex-direction: column; gap: 8px; text-align: center; } }
+  /* 标题 hover：下划线浮动 */
+  .card-title a, .featured-title a, .archive-list li a { position: relative; background-image: linear-gradient(var(--red), var(--red)); background-size: 0% 2px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .28s ease, color .15s ease; }
+  .card-title a:hover, .featured-title a:hover, .archive-list li a:hover { background-size: 100% 2px; }
+  /* 返回顶部 */
+  .to-top { position: fixed; right: 22px; bottom: 22px; width: 46px; height: 46px; border-radius: 50%; background: var(--ink); color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; box-shadow: 0 8px 22px rgba(20,17,12,.25); opacity: 0; visibility: hidden; transform: translateY(12px); transition: opacity .25s ease, transform .25s ease, background .18s ease; z-index: 80; }
+  .to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+  .to-top:hover { background: var(--red); }
+  @media (max-width: 720px) { .to-top { right: 14px; bottom: 14px; width: 42px; height: 42px; } }
 </style>
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.svg">
@@ -280,14 +299,24 @@
 <!-- ======================= 3-2-1 入口 ======================= -->
 <section class="band321">
   <div class="band321-inner">
-    <div>
-      <span class="band321-kicker"><span lang="en">New · Every Thursday</span><span lang="zh">新栏目 · 每周四早安</span></span>
-      <h2><span lang="en">Discover <em>3-2-1 Thursday</em></span><span lang="zh">看看 <em>3-2-1 Thursday</em></span></h2>
-      <p class="band321-sub"><span lang="en">A weekly letter of 3 ideas, 2 quotes, and 1 question.</span><span lang="zh">每周一封：3 条思考，2 段引文，1 个问题。</span></p>
-      <div class="band321-items">
-        <span class="it"><b>3</b><span lang="en">ideas from Colin</span><span lang="zh">我的 3 条思考</span></span>
-        <span class="it"><b>2</b><span lang="en">quotes from books</span><span lang="zh">2 段书中引文</span></span>
-        <span class="it"><b>1</b><span lang="en">question for you</span><span lang="zh">1 个问题</span></span>
+    <span class="band321-kicker"><span lang="en">New · Every Thursday</span><span lang="zh">新栏目 · 每周四早安</span></span>
+    <h2><span lang="en">Mind Fuel</span><span lang="zh">思维加油站</span></h2>
+    <p class="band321-sub"><span lang="en">3 ideas, 2 quotes, 1 question every issue.</span><span lang="zh">每次 3 个观点、2 句名言、1 个提问。</span></p>
+    <div class="band321-cards">
+      <div class="mfu-card">
+        <span class="mfu-num">3</span>
+        <span class="mfu-labels"><span class="en">IDEAS</span><span class="zh">个观点</span></span>
+        <p class="mfu-desc"><span lang="en">Three ideas from Colin</span><span lang="zh">Colin 的 3 条思考</span></p>
+      </div>
+      <div class="mfu-card">
+        <span class="mfu-num">2</span>
+        <span class="mfu-labels"><span class="en">QUOTES</span><span class="zh">句名言</span></span>
+        <p class="mfu-desc"><span lang="en">Two quotes from books</span><span lang="zh">2 段书中引文</span></p>
+      </div>
+      <div class="mfu-card">
+        <span class="mfu-num">1</span>
+        <span class="mfu-labels"><span class="en">QUESTION</span><span class="zh">个提问</span></span>
+        <p class="mfu-desc"><span lang="en">One question for you</span><span lang="zh">1 个问题</span></p>
       </div>
     </div>
     <div class="band321-actions">
@@ -298,28 +327,35 @@
 </section>
 
 <!-- ======================= 页脚 ======================= -->
-<footer>
-  <div class="footer-inner">
+<footer class="nf">
+  <div class="nf-inner">
     <div>
-      <div class="footer-brand">Reads <em>with</em> Colin</div>
-      <p class="footer-tag"><span lang="en">Books that change how you see — and what you do next.</span><span lang="zh">读书不是逃避世界，是带上更好的眼睛再回来。</span></p>
+      <div class="nf-brand">Reads <em>with</em> Colin</div>
+      <p class="nf-tag"><span lang="en">Books that change how you see — and what you do next.</span><span lang="zh">读书不是逃避世界，是带上更好的眼睛再回来。</span></p>
+      <div class="nf-social">
+        <a href="https://x.com/readswithcolin" title="X" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://www.instagram.com/littlelinthinks?utm_source=qr" title="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.51.01-4.75.07-.99.04-1.53.21-1.89.35-.47.18-.81.4-1.17.76-.36.36-.58.7-.76 1.17-.14.36-.31.9-.35 1.89-.06 1.24-.07 1.6-.07 4.75s.01 3.51.07 4.75c.04.99.21 1.53.35 1.89.18.47.4.81.76 1.17.36.36.7.58 1.17.76.36.14.9.31 1.89.35 1.24.06 1.6.07 4.75.07s3.51-.01 4.75-.07c.99-.04 1.53-.21 1.89-.35.47-.18.81-.4 1.17-.76.36-.36.58-.7.76-1.17.14-.36.31-.9.35-1.89.06-1.24.07-1.6.07-4.75s-.01-3.51-.07-4.75c-.04-.99-.21-1.53-.35-1.89a3.14 3.14 0 00-.76-1.17 3.14 3.14 0 00-1.17-.76c-.36-.14-.9-.31-1.89-.35-1.24-.06-1.6-.07-4.75-.07zm0 2.76a5.46 5.46 0 110 10.92 5.46 5.46 0 010-10.92zm0 1.62a3.84 3.84 0 100 7.68 3.84 3.84 0 000-7.68zm5.65-2.96a1.28 1.28 0 11-2.56 0 1.28 1.28 0 012.56 0z"/></svg></a>
+        <span class="ph" title="LinkedIn · 即将上线">in</span>
+        <span class="ph" title="Substack · 即将上线">S</span>
+        <span class="ph" title="微信 · 即将上线">微</span>
+        <span class="ph" title="知乎 · 即将上线">知</span>
+        <span class="ph" title="微博 · 即将上线">博</span>
+      </div>
     </div>
-    <div class="footer-cols">
-      <div class="footer-col">
-        <h4><span lang="en">Explore</span><span lang="zh">浏览</span></h4>
-        <a href="archive.html"><span lang="en">Archive</span><span lang="zh">往期</span></a>
-        <a href="categories.html"><span lang="en">Categories</span><span lang="zh">分类</span></a>
-        <a href="3-2-1.html">3-2-1 Thursday</a>
-      </div>
-      <div class="footer-col">
-        <h4><span lang="en">Connect</span><span lang="zh">联系</span></h4>
-        <a href="about.html"><span lang="en">About Colin</span><span lang="zh">关于 Colin</span></a>
-        <a href="feed.xml" target="_blank" rel="noopener">RSS</a>
-        <a href="mailto:hello@readswithcolin.com">Email</a>
-      </div>
+    <div class="nf-col">
+      <h4><span lang="en">Explore</span><span lang="zh">浏览</span></h4>
+      <a href="archive.html"><span lang="en">Archive</span><span lang="zh">往期</span></a>
+      <a href="categories.html"><span lang="en">Categories</span><span lang="zh">分类</span></a>
+      <a href="3-2-1.html">3-2-1 Thursday</a>
+    </div>
+    <div class="nf-col">
+      <h4><span lang="en">Connect</span><span lang="zh">联系</span></h4>
+      <a href="about.html"><span lang="en">About Colin</span><span lang="zh">关于 Colin</span></a>
+      <a href="feed.xml" target="_blank" rel="noopener">RSS</a>
+      <a href="mailto:hello@readswithcolin.com">Email</a>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div class="nf-bottom">
     <span><span lang="en">© 2026 Reads with Colin. All rights reserved.</span><span lang="zh">© 2026 Reads with Colin · 版权所有</span></span>
     <span><span lang="en">Made with 📚 &amp; ☕</span><span lang="zh">用 📚 &amp; ☕ 制作</span></span>
   </div>
@@ -369,5 +405,17 @@
 </script>
 
   <script src="data/render.js"></script>
+<button class="to-top" id="toTop" aria-label="Back to top" title="返回顶部">↑</button>
+<script>
+(function () {
+  var b = document.getElementById('toTop');
+  if (b) {
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 400) b.classList.add('show'); else b.classList.remove('show');
+    }, { passive: true });
+    b.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+})();
+</script>
 </body>
 </html>
