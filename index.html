@@ -148,6 +148,9 @@
   .feed-head h2 { font-family: var(--serif); font-size: 28px; font-weight: 700; }
   .feed-head a { font-size: 14px; font-weight: 700; color: var(--red); text-decoration: none; }
   .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  /* 新栏目置顶：让「资治通鉴 / 毛选精读」排在书架精选最前面 */
+  .card.zizhi-feature { order: -2; }
+  .card.maoxuan-feature { order: -1; }
   @media (max-width: 880px) { .grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
 
