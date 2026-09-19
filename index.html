@@ -9,14 +9,14 @@
 <meta property="og:title" content="Reads with Colin">
 <meta property="og:description" content="A weekly letter on books that change how you see — and what you do next.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://readswithcolin.com/">
+<meta property="og:url" content="https://www.readswithcolin.com/">
 <meta name="theme-color" content="#14110C">
-<meta property="og:image" content="https://readswithcolin.com/img/og-image.png">
+<meta property="og:image" content="https://www.readswithcolin.com/img/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Reads with Colin — 错金铜鉴">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://readswithcolin.com/img/og-image.png">
+<meta name="twitter:image" content="https://www.readswithcolin.com/img/og-image.png">
 <style>
   /* ============ Reads with Colin · Homepage v2 (Plan C) ============
      自包含样式：不加载 css/style.css，避免与旧页面类名冲突
@@ -235,8 +235,11 @@
 .wx-close{position:absolute;top:6px;right:12px;border:none;background:none;font-size:24px;cursor:pointer;color:var(--muted,#6E675B);line-height:1;}
 </style>
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-<link rel="apple-touch-icon" sizes="180x180" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
   <link rel="manifest" href="manifest.webmanifest">
+
+<meta name="description" content="A weekly letter on books that change how you see — and what you do next. Join Reads with Colin.">
+<link rel="canonical" href="https://www.readswithcolin.com/">
 </head>
 <body>
 
@@ -249,7 +252,7 @@
   <div class="nav-right">
     <a class="nav-link" href="archive.html"><span lang="en">Archive</span><span lang="zh">往期</span></a>
     <a class="nav-link" href="categories.html"><span lang="en">Categories</span><span lang="zh">分类</span></a>
-    <a class="nav-link nav-keep" href="3-2-1.html">3-2-1</a>
+    <a class="nav-link nav-keep" href="reading-321.html">3-2-1</a>
     <a class="nav-link" href="about.html"><span lang="en">About</span><span lang="zh">关于</span></a>
     <div class="lang-switch" role="group" aria-label="Language">
       <a href="#" data-set-lang="en" class="active">EN</a>
@@ -266,11 +269,11 @@
     <h1><span lang="en">Read books that change<br>how you <span class="red">see the world.</span></span><span lang="zh">读懂世界的<br>几本<span class="red">好书</span>，每周一封。</span></h1>
     <p class="hero-sub"><span lang="en">One idea, five minutes, every Thursday.</span><span lang="zh">读书不是逃避世界，是带上更好的眼睛再回来。</span></p>
     <p class="hero-zh"><span lang="en">Learn to know; forget to transcend; practice to renew.</span><span lang="zh">学而知之 · 忘而破之 · 习而新之</span></p>
-    <form class="hero-form" id="sub" action="#" onsubmit="event.preventDefault(); this.classList.add('done'); document.getElementById('subdone').classList.add('show'); return false;">
-      <input type="email" placeholder="your@email.com" aria-label="Email" required>
+    <form class="hero-form" id="sub" action="https://substack.com/readswithcolin/subscribe" method="get" target="_blank" rel="noopener" onsubmit="this.classList.add('done'); document.getElementById('subdone').classList.add('show'); return true;">
+      <input type="email" name="email" placeholder="your@email.com" aria-label="Email" required>
       <button type="submit"><span lang="en">Subscribe</span><span lang="zh">订阅</span></button>
     </form>
-    <p class="hero-done" id="subdone"><span lang="en">🎉 Thanks for subscribing — welcome aboard, reader!</span><span lang="zh">🎉 感谢订阅，欢迎加入我们的阅读之旅！</span></p>
+    <p class="hero-done" id="subdone"><span lang="en">Opening Substack — finish your subscription in the new tab ↗</span><span lang="zh">正在打开 Substack，请在新标签页完成订阅 ↗</span></p>
     <p class="hero-note"><span lang="en">No spam, unsubscribe anytime</span><span lang="zh">无广告 · 可随时退订</span></p>
     <div class="hero-social">
       <div class="avatars">
@@ -335,7 +338,7 @@
       </div>
     </div>
     <div class="band321-actions">
-      <a class="btn-321" href="3-2-1.html"><span lang="en">Read Issue #01 →</span><span lang="zh">读 Issue #01 →</span></a>
+      <a class="btn-321" href="reading-321.html"><span lang="en">Read Issue #01 →</span><span lang="zh">读 Issue #01 →</span></a>
       <a class="btn-321 ghost" href="index.html#subscribe"><span lang="en">Subscribe</span><span lang="zh">订阅</span></a>
     </div>
   </div>
@@ -398,6 +401,52 @@
       </div>
     </article>
 
+    <article class="card zizhi-feature">
+      <div class="card-cover"><img class="jkt" src="img/covers/zizhitongjian-cover.jpg" alt="资治通鉴 · 千年决策案例库"></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="rwc"><span lang="en">COLUMN</span><span lang="zh">专栏</span></span>
+          <span lang="en">Power & Management</span><span lang="zh">财富 · 管理</span>
+        </div>
+        <h3 class="card-title">
+          <a href="zizhitongjian.html">
+            <span lang="en">Zizhi Tongjian: A 1,400-Year Case Book</span>
+            <span lang="zh">资治通鉴：千年决策案例库</span>
+          </a>
+        </h3>
+        <p class="card-teaser">
+          <span lang="en">294 volumes of decision post-mortems — alliances, incentives, attrition, compounding. New case every two weeks. First essay in the works.</span>
+          <span lang="zh">294 卷决策复盘——联盟、激励、消耗、复利。每两周一个案例，首篇撰写中。</span>
+        </p>
+        <div class="card-foot">
+          <span><span lang="en">Column · Coming soon</span><span lang="zh">专栏 · 筹备中</span></span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card maoxuan-feature">
+      <div class="card-cover"><img class="jkt" src="img/covers/maoxuan-cover.jpg" alt="毛选精读 · 思想方法十讲"></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="rwc"><span lang="en">COLUMN</span><span lang="zh">专栏</span></span>
+          <span lang="en">Essays on Method</span><span lang="zh">思想方法</span>
+        </div>
+        <h3 class="card-title">
+          <a href="maoxuan.html">
+            <span lang="en">Reading the Classics for Method</span>
+            <span lang="zh">毛选精读：把思想方法读成工具</span>
+          </a>
+        </h3>
+        <p class="card-teaser">
+          <span lang="en">Strictly methodology: investigate before you conclude, seek truth from facts, grasp the principal contradiction. Ten essays planned.</span>
+          <span lang="zh">只取思想方法与工作方法：调查研究、实事求是、抓主要矛盾。十讲规划，筹备中。</span>
+        </p>
+        <div class="card-foot">
+          <span><span lang="en">Column · Coming soon</span><span lang="zh">专栏 · 筹备中</span></span>
+        </div>
+      </div>
+    </article>
+
     <article class="card viewall">
       <a href="archive.html">
         <span class="va-arrow">→</span>
@@ -445,7 +494,7 @@
       <h4><span lang="en">Explore</span><span lang="zh">浏览</span></h4>
       <a href="archive.html"><span lang="en">Archive</span><span lang="zh">往期</span></a>
       <a href="categories.html"><span lang="en">Categories</span><span lang="zh">分类</span></a>
-      <a href="3-2-1.html">3-2-1 Thursday</a>
+      <a href="reading-321.html">3-2-1 Thursday</a>
     </div>
     <div class="nf-col">
       <h4><span lang="en">Connect</span><span lang="zh">联系</span></h4>
@@ -542,5 +591,6 @@
   document.addEventListener('keydown',function(e){if(e.key==='Escape')m.hidden=true;});
 })();
 </script>
+<script>(function(){var y=new Date().getFullYear();document.querySelectorAll(".nf-bottom").forEach(function(el){el.innerHTML=el.innerHTML.replace(/©\s*\d{4}/g,"© "+y);});})();</script>
 </body>
 </html>

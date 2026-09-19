@@ -2,279 +2,279 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reads with Colin</title>
-    <link>https://readswithcolin.com/</link>
+    <link>https://www.readswithcolin.com/</link>
     <description>A weekly letter on the books that change how you see — and what you do next.</description>
     <language>en</language>
     <lastBuildDate>Sat, 12 Sep 2026 05:56:21 +0000</lastBuildDate>
-    <atom:link href="https://readswithcolin.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://www.readswithcolin.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Thinking, Fast and Slow - 思考，快与慢</title>
-      <link>https://readswithcolin.com/posts/think-fast-slow.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/think-fast-slow.html</guid>
+      <link>https://www.readswithcolin.com/posts/think-fast-slow.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/think-fast-slow.html</guid>
       <description>I read it to understand the brain’s default. The biggest takeaway: build forced pauses into high-stakes decisions. - 三十多年的判断与决策研究，被压成一本可读的书。核心一句话：你的大脑是两套系统——快而直觉的一套，慢而审慎的一套。</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
       <category>Mental Models</category>
     </item>
     <item>
       <title>The Great Mental Models - 思考的框架</title>
-      <link>https://readswithcolin.com/posts/great-mental-models.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/great-mental-models.html</guid>
+      <link>https://www.readswithcolin.com/posts/great-mental-models.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/great-mental-models.html</guid>
       <description>I use reverse-thinking and probability thinking every week. Before a meeting I ask: how would I make this fail? - 不是讲“什么是思维模型”的认知书，而是讲“哪些思维模型最值得收藏”的工具手册。</description>
       <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
       <category>Mental Models</category>
     </item>
     <item>
       <title>The Pyramid Principle - 金字塔原理</title>
-      <link>https://readswithcolin.com/posts/pyramid-principle.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/pyramid-principle.html</guid>
+      <link>https://www.readswithcolin.com/posts/pyramid-principle.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/pyramid-principle.html</guid>
       <description>I treat it as my weekly report filter. Conclusion up top, supporting logic below. - 教你把混乱的素材装进一个金字塔，让表达变得有效。</description>
       <pubDate>Tue, 03 Mar 2026 00:00:00 +0000</pubDate>
       <category>Mental Models</category>
     </item>
     <item>
       <title>The Golden Thread - 金线</title>
-      <link>https://readswithcolin.com/posts/golden-thread.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/golden-thread.html</guid>
+      <link>https://www.readswithcolin.com/posts/golden-thread.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/golden-thread.html</guid>
       <description>I borrowed the "golden thread" metaphor for my weekly notes: what is this week’s golden thread? - 中文学界少有的讲清楚如何把事做成的书。</description>
       <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
       <category>Mental Models</category>
     </item>
     <item>
       <title>The Power of Summarizing - 概括力</title>
-      <link>https://readswithcolin.com/posts/power-of-summarizing.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/power-of-summarizing.html</guid>
+      <link>https://www.readswithcolin.com/posts/power-of-summarizing.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/power-of-summarizing.html</guid>
       <description>I now write three lines after every long read: who is the protagonist, why does it matter, what do I do tomorrow. - 把"表达不清"这件事拆解到三个动作里。</description>
       <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
       <category>Mental Models</category>
     </item>
     <item>
       <title>The Crowd - 乌合之众</title>
-      <link>https://readswithcolin.com/posts/the-crowd.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/the-crowd.html</guid>
+      <link>https://www.readswithcolin.com/posts/the-crowd.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/the-crowd.html</guid>
       <description>The first lesson: the crowd is not "wrong" — it is a triggered system with patterns you can read. - 一个世纪前的群体心理学预见，从弹幕到股价都还在证明它。</description>
       <pubDate>Sat, 06 Jun 2026 00:00:00 +0000</pubDate>
       <category>Mental Models</category>
     </item>
     <item>
       <title>Scarcity - 稀缺</title>
-      <link>https://readswithcolin.com/posts/scarcity.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/scarcity.html</guid>
+      <link>https://www.readswithcolin.com/posts/scarcity.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/scarcity.html</guid>
       <description>My practice: a daily block of empty time — no tasks, no messages, no scrolling. The antidote to scarcity. - 从脑科学和经济学的双重视角证明——稀缺不是缺少，是注意力被占用。</description>
       <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
       <category>Mental Models</category>
     </item>
     <item>
       <title>A Whole New Mind - 全新思维</title>
-      <link>https://readswithcolin.com/posts/a-whole-new-mind.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/a-whole-new-mind.html</guid>
+      <link>https://www.readswithcolin.com/posts/a-whole-new-mind.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/a-whole-new-mind.html</guid>
       <description>It was published in 2006. The future it predicted is now: design, story, and empathy are the most-valued skills. - 从信息时代到概念时代的过渡——审美、故事与共情最被珍视。</description>
       <pubDate>Sat, 08 Aug 2026 00:00:00 +0000</pubDate>
       <category>Mental Models</category>
     </item>
     <item>
       <title>Poor Charlie's Almanack - 穷查理宝典</title>
-      <link>https://readswithcolin.com/posts/poor-charlies-almanack.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/poor-charlies-almanack.html</guid>
+      <link>https://www.readswithcolin.com/posts/poor-charlies-almanack.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/poor-charlies-almanack.html</guid>
       <description>I reframed Munger’s "every problem looks like a nail with a hammer" into "first check whether it is a nail". - 不是一本通常意义上的商业书。是一个九旬老人的讲话集。</description>
       <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
       <category>Business & Investing</category>
     </item>
     <item>
       <title>Principles - 原则</title>
-      <link>https://readswithcolin.com/posts/principles.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/principles.html</guid>
+      <link>https://www.readswithcolin.com/posts/principles.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/principles.html</guid>
       <description>I started writing "daily principles" — small lines that I try to live by and adjust over time. - 表面是个人原则集，实质是一套让生活被审视、被迭代的方法。</description>
       <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
       <category>Business & Investing</category>
     </item>
     <item>
       <title>Jobs, Zen & Investing - 乔布斯、禅与投资</title>
-      <link>https://readswithcolin.com/posts/jobs-zen-investing.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/jobs-zen-investing.html</guid>
+      <link>https://www.readswithcolin.com/posts/jobs-zen-investing.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/jobs-zen-investing.html</guid>
       <description>I now block two hours a week purely for focused reading — the "focus itself is wealth" muscle. - 从中文学界视角写的乔布斯传，把心性的哲学与高端商业嫁接起来。</description>
       <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
       <category>Business & Investing</category>
     </item>
     <item>
       <title>Poor Economics - 贫穷的本质</title>
-      <link>https://readswithcolin.com/posts/poor-economics.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/poor-economics.html</guid>
+      <link>https://www.readswithcolin.com/posts/poor-economics.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/poor-economics.html</guid>
       <description>It changed my belief: environment beats resource in shaping outcomes — backed by field research. - 重新审视贫穷是不是真的只缺钱。</description>
       <pubDate>Sat, 12 Dec 2026 00:00:00 +0000</pubDate>
       <category>Business & Investing</category>
     </item>
     <item>
       <title>Elon Musk - 硅谷钢铁侠</title>
-      <link>https://readswithcolin.com/posts/elon-musk.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/elon-musk.html</guid>
+      <link>https://www.readswithcolin.com/posts/elon-musk.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/elon-musk.html</guid>
       <description>Different industries are not separate — they are physics + software. Space, cars, brain-computer are the same. - 马斯克火箭、电动车、脑机接口背后那个"问为什么"的人物侧写。</description>
       <pubDate>Tue, 13 Jan 2026 00:00:00 +0000</pubDate>
       <category>Business & Investing</category>
     </item>
     <item>
       <title>Insane Mode - 特斯拉传：实现不可能</title>
-      <link>https://readswithcolin.com/posts/insane-mode.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/insane-mode.html</guid>
+      <link>https://www.readswithcolin.com/posts/insane-mode.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/insane-mode.html</guid>
       <description>Even "impossible" projects become achievable once broken into small, rhythmic steps. - 人、商业、技术三角并行的"特斯拉制造史"。</description>
       <pubDate>Sat, 14 Feb 2026 00:00:00 +0000</pubDate>
       <category>Business & Investing</category>
     </item>
     <item>
       <title>The Last Quarter of the Moon - 额尔古纳河右岸</title>
-      <link>https://readswithcolin.com/posts/last-quarter-of-the-moon.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/last-quarter-of-the-moon.html</guid>
+      <link>https://www.readswithcolin.com/posts/last-quarter-of-the-moon.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/last-quarter-of-the-moon.html</guid>
       <description>It is the tone that moves me — a voice of a civilization fading by your side. - 茅奖作品。一个民族与最后一名记录者，在黑龙江梡木里。</description>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
       <category>Fiction</category>
     </item>
     <item>
       <title>Life and Death Are Wearing Me Out - 生死瘦劳</title>
-      <link>https://readswithcolin.com/posts/life-death-wearing-me-out.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/life-death-wearing-me-out.html</guid>
+      <link>https://www.readswithcolin.com/posts/life-death-wearing-me-out.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/life-death-wearing-me-out.html</guid>
       <description>I read it as language exercise. Mo Yan’s sentences "rewind and rewind" — irony is a craft, not a mood. - 诺奖得主以轮回机巧穿梭五十年中国乡土。</description>
       <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
       <category>Fiction</category>
     </item>
     <item>
       <title>Slaughterhouse-Five - 五号屠场</title>
-      <link>https://readswithcolin.com/posts/slaughterhouse-five.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/slaughterhouse-five.html</guid>
+      <link>https://www.readswithcolin.com/posts/slaughterhouse-five.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/slaughterhouse-five.html</guid>
       <description>Late night read. I thought: "a life without being shaken by a book is still a complete life." Then I respected reading. - 德律斯顿表炸之后，才子的生活崩塌。</description>
       <pubDate>Thu, 18 Jun 2026 00:00:00 +0000</pubDate>
       <category>Fiction</category>
     </item>
     <item>
       <title>Strait Is the Gate - 窄门</title>
-      <link>https://readswithcolin.com/posts/strait-is-the-gate.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/strait-is-the-gate.html</guid>
+      <link>https://www.readswithcolin.com/posts/strait-is-the-gate.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/strait-is-the-gate.html</guid>
       <description>A book that leaves you wordless. Some gates are too narrow for two people. - 纪德获诺奖的小说。一个女子为完美主义拒绝爱情。</description>
       <pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate>
       <category>Fiction</category>
     </item>
     <item>
       <title>The Distant Savior - 遥远的救世主</title>
-      <link>https://readswithcolin.com/posts/distant-savior.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/distant-savior.html</guid>
+      <link>https://www.readswithcolin.com/posts/distant-savior.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/distant-savior.html</guid>
       <description>My most-remembered line: no savior will come, only yourself. I re-read the book every year for it. - 丁元英是一个"只能被谈论的人物"。多谈市场、私募、信任。</description>
       <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       <category>Fiction</category>
     </item>
     <item>
       <title>Beyond the Dust of the World - 天幕红尘</title>
-      <link>https://readswithcolin.com/posts/beyond-dust-world.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/beyond-dust-world.html</guid>
+      <link>https://www.readswithcolin.com/posts/beyond-dust-world.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/beyond-dust-world.html</guid>
       <description>When tempted to imitate, I recall "do not walk the road others walked". A guardrail for originality. - 最被低估的豆豆三部曲之一。</description>
       <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
       <category>Fiction</category>
     </item>
     <item>
       <title>Betrayal - 背叛</title>
-      <link>https://readswithcolin.com/posts/betrayal.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/betrayal.html</guid>
+      <link>https://www.readswithcolin.com/posts/betrayal.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/betrayal.html</guid>
       <description>A friend told me: "betrayal is not which side you chose — it is which choices you have left." - 豆豆三部曲的中间一部。事业与"出卖"的论。</description>
       <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
       <category>Fiction</category>
     </item>
     <item>
       <title>Dying Is Easier Than Living - 死比活着容易</title>
-      <link>https://readswithcolin.com/posts/dying-easier-living.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/dying-easier-living.html</guid>
+      <link>https://www.readswithcolin.com/posts/dying-easier-living.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/dying-easier-living.html</guid>
       <description>I wanted to see how an author talks about life across books. She outsmarts her author. - 豆豆"闭上股找个狗"——作者不完全照作者人设谈人生的第一本。</description>
       <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
       <category>Fiction</category>
     </item>
     <item>
       <title>At the Bend of the River - 在峡江的转弯处</title>
-      <link>https://readswithcolin.com/posts/bend-of-the-river.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/bend-of-the-river.html</guid>
+      <link>https://www.readswithcolin.com/posts/bend-of-the-river.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/bend-of-the-river.html</guid>
       <description>"身正不怕影子歪。" This line works outside the bureaucracy too. - 陈行甲退到转身人生所有不甘。</description>
       <pubDate>Thu, 24 Dec 2026 00:00:00 +0000</pubDate>
       <category>Lives & Essays</category>
     </item>
     <item>
       <title>Just Said - 刚刚说过</title>
-      <link>https://readswithcolin.com/posts/just-said.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/just-said.html</guid>
+      <link>https://www.readswithcolin.com/posts/just-said.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/just-said.html</guid>
       <description>Difficulty is not money — it is seniority, relationship, social order. - 老郭五十写过的"人间世"。</description>
       <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
       <category>Lives & Essays</category>
     </item>
     <item>
       <title>Living Just Fine - 过得刚好</title>
-      <link>https://readswithcolin.com/posts/living-just-fine.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/living-just-fine.html</guid>
+      <link>https://www.readswithcolin.com/posts/living-just-fine.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/living-just-fine.html</guid>
       <description>"护脾子" is family, not dining. Reading the book gives you a new view of hierarchy. - 老郭相声三十多年的人文集。</description>
       <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
       <category>Lives & Essays</category>
     </item>
     <item>
       <title>Guo's Discourse - 郭论</title>
-      <link>https://readswithcolin.com/posts/guos-discourse.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/guos-discourse.html</guid>
+      <link>https://www.readswithcolin.com/posts/guos-discourse.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/guos-discourse.html</guid>
       <description>Patience with language and posture. Eat the meal with care — not for show. - 老郭真正抱着"捡就拘了·讲德位"的书。</description>
       <pubDate>Fri, 27 Mar 2026 00:00:00 +0000</pubDate>
       <category>Lives & Essays</category>
     </item>
     <item>
       <title>Flow - 心流</title>
-      <link>https://readswithcolin.com/posts/flow.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/flow.html</guid>
+      <link>https://www.readswithcolin.com/posts/flow.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/flow.html</guid>
       <description>Reading this book feels like playing. Not "chicken soup" — solid psychology from the 80s. - 三十多年前的书，预见了互联网时代的"注意力问题"。</description>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
       <category>Mind & Zen</category>
     </item>
     <item>
       <title>Zen Mind, Beginner's Mind - 禅者的初心</title>
-      <link>https://readswithcolin.com/posts/zen-mind-beginners-mind.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/zen-mind-beginners-mind.html</guid>
+      <link>https://www.readswithcolin.com/posts/zen-mind-beginners-mind.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/zen-mind-beginners-mind.html</guid>
       <description>When stuck, I ask: is this the first time I see this problem? If not, see it as the first time. - 佛门弟子讲"开始心"，说"准备子在世能被联在生活中"。</description>
       <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
       <category>Mind & Zen</category>
     </item>
     <item>
       <title>The Molecule of More - 贪婪的多巴胺</title>
-      <link>https://readswithcolin.com/posts/molecule-of-more.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/molecule-of-more.html</guid>
+      <link>https://www.readswithcolin.com/posts/molecule-of-more.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/molecule-of-more.html</guid>
       <description>The moment of "I want X" is not getting X. That understanding saves me from a few dopamine traps. - 拆解欲望、快乐、遗憾的脑科学书。</description>
       <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
       <category>Mind & Zen</category>
     </item>
     <item>
       <title>Self-Acceptance - 认同自己</title>
-      <link>https://readswithcolin.com/posts/self-acceptance.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/self-acceptance.html</guid>
+      <link>https://www.readswithcolin.com/posts/self-acceptance.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/self-acceptance.html</guid>
       <description>I recognized the "internal judged listener" pattern. Not born — built up by accumulated judgments. - 一本能读得懂的心理书。</description>
       <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
       <category>Mind & Zen</category>
     </item>
     <item>
       <title>Fundamentals - 万物原理</title>
-      <link>https://readswithcolin.com/posts/fundamentals.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/fundamentals.html</guid>
+      <link>https://www.readswithcolin.com/posts/fundamentals.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/fundamentals.html</guid>
       <description>I learned: "you can reframe the world by changing the question." Better questions, better science. - 关于"为什么会是这样"的书。从"看上去那个样"出发。</description>
       <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
       <category>Mind & Zen</category>
     </item>
     <item>
       <title>Steve Jobs - 史蒂夫·乔布斯</title>
-      <link>https://readswithcolin.com/posts/steve-jobs.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/steve-jobs.html</guid>
+      <link>https://www.readswithcolin.com/posts/steve-jobs.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/steve-jobs.html</guid>
       <description>Most readers see "a man with goods". I see a man dwelling in inner phenomenology. - 艾萨克森写乔布斯、爱因斯坦、富兰克林、达·芬奇。</description>
       <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
       <category>Read in English</category>
     </item>
     <item>
       <title>The Book of Elon - 马斯克之书</title>
-      <link>https://readswithcolin.com/posts/book-of-elon.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/book-of-elon.html</guid>
+      <link>https://www.readswithcolin.com/posts/book-of-elon.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/book-of-elon.html</guid>
       <description>Two takeaways: question the requirement, delete the step. Try "ask whether I am the right person". - 与其说是马斯克传记，不如说是"用马斯克讲方法论"。</description>
       <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
       <category>Read in English</category>
     </item>
     <item>
       <title>Strictly Business: The Story of Kwek Leng Beng - 纯商业：郭令明的故事</title>
-      <link>https://readswithcolin.com/posts/strictly-business-kwek.html</link>
-      <guid isPermaLink="true">https://readswithcolin.com/posts/strictly-business-kwek.html</guid>
+      <link>https://www.readswithcolin.com/posts/strictly-business-kwek.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/strictly-business-kwek.html</guid>
       <description>Entrepreneurship is opportunities, not motion. Singapore teaches stillness. - 新加坡酒店、百货、置业的商业家族史。</description>
       <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
       <category>Read in English</category>
