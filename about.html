@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Reads with Colin</title>
   <meta name="description" content="About Reads with Colin — a weekly letter on books that change how you see the world. 关于 Reads with Colin：每周一封推荐好书的来信。">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.cn">
+  <link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin>
+  <link href="https://fonts.googleapis.cn/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <meta name="theme-color" content="#14110C">
   <meta property="og:title" content="About | Reads with Colin">
   <meta property="og:description" content="A weekly letter on books that change how you see the world.">
@@ -441,6 +441,18 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About | Reads with Colin">
 <meta name="twitter:image" content="https://www.readswithcolin.com/img/og-image.png">
+<style>
+  /* v13.1c: 导航「专栏」下拉 */
+  .nav-drop { position: relative; display: inline-block; }
+  .nav-drop summary { list-style: none; cursor: pointer; font-size: 15px; font-weight: 600; color: var(--ink, #14110C); }
+  .nav-drop summary::-webkit-details-marker { display: none; }
+  .nav-drop summary:hover, .nav-drop[open] summary { color: var(--red, #B03A2E); }
+  .nav-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); flex-direction: column; background: #FDFBF6; border: 1px solid var(--line, #E4DCC8); border-radius: 12px; padding: 8px; min-width: 168px; box-shadow: 0 14px 34px rgba(20,17,12,.14); z-index: 60; }
+  .nav-drop[open] .nav-menu, .nav-drop:hover .nav-menu { display: flex; }
+  .nav-menu a { font-size: 14px; font-weight: 600; color: var(--ink, #14110C); padding: 9px 14px; border-radius: 8px; white-space: nowrap; }
+  .nav-menu a:hover { background: rgba(20,17,12,.06); color: var(--red, #B03A2E); }
+  @media (max-width: 720px) { .nav-drop .nav-menu { left: auto; right: 0; transform: none; } .nav-drop summary { display: none; } }
+</style>
 </head>
 <body>
 
@@ -450,8 +462,14 @@
       <span class="nav-brand-text">Reads <span class="amp">with</span> Colin</span>
     </a>
     <div class="nav-links">
-      <a href="archive.html"><span lang="en">Archive</span><span lang="zh">往期</span></a>
       <a href="categories.html"><span lang="en">Categories</span><span lang="zh">分类</span></a>
+      <details class="nav-drop">
+        <summary><span lang="en">Columns</span><span lang="zh">专栏</span></summary>
+        <div class="nav-menu">
+          <a href="zizhitongjian.html"><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span></a>
+          <a href="maoxuan.html"><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span></a>
+        </div>
+      </details>
       <a href="reading-321.html">3-2-1</a>
       <a href="about.html" class="active"><span lang="en">About</span><span lang="zh">关于</span></a>
       <div class="lang-switch" role="group" aria-label="Language">
@@ -696,5 +714,10 @@
 })();
 </script>
 <script>(function(){var y=new Date().getFullYear();document.querySelectorAll(".nf-bottom").forEach(function(el){el.innerHTML=el.innerHTML.replace(/©\s*\d{4}/g,"© "+y);});})();</script>
+<script>
+  document.addEventListener('click', function(e){
+    document.querySelectorAll('nav .nav-drop[open], .nav-drop[open]').forEach(function(d){ if(!d.contains(e.target)) d.removeAttribute('open'); });
+  });
+</script>
 </body>
 </html>

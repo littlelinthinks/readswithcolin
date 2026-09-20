@@ -181,6 +181,20 @@
 
 <link rel="canonical" href="https://www.readswithcolin.com/archive.html">
 <meta property="og:site_name" content="Reads with Colin">
+<style>
+  /* v13.1c: 导航「专栏」下拉（details 原生实现，触屏可点开） */
+  .nav-drop { position: relative; display: inline-block; }
+  .nav-drop summary { list-style: none; cursor: pointer; }
+  .nav-drop summary::-webkit-details-marker { display: none; }
+  .nav-drop summary:hover, .nav-drop[open] summary { color: var(--red); }
+  .nav-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); flex-direction: column; background: #FDFBF6; border: 1px solid var(--line); border-radius: 12px; padding: 8px; min-width: 168px; box-shadow: 0 14px 34px rgba(20,17,12,.14); z-index: 60; }
+  .nav-drop[open] .nav-menu, .nav-drop:hover .nav-menu { display: flex; }
+  .nav-menu a { font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none; padding: 9px 14px; border-radius: 8px; white-space: nowrap; }
+  .nav-menu a:hover { background: rgba(20,17,12,.06); color: var(--red); }
+  @media (max-width: 720px) {
+    .nav-drop .nav-menu { left: auto; right: 0; transform: none; }
+  }
+</style>
 </head>
 <body>
 
@@ -192,8 +206,14 @@
   </a>
   <div class="nav-right">
     <a class="nav-link" href="index.html"><span lang="en">Latest</span><span lang="zh">最近更新</span></a>
-    <a class="nav-link active" href="archive.html"><span lang="en">Archive</span><span lang="zh">往期</span></a>
     <a class="nav-link" href="categories.html"><span lang="en">Categories</span><span lang="zh">分类</span></a>
+        <details class="nav-drop">
+      <summary class="nav-link nav-keep"><span lang="en">Columns</span><span lang="zh">专栏</span></summary>
+      <div class="nav-menu">
+        <a href="zizhitongjian.html"><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span></a>
+        <a href="maoxuan.html"><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span></a>
+      </div>
+    </details>
     <a class="nav-link nav-keep" href="reading-321.html">3-2-1</a>
     <a class="nav-link" href="about.html"><span lang="en">About</span><span lang="zh">关于</span></a>
     <div class="lang-switch" role="group" aria-label="Language">
@@ -412,5 +432,11 @@
 })();
 </script>
 <script>(function(){var y=new Date().getFullYear();document.querySelectorAll(".nf-bottom").forEach(function(el){el.innerHTML=el.innerHTML.replace(/©\s*\d{4}/g,"© "+y);});})();</script>
+<script>
+  /* v13.1c: 点击下拉外部区域自动收起「专栏」菜单 */
+  document.addEventListener('click', function(e){
+    document.querySelectorAll('nav .nav-drop[open]').forEach(function(d){ if(!d.contains(e.target)) d.removeAttribute('open'); });
+  });
+</script>
 </body>
 </html>
