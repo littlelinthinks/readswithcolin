@@ -5,6 +5,18 @@
 (function () {
   'use strict';
 
+  // 封面兜底链：img/covers/ 加载失败 → 试 img/covers-b/ → 试占位图
+  document.addEventListener('error', function (e) {
+    var img = e.target;
+    if (!img || img.tagName !== 'IMG') return;
+    var src = img.getAttribute('src') || '';
+    if (src.indexOf('img/covers/') === 0) {
+      img.src = src.replace('img/covers/', 'img/covers-b/');
+    } else if (src.indexOf('img/covers-b/') === 0 && src !== 'img/covers-b/placeholder.svg') {
+      img.src = 'img/covers-b/placeholder.svg';
+    }
+  }, true);
+
   const today = () => new Date().toISOString().slice(0, 10);
 
   function esc(s) {
@@ -18,9 +30,9 @@
   }
 
   function coverOf(p) {
-    // 优先使用 posts.json 里的真实封面（jpg/png/webp）；否则回退占位 svg
-    if (p.cover && p.cover.indexOf('.svg') === -1) return p.cover;
-    return 'img/covers/' + esc(p.slug) + '.svg';
+    // posts.json 的 cover 字段是唯一权威来源（covers/ 或 covers-b/ 均可能）
+    if (p.cover) return p.cover;
+    return 'img/covers-b/placeholder.svg';
   }
 
   function cardHTML(p) {

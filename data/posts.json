@@ -54,7 +54,7 @@
         "srcZh": "— 沙恩·帕里什，《思考的框架》"
       },
       "readMin": 5,
-      "cover": "img/covers/great-mental-models.jpg",
+      "cover": "img/covers-b/great-mental-models.jpg",
       "featured": false,
       "publishedAt": "2026-02-02",
       "isNew": false
@@ -166,7 +166,7 @@
         "srcZh": "— 古斯塔夫·勒庞，《乌合之众》"
       },
       "readMin": 5,
-      "cover": "img/covers/the-crowd.jpg",
+      "cover": "img/covers-b/the-crowd.jpg",
       "featured": false,
       "publishedAt": "2026-06-06",
       "isNew": false
@@ -194,7 +194,7 @@
         "srcZh": "— 塞德希尔·穆来纳森，《稀缺》"
       },
       "readMin": 5,
-      "cover": "img/covers/scarcity.jpg",
+      "cover": "img/covers-b/scarcity.jpg",
       "featured": false,
       "publishedAt": "2026-07-07",
       "isNew": false
@@ -278,7 +278,7 @@
         "srcZh": "— 瑞·达利欧，《原则》"
       },
       "readMin": 5,
-      "cover": "img/covers/principles.jpg",
+      "cover": "img/covers-b/principles.jpg",
       "featured": false,
       "publishedAt": "2026-10-10",
       "isNew": false
@@ -334,7 +334,7 @@
         "srcZh": "— 阿比吉特·班纳吉 / 埃斯特·迪弗洛，《贫穷的本质》"
       },
       "readMin": 5,
-      "cover": "img/covers/poor-economics.jpg",
+      "cover": "img/covers-b/poor-economics.jpg",
       "featured": false,
       "publishedAt": "2026-12-12",
       "isNew": false
@@ -362,7 +362,7 @@
         "srcZh": "— 阿什利·万斯，《硅谷钢铁侠》"
       },
       "readMin": 5,
-      "cover": "img/covers/elon-musk.svg",
+      "cover": "img/covers-b/elon-musk.svg",
       "featured": false,
       "publishedAt": "2026-01-13",
       "isNew": false
@@ -390,7 +390,7 @@
         "srcZh": "— 哈米什·麦肯齐，《特斯拉传：实现不可能》"
       },
       "readMin": 5,
-      "cover": "img/covers/insane-mode.jpg",
+      "cover": "img/covers-b/insane-mode.jpg",
       "featured": false,
       "publishedAt": "2026-02-14",
       "isNew": false
@@ -446,7 +446,7 @@
         "srcZh": "— 莫言，《生死瘦劳》"
       },
       "readMin": 5,
-      "cover": "img/covers/life-death-wearing-me-out.jpg",
+      "cover": "img/covers-b/life-death-wearing-me-out.jpg",
       "featured": false,
       "publishedAt": "2026-04-16",
       "isNew": false
@@ -474,7 +474,7 @@
         "srcZh": "— 库尔特·冯内古特，《五号屠场》"
       },
       "readMin": 5,
-      "cover": "img/covers/slaughterhouse-five.jpg",
+      "cover": "img/covers-b/slaughterhouse-five.jpg",
       "featured": false,
       "publishedAt": "2026-06-18",
       "isNew": false
@@ -502,7 +502,7 @@
         "srcZh": "— 安德烈·纪德，《窄门》"
       },
       "readMin": 5,
-      "cover": "img/covers/strait-is-the-gate.jpg",
+      "cover": "img/covers-b/strait-is-the-gate.jpg",
       "featured": false,
       "publishedAt": "2026-07-19",
       "isNew": false
@@ -530,7 +530,7 @@
         "srcZh": "— 豆豆，《遥远的救世主》"
       },
       "readMin": 5,
-      "cover": "img/covers/distant-savior.jpeg",
+      "cover": "img/covers-b/distant-savior.jpeg",
       "featured": false,
       "publishedAt": "2026-08-20",
       "isNew": false
@@ -558,7 +558,7 @@
         "srcZh": "— 豆豆，《天幕红尘》"
       },
       "readMin": 5,
-      "cover": "img/covers/beyond-dust-world.jpg",
+      "cover": "img/covers-b/beyond-dust-world.jpg",
       "featured": false,
       "publishedAt": "2026-09-21",
       "isNew": false
@@ -642,7 +642,7 @@
         "srcZh": "— 陈行甲，《在峡江的转弯处》"
       },
       "readMin": 5,
-      "cover": "img/covers/bend-of-the-river.jpg",
+      "cover": "img/covers-b/bend-of-the-river.jpg",
       "featured": false,
       "publishedAt": "2026-12-24",
       "isNew": false
@@ -670,7 +670,7 @@
         "srcZh": "— 郭德纲，《刚刚说过》"
       },
       "readMin": 5,
-      "cover": "img/covers/just-said.jpg",
+      "cover": "img/covers-b/just-said.jpg",
       "featured": false,
       "publishedAt": "2026-01-25",
       "isNew": false
@@ -782,7 +782,7 @@
         "srcZh": "— 铃木俊隆，《禅者的初心》"
       },
       "readMin": 5,
-      "cover": "img/covers/zen-mind-beginners-mind.jpg",
+      "cover": "img/covers-b/zen-mind-beginners-mind.jpg",
       "featured": false,
       "publishedAt": "2026-05-01",
       "isNew": false
@@ -866,7 +866,7 @@
         "srcZh": "— 弗兰克·维尔切克，《万物原理》"
       },
       "readMin": 5,
-      "cover": "img/covers/fundamentals.jpg",
+      "cover": "img/covers-b/fundamentals.jpg",
       "featured": false,
       "publishedAt": "2026-08-04",
       "isNew": false

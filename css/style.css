@@ -1407,3 +1407,48 @@ html[lang="zh"] .archive-card-slogan-text {
     scroll-behavior: auto !important;
   }
 }
+
+/* ==========================================================================
+   Posts 文章页导航补全：nav-right / nav-link / nav-cta 裸类名
+   （文章页 nav 结构与首页一致，但此前只有首页内联样式生效）
+   ========================================================================== */
+.nav-right { display: flex; align-items: center; gap: 22px; }
+.nav-right .nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+.nav-right .nav-link:hover { color: var(--accent); text-decoration: none; }
+.nav-brand .name {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+}
+.nav-brand .name em { color: #C73E2C; font-style: italic; }
+.nav-cta {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--text);
+  padding: 9px 22px;
+  border-radius: 999px;
+  border: 1.5px solid var(--text);
+  transition: background .18s ease, border-color .18s ease;
+  white-space: nowrap;
+}
+.nav-cta:hover { background: var(--accent); border-color: var(--accent); text-decoration: none; }
+
+@media (max-width: 720px) {
+  .nav { padding: 0 16px; }
+  .nav-brand { gap: 8px; }
+  .nav-brand .name { font-size: 17px; }
+  .nav-right { gap: 10px; }
+  .nav-right .nav-link { display: none; }
+  .nav-right .nav-link.nav-keep { display: inline; font-size: 13.5px; }
+  .lang-switch { display: none; }
+  .nav-cta { padding: 7px 14px; font-size: 13px; }
+}
