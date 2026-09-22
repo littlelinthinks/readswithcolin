@@ -452,7 +452,8 @@
   .nav-drop[open] .nav-menu, .nav-drop:hover .nav-menu { display: flex; }
   .nav-menu a { font-size: 14px; font-weight: 600; color: var(--ink, #14110C); padding: 9px 14px; border-radius: 8px; white-space: nowrap; }
   .nav-menu a:hover { background: rgba(20,17,12,.06); color: var(--red, #B03A2E); }
-  @media (max-width: 720px) { .nav-drop .nav-menu { left: auto; right: 0; transform: none; } .nav-drop summary { display: none; } }
+  @media (max-width: 720px) { .nav-drop .nav-menu { left: auto; right: 0; transform: none; }
+  @media(max-width:720px){.nav-drop .nav-menu{max-width:calc(100vw - 150px);}.nav-menu a{white-space:normal;line-height:1.35;}} .nav-drop summary { display: none; } }
 </style>
 </head>
 <body>
@@ -467,8 +468,8 @@
       <details class="nav-drop">
         <summary><span lang="en">Columns</span><span lang="zh">专栏</span></summary>
         <div class="nav-menu">
-          <a href="zizhitongjian.html"><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span></a>
-          <a href="maoxuan.html"><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span></a>
+          <a href="zizhitongjian.html"><span lang="en">The Comprehensive Mirror to Aid in Government</span><span lang="zh">资治通鉴</span></a>
+          <a href="maoxuan.html"><span lang="en">Selected Works</span><span lang="zh">毛选</span></a>
         </div>
       </details>
       <a href="reading-321.html">3-2-1</a>
