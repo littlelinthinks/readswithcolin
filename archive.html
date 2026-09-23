@@ -43,7 +43,7 @@
   .nav { display: flex; align-items: center; justify-content: space-between; max-width: 1180px; margin: 0 auto; padding: 20px 24px; }
   .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
   .nav-brand .mark { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; border: 1.5px solid var(--gold); display: inline-flex; align-items: center; justify-content: center; background: #fff; flex: 0 0 44px; }
-  .nav-brand .mark img { width: 100%; height: 100%; pointer-events: none; }
+  .nav-brand .mark object { width: 100%; height: 100%; pointer-events: none; }
   .nav-brand .name { font-family: var(--serif); font-size: 21px; font-weight: 700; }
   .nav-brand .name em { color: var(--red); font-style: italic; }
   .nav-right { display: flex; align-items: center; gap: 22px; }
@@ -60,23 +60,6 @@
     .nav-link { display: none; }
     .nav-link.nav-keep { display: inline; }
     .lang-switch { display: none; }
-  }
-  @media (max-width: 720px) {
-    .nav { padding: 14px 16px; }
-    .nav-brand { gap: 8px; }
-    .nav-brand .name { white-space: nowrap; font-size: 18px; }
-    .nav-brand .mark { width: 36px; height: 36px; flex: 0 0 36px; }
-    .nav-right { gap: 10px; }
-    .nav-link { white-space: nowrap; }
-    .nav-cta { padding: 7px 14px; font-size: 13px; }
-  }
-  @media (max-width: 420px) {
-    .nav { padding: 12px 12px; }
-    .nav-brand .mark { width: 30px; height: 30px; flex: 0 0 30px; }
-    .nav-brand .name { font-size: 15.5px; }
-    .nav-right { gap: 7px; }
-    .nav-link { font-size: 13px; }
-    .nav-cta { padding: 6px 11px; font-size: 12.5px; }
   }
 
   /* ============ Page Hero ============ */
@@ -210,7 +193,6 @@
   .nav-menu a:hover { background: rgba(20,17,12,.06); color: var(--red); }
   @media (max-width: 720px) {
     .nav-drop .nav-menu { left: auto; right: 0; transform: none; }
-  @media(max-width:720px){.nav-drop .nav-menu{max-width:calc(100vw - 150px);}.nav-menu a{white-space:normal;line-height:1.35;}}
   }
 </style>
 </head>
@@ -219,7 +201,7 @@
 <!-- ======================= 导航 ======================= -->
 <nav class="nav">
   <a class="nav-brand" href="index.html">
-    <span class="mark"><img src="img/mark-books.svg" alt="Reads with Colin"></span>
+    <span class="mark"><object type="image/svg+xml" data="img/logo-v6-final.svg" aria-label="logo"></object></span>
     <span class="name">Reads <em>with</em> Colin</span>
   </a>
   <div class="nav-right">
@@ -228,17 +210,19 @@
         <details class="nav-drop">
       <summary class="nav-link nav-keep"><span lang="en">Columns</span><span lang="zh">专栏</span></summary>
       <div class="nav-menu">
-        <a href="zizhitongjian.html"><span lang="en">The Comprehensive Mirror to Aid in Government</span><span lang="zh">资治通鉴</span></a>
-        <a href="maoxuan.html"><span lang="en">Selected Works</span><span lang="zh">毛选</span></a>
+        <a href="zizhitongjian.html"><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span></a>
+        <a href="maoxuan.html"><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span></a>
       </div>
     </details>
     <a class="nav-link nav-keep" href="reading-321.html">3-2-1</a>
     <a class="nav-link" href="about.html"><span lang="en">About</span><span lang="zh">关于</span></a>
+    <a class="nav-link" href="where-to-find-me.html"><span lang="en">Find me</span><span lang="zh">在哪找到我</span></a>
+    <a class="nav-link" href="media-kit.html"><span lang="en">Media Kit</span><span lang="zh">媒体合作</span></a>
     <div class="lang-switch" role="group" aria-label="Language">
       <a href="#" data-set-lang="en" class="active">EN</a>
       <a href="#" data-set-lang="zh">中文</a>
     </div>
-    <a class="nav-cta" href="index.html#subscribe"><span lang="en">Subscribe</span><span lang="zh">订阅</span></a>
+    <a class="nav-cta" href="mailto:hello@readswithcolin.com"><span lang="en">Contact</span><span lang="zh">联系</span></a>
   </div>
 </nav>
 
@@ -299,7 +283,7 @@
     </div>
     <div class="band321-actions">
       <a class="btn-321" href="reading-321.html"><span lang="en">Read Issue #01 →</span><span lang="zh">读 Issue #01 →</span></a>
-      <a class="btn-321 ghost" href="index.html#subscribe"><span lang="en">Subscribe</span><span lang="zh">订阅</span></a>
+      <a class="btn-321 ghost" href="mailto:hello@readswithcolin.com"><span lang="en">Get in touch</span><span lang="zh">联系我</span></a>
     </div>
   </div>
   </div>

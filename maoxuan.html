@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>《毛选——本质与独立思考》 — Reads with Colin</title>
+<title>毛选精读 · 思想方法十讲 — Reads with Colin</title>
 <meta name="description" content="只取思想方法与工作方法：调查研究、实事求是、抓主要矛盾。把经典读成工具，用于做事、做事业、做决策。十讲规划，筹备中。">
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
@@ -34,7 +34,7 @@ html[lang="zh"] [lang="en"]{display:none!important;}
 .lang-switch{display:inline-flex;gap:2px;font-size:13px;font-weight:700;border:1.5px solid var(--ink);border-radius:999px;padding:2px;background:#fff;}
 .lang-switch a{padding:4px 10px;border-radius:999px;text-decoration:none;color:var(--ink);cursor:pointer;}
 .lang-switch a.active{background:var(--ink);color:#fff;}
-@media(max-width:720px){.nav{padding:0 16px;}.nav-right{gap:10px;}.nav-link{display:inline;font-size:13.5px;}.lang-switch{display:none;}.nav-brand .name{font-size:17px;white-space:nowrap;}}@media(max-width:560px){.nav-brand .name{display:none;}.nav-right .nav-link{font-size:13px;}}
+@media(max-width:720px){.nav-link{display:none;}.nav-link.nav-keep{display:inline;}}
 /* article shell */
 .art{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);max-width:860px;margin:26px auto 0;padding:46px 48px 40px;box-shadow:0 10px 34px rgba(20,17,12,.05);}
 .art-head{text-align:center;padding-bottom:26px;border-bottom:1px solid var(--line);}
@@ -118,15 +118,15 @@ html[lang="zh"] [lang="en"]{display:none!important;}
 <meta name="theme-color" content="#14110C">
 <link rel="canonical" href="https://www.readswithcolin.com/maoxuan.html">
 <meta property="og:site_name" content="Reads with Colin">
-<meta property="og:title" content="《毛选——本质与独立思考》 · Selected Works of Mao Tse-tung — Essence and Independent Thinking">
-<meta property="og:description" content="本质与独立思考：调查研究 · 实事求是 · 抓主要矛盾。十讲规划，筹备中。">
+<meta property="og:title" content="毛选精读 · 思想方法十讲 — Reads with Colin">
+<meta property="og:description" content="把思想方法读成工具：调查研究 · 实事求是 · 抓主要矛盾。十讲规划，筹备中。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://www.readswithcolin.com/maoxuan.html">
 <meta property="og:image" content="https://www.readswithcolin.com/img/covers-b/maoxuan-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="900">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="《毛选——本质与独立思考》 · Selected Works of Mao Tse-tung — Essence and Independent Thinking">
+<meta name="twitter:title" content="毛选精读 · 思想方法十讲 — Reads with Colin">
 <meta name="twitter:image" content="https://www.readswithcolin.com/img/covers-b/maoxuan-cover.jpg">
 <style>
   /* v13.1c: 导航「专栏」下拉（details 原生实现，触屏可点开） */
@@ -140,7 +140,6 @@ html[lang="zh"] [lang="en"]{display:none!important;}
   .nav-menu a:hover { background: rgba(20,17,12,.06); color: var(--red); }
   @media (max-width: 720px) {
     .nav-drop .nav-menu { left: auto; right: 0; transform: none; }
-  @media(max-width:720px){.nav-drop .nav-menu{max-width:calc(100vw - 150px);}.nav-menu a{white-space:normal;line-height:1.35;}}
   }
 </style>
 </head>
@@ -148,7 +147,7 @@ html[lang="zh"] [lang="en"]{display:none!important;}
 
 <nav class="nav">
   <a class="nav-brand" href="index.html">
-    <span class="mark"><img src="img/mark-books.svg" alt="Reads with Colin"></span>
+    <span class="mark"><img src="img/favicon.svg" alt="RwC"></span>
     <span class="name">Reads <em>with</em> Colin</span>
   </a>
   <div class="nav-right">
@@ -156,11 +155,13 @@ html[lang="zh"] [lang="en"]{display:none!important;}
         <details class="nav-drop">
       <summary class="nav-link nav-keep"><span lang="en">Columns</span><span lang="zh">专栏</span></summary>
       <div class="nav-menu">
-        <a href="zizhitongjian.html"><span lang="en">The Comprehensive Mirror to Aid in Government</span><span lang="zh">资治通鉴</span></a>
-        <a href="maoxuan.html"><span lang="en">Selected Works</span><span lang="zh">毛选</span></a>
+        <a href="zizhitongjian.html"><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span></a>
+        <a href="maoxuan.html"><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span></a>
       </div>
     </details>
     <a class="nav-link" href="reading-321.html">3-2-1</a>
+    <a class="nav-link" href="where-to-find-me.html"><span lang="en">Find me</span><span lang="zh">在哪找到我</span></a>
+    <a class="nav-link" href="media-kit.html"><span lang="en">Media Kit</span><span lang="zh">媒体合作</span></a>
     <span class="lang-switch">
       <a data-set-lang="en" class="active">EN</a>
       <a data-set-lang="zh">中</a>
@@ -170,8 +171,8 @@ html[lang="zh"] [lang="en"]{display:none!important;}
 
 <main class="art">
   <header class="art-head">
-    <span class="k-kicker"><span lang="en">Column · Selected Works</span><span lang="zh">专栏 · 毛选</span></span>
-    <h1><span lang="en">Selected Works of Mao Tse-tung — <span class="red">Essence and Independent Thinking</span></span><span lang="zh">毛选——<span class="red">本质与独立思考</span></span></h1>
+    <span class="k-kicker"><span lang="en">Column · Essays on Method</span><span lang="zh">专栏 · 毛选精读</span></span>
+    <h1><span lang="en">Reading the Classics for <span class="red">Method</span></span><span lang="zh">毛选精读：把<span class="red">思想方法</span>读成工具</span></h1>
     <p class="art-meta"><span lang="en">By Colin · Column · Ten essays planned</span><span lang="zh">Colin · 专栏 · 十讲规划</span></p>
     <p class="art-intro"><span lang="en">Strip away the era and what remains is a set of thinking tools: investigate before you conclude, seek truth from facts, grasp the principal contradiction. These essays read the classics <em>strictly as methodology</em> — how to understand a messy situation and act in it — and rebuild each tool for work, business, and personal growth today.</span><span lang="zh">把时代的外壳剥掉，剩下的是一套思维工具：先调查再下结论、实事求是、抓主要矛盾。这个专栏<em>只取思想方法与工作方法</em>——如何认识一团乱麻的局面、如何在其中行动——并把每个工具重造为今天做事、做事业、做决策的用法。</span></p>
     <blockquote style="border-left:3px solid var(--gold);margin:22px 0 4px;padding:2px 0 2px 18px;font-size:16.5px;line-height:1.95;color:var(--ink);">
@@ -228,26 +229,25 @@ html[lang="zh"] [lang="en"]{display:none!important;}
     <div class="m-num">叁<small><span lang="en">Syllabus</span><span lang="zh">篇目</span></small></div>
     <div class="m-body">
       <h2 class="m-title"><span lang="en">Five of the ten essays, previewed</span><span lang="zh">十讲中的前五讲预告</span></h2>
-      <p style="margin:2px 0 18px;font-size:13.5px;color:var(--muted);line-height:1.75;"><span lang="en">Numbering: each lesson maps to one essay (or chapter) of <em>Selected Works of Mao</em>, in the order of the original texts.</span><span lang="zh">编号规则：每讲对应《毛选》中的一篇（或一章），按原文篇目顺序提取。</span></p>
       <div class="m-items">
         <div class="m-item">
-          <h4><span class="tag">讲 01</span><span lang="en">On Practice — knowing is doing</span><span lang="zh">《实践论》 · 知道不如做到</span></h4>
+          <h4><span class="tag">01</span><span lang="en">On Practice — knowing is doing</span><span lang="zh">《实践论》 · 知道不如做到</span></h4>
           <p><span lang="en">Why real understanding comes only from running the loop: try → fail → revise → try again. The original argument against armchair planning.</span><span lang="zh">真懂只能来自跑完闭环：试 → 错 → 改 → 再试。这是反对「沙发式规划」最早最狠的论证。</span></p>
         </div>
         <div class="m-item">
-          <h4><span class="tag">讲 02</span><span lang="en">On Contradiction — find the main one</span><span lang="zh">《矛盾论》 · 抓主要矛盾</span></h4>
+          <h4><span class="tag">02</span><span lang="en">On Contradiction — find the main one</span><span lang="zh">《矛盾论》 · 抓主要矛盾</span></h4>
           <p><span lang="en">Ten problems tug at you; one of them is load-bearing. How to locate it, and why everything else often resolves once it moves.</span><span lang="zh">十个问题拉扯你，其中一个是承重墙。如何找到它，以及为什么它一动、其他问题常常跟着松。</span></p>
         </div>
         <div class="m-item">
-          <h4><span class="tag">讲 03</span><span lang="en">Oppose Book Worship — no investigation, no say</span><span lang="zh">《反对本本主义》 · 没有调查就没有发言权</span></h4>
+          <h4><span class="tag">03</span><span lang="en">Oppose Book Worship — no investigation, no say</span><span lang="zh">《反对本本主义》 · 没有调查就没有发言权</span></h4>
           <p><span lang="en">The deadliest office sin: quoting reports instead of walking the ground. Fieldwork as a personal discipline, not a consulting pitch.</span><span lang="zh">职场里最致命的罪：引用报告，而不是走进现场。把「跑一线」变成个人纪律，而不是汇报姿态。</span></p>
         </div>
         <div class="m-item">
-          <h4><span class="tag">讲 04</span><span lang="en">On Protracted War — strategic patience</span><span lang="zh">《论持久战》 · 战略耐心与阶段判断</span></h4>
+          <h4><span class="tag">04</span><span lang="en">On Protracted War — strategic patience</span><span lang="zh">《论持久战》 · 战略耐心与阶段判断</span></h4>
           <p><span lang="en">You will not win fast; you must also refuse to lose fast. How to split a long war into stages, and give each stage its own scoreboard.</span><span lang="zh">你快赢不了，但也绝不能快输。如何把一场持久战切成阶段，并给每个阶段单独记分。</span></p>
         </div>
         <div class="m-item">
-          <h4><span class="tag">讲 05</span><span lang="en">On Leadership — from the masses, to the masses</span><span lang="zh">《关于领导方法的若干问题》 · 从群众中来，到群众中去</span></h4>
+          <h4><span class="tag">05</span><span lang="en">On Leadership — from the masses, to the masses</span><span lang="zh">《关于领导方法的若干问题》 · 从群众中来，到群众中去</span></h4>
           <p><span lang="en">Take scattered ideas from the field, distill them into a plan, bring the plan back for correction. A complete loop for leading any team.</span><span lang="zh">把一线散落的想法收上来，提炼成方案，再把方案拿回一线校准。一个完整的带团队闭环。</span></p>
         </div>
       </div>
@@ -277,8 +277,8 @@ html[lang="zh"] [lang="en"]{display:none!important;}
     </div>
     <div class="nf-col">
       <h4><span lang="en">Columns</span><span lang="zh">专栏</span></h4>
-      <a href="zizhitongjian.html"><span lang="en">The Comprehensive Mirror to Aid in Government</span><span lang="zh">资治通鉴</span></a>
-      <a href="maoxuan.html"><span lang="en">Selected Works</span><span lang="zh">毛选</span></a>
+      <a href="zizhitongjian.html"><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span></a>
+      <a href="maoxuan.html"><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span></a>
       <a href="reading-321.html">3-2-1 Thursday</a>
       <a href="archive.html"><span lang="en">Archive</span><span lang="zh">往期</span></a>
     </div>

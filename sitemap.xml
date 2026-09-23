@@ -26,6 +26,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.readswithcolin.com/where-to-find-me.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.readswithcolin.com/media-kit.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.readswithcolin.com/posts/think-fast-slow.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

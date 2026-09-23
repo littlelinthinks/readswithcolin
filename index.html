@@ -50,7 +50,7 @@
   .nav { display: flex; align-items: center; justify-content: space-between; max-width: 1180px; margin: 0 auto; padding: 20px 24px; }
   .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
   .nav-brand .mark { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; border: 1.5px solid var(--gold); display: inline-flex; align-items: center; justify-content: center; background: #fff; flex: 0 0 44px; }
-  .nav-brand .mark img { width: 100%; height: 100%; pointer-events: none; }
+  .nav-brand .mark object { width: 100%; height: 100%; pointer-events: none; }
   .nav-brand .name { font-family: var(--serif); font-size: 21px; font-weight: 700; }
   .nav-brand .name em { color: var(--red); font-style: italic; }
   .nav-right { display: flex; align-items: center; gap: 22px; }
@@ -62,34 +62,15 @@
   .nav-cta { font-size: 14px; font-weight: 700; color: #fff; text-decoration: none; background: var(--ink); padding: 9px 22px; border-radius: 999px; border: 1.5px solid var(--ink); transition: background .18s ease, border-color .18s ease; }
   .nav-cta:hover { background: var(--red); border-color: var(--red); }
   @media (max-width: 720px) {
-    .nav-right { gap: 10px; }
-    .nav-link { display: inline; font-size: 13.5px; }
+    .nav-right { gap: 14px; }
+    .nav-link { display: none; }
+    .nav-link.nav-keep { display: inline; }
     .lang-switch { display: none; }
-  }
-  @media (max-width: 560px) {
-    .nav-brand .name { display: none; }
-  }
-  @media (max-width: 720px) {
-    .nav { padding: 14px 16px; }
-    .nav-brand { gap: 8px; }
-    .nav-brand .name { white-space: nowrap; font-size: 18px; }
-    .nav-brand .mark { width: 36px; height: 36px; flex: 0 0 36px; }
-    .nav-right { gap: 10px; }
-    .nav-link { white-space: nowrap; }
-    .nav-cta { padding: 7px 14px; font-size: 13px; }
-  }
-  @media (max-width: 420px) {
-    .nav { padding: 12px 12px; }
-    .nav-brand .mark { width: 30px; height: 30px; flex: 0 0 30px; }
-    .nav-brand .name { font-size: 15.5px; }
-    .nav-right { gap: 7px; }
-    .nav-link { font-size: 13px; }
-    .nav-cta { padding: 6px 11px; font-size: 12.5px; }
   }
 
   /* ============ Hero ============ */
   .hero { max-width: 1180px; margin: 0 auto; padding: 52px 24px 60px; display: grid; grid-template-columns: 1.25fr .75fr; gap: 48px; align-items: center; }
-  @media (max-width: 880px) { .hero { grid-template-columns: 1fr; text-align: center; } .hero-form { justify-content: center; } }
+  @media (max-width: 880px) { .hero { grid-template-columns: 1fr; text-align: center; } }
   .hero-kicker { display: inline-flex; align-items: center; gap: 10px; font-size: 12.5px; letter-spacing: 2px; font-weight: 700; color: var(--red); text-transform: uppercase; }
   .hero-kicker::before { content: ""; width: 34px; height: 2px; background: var(--red); }
   @media (max-width: 880px) { .hero-kicker { justify-content: center; } .hero-kicker::before { display: none; } }
@@ -98,13 +79,8 @@
   .hero-sub { margin-top: 20px; font-size: 17.5px; color: var(--muted); max-width: 520px; }
   @media (max-width: 880px) { .hero-sub { margin-left: auto; margin-right: auto; } }
   .hero-zh { margin-top: 8px; font-size: 14px; color: var(--muted); letter-spacing: 3px; }
-  .hero-form { margin-top: 32px; display: flex; gap: 0; }
-  .hero-form input { width: 300px; max-width: 62vw; padding: 13px 20px; font-size: 15px; border: 1.5px solid var(--ink); border-right: none; border-radius: 999px 0 0 999px; outline: none; font-family: var(--sans); background: #fff; }
-  .hero-form input:focus { border-color: var(--red); }
-  .hero-form button { padding: 13px 28px; background: var(--ink); color: #fff; border: 1.5px solid var(--ink); border-radius: 0 999px 999px 0; font-size: 14px; font-weight: 700; cursor: pointer; font-family: var(--sans); transition: background .18s ease; }
-  @media (max-width: 560px) { .hero-form input { width: 240px; max-width: 55vw; padding: 12px 16px; } .hero-form button { padding: 12px 18px; } }
-  .hero-form button:hover { background: var(--red); border-color: var(--red); }
-  .hero-form.done input, .hero-form.done button { display: none; }
+  .hero-cta { display:inline-block; margin-top:32px; padding:13px 28px; background:var(--ink); color:#fff; border:1.5px solid var(--ink); border-radius:999px; font-size:14px; font-weight:700; text-decoration:none; font-family:var(--sans); transition:background .18s ease, border-color .18s ease; }
+  .hero-cta:hover { background:var(--red); border-color:var(--red); }
   .hero-done { display: none; margin-top: 24px; font-size: 15px; color: var(--green); font-weight: 600; }
   .hero-done.show { display: inline-block; }
   .hero-note { margin-top: 16px; font-size: 13px; color: var(--muted); }
@@ -117,7 +93,7 @@
   .hero-social p { font-size: 14px; color: var(--muted); }
   .hero-social b { color: var(--ink); font-weight: 700; }
   .hero-logo { display: flex; justify-content: center; }
-  .hero-logo img { width: 320px; height: auto; max-width: 100%; filter: drop-shadow(0 14px 30px rgba(60,45,20,.18)); pointer-events: none; }
+  .hero-logo object { width: 320px; max-width: 100%; filter: drop-shadow(0 14px 30px rgba(60,45,20,.18)); pointer-events: none; }
 
   /* ============ Featured ============ */
   .featured-wrap { max-width: 1180px; margin: 32px auto 64px; padding: 0 24px; }
@@ -272,7 +248,6 @@
   .nav-menu a:hover { background: rgba(20,17,12,.06); color: var(--red); }
   @media (max-width: 720px) {
     .nav-drop .nav-menu { left: auto; right: 0; transform: none; }
-  @media(max-width:720px){.nav-drop .nav-menu{max-width:calc(100vw - 150px);}.nav-menu a{white-space:normal;line-height:1.35;}}
   }
 </style>
 </head>
@@ -281,7 +256,7 @@
 <!-- ======================= 导航 ======================= -->
 <nav class="nav">
   <a class="nav-brand" href="index.html">
-    <span class="mark"><img src="img/mark-books.svg" alt="Reads with Colin"></span>
+    <span class="mark"><object type="image/svg+xml" data="img/logo-v6-final.svg" aria-label="logo"></object></span>
     <span class="name">Reads <em>with</em> Colin</span>
   </a>
   <div class="nav-right">
@@ -289,17 +264,19 @@
         <details class="nav-drop">
       <summary class="nav-link nav-keep"><span lang="en">Columns</span><span lang="zh">专栏</span></summary>
       <div class="nav-menu">
-        <a href="zizhitongjian.html"><span lang="en">The Comprehensive Mirror to Aid in Government</span><span lang="zh">资治通鉴</span></a>
-        <a href="maoxuan.html"><span lang="en">Selected Works</span><span lang="zh">毛选</span></a>
+        <a href="zizhitongjian.html"><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span></a>
+        <a href="maoxuan.html"><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span></a>
       </div>
     </details>
     <a class="nav-link nav-keep" href="reading-321.html">3-2-1</a>
     <a class="nav-link" href="about.html"><span lang="en">About</span><span lang="zh">关于</span></a>
+    <a class="nav-link" href="where-to-find-me.html"><span lang="en">Find me</span><span lang="zh">在哪找到我</span></a>
+    <a class="nav-link" href="media-kit.html"><span lang="en">Media Kit</span><span lang="zh">媒体合作</span></a>
     <div class="lang-switch" role="group" aria-label="Language">
       <a href="#" data-set-lang="en" class="active">EN</a>
       <a href="#" data-set-lang="zh">中文</a>
     </div>
-    <a class="nav-cta" href="#subscribe"><span lang="en">Subscribe</span><span lang="zh">订阅</span></a>
+    <a class="nav-cta" href="mailto:hello@readswithcolin.com"><span lang="en">Contact</span><span lang="zh">联系</span></a>
   </div>
 </nav>
 
@@ -310,12 +287,7 @@
     <h1><span lang="en">Read books that change<br>how you <span class="red">see the world.</span></span><span lang="zh">读懂世界的<br>几本<span class="red">好书</span>，每周一封。</span></h1>
     <p class="hero-sub"><span lang="en">One idea, five minutes, every Thursday.</span><span lang="zh">读书不是逃避世界，是带上更好的眼睛再回来。</span></p>
     <p class="hero-zh"><span lang="en">Learn to know; forget to transcend; practice to renew.</span><span lang="zh">学而知之 · 忘而破之 · 习而新之</span></p>
-    <form class="hero-form" id="sub" action="https://substack.com/readswithcolin/subscribe" method="get" target="_blank" rel="noopener" onsubmit="this.classList.add('done'); document.getElementById('subdone').classList.add('show'); return true;">
-      <input type="email" name="email" placeholder="your@email.com" aria-label="Email" required>
-      <button type="submit"><span lang="en">Subscribe</span><span lang="zh">订阅</span></button>
-    </form>
-    <p class="hero-done" id="subdone"><span lang="en">Opening Substack — finish your subscription in the new tab ↗</span><span lang="zh">正在打开 Substack，请在新标签页完成订阅 ↗</span></p>
-    <p class="hero-note"><span lang="en">No spam, unsubscribe anytime</span><span lang="zh">无广告 · 可随时退订</span></p>
+      <a class="hero-cta" href="mailto:hello@readswithcolin.com"><span lang="en">Get in touch</span><span lang="zh">联系我</span></a>
     <div class="hero-social">
       <div class="avatars">
         <span style="background:#C73E2C">A</span>
@@ -328,12 +300,12 @@
     </div>
   </div>
   <div class="hero-logo">
-    <img src="img/logo-rwc.png" alt="Reads with Colin — Reading to change yourself" width="900" height="906">
+    <object type="image/svg+xml" data="img/logo-v6-final.svg" aria-label="Reads with Colin 徽章"></object>
   </div>
 </header>
 
 <!-- ======================= Featured 大卡 · RWC #001 ======================= -->
-<section class="featured-wrap" id="subscribe">
+<section class="featured-wrap" id="featured">
   <article class="featured">
     <a class="featured-link" id="featuredLink" href="posts/think-fast-slow.html">
       <div class="featured-cover">
@@ -380,7 +352,7 @@
     </div>
     <div class="band321-actions">
       <a class="btn-321" href="reading-321.html"><span lang="en">Read Issue #01 →</span><span lang="zh">读 Issue #01 →</span></a>
-      <a class="btn-321 ghost" href="index.html#subscribe"><span lang="en">Subscribe</span><span lang="zh">订阅</span></a>
+      <a class="btn-321 ghost" href="mailto:hello@readswithcolin.com"><span lang="en">Get in touch</span><span lang="zh">联系我</span></a>
     </div>
   </div>
   </div>
@@ -443,7 +415,7 @@
     </article>
 
     <article class="card zizhi-feature">
-      <div class="card-cover"><img class="jkt" src="img/covers-b/zizhitongjian-cover.jpg" alt="资治通鉴 · 管理与人性"></div>
+      <div class="card-cover"><img class="jkt" src="img/covers-b/zizhitongjian-cover.jpg" alt="资治通鉴 · 千年决策案例库"></div>
       <div class="card-body">
         <div class="card-meta">
           <span class="rwc"><span lang="en">COLUMN</span><span lang="zh">专栏</span></span>
@@ -451,8 +423,8 @@
         </div>
         <h3 class="card-title">
           <a href="zizhitongjian.html">
-            <span lang="en">The Comprehensive Mirror to Aid in Government — Management and Human Nature</span>
-            <span lang="zh">资治通鉴：管理与人性</span>
+            <span lang="en">Zizhi Tongjian: A 1,400-Year Case Book</span>
+            <span lang="zh">资治通鉴：千年决策案例库</span>
           </a>
         </h3>
         <p class="card-teaser">
@@ -466,16 +438,16 @@
     </article>
 
     <article class="card maoxuan-feature">
-      <div class="card-cover"><img class="jkt" src="img/covers-b/maoxuan-cover.jpg" alt="毛选 · 本质与独立思考"></div>
+      <div class="card-cover"><img class="jkt" src="img/covers-b/maoxuan-cover.jpg" alt="毛选精读 · 思想方法十讲"></div>
       <div class="card-body">
         <div class="card-meta">
           <span class="rwc"><span lang="en">COLUMN</span><span lang="zh">专栏</span></span>
-          <span lang="en">Selected Works</span><span lang="zh">思想方法</span>
+          <span lang="en">Essays on Method</span><span lang="zh">思想方法</span>
         </div>
         <h3 class="card-title">
           <a href="maoxuan.html">
-            <span lang="en">Selected Works of Mao Tse-tung — Essence and Independent Thinking</span>
-            <span lang="zh">毛选：本质与独立思考</span>
+            <span lang="en">Reading the Classics for Method</span>
+            <span lang="zh">毛选精读：把思想方法读成工具</span>
           </a>
         </h3>
         <p class="card-teaser">

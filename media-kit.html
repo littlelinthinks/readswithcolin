@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Kit — Reads with Colin</title>
+<meta name="description" content="Reads with Colin media kit: audience, platforms, and partnership rates for publishers and book brands. 媒体合作：读者画像、各平台数据与合作报价。">
+<meta property="og:title" content="Media Kit — Reads with Colin">
+<meta property="og:description" content="Partnership rates and audience for book reviews and affiliate with Reads with Colin.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.readswithcolin.com/media-kit.html">
+<meta name="theme-color" content="#14110C">
+<meta property="og:image" content="https://www.readswithcolin.com/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root {
+    --ink: #14110C; --muted: #6E675B; --paper: #FAF7F0; --card: #FFFFFF;
+    --red: #C73E2C; --red-dark: #A53324; --brown: #8B5E3C; --gold: #C9A668;
+    --green: #4E7A5A; --line: #E7E0D2; --radius: 16px;
+    --sans: -apple-system, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+    --serif: Georgia, "Times New Roman", "Songti SC", serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.65; }
+  a { color: inherit; }
+  html[lang="en"] [lang="zh"] { display: none !important; }
+  html[lang="zh"] [lang="en"] { display: none !important; }
+
+  .nav { display: flex; align-items: center; justify-content: space-between; max-width: 1180px; margin: 0 auto; padding: 20px 24px; flex-wrap: wrap; }
+  .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+  .nav-brand .mark { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; border: 1.5px solid var(--gold); display: inline-flex; align-items: center; justify-content: center; background: #fff; flex: 0 0 44px; }
+  .nav-brand .mark object { width: 100%; height: 100%; pointer-events: none; }
+  .nav-brand .name { font-family: var(--serif); font-size: 21px; font-weight: 700; }
+  .nav-brand .name em { color: var(--red); font-style: italic; }
+  .nav-right { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+  .nav-link { font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none; }
+  .nav-link:hover { color: var(--red); }
+  .lang-switch { display: inline-flex; gap: 2px; font-size: 13px; font-weight: 700; border: 1.5px solid var(--ink); border-radius: 999px; padding: 2px; background: #fff; }
+  .lang-switch a { padding: 4px 10px; border-radius: 999px; text-decoration: none; color: var(--ink); cursor: pointer; }
+  .lang-switch a.active { background: var(--ink); color: #fff; }
+  .nav-cta { font-size: 14px; font-weight: 700; color: #fff; text-decoration: none; background: var(--ink); padding: 9px 22px; border-radius: 999px; border: 1.5px solid var(--ink); transition: background .18s ease, border-color .18s ease; }
+  .nav-cta:hover { background: var(--red); border-color: var(--red); }
+  .nav-drop { position: relative; }
+  .nav-drop summary { list-style: none; cursor: pointer; }
+  .nav-drop summary::-webkit-details-marker { display: none; }
+  .nav-menu { position: absolute; top: 120%; right: 0; background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 30px rgba(20,17,12,.12); padding: 8px; min-width: 200px; display: none; flex-direction: column; z-index: 20; }
+  .nav-drop[open] .nav-menu { display: flex; }
+  .nav-menu a { padding: 8px 12px; font-size: 14px; text-decoration: none; color: var(--ink); border-radius: 8px; }
+  .nav-menu a:hover { background: var(--paper); color: var(--red); }
+  @media (max-width: 720px) { .nav-right { gap: 14px; } .nav-link { display: none; } .nav-link.nav-keep { display: inline; } .lang-switch { display: none; } }
+
+  .page-hero { max-width: 860px; margin: 0 auto; padding: 56px 24px 8px; text-align: center; }
+  .page-hero .kicker { display: inline-block; font-size: 12.5px; letter-spacing: 2px; font-weight: 700; color: var(--red); text-transform: uppercase; margin-bottom: 14px; }
+  .page-hero h1 { font-family: var(--serif); font-size: clamp(32px, 5vw, 48px); font-weight: 700; line-height: 1.15; letter-spacing: -.5px; }
+  .page-hero h1 .red { color: var(--red); font-style: italic; }
+  .page-hero .page-sub { margin-top: 16px; font-size: 17px; color: var(--muted); }
+
+  .about-page { max-width: 860px; margin: 0 auto; padding: 32px 24px 64px; }
+  .about-section { margin-top: 44px; }
+  .about-section > h2 { font-family: var(--serif); font-size: 26px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: baseline; gap: 12px; }
+  .about-section > h2 .num { font-size: 14px; color: var(--gold); font-family: var(--sans); font-weight: 700; letter-spacing: 1px; }
+  .about-section p { color: var(--muted); font-size: 16px; line-height: 1.8; }
+  .about-section p.note { font-size: 13.5px; margin-top: 10px; }
+
+  .about-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin-top: 18px; }
+  .fact-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 16px; text-align: center; }
+  .fact-num { display: block; font-family: var(--serif); font-size: 30px; font-weight: 700; color: var(--ink); }
+  .fact-label { display: block; font-size: 12.5px; color: var(--muted); margin-top: 6px; }
+
+  .rate { margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .rate-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+  .rate-card h3 { font-family: var(--serif); font-size: 19px; margin-bottom: 8px; }
+  .rate-card .price { font-size: 22px; font-weight: 700; color: var(--red); }
+  .rate-card p { font-size: 14px; color: var(--muted); margin-top: 8px; }
+
+  .contact-email { font-family: var(--serif); font-size: 22px; font-weight: 600; color: var(--red); display: inline-block; margin-top: 10px; text-decoration: none; }
+  .contact-email:hover { color: var(--ink); }
+  .btn { display: inline-block; border: none; cursor: pointer; font-family: var(--sans); font-size: 15px; font-weight: 600; letter-spacing: .3px; color: #fff; background: var(--ink); padding: 11px 26px; border-radius: 999px; text-decoration: none; transition: background .2s ease; }
+  .btn:hover { background: var(--red); }
+  .ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+  .ghost:hover { background: var(--ink); color: #fff; }
+
+  .site-footer { border-top: 1px solid var(--line); background: var(--card); margin-top: 40px; }
+  .footer-inner { max-width: 1180px; margin: 0 auto; padding: 36px 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; align-items: center; }
+  .footer-brand { font-family: var(--serif); font-size: 18px; font-weight: 700; }
+  .footer-brand em { color: var(--red); font-style: italic; }
+  .footer-tag { font-size: 13px; color: var(--muted); margin-top: 4px; max-width: 360px; }
+</style>
+</head>
+<body>
+<!-- ======================= 导航 ======================= -->
+<nav class="nav">
+  <a class="nav-brand" href="index.html">
+    <span class="mark"><object type="image/svg+xml" data="img/logo-v6-final.svg" aria-label="logo"></object></span>
+    <span class="name">Reads <em>with</em> Colin</span>
+  </a>
+  <div class="nav-right">
+    <a class="nav-link" href="categories.html"><span lang="en">Categories</span><span lang="zh">分类</span></a>
+    <details class="nav-drop">
+      <summary class="nav-link nav-keep"><span lang="en">Columns</span><span lang="zh">专栏</span></summary>
+      <div class="nav-menu">
+        <a href="zizhitongjian.html"><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span></a>
+        <a href="maoxuan.html"><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span></a>
+      </div>
+    </details>
+    <a class="nav-link nav-keep" href="reading-321.html">3-2-1</a>
+    <a class="nav-link" href="about.html"><span lang="en">About</span><span lang="zh">关于</span></a>
+    <a class="nav-link" href="where-to-find-me.html"><span lang="en">Find me</span><span lang="zh">在哪找到我</span></a>
+    <a class="nav-link" href="media-kit.html"><span lang="en">Media Kit</span><span lang="zh">媒体合作</span></a>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <a href="#" data-set-lang="en" class="active">EN</a>
+      <a href="#" data-set-lang="zh">中文</a>
+    </div>
+    <a class="nav-cta" href="mailto:hello@readswithcolin.com"><span lang="en">Contact</span><span lang="zh">联系</span></a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <span class="kicker"><span lang="en">For partners</span><span lang="zh">致合作伙伴</span></span>
+  <h1><span lang="en">Media <span class="red">Kit</span></span><span lang="zh">媒体<span class="red">合作</span></span></h1>
+  <p class="page-sub"><span lang="en">Who reads, where, and how we can work together on books.</span><span lang="zh">谁在读、在哪读，以及我们如何一起做书。</span></p>
+</header>
+
+<main class="about-page">
+  <section class="about-section">
+    <h2><span class="num">01</span><span lang="en">Audience</span><span lang="zh">读者画像</span></h2>
+    <p><span lang="en">Reads with Colin is a bilingual (EN / 中文) book-letter for thoughtful readers — founders, operators, and lifelong learners who buy the books they read. The voice is practical: not "what the book says," but "what to do with it."</span><span lang="zh">Reads with Colin 是一份双语（英/中）的读书来信，读者多为认真读书、读后真买的创始人、职场人与终身学习者。调性是务实的：不讲"书里说了什么"，而讲"读完能用什么"。</span></p>
+    <!-- TODO: 补充真实读者画像数据（年龄/职业/地域） -->
+  </section>
+
+  <section class="about-section">
+    <h2><span class="num">02</span><span lang="en">By the numbers</span><span lang="zh">各平台数据</span></h2>
+    <!-- TODO: 以下数字为占位，请替换为真实数据 -->
+    <div class="about-facts">
+      <div class="fact-card"><span class="fact-num">—</span><span class="fact-label"><span lang="en">Site readers / mo</span><span lang="zh">网站月读者</span></span></div>
+      <div class="fact-card"><span class="fact-num">—</span><span class="fact-label"><span lang="en">X followers</span><span lang="zh">X 粉丝</span></span></div>
+      <div class="fact-card"><span class="fact-num">—</span><span class="fact-label"><span lang="en">Instagram</span></span></div>
+      <div class="fact-card"><span class="fact-num">—</span><span class="fact-label"><span lang="en">小红书 Xiaohongshu</span></span></div>
+      <div class="fact-card"><span class="fact-num">—</span><span class="fact-label"><span lang="en">微博 Weibo</span></span></div>
+      <div class="fact-card"><span class="fact-num">—</span><span class="fact-label"><span lang="en">知乎 Zhihu</span></span></div>
+      <div class="fact-card"><span class="fact-num">—</span><span class="fact-label"><span lang="en">公众号 小Lin思考</span></span></div>
+      <div class="fact-card"><span class="fact-num">待上线</span><span class="fact-label"><span lang="en">视频号 / 抖音 / YouTube / B站</span><span lang="zh">视频平台</span></span></div>
+    </div>
+    <p class="note"><span lang="en">Numbers above are placeholders — fill in real metrics before sending to partners.</span><span lang="zh">以上数字为占位，发给合作方前请填入真实数据。</span></p>
+  </section>
+
+  <section class="about-section">
+    <h2><span class="num">03</span><span lang="en">Rate card</span><span lang="zh">报价</span></h2>
+    <!-- TODO: 替换为真实报价 -->
+    <div class="rate">
+      <div class="rate-card">
+        <h3><span lang="en">Honest review</span><span lang="zh">诚意书评</span></h3>
+        <div class="price"><span lang="en">TBD</span><span lang="zh">待定</span></div>
+        <p><span lang="en">A full reading note on the site + cross-post. Always disclosed.</span><span lang="zh">站内完整读书笔记 + 全平台分发。始终标注合作。</span></p>
+      </div>
+      <div class="rate-card">
+        <h3><span lang="en">Affiliate</span><span lang="zh">联盟佣金</span></h3>
+        <div class="price"><span lang="en">TBD</span><span lang="zh">待定</span></div>
+        <p><span lang="en">Book buy-card on every review; pay-per-sale via partner links.</span><span lang="zh">每篇书评内置购买卡；按成交分佣。</span></p>
+      </div>
+      <div class="rate-card">
+        <h3><span lang="en">Custom content</span><span lang="zh">定制内容</span></h3>
+        <div class="price"><span lang="en">TBD</span><span lang="zh">待定</span></div>
+        <p><span lang="en">Short video / audio scripts and series around your title.</span><span lang="zh">围绕贵方书目的短视频/口播脚本与系列。</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2><span class="num">04</span><span lang="en">Contact</span><span lang="zh">联系</span></h2>
+    <p><span lang="en">For partnerships, review copies, or a custom plan — email me directly:</span><span lang="zh">合作、赠书或定制方案，直接发邮件给我：</span></p>
+    <p style="margin-top:14px"><a class="contact-email" href="mailto:hello@readswithcolin.com?subject=Media%20Kit%20Inquiry">hello@readswithcolin.com</a></p>
+    <p style="margin-top:18px">
+      <a class="btn" href="mailto:hello@readswithcolin.com?subject=Media%20Kit%20Inquiry"><span lang="en">Email Colin</span><span lang="zh">发邮件给我</span></a>
+      <a class="btn ghost" href="where-to-find-me.html"><span lang="en">All platforms →</span><span lang="zh">全平台 →</span></a>
+    </p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Reads <em>with</em> Colin</div>
+      <p class="footer-tag"><span lang="en">Books that change how you see — and what you do next.</span><span lang="zh">读书不是逃避世界，是带上更好的眼睛再回来。</span></p>
+    </div>
+    <div class="nf-social">
+      <a href="https://x.com/readswithcolin?utm_source=readswithcolin&amp;utm_medium=social&amp;utm_campaign=media_kit" title="X" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a href="https://substack.com/readswithcolin?utm_campaign=media_kit" title="Substack" target="_blank" rel="noopener" class="txt">S</a>
+      <a href="mailto:hello@readswithcolin.com?utm_campaign=media_kit" title="Email" class="txt">@</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btns=document.querySelectorAll('.lang-switch [data-set-lang]');
+  function apply(l){document.documentElement.lang=l;btns.forEach(function(b){b.classList.toggle('active',b.dataset.setLang===l)});try{localStorage.setItem('rwc-lang',l)}catch(e){}}
+  btns.forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();apply(b.dataset.setLang)})});
+  try{var s=localStorage.getItem('rwc-lang');if(s)apply(s)}catch(e){}
+})();
+</script>
+</body>
+</html>

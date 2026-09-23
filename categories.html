@@ -43,7 +43,7 @@
   .nav { display: flex; align-items: center; justify-content: space-between; max-width: 1180px; margin: 0 auto; padding: 20px 24px; }
   .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
   .nav-brand .mark { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; border: 1.5px solid var(--gold); display: inline-flex; align-items: center; justify-content: center; background: #fff; flex: 0 0 44px; }
-  .nav-brand .mark img { width: 100%; height: 100%; pointer-events: none; }
+  .nav-brand .mark object { width: 100%; height: 100%; pointer-events: none; }
   .nav-brand .name { font-family: var(--serif); font-size: 21px; font-weight: 700; }
   .nav-brand .name em { color: var(--red); font-style: italic; }
   .nav-right { display: flex; align-items: center; gap: 22px; }
@@ -60,23 +60,6 @@
     .nav-link { display: none; }
     .nav-link.nav-keep { display: inline; }
     .lang-switch { display: none; }
-  }
-  @media (max-width: 720px) {
-    .nav { padding: 14px 16px; }
-    .nav-brand { gap: 8px; }
-    .nav-brand .name { white-space: nowrap; font-size: 18px; }
-    .nav-brand .mark { width: 36px; height: 36px; flex: 0 0 36px; }
-    .nav-right { gap: 10px; }
-    .nav-link { white-space: nowrap; }
-    .nav-cta { padding: 7px 14px; font-size: 13px; }
-  }
-  @media (max-width: 420px) {
-    .nav { padding: 12px 12px; }
-    .nav-brand .mark { width: 30px; height: 30px; flex: 0 0 30px; }
-    .nav-brand .name { font-size: 15.5px; }
-    .nav-right { gap: 7px; }
-    .nav-link { font-size: 13px; }
-    .nav-cta { padding: 6px 11px; font-size: 12.5px; }
   }
 
   /* Page Hero */
@@ -218,7 +201,6 @@
   .nav-menu a:hover { background: rgba(20,17,12,.06); color: var(--red); }
   @media (max-width: 720px) {
     .nav-drop .nav-menu { left: auto; right: 0; transform: none; }
-  @media(max-width:720px){.nav-drop .nav-menu{max-width:calc(100vw - 150px);}.nav-menu a{white-space:normal;line-height:1.35;}}
   }
 </style>
 </head>
@@ -227,7 +209,7 @@
 <!-- ======================= 导航 ======================= -->
 <nav class="nav">
   <a class="nav-brand" href="index.html">
-    <span class="mark"><img src="img/mark-books.svg" alt="Reads with Colin"></span>
+    <span class="mark"><object type="image/svg+xml" data="img/logo-v6-final.svg" aria-label="logo"></object></span>
     <span class="name">Reads <em>with</em> Colin</span>
   </a>
   <div class="nav-right">
@@ -236,17 +218,19 @@
         <details class="nav-drop">
       <summary class="nav-link nav-keep"><span lang="en">Columns</span><span lang="zh">专栏</span></summary>
       <div class="nav-menu">
-        <a href="zizhitongjian.html"><span lang="en">The Comprehensive Mirror to Aid in Government</span><span lang="zh">资治通鉴</span></a>
-        <a href="maoxuan.html"><span lang="en">Selected Works</span><span lang="zh">毛选</span></a>
+        <a href="zizhitongjian.html"><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span></a>
+        <a href="maoxuan.html"><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span></a>
       </div>
     </details>
     <a class="nav-link nav-keep" href="reading-321.html">3-2-1</a>
     <a class="nav-link" href="about.html"><span lang="en">About</span><span lang="zh">关于</span></a>
+    <a class="nav-link" href="where-to-find-me.html"><span lang="en">Find me</span><span lang="zh">在哪找到我</span></a>
+    <a class="nav-link" href="media-kit.html"><span lang="en">Media Kit</span><span lang="zh">媒体合作</span></a>
     <div class="lang-switch" role="group" aria-label="Language">
       <a href="#" data-set-lang="en" class="active">EN</a>
       <a href="#" data-set-lang="zh">中文</a>
     </div>
-    <a class="nav-cta" href="index.html#subscribe"><span lang="en">Subscribe</span><span lang="zh">订阅</span></a>
+    <a class="nav-cta" href="mailto:hello@readswithcolin.com"><span lang="en">Contact</span><span lang="zh">联系</span></a>
   </div>
 </nav>
 
@@ -265,8 +249,8 @@
   <a class="chip" href="#lives"><span lang="en">Lives & Essays</span><span lang="zh">人物随笔</span> · <span class="chip-n">—</span></a>
   <a class="chip" href="#mind"><span lang="en">Mind & Zen</span><span lang="zh">心智与禅</span> · <span class="chip-n">—</span></a>
   <a class="chip" href="#english"><span lang="en">Read in English</span><span lang="zh">英文原著</span> · <span class="chip-n">—</span></a>
-  <a class="chip" href="#zizhi"><span lang="en">The Comprehensive Mirror to Aid in Government</span><span lang="zh">资治通鉴</span> · <span class="chip-n">专栏</span></a>
-  <a class="chip" href="#maoxuan"><span lang="en">Selected Works</span><span lang="zh">毛选</span> · <span class="chip-n">专栏</span></a>
+  <a class="chip" href="#zizhi"><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span> · <span class="chip-n">专栏</span></a>
+  <a class="chip" href="#maoxuan"><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span> · <span class="chip-n">专栏</span></a>
   <a class="chip" href="archive.html"><span lang="en">Archive</span><span lang="zh">往期全部</span> · <span class="chip-n">→</span></a>
 </div>
 
@@ -354,14 +338,14 @@
   <div class="section" id="zizhi">
     <div class="section-head">
       <div>
-        <h2><span lang="en">The Comprehensive Mirror to Aid in Government</span><span lang="zh">资治通鉴</span> <em>·</em> <span lang="en">Management and Human Nature</span><span lang="zh">管理与人性</span></h2>
-        <p class="desc"><span lang="en">Wealth logic and management thinking, read out of 294 volumes of real decisions.</span><span lang="zh">从 294 卷真实决策里，学管理与人性。</span></p>
+        <h2><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span> <em>·</em> <span lang="en">a 1,400-year case book</span><span lang="zh">千年决策案例库</span></h2>
+        <p class="desc"><span lang="en">Wealth logic and management thinking, read out of 294 volumes of real decisions.</span><span lang="zh">从 294 卷真实决策里，学财富逻辑与管理思维。</span></p>
       </div>
       <span class="count">专栏</span>
     </div>
     <div class="grid">
       <article class="card zizhi-feature">
-        <div class="card-cover"><img class="jkt" src="img/covers-b/zizhitongjian-cover.jpg" alt="资治通鉴 · 管理与人性"></div>
+        <div class="card-cover"><img class="jkt" src="img/covers-b/zizhitongjian-cover.jpg" alt="资治通鉴 · 千年决策案例库"></div>
         <div class="card-body">
           <div class="card-meta">
             <span class="rwc"><span lang="en">COLUMN</span><span lang="zh">专栏</span></span>
@@ -369,8 +353,8 @@
           </div>
           <h3 class="card-title">
             <a href="zizhitongjian.html">
-              <span lang="en">The Comprehensive Mirror to Aid in Government — Management and Human Nature</span>
-              <span lang="zh">资治通鉴：管理与人性</span>
+              <span lang="en">Zizhi Tongjian: A 1,400-Year Case Book</span>
+              <span lang="zh">资治通鉴：千年决策案例库</span>
             </a>
           </h3>
           <p class="card-teaser">
@@ -388,23 +372,23 @@
   <div class="section" id="maoxuan">
     <div class="section-head">
       <div>
-        <h2><span lang="en">Selected Works</span><span lang="zh">毛选</span> <em>·</em> <span lang="en">Essence and Independent Thinking</span><span lang="zh">本质与独立思考</span></h2>
+        <h2><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span> <em>·</em> <span lang="en">a habit, not an answer</span><span lang="zh">一种习惯，不是一套答案</span></h2>
         <p class="desc"><span lang="en">Not a set of answers — a trained habit: investigate, analyse, find the principal contradiction, test it in practice.</span><span lang="zh">不是一套答案，而是训练一种习惯：去调查、去分析、去找主要矛盾、去用实践检验。</span></p>
       </div>
       <span class="count">专栏</span>
     </div>
     <div class="grid">
       <article class="card maoxuan-feature">
-        <div class="card-cover"><img class="jkt" src="img/covers-b/maoxuan-cover.jpg" alt="毛选 · 本质与独立思考"></div>
+        <div class="card-cover"><img class="jkt" src="img/covers-b/maoxuan-cover.jpg" alt="毛选精读 · 思想方法十讲"></div>
         <div class="card-body">
           <div class="card-meta">
             <span class="rwc"><span lang="en">COLUMN</span><span lang="zh">专栏</span></span>
-            <span lang="en">Selected Works</span><span lang="zh">思想方法</span>
+            <span lang="en">Essays on Method</span><span lang="zh">思想方法</span>
           </div>
           <h3 class="card-title">
             <a href="maoxuan.html">
-              <span lang="en">Selected Works of Mao Tse-tung — Essence and Independent Thinking</span>
-              <span lang="zh">毛选：本质与独立思考</span>
+              <span lang="en">Reading the Classics for Method</span>
+              <span lang="zh">毛选精读：把思想方法读成工具</span>
             </a>
           </h3>
           <p class="card-teaser">
@@ -447,7 +431,7 @@
     </div>
     <div class="band321-actions">
       <a class="btn-321" href="reading-321.html"><span lang="en">Read Issue #01 →</span><span lang="zh">读 Issue #01 →</span></a>
-      <a class="btn-321 ghost" href="index.html#subscribe"><span lang="en">Subscribe</span><span lang="zh">订阅</span></a>
+      <a class="btn-321 ghost" href="mailto:hello@readswithcolin.com"><span lang="en">Get in touch</span><span lang="zh">联系我</span></a>
     </div>
   </div>
   </div>

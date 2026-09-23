@@ -582,6 +582,16 @@ img { max-width: 100%; height: auto; display: block; }
   .book-card .book-cover { width: 100%; height: 120px; flex-direction: row; gap: 14px; }
 }
 
+/* 联盟购买卡（占位，未来替换为真实联盟链接） */
+.book-card.buy-card { border-color: var(--accent-soft); }
+.book-card.buy-card .book-info .btn { margin-top: 6px; }
+
+/* 邮件联系卡（订阅暂停后） */
+.post-mailto { text-align: center; margin: 32px 0; padding: 24px; background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius); }
+.post-mailto h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 20px; }
+.post-mailto p { margin: 0 0 12px; color: var(--text-light); font-size: 14.5px; }
+.post-mailto p.post-mailto-line a { color: var(--accent); font-weight: 700; font-size: 16px; text-decoration: underline; text-underline-offset: 3px; }
+
 /* 阅读小贴士 */
 .tip-box {
   background: var(--accent-soft);
@@ -1406,49 +1416,4 @@ html[lang="zh"] .archive-card-slogan-text {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-/* ==========================================================================
-   Posts 文章页导航补全：nav-right / nav-link / nav-cta 裸类名
-   （文章页 nav 结构与首页一致，但此前只有首页内联样式生效）
-   ========================================================================== */
-.nav-right { display: flex; align-items: center; gap: 22px; }
-.nav-right .nav-link {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text);
-  letter-spacing: 0.2px;
-  white-space: nowrap;
-}
-.nav-right .nav-link:hover { color: var(--accent); text-decoration: none; }
-.nav-brand .name {
-  font-family: var(--serif);
-  font-size: 21px;
-  font-weight: 700;
-  color: var(--text);
-  white-space: nowrap;
-}
-.nav-brand .name em { color: #C73E2C; font-style: italic; }
-.nav-cta {
-  font-size: 14px;
-  font-weight: 700;
-  color: #fff;
-  background: var(--text);
-  padding: 9px 22px;
-  border-radius: 999px;
-  border: 1.5px solid var(--text);
-  transition: background .18s ease, border-color .18s ease;
-  white-space: nowrap;
-}
-.nav-cta:hover { background: var(--accent); border-color: var(--accent); text-decoration: none; }
-
-@media (max-width: 720px) {
-  .nav { padding: 0 16px; }
-  .nav-brand { gap: 8px; }
-  .nav-brand .name { font-size: 17px; }
-  .nav-right { gap: 10px; }
-  .nav-right .nav-link { display: none; }
-  .nav-right .nav-link.nav-keep { display: inline; font-size: 13.5px; }
-  .lang-switch { display: none; }
-  .nav-cta { padding: 7px 14px; font-size: 13px; }
 }

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>《资治通鉴——管理与人性》 — Reads with Colin</title>
-<meta name="description" content="把《资治通鉴》当案例库读：管理与人性，每两周一个案例。294 卷决策复盘，翻译成你今天就能用的行动卡。">
+<title>资治通鉴 · 千年决策案例库 — Reads with Colin</title>
+<meta name="description" content="把《资治通鉴》当案例库读：财富逻辑与管理思维，每两周一个案例。294 卷决策复盘，翻译成你今天就能用的行动卡。">
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
 <link rel="manifest" href="manifest.webmanifest">
@@ -34,7 +34,7 @@ html[lang="zh"] [lang="en"]{display:none!important;}
 .lang-switch{display:inline-flex;gap:2px;font-size:13px;font-weight:700;border:1.5px solid var(--ink);border-radius:999px;padding:2px;background:#fff;}
 .lang-switch a{padding:4px 10px;border-radius:999px;text-decoration:none;color:var(--ink);cursor:pointer;}
 .lang-switch a.active{background:var(--ink);color:#fff;}
-@media(max-width:720px){.nav{padding:0 16px;}.nav-right{gap:10px;}.nav-link{display:inline;font-size:13.5px;}.lang-switch{display:none;}.nav-brand .name{font-size:17px;white-space:nowrap;}}@media(max-width:560px){.nav-brand .name{display:none;}.nav-right .nav-link{font-size:13px;}}
+@media(max-width:720px){.nav-link{display:none;}.nav-link.nav-keep{display:inline;}}
 /* article shell */
 .art{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);max-width:860px;margin:26px auto 0;padding:46px 48px 40px;box-shadow:0 10px 34px rgba(20,17,12,.05);}
 .art-head{text-align:center;padding-bottom:26px;border-bottom:1px solid var(--line);}
@@ -118,15 +118,15 @@ html[lang="zh"] [lang="en"]{display:none!important;}
 <meta name="theme-color" content="#14110C">
 <link rel="canonical" href="https://www.readswithcolin.com/zizhitongjian.html">
 <meta property="og:site_name" content="Reads with Colin">
-<meta property="og:title" content="《资治通鉴——管理与人性》 · The Comprehensive Mirror to Aid in Government — Management and Human Nature">
-<meta property="og:description" content="294 卷决策复盘 — 管理与人性的千年案例库。">
+<meta property="og:title" content="资治通鉴 · 千年决策案例库 — Reads with Colin">
+<meta property="og:description" content="294 卷决策复盘 — 财富逻辑与管理思维的千年案例库。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://www.readswithcolin.com/zizhitongjian.html">
 <meta property="og:image" content="https://www.readswithcolin.com/img/covers-b/zizhitongjian-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="900">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="《资治通鉴——管理与人性》 · The Comprehensive Mirror to Aid in Government — Management and Human Nature">
+<meta name="twitter:title" content="资治通鉴 · 千年决策案例库 — Reads with Colin">
 <meta name="twitter:image" content="https://www.readswithcolin.com/img/covers-b/zizhitongjian-cover.jpg">
 <style>
   /* v13.1c: 导航「专栏」下拉（details 原生实现，触屏可点开） */
@@ -140,7 +140,6 @@ html[lang="zh"] [lang="en"]{display:none!important;}
   .nav-menu a:hover { background: rgba(20,17,12,.06); color: var(--red); }
   @media (max-width: 720px) {
     .nav-drop .nav-menu { left: auto; right: 0; transform: none; }
-  @media(max-width:720px){.nav-drop .nav-menu{max-width:calc(100vw - 150px);}.nav-menu a{white-space:normal;line-height:1.35;}}
   }
 </style>
 </head>
@@ -148,7 +147,7 @@ html[lang="zh"] [lang="en"]{display:none!important;}
 
 <nav class="nav">
   <a class="nav-brand" href="index.html">
-    <span class="mark"><img src="img/mark-books.svg" alt="Reads with Colin"></span>
+    <span class="mark"><img src="img/favicon.svg" alt="RwC"></span>
     <span class="name">Reads <em>with</em> Colin</span>
   </a>
   <div class="nav-right">
@@ -156,11 +155,13 @@ html[lang="zh"] [lang="en"]{display:none!important;}
         <details class="nav-drop">
       <summary class="nav-link nav-keep"><span lang="en">Columns</span><span lang="zh">专栏</span></summary>
       <div class="nav-menu">
-        <a href="zizhitongjian.html"><span lang="en">The Comprehensive Mirror to Aid in Government</span><span lang="zh">资治通鉴</span></a>
-        <a href="maoxuan.html"><span lang="en">Selected Works</span><span lang="zh">毛选</span></a>
+        <a href="zizhitongjian.html"><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span></a>
+        <a href="maoxuan.html"><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span></a>
       </div>
     </details>
     <a class="nav-link" href="reading-321.html">3-2-1</a>
+    <a class="nav-link" href="where-to-find-me.html"><span lang="en">Find me</span><span lang="zh">在哪找到我</span></a>
+    <a class="nav-link" href="media-kit.html"><span lang="en">Media Kit</span><span lang="zh">媒体合作</span></a>
     <span class="lang-switch">
       <a data-set-lang="en" class="active">EN</a>
       <a data-set-lang="zh">中</a>
@@ -170,8 +171,8 @@ html[lang="zh"] [lang="en"]{display:none!important;}
 
 <main class="art">
   <header class="art-head">
-    <span class="k-kicker"><span lang="en">Column · The Comprehensive Mirror to Aid in Government</span><span lang="zh">专栏 · 资治通鉴</span></span>
-    <h1><span lang="en">The Comprehensive Mirror to Aid in Government — <span class="red">Management and Human Nature</span></span><span lang="zh">资治通鉴——<span class="red">管理与人性</span></span></h1>
+    <span class="k-kicker"><span lang="en">Column · Zizhi Tongjian</span><span lang="zh">专栏 · 资治通鉴</span></span>
+    <h1><span lang="en">Zizhi Tongjian: A <span class="red">1,400-Year</span> Case Book</span><span lang="zh">资治通鉴：<span class="red">千年决策</span>案例库</span></h1>
     <p class="art-meta"><span lang="en">By Colin · Column · New case every two weeks</span><span lang="zh">Colin · 专栏 · 每两周一个案例</span></p>
     <p class="art-intro"><span lang="en">I don't read <em>Zizhi Tongjian</em> as history. I read it as what it really is: 294 volumes of decision post-mortems — how resources were gathered, how alliances were built and broken, how power compounded and collapsed. Money and management follow the same logic today; only the costumes changed.</span><span lang="zh">我不把《资治通鉴》当历史书读。我把它当成它本来的样子：294 卷「决策复盘」——资源怎么聚集，联盟怎么结成又怎么破裂，权力怎么复利增长又怎么一夜清零。财富与管理的底层逻辑千年未变，变的只是服装。</span></p>
     <span class="wip"><span lang="en">✍ First case in writing — launching soon</span><span lang="zh">✍ 首篇正在撰写 · 即将上线</span></span>
@@ -213,7 +214,7 @@ html[lang="zh"] [lang="en"]{display:none!important;}
         </div>
         <div class="m-item">
           <h4><span class="tag">映射</span><span lang="en">The modern mapping</span><span lang="zh">现代映射</span></h4>
-          <p><span lang="en">Where the same logic shows up now: pricing, hiring, partnering, competing, compounding — wealth logic and management thinking, made visible.</span><span lang="zh">同样的逻辑今天在哪里上演：定价、用人、结盟、竞争、复利——管理与人性，看得见摸得着。</span></p>
+          <p><span lang="en">Where the same logic shows up now: pricing, hiring, partnering, competing, compounding — wealth logic and management thinking, made visible.</span><span lang="zh">同样的逻辑今天在哪里上演：定价、用人、结盟、竞争、复利——财富逻辑与管理思维，看得见摸得着。</span></p>
         </div>
         <div class="m-item">
           <h4><span class="tag">行动</span><span lang="en">The action card</span><span lang="zh">一张行动卡</span></h4>
@@ -227,22 +228,21 @@ html[lang="zh"] [lang="en"]{display:none!important;}
     <div class="m-num">叁<small><span lang="en">Syllabus</span><span lang="zh">篇目</span></small></div>
     <div class="m-body">
       <h2 class="m-title"><span lang="en">First four cases on the bench</span><span lang="zh">首批四个案例预告</span></h2>
-      <p style="margin:2px 0 18px;font-size:13.5px;color:var(--muted);line-height:1.75;"><span lang="en">Numbering: cases are drawn in the chronological order of the <em>Zizhi Tongjian</em>’s 294 volumes; each case notes its source volume (e.g. 卷一).</span><span lang="zh">编号规则：案例按《资治通鉴》卷次顺序提取，每篇标注出处卷次（如 卷一）。</span></p>
       <div class="m-items">
         <div class="m-item">
-          <h4><span class="tag">案例 01</span><span lang="en">The Partition of Jin — names and order</span><span lang="zh">三家分晋 · 秩序的名与实</span></h4>
+          <h4><span class="tag">01</span><span lang="en">The Partition of Jin — names and order</span><span lang="zh">三家分晋 · 秩序的名与实</span></h4>
           <p><span lang="en">Sima Guang opens the whole book with this case: when the name collapses, the order collapses. On brands, rules, and the cost of broken conventions.</span><span lang="zh">司马光用这个案例开全书：名分一倒，秩序就倒。谈品牌、规则与「破坏惯例」的真实代价。</span></p>
         </div>
         <div class="m-item">
-          <h4><span class="tag">案例 02</span><span lang="en">Shang Yang's reforms — the price of system design</span><span lang="zh">商鞅变法 · 制度设计的代价</span></h4>
+          <h4><span class="tag">02</span><span lang="en">Shang Yang's reforms — the price of system design</span><span lang="zh">商鞅变法 · 制度设计的代价</span></h4>
           <p><span lang="en">The most successful and the most lethal reform in the book. On incentives, execution, and what happens when the designer can't exit.</span><span lang="zh">全书最成功也最致命的改革。谈激励、执行，以及「设计者无法退出」时会发生什么。</span></p>
         </div>
         <div class="m-item">
-          <h4><span class="tag">案例 03</span><span lang="en">Changping — the logistics of attrition</span><span lang="zh">长平之战 · 消耗战的账本</span></h4>
+          <h4><span class="tag">03</span><span lang="en">Changping — the logistics of attrition</span><span lang="zh">长平之战 · 消耗战的账本</span></h4>
           <p><span lang="en">A war decided less by courage than by grain, roads, and cash flow. The ancient twin of burn-rate thinking.</span><span lang="zh">一场与其说靠勇气、不如说靠粮草与道路定胜负的战争。「烧钱率」思维的古代孪生兄弟。</span></p>
         </div>
         <div class="m-item">
-          <h4><span class="tag">案例 04</span><span lang="en">Red Cliffs — how the weak build alliances</span><span lang="zh">赤壁之战 · 弱者的联盟博弈</span></h4>
+          <h4><span class="tag">04</span><span lang="en">Red Cliffs — how the weak build alliances</span><span lang="zh">赤壁之战 · 弱者的联盟博弈</span></h4>
           <p><span lang="en">When you can't win alone, the alliance is the product. On negotiating from weakness without becoming subordinate.</span><span lang="zh">当你独自赢不了，联盟本身就是产品。谈弱势一方如何结盟而不沦为附庸。</span></p>
         </div>
       </div>
@@ -274,8 +274,8 @@ html[lang="zh"] [lang="en"]{display:none!important;}
     </div>
     <div class="nf-col">
       <h4><span lang="en">Columns</span><span lang="zh">专栏</span></h4>
-      <a href="zizhitongjian.html"><span lang="en">The Comprehensive Mirror to Aid in Government</span><span lang="zh">资治通鉴</span></a>
-      <a href="maoxuan.html"><span lang="en">Selected Works</span><span lang="zh">毛选</span></a>
+      <a href="zizhitongjian.html"><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span></a>
+      <a href="maoxuan.html"><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span></a>
       <a href="reading-321.html">3-2-1 Thursday</a>
       <a href="archive.html"><span lang="en">Archive</span><span lang="zh">往期</span></a>
     </div>

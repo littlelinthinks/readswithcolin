@@ -132,7 +132,6 @@
       .nav { padding: 0 16px; }
       .nav-links { gap: 12px; }
       .nav-links a:not(.nav-cta) { display: none; }
-  @media (max-width: 720px) { .nav-brand-text, .nav-brand .name { white-space: nowrap; } }
     }
 
     /* ============ 双语切换 ============ */
@@ -306,52 +305,6 @@
       font-size: 14.5px;
       margin: 0 0 22px;
     }
-    .subscribe-form {
-      display: flex;
-      max-width: 420px;
-      margin: 0 auto;
-      background: var(--paper);
-      border-radius: 999px;
-      padding: 4px;
-      gap: 0;
-    }
-    .subscribe-form input {
-      flex: 1;
-      border: 0;
-      background: transparent;
-      padding: 10px 18px;
-      font-size: 14.5px;
-      color: var(--ink);
-      outline: 0;
-      font-family: var(--sans);
-    }
-    .subscribe-form input::placeholder { color: var(--muted); }
-    .subscribe-form button {
-      background: var(--red);
-      color: var(--paper);
-      border: 0;
-      border-radius: 999px;
-      padding: 9px 22px;
-      font-size: 13.5px;
-      font-weight: 600;
-      cursor: pointer;
-      font-family: var(--sans);
-      letter-spacing: 0.3px;
-      transition: background 0.2s;
-    }
-    .subscribe-form button:hover { background: #A02E1F; }
-    .subscribe-success {
-      display: none;
-      color: var(--gold);
-      font-size: 13px;
-      margin-top: 12px;
-    }
-    .subscribe-success.show { display: block; }
-    @media (max-width: 520px) {
-      .subscribe-form { flex-direction: column; border-radius: 16px; }
-      .subscribe-form input { padding: 12px 16px; }
-      .subscribe-form button { padding: 12px 16px; border-radius: 12px; }
-    }
 
     /* ============ 联系区 ============ */
     .contact-email {
@@ -452,15 +405,14 @@
   .nav-drop[open] .nav-menu, .nav-drop:hover .nav-menu { display: flex; }
   .nav-menu a { font-size: 14px; font-weight: 600; color: var(--ink, #14110C); padding: 9px 14px; border-radius: 8px; white-space: nowrap; }
   .nav-menu a:hover { background: rgba(20,17,12,.06); color: var(--red, #B03A2E); }
-  @media (max-width: 720px) { .nav-drop .nav-menu { left: auto; right: 0; transform: none; }
-  @media(max-width:720px){.nav-drop .nav-menu{max-width:calc(100vw - 150px);}.nav-menu a{white-space:normal;line-height:1.35;}} .nav-drop summary { display: none; } }
+  @media (max-width: 720px) { .nav-drop .nav-menu { left: auto; right: 0; transform: none; } .nav-drop summary { display: none; } }
 </style>
 </head>
 <body>
 
   <nav class="nav">
     <a class="nav-brand" href="index.html">
-      <img class="nav-brand-img" src="img/mark-books.svg" alt="Reads with Colin">
+      <img class="nav-brand-img" src="img/favicon.svg" alt="">
       <span class="nav-brand-text">Reads <span class="amp">with</span> Colin</span>
     </a>
     <div class="nav-links">
@@ -468,19 +420,21 @@
       <details class="nav-drop">
         <summary><span lang="en">Columns</span><span lang="zh">专栏</span></summary>
         <div class="nav-menu">
-          <a href="zizhitongjian.html"><span lang="en">The Comprehensive Mirror to Aid in Government</span><span lang="zh">资治通鉴</span></a>
-          <a href="maoxuan.html"><span lang="en">Selected Works</span><span lang="zh">毛选</span></a>
+          <a href="zizhitongjian.html"><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span></a>
+          <a href="maoxuan.html"><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span></a>
         </div>
       </details>
       <a href="reading-321.html">3-2-1</a>
       <a href="about.html" class="active"><span lang="en">About</span><span lang="zh">关于</span></a>
+      <a class="nav-link" href="where-to-find-me.html"><span lang="en">Find me</span><span lang="zh">在哪找到我</span></a>
+      <a class="nav-link" href="media-kit.html"><span lang="en">Media Kit</span><span lang="zh">媒体合作</span></a>
       <div class="lang-switch" role="group" aria-label="Language">
         <a href="#" data-set-lang="en" class="active">EN</a>
         <a href="#" data-set-lang="zh">中文</a>
       </div>
-      <a class="nav-cta" href="#subscribe">
-        <span lang="en">Subscribe</span>
-        <span lang="zh">订阅</span>
+      <a class="nav-cta" href="mailto:hello@readswithcolin.com">
+        <span lang="en">Contact</span>
+        <span lang="zh">联系</span>
       </a>
     </div>
   </nav>
@@ -542,27 +496,18 @@
       </p>
     </section>
 
-    <section class="about-section" id="subscribe">
-      <h2><span class="num">04</span><span lang="en">SUBSCRIBE</span><span lang="zh">订阅</span></h2>
+    <section class="about-section" id="contact">
+      <h2><span class="num">04</span><span lang="en">STAY IN TOUCH</span><span lang="zh">保持联系</span></h2>
       <div class="subscribe-card">
         <h3>
-          <span lang="en">Join the letter</span>
-          <span lang="zh">加入我们</span>
+          <span lang="en">Let's talk books</span>
+          <span lang="zh">聊聊书</span>
         </h3>
         <p>
-          <span lang="en">One thoughtful 5-minute read every Thursday morning. Unsubscribe anytime.</span>
-          <span lang="zh">每周四早晨，一封读书来信直达你的邮箱。随时退订。</span>
+          <span lang="en">I've paused email subscriptions for now. The easiest way to reach me is by email — a book tip, a collab idea, or just to say hi:</span>
+          <span lang="zh">我暂时暂停了邮件订阅。联系我最直接的方式是发邮件——推荐好书、合作想法，或只是打个招呼，都欢迎：</span>
         </p>
-        <form class="subscribe-form" action="#" method="post" novalidate>
-          <input type="email" name="email" placeholder="your@email.com" aria-label="Email" required>
-          <button type="submit">
-            <span lang="en">Subscribe</span>
-            <span lang="zh">订阅</span>
-          </button>
-        </form>
-        <div class="subscribe-success" role="status"
-             data-success-en="🎉 Thanks for subscribing — welcome aboard, reader!"
-             data-success-zh="🎉 感谢订阅，欢迎加入我们的阅读之旅！"></div>
+        <a class="contact-email" style="color:var(--gold)" href="mailto:hello@readswithcolin.com">hello@readswithcolin.com</a>
       </div>
     </section>
 
@@ -660,21 +605,6 @@
         applyLang(b.dataset.setLang);
       }));
 
-      /* ============ Subscribe form success ============ */
-      const form = document.querySelector('.subscribe-form');
-      const success = document.querySelector('.subscribe-success');
-      if (form && success) {
-        form.addEventListener('submit', e => {
-          e.preventDefault();
-          const email = form.querySelector('input[type=email]').value.trim();
-          if (!email) return;
-          const cur = document.documentElement.lang || 'en';
-          success.textContent = success.dataset['success' + (cur === 'zh' ? 'Zh' : 'En')];
-          success.classList.add('show');
-          form.reset();
-          setTimeout(() => success.classList.remove('show'), 6000);
-        });
-      }
     })();
   </script>
 <button class="to-top" id="toTop" aria-label="Back to top" title="返回顶部">↑</button>
