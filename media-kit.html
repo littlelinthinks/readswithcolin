@@ -65,7 +65,8 @@
 
   .about-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin-top: 18px; }
   .fact-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 16px; text-align: center; }
-  .fact-num { display: block; font-family: var(--serif); font-size: 30px; font-weight: 700; color: var(--ink); }
+  .fact-num { display: block; font-family: var(--serif); font-size: 30px; font-weight: 700; color: var(--ink); white-space: nowrap; }
+  .fact-num-sm { font-size: 22px; line-height: 30px; }
   .fact-label { display: block; font-size: 12.5px; color: var(--muted); margin-top: 6px; }
 
   .rate { margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
@@ -134,7 +135,7 @@
       <div class="fact-card"><span class="fact-num">34</span><span class="fact-label"><span lang="en">Book notes published</span><span lang="zh">书评已发布</span></span></div>
       <div class="fact-card"><span class="fact-num">3</span><span class="fact-label"><span lang="en">Ongoing columns</span><span lang="zh">常设专栏</span></span></div>
       <div class="fact-card"><span class="fact-num"><span lang="en">Thu</span><span lang="zh">每周四</span></span><span class="fact-label"><span lang="en">New letter, weekly</span><span lang="zh">3-2-1 信定期更新</span></span></div>
-      <div class="fact-card"><span class="fact-num">EN+中文</span><span class="fact-label"><span lang="en">Fully bilingual</span><span lang="zh">全站双语</span></span></div>
+      <div class="fact-card"><span class="fact-num fact-num-sm">EN+中文</span><span class="fact-label"><span lang="en">Fully bilingual</span><span lang="zh">全站双语</span></span></div>
       <div class="fact-card"><span class="fact-num">10+</span><span class="fact-label"><span lang="en">Platforms live</span><span lang="zh">已入驻平台</span></span></div>
       <div class="fact-card"><span class="fact-num">4</span><span class="fact-label"><span lang="en">Video channels in prep</span><span lang="zh">视频平台筹备中</span></span></div>
     </div>
