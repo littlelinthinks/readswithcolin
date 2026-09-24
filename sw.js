@@ -1,9 +1,9 @@
-/* Reads with Colin · Service Worker (PWA) · rwc-pwa-v2
+/* Reads with Colin · Service Worker (PWA) · rwc-pwa-v3
  * 策略：页面与数据「网络优先」（保证部署后立刻看到新内容），
  *       静态资源（css/js/img/covers）「缓存优先」（离线可读）。
  * 部署新版时请把下方 CACHE 版本号 +1，旧缓存会在 activate 时自动清理。
  */
-const CACHE = 'rwc-pwa-v2';
+const CACHE = 'rwc-pwa-v3';
 const CORE = [
   './',
   './index.html',
