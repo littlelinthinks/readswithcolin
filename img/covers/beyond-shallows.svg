@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1200" viewBox="0 0 800 1200">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E9EFF3"/>
+      <stop offset="1" stop-color="#D6E2EA"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1200" fill="url(#g)"/>
+  <rect x="34" y="34" width="732" height="1132" fill="none" stroke="#3E6E8E" stroke-width="3" opacity="0.55"/>
+  <text x="400" y="250" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="120" fill="#3E6E8E">☯</text>
+  <text x="400" y="470" text-anchor="middle" font-family="'Noto Serif SC', 'Songti SC', serif" font-size="84" font-weight="700" fill="#2A2620">越过浅水区</text>
+  <text x="400" y="560" text-anchor="middle" font-family="Georgia, serif" font-size="40" font-style="italic" fill="#5A5347">Beyond Shallows</text>
+  <line x1="250" y1="640" x2="550" y2="640" stroke="#3E6E8E" stroke-width="2" opacity="0.6"/>
+  <text x="400" y="720" text-anchor="middle" font-family="'Noto Serif SC', serif" font-size="36" fill="#4A4438">Cal Newport · 深度阅读</text>
+  <text x="400" y="778" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#6E675B">Deep Reading Framework</text>
+  <text x="400" y="1120" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-style="italic" fill="#2A2620">Reads <tspan fill="#3E6E8E">with</tspan> Colin</text>
+</svg>

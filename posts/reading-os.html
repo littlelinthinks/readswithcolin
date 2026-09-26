@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>习而新之：将查理·芒格与《资治通鉴》融为一体的阅读操作系统 — Reads with Colin</title>
+<meta name="description" content="Learn, Then Transcend: a reading OS fusing Charlie Munger's mental models with Zizhi Tongjian. 习而新之：将查理·芒格与《资治通鉴》融为一体的阅读操作系统。">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+:root{
+  --ink:#14110C; --muted:#6E675B; --paper:#FAF7F0; --card:#FFFFFF;
+  --red:#C73E2C; --gold:#C9A668; --line:#E7E0D2; --radius:16px;
+  --sans:-apple-system,"Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;
+  --serif:Georgia,"Times New Roman","Songti SC",serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65;}
+a{color:inherit;}
+html[lang="en"] [lang="zh"]{display:none!important;}
+html[lang="zh"] [lang="en"]{display:none!important;}
+.nav{display:flex;align-items:center;justify-content:space-between;max-width:1180px;margin:0 auto;padding:20px 24px;}
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);}
+.nav-brand .mark{width:44px;height:44px;border-radius:50%;overflow:hidden;border:1.5px solid var(--gold);display:inline-flex;align-items:center;justify-content:center;background:#fff;flex:0 0 44px;}
+.nav-brand .mark img{width:100%;height:100%;object-fit:contain;}
+.nav-brand .name{font-family:var(--serif);font-size:21px;font-weight:700;}
+.nav-brand .name em{color:var(--red);font-style:italic;}
+.nav-right{display:flex;align-items:center;gap:22px;}
+.nav-link{font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;}
+.nav-link:hover{color:var(--red);}
+.lang-switch{display:inline-flex;gap:2px;font-size:13px;font-weight:700;border:1.5px solid var(--ink);border-radius:999px;padding:2px;background:#fff;}
+.lang-switch a{padding:4px 10px;border-radius:999px;text-decoration:none;color:var(--ink);cursor:pointer;}
+.lang-switch a.active{background:var(--ink);color:#fff;}
+.nav-cta{font-size:14px;font-weight:700;color:#fff;text-decoration:none;background:var(--ink);padding:9px 22px;border-radius:999px;border:1.5px solid var(--ink);}
+.nav-cta:hover{background:var(--red);border-color:var(--red);}
+@media(max-width:720px){.nav-link{display:none;}.nav-link.nav-keep{display:inline;}}
+.art{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);max-width:840px;margin:26px auto 0;padding:46px 48px 40px;box-shadow:0 10px 34px rgba(20,17,12,.05);}
+.art-head{text-align:center;padding-bottom:26px;border-bottom:1px solid var(--line);}
+.k-kicker{display:inline-block;font-size:12.5px;letter-spacing:3px;font-weight:700;color:var(--red);text-transform:uppercase;margin-bottom:14px;}
+.art-head h1{font-family:var(--serif);font-size:clamp(30px,4.6vw,46px);font-weight:700;line-height:1.16;letter-spacing:-.5px;}
+.art-head h1 .red{color:var(--red);font-style:italic;}
+.art-meta{margin-top:14px;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);}
+.art-intro{max-width:660px;margin:22px auto 0;font-size:17px;color:var(--ink);line-height:1.75;}
+.art-intro a{color:var(--red);font-weight:700;text-decoration:none;border-bottom:1.5px solid var(--gold);}
+.art-note{margin-top:16px;font-size:14.5px;color:var(--muted);text-align:center;}
+.art-note a{color:var(--red);font-weight:700;text-decoration:none;border-bottom:1.5px solid var(--gold);}
+.rl{margin-top:6px;}
+.rl-item{display:flex;gap:24px;padding:30px 0;border-top:1px solid var(--line);}
+.rl-item:first-child{border-top:none;padding-top:26px;}
+.rl-cover{flex:0 0 130px;position:relative;}
+.rl-cover img{width:130px;height:auto;border-radius:3px;box-shadow:0 9px 22px rgba(20,17,12,.20);display:block;background:#fff;}
+.rl-num{position:absolute;top:-11px;left:-11px;width:36px;height:36px;border-radius:10px;background:var(--ink);color:#fff;font-family:var(--serif);font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(20,17,12,.32);}
+.rl-body{flex:1;min-width:0;}
+.rl-title{font-family:var(--serif);font-size:23px;line-height:1.24;font-weight:700;}
+.rl-author{font-size:13.5px;color:var(--muted);font-style:italic;margin-top:5px;}
+.rl-quote{font-family:var(--serif);font-style:italic;font-size:16px;line-height:1.62;color:var(--ink);margin-top:14px;padding-left:14px;border-left:3px solid var(--gold);}
+.rl-attr{margin-top:11px;font-size:13px;font-weight:700;color:var(--red);}
+.art-end{margin-top:8px;padding-top:30px;border-top:1px solid var(--line);text-align:center;}
+.art-end p{font-size:15.5px;color:var(--muted);}
+.art-end a.btn{display:inline-block;margin-top:20px;background:var(--gold);color:#fff;text-decoration:none;padding:13px 28px;border-radius:999px;font-weight:700;box-shadow:0 8px 20px rgba(201,166,104,.35);}
+.art-end a.btn:hover{transform:translateY(-2px);}
+@media(max-width:560px){
+  .art{padding:34px 22px 30px;}
+  .rl-item{flex-direction:column;align-items:center;text-align:center;}
+  .rl-cover{flex:none;}
+  .rl-num{left:-6px;top:-8px;}
+  .rl-body{text-align:left;width:100%;}
+}
+.to-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;border:none;font-size:20px;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease,background .2s ease;z-index:60;}
+.to-top.show{opacity:.92;visibility:visible;}
+.to-top:hover{background:var(--red);}
+.nf{background:var(--card);border-top:1px solid var(--line);padding:60px 24px 28px;}
+.nf-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px;}
+.nf-brand{font-family:var(--serif);font-size:22px;font-weight:700;}
+.nf-brand em{color:var(--red);font-style:italic;}
+.nf-tag{margin-top:12px;font-size:14px;color:var(--muted);max-width:360px;}
+.nf-col h4{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--ink);margin-bottom:12px;}
+.nf-col a{display:block;font-size:14px;color:var(--muted);text-decoration:none;margin-bottom:8px;}
+.nf-col a:hover{color:var(--red);}
+.nf-bottom{max-width:1180px;margin:36px auto 0;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);flex-wrap:wrap;gap:8px;}
+@media(max-width:720px){.nf-inner{grid-template-columns:1fr;}}
+</style>
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../img/favicon-180.png">
+<meta name="description" content="15 books recommended by Daniel Kahneman — on thinking, bias, and making better decisions. 卡尼曼推荐的 15 本书。">
+<meta name="theme-color" content="#14110C">
+<link rel="canonical" href="https://www.readswithcolin.com/posts/reading-os.html">
+<meta property="og:site_name" content="Reads with Colin">
+<meta property="og:title" content="15 Books Recommended by Daniel Kahneman">
+<meta property="og:description" content="On thinking, bias, and making better decisions — curated by Reads with Colin.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.readswithcolin.com/posts/reading-os.html">
+<meta property="og:image" content="https://www.readswithcolin.com/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="15 Books Recommended by Daniel Kahneman">
+<meta name="twitter:image" content="https://www.readswithcolin.com/img/og-image.png">
+<style>
+  /* v13.1c: 导航「专栏」下拉（details 原生实现，触屏可点开） */
+  .nav-drop { position: relative; display: inline-block; }
+  .nav-drop summary { list-style: none; cursor: pointer; }
+  .nav-drop summary::-webkit-details-marker { display: none; }
+  .nav-drop summary:hover, .nav-drop[open] summary { color: var(--red); }
+  .nav-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); flex-direction: column; background: #FDFBF6; border: 1px solid var(--line); border-radius: 12px; padding: 8px; min-width: 168px; box-shadow: 0 14px 34px rgba(20,17,12,.14); z-index: 60; }
+  .nav-drop[open] .nav-menu, .nav-drop:hover .nav-menu { display: flex; }
+  .nav-menu a { font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none; padding: 9px 14px; border-radius: 8px; white-space: nowrap; }
+  .nav-menu a:hover { background: rgba(20,17,12,.06); color: var(--red); }
+  @media (max-width: 720px) {
+    .nav-drop .nav-menu { left: auto; right: 0; transform: none; }
+  }
+
+    /* ===== v26 新增：深度阅读长文排版 + 播客组件（兼容现有书卷风）===== */
+    .post-body { font-size: 17px; max-width: 720px; margin: 0 auto; }
+    .post-body p { margin: 0 0 22px; line-height: 1.9; }
+    .post-body h2 { font-family: var(--serif); font-size: 25px; font-weight: 700; line-height: 1.35; margin: 50px 0 16px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--ink); }
+    .post-body h2:first-of-type { border-top: none; padding-top: 0; }
+    .post-body h2 .sec-en { display: block; }
+    .post-body h2 .sec-zh { display: block; font-family: var(--sans); font-size: 14px; font-weight: 600; color: #2d5a3d; letter-spacing: 2px; margin-top: 6px; }
+    .post-body ul { margin: 0 0 22px; padding-left: 26px; }
+    .post-body li { margin-bottom: 10px; line-height: 1.8; }
+    .post-body li::marker { color: #2d5a3d; }
+    .post-body strong { font-weight: 700; }
+    .post-body em { font-style: italic; }
+    .post-body blockquote { position: relative; margin: 30px 0; padding: 24px 28px; background: #eef3ef; border-left: 3px solid #2d5a3d; border-radius: 0 12px 12px 0; font-size: 18px; line-height: 1.85; }
+    .post-body blockquote p { margin: 0; }
+    /* 播客组件 */
+    .rwc-podcast { max-width: 720px; margin: 42px auto; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 1px 2px rgba(20,17,12,.05), 0 8px 24px rgba(20,17,12,.06); overflow: hidden; }
+    .rwc-podcast .pc-show { display: flex; align-items: center; gap: 16px; padding: 22px 24px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+    .rwc-podcast .pc-icon { width: 50px; height: 50px; border-radius: 50%; background: #2d5a3d; display: flex; align-items: center; justify-content: center; font-size: 22px; flex: none; }
+    .rwc-podcast .pc-info { flex: 1; min-width: 160px; }
+    .rwc-podcast .pc-kicker { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #2d5a3d; }
+    .rwc-podcast .pc-title { font-family: var(--serif); font-size: 18px; font-weight: 700; margin: 3px 0 2px; color: var(--ink); }
+    .rwc-podcast .pc-ep { font-size: 13.5px; color: var(--muted); margin: 0; }
+    .rwc-podcast .pc-btn { padding: 9px 18px; background: var(--ink); color: #fff; font-size: 13px; font-weight: 600; border-radius: 999px; text-decoration: none; white-space: nowrap; transition: background .2s; }
+    .rwc-podcast .pc-btn:hover { background: #2d5a3d; }
+    .rwc-podcast .pc-quote { padding: 22px 24px; }
+    .rwc-podcast .pc-q-en { font-family: var(--serif); font-size: 17px; line-height: 1.7; margin: 0 0 14px; color: var(--ink); }
+    .rwc-podcast .pc-q-zh { background: #faf8f3; border: 1px solid var(--line); border-left: 3px solid #C9A668; border-radius: 0 10px 10px 0; padding: 14px 16px; font-size: 14px; line-height: 1.85; color: var(--muted); }
+    .rwc-podcast .pc-zh-label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #2d5a3d; margin-bottom: 6px; }
+    @media (max-width: 600px) {
+      .rwc-podcast .pc-show { gap: 12px; }
+      .rwc-podcast .pc-btn { width: 100%; text-align: center; }
+    }
+
+    /* ===== 跨文化策展卡片（原生 CSS 版，对应 Tailwind 组件） ===== */
+    .cc-wrap{max-width:740px;margin:46px auto 10px;font-family:var(--serif);color:var(--ink);}
+    .cc-head{border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:0 0 16px 16px;background:#FBF8F1;padding:24px 26px;display:flex;gap:18px;align-items:flex-start;}
+    .cc-icon{flex:0 0 42px;width:42px;height:42px;border-radius:10px;background:rgba(201,166,104,.16);color:#B0892F;display:flex;align-items:center;justify-content:center;font-size:20px;}
+    .cc-head .cc-top{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .cc-label{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B0892F;}
+    .cc-en{font-family:var(--sans);font-size:11px;color:var(--muted);white-space:nowrap;}
+    .cc-head h4{font-family:var(--serif);font-size:20px;font-weight:700;margin:8px 0 4px;line-height:1.3;}
+    .cc-head p{font-family:var(--sans);font-size:13px;color:var(--muted);margin:0;line-height:1.5;}
+    .cc-quote{margin-top:18px;background:#FBF8F1;border:1px solid var(--line);border-radius:14px;padding:24px 26px;}
+    .cc-quote .en{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.7;color:var(--ink);margin:0;}
+    .cc-quote .zh-wrap{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);}
+    .cc-zh-label{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#2d5a3d;display:block;margin-bottom:8px;}
+    .cc-quote .zh{font-family:var(--sans);font-size:15px;line-height:1.9;color:var(--muted);margin:0;}
+    .cc-loop{margin-top:8px;}
+    .cc-loop .loop-item{padding:18px 0;border-top:1px solid var(--line);}
+    .cc-loop .loop-item:first-child{border-top:none;}
+    .cc-loop .loop-k{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#B0892F;margin-bottom:6px;}
+    .cc-loop .loop-v{font-family:var(--serif);font-size:16px;line-height:1.8;color:var(--ink);}
+    @media(max-width:560px){.cc-head{flex-direction:column;gap:12px;}.cc-icon{flex:none;}}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-brand" href="../index.html">
+    <span class="mark"><img src="../img/favicon.svg" alt="RwC"></span>
+    <span class="name">Reads <em>with</em> Colin</span>
+  </a>
+  <div class="nav-right">
+    <a class="nav-link" href="../index.html"><span lang="en">Home</span><span lang="zh">首页</span></a>
+        <details class="nav-drop">
+      <summary class="nav-link nav-keep"><span lang="en">Columns</span><span lang="zh">专栏</span></summary>
+      <div class="nav-menu">
+        <a href="../zizhitongjian.html"><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span></a>
+        <a href="../maoxuan.html"><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span></a>
+        <a href="../tiandao.html"><span lang="en">Tiandao</span><span lang="zh">天道</span></a>
+      </div>
+    </details>
+    <a class="nav-link" href="../reading-321.html">3-2-1</a>
+    <span class="lang-switch">
+      <a data-set-lang="en" class="active">EN</a>
+      <a data-set-lang="zh">中</a>
+    </span>
+  </div>
+</nav>
+
+<main class="art">
+    <header class="art-head">
+    <span class="k-kicker"><span lang="en">Mental Models Bookshelf · East-Meets-West</span><span lang="zh">思维模型书架 · 中西互证</span></span>
+    <h1><span lang="en">Learn, Then Transcend: A Reading OS Fusing Charlie Munger with Zizhi Tongjian</span><span lang="zh">习而新之：将查理·芒格与《资治通鉴》融为一体的阅读操作系统</span></h1>
+    <p class="art-meta"><span lang="en">East–West Synthesis · Charlie Munger · Zizhi Tongjian · Sep 2026</span><span lang="zh">中西互证 · 查理·芒格 · 资治通鉴 · 2026 年 9 月</span></p>
+    <p class="art-intro"><span lang="en">The West builds lattices of mental models from the outside in; the East folds the mind from the inside out through its histories. What if we ran both operating systems at once?</span><span lang="zh">西方由外而内地搭建思维栅格，东方借史书由内而外地折叠心智。若两套“阅读操作系统”同时运行，会发生什么？</span></p>
+  </header>
+
+    <div class="post-body">
+    <p><span lang="en">Western thinkers build lattices of mental models to navigate the world; Chinese historians folded two thousand years of rise and fall into a single mirror for the mind. Charlie Munger and Sima Guang never met — yet both were obsessed with the same question: how does a person actually make a good decision?</span><span lang="zh">西方思想家搭建思维模型栅格以驾驭世界；中国史家把两千年的兴亡起落折成一面照心的镜子。查理·芒格与司马光素未谋面，却纠缠于同一个问题：一个人究竟如何做出真正好的决策？</span></p>
+
+    <p><span lang="en">This piece is not a book summary. It is an attempt to run two reading operating systems at once — Munger's "by the outside in" lattice, and the Zizhi Tongjian's "by the inside out" mental folding.</span><span lang="zh">这篇不是书摘。它尝试同时运行两套“阅读操作系统”——芒格“由外而内”的栅格，与《资治通鉴》“由内而外”的心智折叠。</span></p>
+
+    <h2><span class="sec-en">Part One · When Munger Meets Sima Guang</span><span class="sec-zh">壹 · 当芒格遇见司马光</span></h2>
+    <p><span lang="en">Munger's lifelong creed was that wisdom is multidisciplinary — you must borrow from physics, biology, and history to escape the man-with-a-hammer syndrome. Sima Guang's creed was that history is the ultimate multidisciplinary textbook: every folly and every triumph is already on record.</span><span lang="zh">芒格毕生的信条是：智慧必须跨学科——你得从物理、生物、历史里借工具，才不至于“手里拿锤子，看什么都像钉子”。司马光的信条则是：历史本就是最博大的跨学科教科书，每一场愚蠢与辉煌都已被写下。</span></p>
+
+    <!-- 跨文化策展卡片（原生 CSS 版，对应 Tailwind 组件） -->
+    <div class="cc-wrap">
+      <div class="cc-head">
+        <div class="cc-icon">☯️</div>
+        <div class="cc-body">
+          <div class="cc-top">
+            <span class="cc-label">小Lin思考 · 东西互证</span>
+            <span class="cc-en">Context Reflection</span>
+          </div>
+          <h4>当芒格的栅格遇见通鉴的兴衰</h4>
+          <p>思想源头：查理·芒格《穷查理宝典》 × 《资治通鉴》心智映射</p>
+        </div>
+      </div>
+      <div class="cc-quote">
+        <p class="en">"In my whole life, I have known no wise people who didn't read all the time — none, zero."</p>
+        <div class="zh-wrap">
+          <span class="cc-zh-label">Colin 的翻译与跨文化感悟</span>
+          <p class="zh">“在我的一生中，我认识的所有聪明人，没有一个不是在时刻阅读的——一个都没有。”芒格终生追求的“多元思维模型”，其本质与我们翻阅《资治通鉴》、格物致知以洞察世事的路径完全一致：西方由外而内地搭建栅格，东方由内而外地折叠心智。学而知之，唯有内求。</p>
+        </div>
+      </div>
+    </div>
+
+    <blockquote>
+      <p><span lang="en"><strong>Colin's Takeaway:</strong> Stop collecting books as trophies. Start running them through two engines — a Western lattice for structure, an Eastern mirror for temperament.</span><span lang="zh"><strong>柯林的话：</strong>别再把书当战利品收集。开始让两套引擎同时运转——西方的栅格负责结构，东方的镜子负责性情。</span></p>
+    </blockquote>
+
+    <h2><span class="sec-en">Part Two · The Three-Line Reading Loop</span><span class="sec-zh">贰 · 三行核心闭环</span></h2>
+    <p><span lang="en">After every deep reading session, I close the book and run this three-line loop — a synthesis ritual that fuses Munger's output discipline with the historian's long view.</span><span lang="zh">每次深度阅读后，我合上书，跑一遍这三行闭环——一套将芒格的“输出纪律”与史家的“长时段视野”融为一体的合成仪式。</span></p>
+    <div class="cc-loop">
+      <div class="loop-item">
+        <div class="loop-k">Protagonist · 谁是主角</div>
+        <div class="loop-v"><span lang="en">Those who kept their composure across market cycles and historical tides.</span><span lang="zh">那些在周期与浪潮中始终保持定力、清醒自持的人。</span></div>
+      </div>
+      <div class="loop-item">
+        <div class="loop-k">Why it matters · 为何重要</div>
+        <div class="loop-v"><span lang="en">We read history and books not to memorize dogma, but to own a ready-made map of first principles for the next crisis.</span><span lang="zh">读史与读书，不是为了记住陈旧的教条，而是为了在明天遭遇危机时，拥有一张现成的底层决策图谱。</span></div>
+      </div>
+      <div class="loop-item">
+        <div class="loop-k">Tomorrow's Action · 明日行动</div>
+        <div class="loop-v"><span lang="en">Learn to know, forget to break. Tomorrow, strip emotion from your decisions and switch on second-order reason.</span><span lang="zh">学而知之，忘而破之。明天做决策时，主动剥离情绪干扰，启用理性的二阶思维。</span></div>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="art-end">
+    <p><span lang="en">Want a book like this in your inbox every week? Reads with Colin is a weekly letter on the books worth keeping.</span><span lang="zh">想每周收到一本这样的好书？Reads with Colin 是一封每周推荐好书的来信。</span></p>
+    <a class="btn" href="../index.html"><span lang="en">Back to Reads with Colin</span><span lang="zh">回到读书站</span></a>
+  </section>
+</main>
+
+<footer class="nf">
+  <div class="nf-inner">
+    <div>
+      <div class="nf-brand">Reads <em>with</em> Colin</div>
+      <p class="nf-tag"><span lang="en">Books that change how you see — and what you do next.</span><span lang="zh">读书不是逃避世界，是带上更好的眼睛再回来。</span></p>
+    </div>
+    <div class="nf-col">
+      <h4><span lang="en">Explore</span><span lang="zh">浏览</span></h4>
+      <a href="../archive.html"><span lang="en">Archive</span><span lang="zh">往期</span></a>
+      <a href="../categories.html"><span lang="en">Categories</span><span lang="zh">分类</span></a>
+      <a href="../reading-321.html">3-2-1 Thursday</a>
+    </div>
+    <div class="nf-col">
+      <h4><span lang="en">Connect</span><span lang="zh">联系</span></h4>
+      <a href="../about.html"><span lang="en">About Colin</span><span lang="zh">关于 Colin</span></a>
+      <a href="../feed.xml" target="_blank" rel="noopener">RSS</a>
+      <a href="../where-to-find-me.html"><span lang="en">Contact</span><span lang="zh">联系我</span></a>
+      <a href="../media-kit.html"><span lang="en">Business</span><span lang="zh">商务合作</span></a>
+      <a href="mailto:littlelinthinks@gmail.com">Email</a>
+    </div>
+  </div>
+  <div class="nf-bottom">
+    <span><span lang="en">© 2026 Reads with Colin. All rights reserved.</span><span lang="zh">© 2026 Reads with Colin · 版权所有</span></span>
+    <span><span lang="en">Made with 📚 &amp; ☕</span><span lang="zh">用 📚 &amp; ☕ 制作</span></span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script>
+(function () {
+  "use strict";
+  var STORAGE_KEY = "rwc-lang";
+  var SUPPORTED = { en: "en", zh: "zh", "zh-cn": "zh", "zh-hans": "zh" };
+  function detectLang() {
+    try {
+      var fromUrl = new URLSearchParams(location.search).get("lang");
+      if (fromUrl && SUPPORTED[fromUrl.toLowerCase()]) return SUPPORTED[fromUrl.toLowerCase()];
+      var saved = localStorage.getItem(STORAGE_KEY);
+      if (saved && SUPPORTED[saved]) return SUPPORTED[saved];
+    } catch (e) {}
+    var nav = (navigator.language || "en").toLowerCase();
+    if (nav.indexOf("zh") === 0) return "zh";
+    return "en";
+  }
+  function applyLang(lang) {
+    document.documentElement.setAttribute("lang", lang);
+    document.querySelectorAll(".lang-switch [data-set-lang]").forEach(function (el) {
+      el.classList.toggle("active", el.getAttribute("data-set-lang") === lang);
+    });
+    try {
+      var url = new URL(location.href);
+      if (url.searchParams.get("lang") !== lang) { url.searchParams.set("lang", lang); history.replaceState(null, "", url.toString()); }
+    } catch (e) {}
+  }
+  var lang = detectLang(); applyLang(lang);
+  document.querySelectorAll(".lang-switch [data-set-lang]").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      var t = el.getAttribute("data-set-lang");
+      try { localStorage.setItem(STORAGE_KEY, t); } catch (e) {}
+      applyLang(t);
+    });
+  });
+  var b = document.getElementById("toTop");
+  function onScroll() { if (window.scrollY > 400) b.classList.add("show"); else b.classList.remove("show"); }
+  window.addEventListener("scroll", onScroll); onScroll();
+  b.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+})();
+</script>
+<script>
+  if ('serviceWorker' in navigator) { window.addEventListener('load', function () { navigator.serviceWorker.register('../sw.js').catch(function () {}); }); }
+</script>
+<script>(function(){var y=new Date().getFullYear();document.querySelectorAll(".nf-bottom").forEach(function(el){el.innerHTML=el.innerHTML.replace(/©\s*\d{4}/g,"© "+y);});})();</script>
+<script>
+  /* v13.1c: 点击下拉外部区域自动收起「专栏」菜单 */
+  document.addEventListener('click', function(e){
+    document.querySelectorAll('nav .nav-drop[open]').forEach(function(d){ if(!d.contains(e.target)) d.removeAttribute('open'); });
+  });
+</script>
+</body>
+</html>
