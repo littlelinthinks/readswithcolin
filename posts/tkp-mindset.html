@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Knowledge Project and the Latticework of Mental Models — Reads with Colin</title>
+<meta name="description" content="从 TKP（The Knowledge Project）看东方的「博学而约取」：为什么最会做决定的人广读、用心智模型思考，又如何对应《中庸》与《资治通鉴》。">
+<link rel="manifest" href="../manifest.webmanifest">
+<style>
+:root{
+  --ink:#14110C; --muted:#6E675B; --paper:#FAF7F0; --card:#FFFFFF;
+  --red:#C73E2C; --gold:#C9A668; --line:#E7E0D2; --radius:16px;
+  --sans:-apple-system,"Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;
+  --serif:Georgia,"Times New Roman","Songti SC",serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65;}
+a{color:inherit;}
+html[lang="en"] [lang="zh"]{display:none!important;}
+html[lang="zh"] [lang="en"]{display:none!important;}
+.nav{display:flex;align-items:center;justify-content:space-between;max-width:1180px;margin:0 auto;padding:20px 24px;}
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);}
+.nav-brand .mark{width:44px;height:44px;border-radius:50%;overflow:hidden;border:1.5px solid var(--gold);display:inline-flex;align-items:center;justify-content:center;background:#fff;flex:0 0 44px;}
+.nav-brand .mark img{width:100%;height:100%;object-fit:contain;}
+.nav-brand .name{font-family:var(--serif);font-size:21px;font-weight:700;}
+.nav-brand .name em{color:var(--red);font-style:italic;}
+.nav-right{display:flex;align-items:center;gap:22px;}
+.nav-link{font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;}
+.nav-link:hover{color:var(--red);}
+.lang-switch{display:inline-flex;gap:2px;font-size:13px;font-weight:700;border:1.5px solid var(--ink);border-radius:999px;padding:2px;background:#fff;}
+.lang-switch a{padding:4px 10px;border-radius:999px;text-decoration:none;color:var(--ink);cursor:pointer;}
+.lang-switch a.active{background:var(--ink);color:#fff;}
+.nav-cta{font-size:14px;font-weight:700;color:#fff;text-decoration:none;background:var(--ink);padding:9px 22px;border-radius:999px;border:1.5px solid var(--ink);}
+.nav-cta:hover{background:var(--red);border-color:var(--red);}
+@media(max-width:720px){.nav-link{display:none;}.nav-link.nav-keep{display:inline;}}
+.art{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);max-width:840px;margin:26px auto 0;padding:46px 48px 40px;box-shadow:0 10px 34px rgba(20,17,12,.05);}
+.art-head{text-align:center;padding-bottom:26px;border-bottom:1px solid var(--line);}
+.k-kicker{display:inline-block;font-size:12.5px;letter-spacing:3px;font-weight:700;color:var(--red);text-transform:uppercase;margin-bottom:14px;}
+.art-head h1{font-family:var(--serif);font-size:clamp(28px,4.4vw,44px);font-weight:700;line-height:1.18;letter-spacing:-.5px;}
+.art-head h1 .red{color:var(--red);font-style:italic;}
+.art-meta{margin-top:14px;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);}
+.art-intro{max-width:660px;margin:22px auto 0;font-size:17px;color:var(--ink);line-height:1.75;}
+.art-intro a{color:var(--red);font-weight:700;text-decoration:none;border-bottom:1.5px solid var(--gold);}
+.art-note{margin-top:16px;font-size:14.5px;color:var(--muted);text-align:center;}
+.art-note a{color:var(--red);font-weight:700;text-decoration:none;border-bottom:1.5px solid var(--gold);}
+.to-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;border:none;font-size:20px;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease,background .2s ease;z-index:60;}
+.to-top.show{opacity:.92;visibility:visible;}
+.to-top:hover{background:var(--red);}
+.nf{background:var(--card);border-top:1px solid var(--line);padding:60px 24px 28px;}
+.nf-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px;}
+.nf-brand{font-family:var(--serif);font-size:22px;font-weight:700;}
+.nf-brand em{color:var(--red);font-style:italic;}
+.nf-tag{margin-top:12px;font-size:14px;color:var(--muted);max-width:360px;}
+.nf-col h4{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--ink);margin-bottom:12px;}
+.nf-col a{display:block;font-size:14px;color:var(--muted);text-decoration:none;margin-bottom:8px;}
+.nf-col a:hover{color:var(--red);}
+.nf-bottom{max-width:1180px;margin:36px auto 0;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);flex-wrap:wrap;gap:8px;}
+@media(max-width:720px){.nf-inner{grid-template-columns:1fr;}}
+</style>
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../img/favicon-180.png">
+<meta name="theme-color" content="#14110C">
+<link rel="canonical" href="https://www.readswithcolin.com/posts/tkp-mindset.html">
+<meta property="og:site_name" content="Reads with Colin">
+<meta property="og:title" content="The Knowledge Project and the Latticework of Mental Models">
+<meta property="og:description" content="从 TKP 看东方的「博学而约取」：为什么最会做决定的人广读、用心智模型思考。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.readswithcolin.com/posts/tkp-mindset.html">
+<meta property="og:image" content="https://www.readswithcolin.com/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Knowledge Project and the Latticework of Mental Models">
+<meta name="twitter:image" content="https://www.readswithcolin.com/img/og-image.png">
+<style>
+  /* v13.1c: 导航「专栏」下拉（details 原生实现，触屏可点开） */
+  .nav-drop { position: relative; display: inline-block; }
+  .nav-drop summary { list-style: none; cursor: pointer; }
+  .nav-drop summary::-webkit-details-marker { display: none; }
+  .nav-drop summary:hover, .nav-drop[open] summary { color: var(--red); }
+  .nav-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); flex-direction: column; background: #FDFBF6; border: 1px solid var(--line); border-radius: 12px; padding: 8px; min-width: 168px; box-shadow: 0 14px 34px rgba(20,17,12,.14); z-index: 60; }
+  .nav-drop[open] .nav-menu, .nav-drop:hover .nav-menu { display: flex; }
+  .nav-menu a { font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none; padding: 9px 14px; border-radius: 8px; white-space: nowrap; }
+  .nav-menu a:hover { background: rgba(20,17,12,.06); color: var(--red); }
+  @media (max-width: 720px) {
+    .nav-drop .nav-menu { left: auto; right: 0; transform: none; }
+  }
+
+    /* ===== v26 新增：深度阅读长文排版 + 跨文化策展卡片（原生 CSS 版）===== */
+    .post-body { font-size: 17px; max-width: 720px; margin: 0 auto; }
+    .post-body p { margin: 0 0 22px; line-height: 1.9; }
+    .post-body h2 { font-family: var(--serif); font-size: 25px; font-weight: 700; line-height: 1.35; margin: 50px 0 16px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--ink); }
+    .post-body h2:first-of-type { border-top: none; padding-top: 0; }
+    .post-body h2 .sec-en { display: block; }
+    .post-body h2 .sec-zh { display: block; font-family: var(--sans); font-size: 14px; font-weight: 600; color: #B5752A; letter-spacing: 2px; margin-top: 6px; }
+    .post-body ul { margin: 0 0 22px; padding-left: 26px; }
+    .post-body li { margin-bottom: 10px; line-height: 1.8; }
+    .post-body li::marker { color: #B5752A; }
+    .post-body strong { font-weight: 700; }
+    .post-body em { font-style: italic; }
+    .post-body blockquote { position: relative; margin: 30px 0; padding: 24px 28px; background: #F7F1E6; border-left: 3px solid #B5752A; border-radius: 0 12px 12px 0; font-size: 18px; line-height: 1.85; }
+    .post-body blockquote p { margin: 0; }
+
+    /* 跨文化策展卡片（原生 CSS 版） */
+    .cc-wrap{max-width:740px;margin:46px auto 10px;font-family:var(--serif);color:var(--ink);}
+    .cc-head{border:1px solid var(--line);border-top:4px solid #B5752A;border-radius:0 0 16px 16px;background:#FBF6EC;padding:24px 26px;display:flex;gap:18px;align-items:flex-start;}
+    .cc-icon{flex:0 0 42px;width:42px;height:42px;border-radius:10px;background:rgba(181,117,42,.16);color:#B5752A;display:flex;align-items:center;justify-content:center;font-size:20px;}
+    .cc-head .cc-top{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .cc-label{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B5752A;}
+    .cc-en{font-family:var(--sans);font-size:11px;color:var(--muted);white-space:nowrap;}
+    .cc-head h4{font-family:var(--serif);font-size:20px;font-weight:700;margin:8px 0 4px;line-height:1.3;}
+    .cc-head p{font-family:var(--sans);font-size:13px;color:var(--muted);margin:0;line-height:1.5;}
+    .cc-quote{margin-top:18px;background:#FBF6EC;border:1px solid var(--line);border-radius:14px;padding:24px 26px;}
+    .cc-quote .en{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.7;color:var(--ink);margin:0;}
+    .cc-quote .zh-wrap{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);}
+    .cc-zh-label{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#B5752A;display:block;margin-bottom:8px;}
+    .cc-quote .zh{font-family:var(--sans);font-size:15px;line-height:1.9;color:var(--muted);margin:0;}
+    .cc-loop{margin-top:8px;}
+    .cc-loop .loop-item{padding:18px 0;border-top:1px solid var(--line);}
+    .cc-loop .loop-item:first-child{border-top:none;}
+    .cc-loop .loop-k{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#B5752A;margin-bottom:6px;}
+    .cc-loop .loop-v{font-family:var(--serif);font-size:16px;line-height:1.8;color:var(--ink);}
+    @media(max-width:560px){.cc-head{flex-direction:column;gap:12px;}.cc-icon{flex:none;}}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-brand" href="../index.html">
+    <span class="mark"><img src="../img/favicon.svg" alt="RwC"></span>
+    <span class="name">Reads <em>with</em> Colin</span>
+  </a>
+  <div class="nav-right">
+    <a class="nav-link" href="../index.html"><span lang="en">Home</span><span lang="zh">首页</span></a>
+        <details class="nav-drop">
+      <summary class="nav-link nav-keep"><span lang="en">Columns</span><span lang="zh">专栏</span></summary>
+      <div class="nav-menu">
+        <a href="../zizhitongjian.html"><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span></a>
+        <a href="../maoxuan.html"><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span></a>
+        <a href="../tiandao.html"><span lang="en">Tiandao</span><span lang="zh">天道</span></a>
+        <a href="../fangtan.html"><span lang="en">Interview Cross-Verification</span><span lang="zh">访谈互证</span></a>
+      </div>
+    </details>
+    <a class="nav-link" href="../reading-321.html">3-2-1</a>
+    <span class="lang-switch">
+      <a data-set-lang="en" class="active">EN</a>
+      <a data-set-lang="zh">中</a>
+    </span>
+  </div>
+</nav>
+
+<main class="art">
+    <header class="art-head">
+    <span class="k-kicker"><span lang="en">Interview Cross-Verification · 访谈互证</span><span lang="zh">访谈互证 · 全球心智书架</span></span>
+    <h1><span lang="en">The Knowledge Project and the Latticework of Mental Models</span><span lang="zh">常青心智模型：从 TKP 看东方的「博学而约取」</span></h1>
+    <p class="art-meta"><span lang="en">East–West Synthesis · The Knowledge Project · Mental Models · Sep 2026</span><span lang="zh">中西互证 · The Knowledge Project · 心智模型 · 2026 年 9 月</span></p>
+    <p class="art-intro"><span lang="en">The Knowledge Project sits down with the best decision-makers alive and asks, quietly, how they think. The pattern is always the same: they read widely and reason with a latticework of mental models — exactly what the East called 博学而约取.</span><span lang="zh">The Knowledge Project（TKP）请来当今最会做决定的人，轻声问一句：你是怎么想的。答案总是同一个：广读，并用一套"心智模型格栅"去推理——这正是东方说的"博学而约取"。</span></p>
+  </header>
+
+    <div class="post-body">
+    <p><span lang="en">The Knowledge Project, hosted by Shane Parrish of Farnam Street, is one of the few interview shows that treats a conversation as a dissection of how someone thinks rather than what they've done. The recurring lesson from its guests is not a tactic — it's a stance: build a latticework of mental models from many disciplines, and let them check each other. One lens is a bias; many lenses are a compass.</span><span lang="zh">The Knowledge Project（TKP），由 Farnam Street 的 Shane Parrish 主持，是少数把访谈当成"解剖一个人怎么想"、而非"他干了什么"的节目。嘉宾们反复给出的教训，不是某个技巧，而是一种姿态：从多个学科搭起一套"心智模型格栅"，让它们彼此校验。一个透镜是偏见，多个透镜才是指南针。</span></p>
+
+    <h2><span class="sec-en">The Axiom: A Latticework of Mental Models</span><span class="sec-zh">壹 · 公理：心智模型的格栅</span></h2>
+    <p><span lang="en">The West reaches for many disciplines — physics, biology, economics, psychology — wired together so no single framework owns the answer. The East reaches for 博学之，审问之，慎思之，明辨之，笃行之 — to learn broadly, question closely, reflect deeply, distinguish clearly, and then act.</span><span lang="zh">西方人从物理、生物、经济、心理多个学科接线成网，让没有任何单一框架独占答案。东方则用「博学之，审问之，慎思之，明辨之，笃行之」——广学、细问、深省、明辨，然后行动。</span></p>
+
+    <!-- 跨文化策展卡片（原生 CSS 版） -->
+    <div class="cc-wrap">
+      <div class="cc-head">
+        <div class="cc-icon">🎙️</div>
+        <div class="cc-body">
+          <div class="cc-top">
+            <span class="cc-label">访谈互证 · TKP × 诸子</span>
+            <span class="cc-en">Context Reflection</span>
+          </div>
+          <h4>当 TKP 的"心智模型"遇见《中庸》的"博学审问"</h4>
+          <p>思想源头：Charlie Munger「心智模型格栅」× 《礼记·中庸》博学审问 · 《资治通鉴》兼听则明</p>
+        </div>
+      </div>
+      <div class="cc-quote">
+        <p class="en">"You've got to have models in your head. And you've got to array your experience — both vicarious and direct — on this latticework of models."</p>
+        <div class="zh-wrap">
+          <span class="cc-zh-label">Colin 的翻译与中西文明互证</span>
+          <p class="zh">"你脑子里得装着模型。并且要把你的经验——无论亲历还是间接——都挂到这张心智模型的格栅上。"这是查理·芒格（Charlie Munger）1994 年在南加州大学著名的演讲原话，也是 TKP 这类节目真正的思想地基。西方用"多模型互相校验"防止单一框架的盲区；东方则用《中庸》的"博学之，审问之，慎思之，明辨之"与《资治通鉴》里魏徵那句"兼听则明，偏信则暗"，早把同一件事说透了：只信一个角度，就是偏信；让多个角度互相打架，才看得见真相。读书、听访谈，不是为了收集金句，而是为了给自己的格栅，多挂一根结实的横梁。</p>
+          <p class="zh" style="font-size:12px;color:var(--muted);margin-top:10px;">— Charlie Munger, USC 演讲 (1994)（逐字可核实）</p>
+        </div>
+      </div>
+    </div>
+
+    <h2><span class="sec-en">Three Core Extractions</span><span class="sec-zh">贰 · 核心提炼</span></h2>
+    <div class="cc-loop">
+      <div class="loop-item">
+        <div class="loop-k">The Western Tool · 西方之术</div>
+        <div class="loop-v"><span lang="en">Build a latticework. TKP's guests don't rely on one framework — they wire physics, incentives, and psychology together so no single bias can own the decision.</span><span lang="zh">搭起格栅。TKP 的嘉宾不依赖单一框架——他们把物理、激励、心理接线成网，让任何单一偏见都无法独占决策。</span></div>
+      </div>
+      <div class="loop-item">
+        <div class="loop-k">The Eastern Anchor · 东方之道</div>
+        <div class="loop-v"><span lang="en">Zizhi Tongjian records Wei Zheng's warning — 兼听则明，偏信则暗 (heed broadly and you see clearly; trust one side and you go blind). The classics prescribe the same multi-lens discipline 1,300 years before Munger.</span><span lang="zh">《资治通鉴》记下魏徵的警示——「兼听则明，偏信则暗」。在芒格之前一千三百年，经典就已经规定了同一套"多透镜"纪律。</span></div>
+      </div>
+      <div class="loop-item">
+        <div class="loop-k">Colin's Synthesis · 习而新之</div>
+        <div class="loop-v"><span lang="en">Read one book from a field you'd never pick, then ask which of your old beliefs it pokes a hole in. That hole is the dividend.</span><span lang="zh">去读一本你绝不会主动选的领域之书，然后问它戳穿了你哪个旧信念。那个洞，就是红利。</span></div>
+      </div>
+    </div>
+
+    <h2><span class="sec-en">This Week's Mental Iteration</span><span class="sec-zh">叁 · 本周心智迭代</span></h2>
+    <div class="cc-loop">
+      <div class="loop-item">
+        <div class="loop-k">学 · Ingestion</div>
+        <div class="loop-v"><span lang="en">Take apart one TKP conversation for the mental models named — not the stories, the models.</span><span lang="zh">拆解一期 TKP 访谈里被点名的"心智模型"——不是故事，是模型。</span></div>
+      </div>
+      <div class="loop-item">
+        <div class="loop-k">忘 · Deconstruction</div>
+        <div class="loop-v"><span lang="en">Forget the comfort of a single framework. The expert who trusts one lens is the easiest to fool.</span><span lang="zh">忘掉"只信一个框架"的安逸。只信一个透镜的专家，最容易被骗。</span></div>
+      </div>
+      <div class="loop-item">
+        <div class="loop-k">习 · Action</div>
+        <div class="loop-v"><span lang="en">Add one cross-disciplinary book to this month's shelf, and write the single belief it challenges.</span><span lang="zh">本月书架上加一本跨学科的书，并写下它挑战的那一个信念。</span></div>
+      </div>
+    </div>
+
+    <div class="post-body" style="margin-top:34px;border-top:1px dashed var(--line);padding-top:18px;font-size:14px;color:var(--muted);">
+      <p><span lang="en"><em>Note on sourcing:</em> the quoted line is Charlie Munger's from his 1994 USC commencement address (widely transcribed and verifiable); TKP (The Knowledge Project, Farnam Street) is cited for its documented focus on mental models and wide reading. No interview dialogue is invented.</span><span lang="zh"><em>引文说明：</em>引文出自查理·芒格 1994 年南加州大学毕业演讲（有广泛转录，可核实）；TKP（The Knowledge Project，Farnam Street）引为其"心智模型 + 广读"的已记录取向。本文未编造任何访谈对话。</span></p>
+    </div>
+  </div>
+
+
+  <section class="art-end">
+    <p><span lang="en">Want a note like this in your inbox every week? Reads with Colin is a weekly letter on the books and minds worth keeping.</span><span lang="zh">想每周收到一篇这样的笔记？Reads with Colin 是一封每周推荐好书与好思想的来信。</span></p>
+    <a class="btn" href="../index.html" style="display:inline-block;margin-top:20px;background:var(--gold);color:#fff;text-decoration:none;padding:13px 28px;border-radius:999px;font-weight:700;"><span lang="en">Back to Reads with Colin</span><span lang="zh">回到读书站</span></a>
+  </section>
+</main>
+
+<footer class="nf">
+  <div class="nf-inner">
+    <div>
+      <div class="nf-brand">Reads <em>with</em> Colin</div>
+      <p class="nf-tag"><span lang="en">Books that change how you see — and what you do next.</span><span lang="zh">读书不是逃避世界，是带上更好的眼睛再回来。</span></p>
+    </div>
+    <div class="nf-col">
+      <h4><span lang="en">Explore</span><span lang="zh">浏览</span></h4>
+      <a href="../archive.html"><span lang="en">Archive</span><span lang="zh">往期</span></a>
+      <a href="../categories.html"><span lang="en">Categories</span><span lang="zh">分类</span></a>
+      <a href="../fangtan.html"><span lang="en">Interview Cross-Verification</span><span lang="zh">访谈互证</span></a>
+      <a href="../reading-321.html">3-2-1 Thursday</a>
+    </div>
+    <div class="nf-col">
+      <h4><span lang="en">Connect</span><span lang="zh">联系</span></h4>
+      <a href="../about.html"><span lang="en">About Colin</span><span lang="zh">关于 Colin</span></a>
+      <a href="../feed.xml" target="_blank" rel="noopener">RSS</a>
+      <a href="../where-to-find-me.html"><span lang="en">Contact</span><span lang="zh">联系我</span></a>
+      <a href="../media-kit.html"><span lang="en">Business</span><span lang="zh">商务合作</span></a>
+      <a href="mailto:littlelinthinks@gmail.com">Email</a>
+    </div>
+  </div>
+  <div class="nf-bottom">
+    <span><span lang="en">© 2026 Reads with Colin. All rights reserved.</span><span lang="zh">© 2026 Reads with Colin · 版权所有</span></span>
+    <span><span lang="en">Made with 📚 &amp; ☕</span><span lang="zh">用 📚 &amp; ☕ 制作</span></span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script>
+(function () {
+  "use strict";
+  var STORAGE_KEY = "rwc-lang";
+  var SUPPORTED = { en: "en", zh: "zh", "zh-cn": "zh", "zh-hans": "zh" };
+  function detectLang() {
+    try {
+      var fromUrl = new URLSearchParams(location.search).get("lang");
+      if (fromUrl && SUPPORTED[fromUrl.toLowerCase()]) return SUPPORTED[fromUrl.toLowerCase()];
+      var saved = localStorage.getItem(STORAGE_KEY);
+      if (saved && SUPPORTED[saved]) return SUPPORTED[saved];
+    } catch (e) {}
+    var nav = (navigator.language || "en").toLowerCase();
+    if (nav.indexOf("zh") === 0) return "zh";
+    return "en";
+  }
+  function applyLang(lang) {
+    document.documentElement.setAttribute("lang", lang);
+    document.querySelectorAll(".lang-switch [data-set-lang]").forEach(function (el) {
+      el.classList.toggle("active", el.getAttribute("data-set-lang") === lang);
+    });
+    try {
+      var url = new URL(location.href);
+      if (url.searchParams.get("lang") !== lang) { url.searchParams.set("lang", lang); history.replaceState(null, "", url.toString()); }
+    } catch (e) {}
+  }
+  var lang = detectLang(); applyLang(lang);
+  document.querySelectorAll(".lang-switch [data-set-lang]").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      var t = el.getAttribute("data-set-lang");
+      try { localStorage.setItem(STORAGE_KEY, t); } catch (e) {}
+      applyLang(t);
+    });
+  });
+  var b = document.getElementById("toTop");
+  function onScroll() { if (window.scrollY > 400) b.classList.add("show"); else b.classList.remove("show"); }
+  window.addEventListener("scroll", onScroll); onScroll();
+  b.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+})();
+</script>
+<script>
+  if ('serviceWorker' in navigator) { window.addEventListener('load', function () { navigator.serviceWorker.register('../sw.js').catch(function () {}); }); }
+</script>
+<script>(function(){var y=new Date().getFullYear();document.querySelectorAll(".nf-bottom").forEach(function(el){el.innerHTML=el.innerHTML.replace(/©\s*\d{4}/g,"© "+y);});})();</script>
+<script>
+  /* v13.1c: 点击下拉外部区域自动收起「专栏」菜单 */
+  document.addEventListener('click', function(e){
+    document.querySelectorAll('nav .nav-drop[open]').forEach(function(d){ if(!d.contains(e.target)) d.removeAttribute('open'); });
+  });
+</script>
+</body>
+</html>

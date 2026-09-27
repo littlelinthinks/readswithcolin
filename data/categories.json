@@ -30,6 +30,11 @@
       "slug": "english",
       "labelEn": "Read in English",
       "labelZh": "英文原著"
+    },
+    {
+      "slug": "interview",
+      "labelEn": "Interviews & Cross-Verification",
+      "labelZh": "访谈互证"
     }
   ]
 }

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deconstructing Y Combinator's First Principles Against Eastern "Non-Pretension" — Reads with Colin</title>
+<meta name="description" content="YC's hardest-won startup axiom — Make something people want — turns out to be four characters the sages already wrote: 实事求是. 解构 Y Combinator 的「第一性原理」与东方哲学的「不作伪」。">
+<link rel="manifest" href="../manifest.webmanifest">
+<style>
+:root{
+  --ink:#14110C; --muted:#6E675B; --paper:#FAF7F0; --card:#FFFFFF;
+  --red:#C73E2C; --gold:#C9A668; --line:#E7E0D2; --radius:16px;
+  --sans:-apple-system,"Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;
+  --serif:Georgia,"Times New Roman","Songti SC",serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65;}
+a{color:inherit;}
+html[lang="en"] [lang="zh"]{display:none!important;}
+html[lang="zh"] [lang="en"]{display:none!important;}
+.nav{display:flex;align-items:center;justify-content:space-between;max-width:1180px;margin:0 auto;padding:20px 24px;}
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);}
+.nav-brand .mark{width:44px;height:44px;border-radius:50%;overflow:hidden;border:1.5px solid var(--gold);display:inline-flex;align-items:center;justify-content:center;background:#fff;flex:0 0 44px;}
+.nav-brand .mark img{width:100%;height:100%;object-fit:contain;}
+.nav-brand .name{font-family:var(--serif);font-size:21px;font-weight:700;}
+.nav-brand .name em{color:var(--red);font-style:italic;}
+.nav-right{display:flex;align-items:center;gap:22px;}
+.nav-link{font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;}
+.nav-link:hover{color:var(--red);}
+.lang-switch{display:inline-flex;gap:2px;font-size:13px;font-weight:700;border:1.5px solid var(--ink);border-radius:999px;padding:2px;background:#fff;}
+.lang-switch a{padding:4px 10px;border-radius:999px;text-decoration:none;color:var(--ink);cursor:pointer;}
+.lang-switch a.active{background:var(--ink);color:#fff;}
+.nav-cta{font-size:14px;font-weight:700;color:#fff;text-decoration:none;background:var(--ink);padding:9px 22px;border-radius:999px;border:1.5px solid var(--ink);}
+.nav-cta:hover{background:var(--red);border-color:var(--red);}
+@media(max-width:720px){.nav-link{display:none;}.nav-link.nav-keep{display:inline;}}
+.art{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);max-width:840px;margin:26px auto 0;padding:46px 48px 40px;box-shadow:0 10px 34px rgba(20,17,12,.05);}
+.art-head{text-align:center;padding-bottom:26px;border-bottom:1px solid var(--line);}
+.k-kicker{display:inline-block;font-size:12.5px;letter-spacing:3px;font-weight:700;color:var(--red);text-transform:uppercase;margin-bottom:14px;}
+.art-head h1{font-family:var(--serif);font-size:clamp(28px,4.4vw,44px);font-weight:700;line-height:1.18;letter-spacing:-.5px;}
+.art-head h1 .red{color:var(--red);font-style:italic;}
+.art-meta{margin-top:14px;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);}
+.art-intro{max-width:660px;margin:22px auto 0;font-size:17px;color:var(--ink);line-height:1.75;}
+.art-intro a{color:var(--red);font-weight:700;text-decoration:none;border-bottom:1.5px solid var(--gold);}
+.art-note{margin-top:16px;font-size:14.5px;color:var(--muted);text-align:center;}
+.art-note a{color:var(--red);font-weight:700;text-decoration:none;border-bottom:1.5px solid var(--gold);}
+.to-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;border:none;font-size:20px;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease,background .2s ease;z-index:60;}
+.to-top.show{opacity:.92;visibility:visible;}
+.to-top:hover{background:var(--red);}
+.nf{background:var(--card);border-top:1px solid var(--line);padding:60px 24px 28px;}
+.nf-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px;}
+.nf-brand{font-family:var(--serif);font-size:22px;font-weight:700;}
+.nf-brand em{color:var(--red);font-style:italic;}
+.nf-tag{margin-top:12px;font-size:14px;color:var(--muted);max-width:360px;}
+.nf-col h4{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--ink);margin-bottom:12px;}
+.nf-col a{display:block;font-size:14px;color:var(--muted);text-decoration:none;margin-bottom:8px;}
+.nf-col a:hover{color:var(--red);}
+.nf-bottom{max-width:1180px;margin:36px auto 0;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);flex-wrap:wrap;gap:8px;}
+@media(max-width:720px){.nf-inner{grid-template-columns:1fr;}}
+</style>
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../img/favicon-180.png">
+<meta name="theme-color" content="#14110C">
+<link rel="canonical" href="https://www.readswithcolin.com/posts/yc-first-principles.html">
+<meta property="og:site_name" content="Reads with Colin">
+<meta property="og:title" content="Deconstructing Y Combinator's First Principles Against Eastern 'Non-Pretension'">
+<meta property="og:description" content="YC's hardest-won startup axiom — Make something people want — turns out to be four characters the sages already wrote: 实事求是.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.readswithcolin.com/posts/yc-first-principles.html">
+<meta property="og:image" content="https://www.readswithcolin.com/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Deconstructing Y Combinator's First Principles Against Eastern 'Non-Pretension'">
+<meta name="twitter:image" content="https://www.readswithcolin.com/img/og-image.png">
+<style>
+  /* v13.1c: 导航「专栏」下拉（details 原生实现，触屏可点开） */
+  .nav-drop { position: relative; display: inline-block; }
+  .nav-drop summary { list-style: none; cursor: pointer; }
+  .nav-drop summary::-webkit-details-marker { display: none; }
+  .nav-drop summary:hover, .nav-drop[open] summary { color: var(--red); }
+  .nav-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); flex-direction: column; background: #FDFBF6; border: 1px solid var(--line); border-radius: 12px; padding: 8px; min-width: 168px; box-shadow: 0 14px 34px rgba(20,17,12,.14); z-index: 60; }
+  .nav-drop[open] .nav-menu, .nav-drop:hover .nav-menu { display: flex; }
+  .nav-menu a { font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none; padding: 9px 14px; border-radius: 8px; white-space: nowrap; }
+  .nav-menu a:hover { background: rgba(20,17,12,.06); color: var(--red); }
+  @media (max-width: 720px) {
+    .nav-drop .nav-menu { left: auto; right: 0; transform: none; }
+  }
+
+    /* ===== v26 新增：深度阅读长文排版 + 跨文化策展卡片（原生 CSS 版）===== */
+    .post-body { font-size: 17px; max-width: 720px; margin: 0 auto; }
+    .post-body p { margin: 0 0 22px; line-height: 1.9; }
+    .post-body h2 { font-family: var(--serif); font-size: 25px; font-weight: 700; line-height: 1.35; margin: 50px 0 16px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--ink); }
+    .post-body h2:first-of-type { border-top: none; padding-top: 0; }
+    .post-body h2 .sec-en { display: block; }
+    .post-body h2 .sec-zh { display: block; font-family: var(--sans); font-size: 14px; font-weight: 600; color: #B5752A; letter-spacing: 2px; margin-top: 6px; }
+    .post-body ul { margin: 0 0 22px; padding-left: 26px; }
+    .post-body li { margin-bottom: 10px; line-height: 1.8; }
+    .post-body li::marker { color: #B5752A; }
+    .post-body strong { font-weight: 700; }
+    .post-body em { font-style: italic; }
+    .post-body blockquote { position: relative; margin: 30px 0; padding: 24px 28px; background: #F7F1E6; border-left: 3px solid #B5752A; border-radius: 0 12px 12px 0; font-size: 18px; line-height: 1.85; }
+    .post-body blockquote p { margin: 0; }
+
+    /* 跨文化策展卡片（原生 CSS 版） */
+    .cc-wrap{max-width:740px;margin:46px auto 10px;font-family:var(--serif);color:var(--ink);}
+    .cc-head{border:1px solid var(--line);border-top:4px solid #B5752A;border-radius:0 0 16px 16px;background:#FBF6EC;padding:24px 26px;display:flex;gap:18px;align-items:flex-start;}
+    .cc-icon{flex:0 0 42px;width:42px;height:42px;border-radius:10px;background:rgba(181,117,42,.16);color:#B5752A;display:flex;align-items:center;justify-content:center;font-size:20px;}
+    .cc-head .cc-top{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .cc-label{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B5752A;}
+    .cc-en{font-family:var(--sans);font-size:11px;color:var(--muted);white-space:nowrap;}
+    .cc-head h4{font-family:var(--serif);font-size:20px;font-weight:700;margin:8px 0 4px;line-height:1.3;}
+    .cc-head p{font-family:var(--sans);font-size:13px;color:var(--muted);margin:0;line-height:1.5;}
+    .cc-quote{margin-top:18px;background:#FBF6EC;border:1px solid var(--line);border-radius:14px;padding:24px 26px;}
+    .cc-quote .en{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.7;color:var(--ink);margin:0;}
+    .cc-quote .zh-wrap{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);}
+    .cc-zh-label{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#B5752A;display:block;margin-bottom:8px;}
+    .cc-quote .zh{font-family:var(--sans);font-size:15px;line-height:1.9;color:var(--muted);margin:0;}
+    .cc-loop{margin-top:8px;}
+    .cc-loop .loop-item{padding:18px 0;border-top:1px solid var(--line);}
+    .cc-loop .loop-item:first-child{border-top:none;}
+    .cc-loop .loop-k{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#B5752A;margin-bottom:6px;}
+    .cc-loop .loop-v{font-family:var(--serif);font-size:16px;line-height:1.8;color:var(--ink);}
+    @media(max-width:560px){.cc-head{flex-direction:column;gap:12px;}.cc-icon{flex:none;}}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-brand" href="../index.html">
+    <span class="mark"><img src="../img/favicon.svg" alt="RwC"></span>
+    <span class="name">Reads <em>with</em> Colin</span>
+  </a>
+  <div class="nav-right">
+    <a class="nav-link" href="../index.html"><span lang="en">Home</span><span lang="zh">首页</span></a>
+        <details class="nav-drop">
+      <summary class="nav-link nav-keep"><span lang="en">Columns</span><span lang="zh">专栏</span></summary>
+      <div class="nav-menu">
+        <a href="../zizhitongjian.html"><span lang="en">Zizhi Tongjian</span><span lang="zh">资治通鉴</span></a>
+        <a href="../maoxuan.html"><span lang="en">Essays on Method</span><span lang="zh">毛选精读</span></a>
+        <a href="../tiandao.html"><span lang="en">Tiandao</span><span lang="zh">天道</span></a>
+        <a href="../fangtan.html"><span lang="en">Interview Cross-Verification</span><span lang="zh">访谈互证</span></a>
+      </div>
+    </details>
+    <a class="nav-link" href="../reading-321.html">3-2-1</a>
+    <span class="lang-switch">
+      <a data-set-lang="en" class="active">EN</a>
+      <a data-set-lang="zh">中</a>
+    </span>
+  </div>
+</nav>
+
+<main class="art">
+    <header class="art-head">
+    <span class="k-kicker"><span lang="en">Interview Cross-Verification · 访谈互证</span><span lang="zh">访谈互证 · 全球心智书架</span></span>
+    <h1><span lang="en">Deconstructing Y Combinator's First Principles Against Eastern "Non-Pretension"</span><span lang="zh">解构 Y Combinator 的「第一性原理」与东方哲学的「不作伪」</span></h1>
+    <p class="art-meta"><span lang="en">East–West Synthesis · Y Combinator · First Principles · Sep 2026</span><span lang="zh">中西互证 · Y Combinator · 第一性原理 · 2026 年 9 月</span></p>
+    <p class="art-intro"><span lang="en">Silicon Valley's hardest-won startup axiom turns out to be four characters the sages already wrote: 实事求是 — seek truth from facts, investigate reality before you build.</span><span lang="zh">硅谷用几十年撞出来的创业第一公理，翻成四个字古人早写好了：实事求是——先格物致知、探明真实，再去建造。</span></p>
+  </header>
+
+    <div class="post-body">
+    <p><span lang="en">Y Combinator, the most influential startup accelerator on earth, boils its entire philosophy into one sentence founders are told before anything else: build what people actually want. It sounds trivial until you watch how many brilliant teams quietly build what they want to want — and then wonder why no one comes.</span><span lang="zh">Y Combinator，全球最有影响力的创业加速器，把整套哲学压成一句话，在每个创始人起步前先告诉他们：去做人们真正想要的东西。这句话听起来稀松平常，直到你看见多少聪明的团队，悄悄去做了"自己想想要的"东西，然后困惑于为何无人问津。</span></p>
+
+    <h2><span class="sec-en">The Axiom: Make Something People Want</span><span class="sec-zh">壹 · 公理：做人们真正需要的东西</span></h2>
+    <p><span lang="en">The West reaches for funnels, MVPs, and cold data to test whether a thing is real. The East reaches for self-inquiry — 戒骄戒躁, to calm the pride and the impatience, and look at what is actually there.</span><span lang="zh">西方人用漏斗、最小可行产品（MVP）和冰冷的数据，去试探一件东西是否真实成立；东方人向内求，戒骄戒躁，先看清面前究竟是什么。</span></p>
+
+    <!-- 跨文化策展卡片（原生 CSS 版） -->
+    <div class="cc-wrap">
+      <div class="cc-head">
+        <div class="cc-icon">🎙️</div>
+        <div class="cc-body">
+          <div class="cc-top">
+            <span class="cc-label">访谈互证 · YC × 通鉴</span>
+            <span class="cc-en">Context Reflection</span>
+          </div>
+          <h4>当 YC 的"第一性原理"遇见诸子的"不作伪"</h4>
+          <p>思想源头：Y Combinator 创业公理 × 《资治通鉴》《诸子》格物致知</p>
+        </div>
+      </div>
+      <div class="cc-quote">
+        <p class="en">"Make something people want."</p>
+        <div class="zh-wrap">
+          <span class="cc-zh-label">Colin 的翻译与中西文明互证</span>
+          <p class="zh">"做人们真正需要的东西。"硅谷最硬核的商业直觉，其内核正是东方哲学里的"实事求是"。YC 用严密的数据漏斗与 MVP 去试探真实市场；司马光与诸子则用一个更朴素的提醒——因循天道、格物致知、戒骄戒躁、内观人性。两者殊途同归：剥离掉属于你自己的幻觉，才看得见真实的需求。读书、听访谈，绝不是为了给大脑塞满英文金句，而是为了打破自负的错觉。</p>
+          <p class="zh" style="font-size:12px;color:var(--muted);margin-top:10px;">— Y Combinator / Paul Graham（创业公理）</p>
+        </div>
+      </div>
+    </div>
+
+    <h2><span class="sec-en">Three Core Extractions</span><span class="sec-zh">贰 · 核心提炼</span></h2>
+    <div class="cc-loop">
+      <div class="loop-item">
+        <div class="loop-k">The Western Tool · 西方之术</div>
+        <div class="loop-v"><span lang="en">YC forces founders to strip self-illusion through MVP and real-market feedback — build the smallest thing, ship it, let demand (or silence) speak.</span><span lang="zh">YC 逼着创始人用 MVP 与真实市场反馈，剥离自我幻觉——做最小的东西，发出去，让需求（或沉默）说话。</span></div>
+      </div>
+      <div class="loop-item">
+        <div class="loop-k">The Eastern Anchor · 东方之道</div>
+        <div class="loop-v"><span lang="en">Zizhi Tongjian proves again and again: the achievers who last are those who investigate reality before acting, and keep their minds steady amid noise — 实事求是, not 自以为是.</span><span lang="zh">《资治通鉴》无数次证明，走得远的人，都是先探明现实再行动、在喧嚣中守住心智稳态的人——实事求是，而非自以为是。</span></div>
+      </div>
+      <div class="loop-item">
+        <div class="loop-k">Colin's Synthesis · 习而新之</div>
+        <div class="loop-v"><span lang="en">Reading and listening are never to stuff the brain with quotes, but to add an "immunity shield" against our own vanity. Learn, then transcend.</span><span lang="zh">读书、听播客绝不是为了给大脑塞满金句，而是为了在自己的人生操作系统里，加一块抵御自负的"免疫盾牌"。学而知之，习而新之。</span></div>
+      </div>
+    </div>
+
+    <h2><span class="sec-en">This Week's Mental Iteration</span><span class="sec-zh">叁 · 本周心智迭代</span></h2>
+    <div class="cc-loop">
+      <div class="loop-item">
+        <div class="loop-k">学 · Ingestion</div>
+        <div class="loop-v"><span lang="en">Take apart YC's logic on how founders avoid fake work — building to look busy instead of to learn.</span><span lang="zh">拆解 YC 关于"创始人如何避免自嗨（Fake Work）"的认知逻辑——别为了显得忙碌而建造，要为了学到真东西而建造。</span></div>
+      </div>
+      <div class="loop-item">
+        <div class="loop-k">忘 · Deconstruction</div>
+        <div class="loop-v"><span lang="en">Forget the words written only to be written. Break the dogma.</span><span lang="zh">彻底忘掉那些为了写而写的文字，破除教条主义。</span></div>
+      </div>
+      <div class="loop-item">
+        <div class="loop-k">习 · Action</div>
+        <div class="loop-v"><span lang="en">Publish only the evergreen content that truly resonates — in the two sites' architecture, nothing else.</span><span lang="zh">只做读者能真正产生心智共鸣的常青内容；在两个网站的架构上，除此之外，皆可不写。</span></div>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="art-end">
+    <p><span lang="en">Want a book like this in your inbox every week? Reads with Colin is a weekly letter on the books worth keeping.</span><span lang="zh">想每周收到一本这样的好书？Reads with Colin 是一封每周推荐好书的来信。</span></p>
+    <a class="btn" href="../index.html" style="display:inline-block;margin-top:20px;background:var(--gold);color:#fff;text-decoration:none;padding:13px 28px;border-radius:999px;font-weight:700;"><span lang="en">Back to Reads with Colin</span><span lang="zh">回到读书站</span></a>
+  </section>
+</main>
+
+<footer class="nf">
+  <div class="nf-inner">
+    <div>
+      <div class="nf-brand">Reads <em>with</em> Colin</div>
+      <p class="nf-tag"><span lang="en">Books that change how you see — and what you do next.</span><span lang="zh">读书不是逃避世界，是带上更好的眼睛再回来。</span></p>
+    </div>
+    <div class="nf-col">
+      <h4><span lang="en">Explore</span><span lang="zh">浏览</span></h4>
+      <a href="../archive.html"><span lang="en">Archive</span><span lang="zh">往期</span></a>
+      <a href="../categories.html"><span lang="en">Categories</span><span lang="zh">分类</span></a>
+      <a href="../fangtan.html"><span lang="en">Interview Cross-Verification</span><span lang="zh">访谈互证</span></a>
+      <a href="../reading-321.html">3-2-1 Thursday</a>
+    </div>
+    <div class="nf-col">
+      <h4><span lang="en">Connect</span><span lang="zh">联系</span></h4>
+      <a href="../about.html"><span lang="en">About Colin</span><span lang="zh">关于 Colin</span></a>
+      <a href="../feed.xml" target="_blank" rel="noopener">RSS</a>
+      <a href="../where-to-find-me.html"><span lang="en">Contact</span><span lang="zh">联系我</span></a>
+      <a href="../media-kit.html"><span lang="en">Business</span><span lang="zh">商务合作</span></a>
+      <a href="mailto:littlelinthinks@gmail.com">Email</a>
+    </div>
+  </div>
+  <div class="nf-bottom">
+    <span><span lang="en">© 2026 Reads with Colin. All rights reserved.</span><span lang="zh">© 2026 Reads with Colin · 版权所有</span></span>
+    <span><span lang="en">Made with 📚 &amp; ☕</span><span lang="zh">用 📚 &amp; ☕ 制作</span></span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script>
+(function () {
+  "use strict";
+  var STORAGE_KEY = "rwc-lang";
+  var SUPPORTED = { en: "en", zh: "zh", "zh-cn": "zh", "zh-hans": "zh" };
+  function detectLang() {
+    try {
+      var fromUrl = new URLSearchParams(location.search).get("lang");
+      if (fromUrl && SUPPORTED[fromUrl.toLowerCase()]) return SUPPORTED[fromUrl.toLowerCase()];
+      var saved = localStorage.getItem(STORAGE_KEY);
+      if (saved && SUPPORTED[saved]) return SUPPORTED[saved];
+    } catch (e) {}
+    var nav = (navigator.language || "en").toLowerCase();
+    if (nav.indexOf("zh") === 0) return "zh";
+    return "en";
+  }
+  function applyLang(lang) {
+    document.documentElement.setAttribute("lang", lang);
+    document.querySelectorAll(".lang-switch [data-set-lang]").forEach(function (el) {
+      el.classList.toggle("active", el.getAttribute("data-set-lang") === lang);
+    });
+    try {
+      var url = new URL(location.href);
+      if (url.searchParams.get("lang") !== lang) { url.searchParams.set("lang", lang); history.replaceState(null, "", url.toString()); }
+    } catch (e) {}
+  }
+  var lang = detectLang(); applyLang(lang);
+  document.querySelectorAll(".lang-switch [data-set-lang]").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      var t = el.getAttribute("data-set-lang");
+      try { localStorage.setItem(STORAGE_KEY, t); } catch (e) {}
+      applyLang(t);
+    });
+  });
+  var b = document.getElementById("toTop");
+  function onScroll() { if (window.scrollY > 400) b.classList.add("show"); else b.classList.remove("show"); }
+  window.addEventListener("scroll", onScroll); onScroll();
+  b.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+})();
+</script>
+<script>
+  if ('serviceWorker' in navigator) { window.addEventListener('load', function () { navigator.serviceWorker.register('../sw.js').catch(function () {}); }); }
+</script>
+<script>(function(){var y=new Date().getFullYear();document.querySelectorAll(".nf-bottom").forEach(function(el){el.innerHTML=el.innerHTML.replace(/©\s*\d{4}/g,"© "+y);});})();</script>
+<script>
+  /* v13.1c: 点击下拉外部区域自动收起「专栏」菜单 */
+  document.addEventListener('click', function(e){
+    document.querySelectorAll('nav .nav-drop[open]').forEach(function(d){ if(!d.contains(e.target)) d.removeAttribute('open'); });
+  });
+</script>
+</body>
+</html>
