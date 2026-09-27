@@ -5,7 +5,7 @@
     <link>https://www.readswithcolin.com/</link>
     <description>A weekly letter on the books that change how you see — and what you do next.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.readswithcolin.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Thinking, Fast and Slow - 思考，快与慢</title>
@@ -287,5 +287,29 @@
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <category>Read in English</category>
     </item>
-  </channel>
+      <item>
+      <title>Deconstructing Y Combinator's First Principles Against Eastern 'Non-Pretension' - 解构 Y Combinator 的「第一性原理」与东方哲学的「不作伪」</title>
+      <link>https://www.readswithcolin.com/posts/yc-first-principles.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/yc-first-principles.html</guid>
+      <description>Silicon Valley's hardest-won axiom — Make something people want — is four characters the sages already wrote: 实事求是. - 硅谷撞出来的创业第一公理，翻成四个字古人早写好了：实事求是。YC 与《资治通鉴》的互证。</description>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      <category>访谈互证</category>
+    </item>
+    <item>
+      <title>Cardone's 10X and the Art of Borrowing Momentum - 狂飙与定力：从 Grant Cardone 的 10X 看东方的「借势与修身」</title>
+      <link>https://www.readswithcolin.com/posts/cardone-10x.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/cardone-10x.html</guid>
+      <description>A high-agency operator who built billions by refusing the local optimum — read against Zizhi Tongjian's strategies of survival. - 一个靠「拒绝局部最优」垒起数十亿的高主体性操盘手——放进《资治通鉴》乱世求存的策略里对照着读。</description>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 +0000</pubDate>
+      <category>访谈互证</category>
+    </item>
+    <item>
+      <title>The Knowledge Project and the Latticework of Mental Models - 常青心智模型：从 TKP 看东方的「博学而约取」</title>
+      <link>https://www.readswithcolin.com/posts/tkp-mindset.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/tkp-mindset.html</guid>
+      <description>Why the best decision-makers read widely and reason with a latticework of mental models — and how that maps onto 博学之，审问之. - 为什么最会做决定的人广读、用心智模型思考——以及它如何对应「博学之，审问之」。</description>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 +0000</pubDate>
+      <category>访谈互证</category>
+    </item>
+</channel>
 </rss>
