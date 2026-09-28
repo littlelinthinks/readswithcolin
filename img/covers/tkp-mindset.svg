@@ -1,17 +1,69 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="1200" viewBox="0 0 800 1200">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#F7F1E6"/>
-      <stop offset="1" stop-color="#E8DCC4"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4A3B63"/>
+      <stop offset="1" stop-color="#332849"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.38" r="0.55">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0"/></filter>
+    <linearGradient id="spine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.35"/>
+      <stop offset="0.06" stop-color="#000000" stop-opacity="0.08"/>
+      <stop offset="0.1" stop-color="#000000" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="1200" fill="url(#g)"/>
-  <rect x="34" y="34" width="732" height="1132" fill="none" stroke="#B5752A" stroke-width="3" opacity="0.55"/>
-  <text x="400" y="250" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="120" fill="#B5752A">🧠</text>
-  <text x="400" y="470" text-anchor="middle" font-family="'Noto Serif SC', 'Songti SC', serif" font-size="74" font-weight="700" fill="#2A2620">访谈互证</text>
-  <text x="400" y="560" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-style="italic" fill="#5A5347">Mental Models</text>
-  <line x1="250" y1="640" x2="550" y2="640" stroke="#B5752A" stroke-width="2" opacity="0.6"/>
-  <text x="400" y="720" text-anchor="middle" font-family="'Noto Serif SC', serif" font-size="36" fill="#4A4438">TKP × 诸子百家</text>
-  <text x="400" y="778" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#6E675B">TKP meets the Philosophers</text>
-  <text x="400" y="1120" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-style="italic" fill="#2A2620">Reads <tspan fill="#B5752A">with</tspan> Colin</text>
+
+  <rect width="800" height="1200" fill="url(#bg)"/>
+  <rect width="800" height="1200" fill="url(#glow)"/>
+  <rect width="800" height="1200" filter="url(#grain)"/>
+
+  <!-- 书脊阴影 -->
+  <rect width="800" height="1200" fill="url(#spine)"/>
+  <line x1="88" y1="40" x2="88" y2="1160" stroke="#D9A94F" stroke-width="2" opacity="0.35"/>
+
+  <!-- 双线框 + 角饰 -->
+  <rect x="46" y="46" width="708" height="1108" fill="none" stroke="#D9A94F" stroke-width="3" opacity="0.6"/>
+  <rect x="62" y="62" width="676" height="1076" fill="none" stroke="#D9A94F" stroke-width="1" opacity="0.45"/>
+  <g fill="#D9A94F" opacity="0.85">
+    <rect x="54" y="50" width="16" height="16" transform="rotate(45 62 58)"/>
+    <rect x="730" y="50" width="16" height="16" transform="rotate(45 738 58)"/>
+    <rect x="54" y="1134" width="16" height="16" transform="rotate(45 62 1142)"/>
+    <rect x="730" y="1134" width="16" height="16" transform="rotate(45 738 1142)"/>
+  </g>
+
+  <!-- 顶部系列签 -->
+  <text x="400" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="6" fill="#D9A94F">READS WITH COLIN</text>
+  <line x1="300" y1="176" x2="500" y2="176" stroke="#D9A94F" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- motif -->
+  <g stroke="#D9A94F" stroke-width="10" fill="none" stroke-linecap="round">
+      <line x1="400" y1="640" x2="400" y2="400"/>
+      <line x1="400" y1="480" x2="300" y2="390"/>
+      <line x1="400" y1="480" x2="500" y2="390"/>
+      <line x1="400" y1="570" x2="280" y2="490"/>
+      <line x1="400" y1="570" x2="520" y2="490"/>
+    </g>
+    <g fill="#D9A94F">
+      <circle cx="400" cy="392" r="18"/><circle cx="300" cy="382" r="14"/>
+      <circle cx="500" cy="382" r="14"/><circle cx="280" cy="486" r="11"/>
+      <circle cx="520" cy="486" r="11"/><circle cx="400" cy="640" r="14"/>
+    </g>
+
+  <!-- 中文主标题 -->
+  <text x="400" y="810" text-anchor="middle" font-family="'Noto Serif SC','Songti SC','SimSun',serif" font-size="82" font-weight="700" fill="#F5F1E6">常青心智模型</text>
+
+  <!-- 英文副题 -->
+  <text x="400" y="878" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-style="italic" fill="#D9A94F">Evergreen Mental Models</text>
+
+  <line x1="290" y1="940" x2="510" y2="940" stroke="#D9A94F" stroke-width="2" opacity="0.55"/>
+
+  <!-- 来源行 -->
+  <text x="400" y="1000" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="30" fill="#E9E2D2" opacity="0.92">TKP × 诸子百家 · 访谈互证</text>
+
+  <!-- 底部品牌 -->
+  <text x="400" y="1108" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-style="italic" fill="#F5F1E6" opacity="0.85">Reads <tspan fill="#D9A94F">with</tspan> Colin</text>
 </svg>

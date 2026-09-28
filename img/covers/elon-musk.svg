@@ -1,16 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 440" width="300" height="440">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1200" viewBox="0 0 800 1200">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#8B5E3C"/>
-      <stop offset="1" stop-color="#5E3D22"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B2E33"/>
+      <stop offset="1" stop-color="#17191D"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.38" r="0.55">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0"/></filter>
+    <linearGradient id="spine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.35"/>
+      <stop offset="0.06" stop-color="#000000" stop-opacity="0.08"/>
+      <stop offset="0.1" stop-color="#000000" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <rect x="14" y="8" width="272" height="424" rx="6" fill="url(#g)"/>
-  <rect x="14" y="8" width="10" height="424" fill="#000" opacity="0.18"/>
-  <rect x="14" y="8" width="272" height="424" rx="6" fill="none" stroke="#FAF7F0" stroke-opacity="0.25" stroke-width="1.5"/>
-  <text x="150" y="44" text-anchor="middle" font-family="Georgia, serif" font-size="13" letter-spacing="3" fill="#E9DFC9">READS WITH COLIN</text>
-  <line x1="60" y1="58" x2="240" y2="58" stroke="#E9DFC9" stroke-opacity="0.4" stroke-width="1"/>
-  <text x="150" y="408" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#E9DFC9">RWC #013</text>
-  <line x1="90" y1="420" x2="210" y2="420" stroke="#E9DFC9" stroke-opacity="0.4" stroke-width="1"/>
-  <text x="150" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#FAF7F0">Elon Musk</text><text x="150" y="183" text-anchor="middle" font-family="'Songti SC', serif" font-size="16" fill="#E9DFC9">硅谷钢铁侠</text>
+
+  <rect width="800" height="1200" fill="url(#bg)"/>
+  <rect width="800" height="1200" fill="url(#glow)"/>
+  <rect width="800" height="1200" filter="url(#grain)"/>
+
+  <!-- 书脊阴影 -->
+  <rect width="800" height="1200" fill="url(#spine)"/>
+  <line x1="88" y1="40" x2="88" y2="1160" stroke="#C75146" stroke-width="2" opacity="0.35"/>
+
+  <!-- 双线框 + 角饰 -->
+  <rect x="46" y="46" width="708" height="1108" fill="none" stroke="#C75146" stroke-width="3" opacity="0.6"/>
+  <rect x="62" y="62" width="676" height="1076" fill="none" stroke="#C75146" stroke-width="1" opacity="0.45"/>
+  <g fill="#C75146" opacity="0.85">
+    <rect x="54" y="50" width="16" height="16" transform="rotate(45 62 58)"/>
+    <rect x="730" y="50" width="16" height="16" transform="rotate(45 738 58)"/>
+    <rect x="54" y="1134" width="16" height="16" transform="rotate(45 62 1142)"/>
+    <rect x="730" y="1134" width="16" height="16" transform="rotate(45 738 1142)"/>
+  </g>
+
+  <!-- 顶部系列签 -->
+  <text x="400" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="6" fill="#C75146">READS WITH COLIN</text>
+  <line x1="300" y1="176" x2="500" y2="176" stroke="#C75146" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- motif -->
+  <g fill="#C75146">
+      <path d="M400 330 C440 390 452 470 452 540 L348 540 C348 470 360 390 400 330 Z"/>
+      <circle cx="400" cy="450" r="26" fill="#F5F1E6"/>
+      <path d="M348 500 L300 580 L348 560 Z M452 500 L500 580 L452 560 Z"/>
+      <path d="M378 560 L400 660 L422 560 Z" opacity=".85"/>
+    </g>
+
+  <!-- 中文主标题 -->
+  <text x="400" y="810" text-anchor="middle" font-family="'Noto Serif SC','Songti SC','SimSun',serif" font-size="82" font-weight="700" fill="#F5F1E6">硅谷钢铁侠</text>
+
+  <!-- 英文副题 -->
+  <text x="400" y="878" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-style="italic" fill="#C75146">Elon Musk</text>
+
+  <line x1="290" y1="940" x2="510" y2="940" stroke="#C75146" stroke-width="2" opacity="0.55"/>
+
+  <!-- 来源行 -->
+  <text x="400" y="1000" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="30" fill="#E9E2D2" opacity="0.92">沃尔特·艾萨克森 · 传记</text>
+
+  <!-- 底部品牌 -->
+  <text x="400" y="1108" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-style="italic" fill="#F5F1E6" opacity="0.85">Reads <tspan fill="#C75146">with</tspan> Colin</text>
 </svg>
