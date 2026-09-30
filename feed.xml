@@ -5,7 +5,7 @@
     <link>https://www.readswithcolin.com/</link>
     <description>A weekly letter on the books that change how you see — and what you do next.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.readswithcolin.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Thinking, Fast and Slow - 思考，快与慢</title>
@@ -310,6 +310,38 @@
       <description>Why the best decision-makers read widely and reason with a latticework of mental models — and how that maps onto 博学之，审问之. - 为什么最会做决定的人广读、用心智模型思考——以及它如何对应「博学之，审问之」。</description>
       <pubDate>Sun, 27 Sep 2026 00:00:00 +0000</pubDate>
       <category>访谈互证</category>
+    </item>
+    <item>
+      <title>Learn, Then Transcend: A Reading OS Fusing Charlie Munger with Zizhi Tongjian - 习而新之：将查理·芒格与《资治通鉴》融为一体的阅读操作系统</title>
+      <link>https://www.readswithcolin.com/posts/reading-os.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/reading-os.html</guid>
+      <description>The West builds lattices of mental models from the outside in; the East folds the mind from the inside out through its histories. - 西方由外而内地搭建思维栅格，东方借史书由内而外地折叠心智。两套阅读操作系统，同时运行。</description>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      <category>心智修炼</category>
+    </item>
+    <item>
+      <title>When Modern Psychology Met the Eastern Path of Liberation - 当现代心理学撞上东方解脱道——重构高 Agency 的内在锚</title>
+      <link>https://www.readswithcolin.com/posts/internal-anchor.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/internal-anchor.html</guid>
+      <description>Modern people buy 'mindfulness protocols' as external tools; the East cultivated 'stable wisdom through inner inquiry' as a way of being. - 现代人把“正念协议”当外部工具追逐；东方先贤把“定慧内求”当作存在方式修行。同样的焦虑，隔两千年，只是包装换了。</description>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      <category>心智修炼</category>
+    </item>
+    <item>
+      <title>3-2-1 Thursday · Issue #001 - 3-2-1 周四 · 第 001 期</title>
+      <link>https://www.readswithcolin.com/posts/321-thursday-01.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/321-thursday-01.html</guid>
+      <description>3 Mental Frameworks · 2 Golden Nuggets · 1 Action Protocol. Learn, then transcend. - 3 种跨文化底层认知 · 2 句大咖金句深加工 · 1 个本周践行协议。拒绝碎片信息轰炸，回归心智底层稳态。</description>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      <category>心智修炼</category>
+    </item>
+    <item>
+      <title>Beyond Shallows: Deconstructing Cal Newport's Deep Reading Framework - 越过浅水区：拆解卡尔·纽波特的深度阅读框架</title>
+      <link>https://www.readswithcolin.com/posts/beyond-shallows.html</link>
+      <guid isPermaLink="true">https://www.readswithcolin.com/posts/beyond-shallows.html</guid>
+      <description>In an era dominated by 15-second vertical videos and algorithmic dopamine loops, our relationship with books has paradoxically degraded. - 在一个被 15 秒竖屏视频和算法多巴胺循环主宰的时代，我们与书的关系却矛盾地退化了：买得更多、翻得更多，记住的却更少。</description>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      <category>英文原著</category>
     </item>
 </channel>
 </rss>

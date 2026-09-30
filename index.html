@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png">
+  <link rel="shortcut icon" type="image/png" href="img/favicon-32.png">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="pAoH65wg-NAvnM_j7u7RfVEW2PoiSfPsdKsEe_TUe2w" />
-<title>Reads with Colin — A weekly letter on books worth keeping</title>
-<meta name="description" content="Reads with Colin — a weekly letter on the books that change how you see the world, and what you do next. 每周一封推荐好书的来信 + 3-2-1 Thursday 栏目。">
+<title>Reads with Colin — 读书 · 思考 · 成长</title>
+<meta name="description" content="Reads with Colin — 读书分享网站，为大家带来全球更多更新的好书：能改变你看世界方式、也会改变你接下来所做的事的书。附 3-2-1 Thursday 栏目。">
 <meta property="og:title" content="Reads with Colin">
-<meta property="og:description" content="A weekly letter on books that change how you see — and what you do next.">
+<meta property="og:description" content="A book-sharing site — reading, thinking, growing. 读书分享：阅己，越己，悦己。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.readswithcolin.com/">
 <meta name="theme-color" content="#14110C">
@@ -81,6 +87,13 @@
   .hero-zh { margin-top: 8px; font-size: 14px; color: var(--muted); letter-spacing: 3px; }
   .hero-cta { display:inline-block; margin-top:32px; padding:13px 28px; background:var(--ink); color:#fff; border:1.5px solid var(--ink); border-radius:999px; font-size:14px; font-weight:700; text-decoration:none; font-family:var(--sans); transition:background .18s ease, border-color .18s ease; }
   .hero-cta:hover { background:var(--red); border-color:var(--red); }
+  .hero-search { margin-top:32px; display:flex; align-items:center; max-width:420px; background:#fff; border:1.5px solid var(--ink); border-radius:999px; overflow:hidden; transition:border-color .18s ease; }
+  .hero-search:focus-within { border-color:var(--red); }
+  .hero-search input { flex:1; border:none; outline:none; background:transparent; padding:12px 20px; font-size:14px; font-family:var(--sans); color:var(--ink); min-width:0; }
+  .hero-search input::placeholder { color:var(--muted); }
+  .hero-search button { border:none; cursor:pointer; background:var(--ink); color:#fff; padding:12px 24px; font-size:13.5px; font-weight:700; font-family:var(--sans); letter-spacing:1px; transition:background .18s ease; }
+  .hero-search button:hover { background:var(--red); }
+  @media (max-width:880px) { .hero-search { margin-left:auto; margin-right:auto; } }
   .hero-done { display: none; margin-top: 24px; font-size: 15px; color: var(--green); font-weight: 600; }
   .hero-done.show { display: inline-block; }
   .hero-note { margin-top: 16px; font-size: 13px; color: var(--muted); }
@@ -233,11 +246,9 @@
 .wx-s{margin-top:4px;font-size:12.5px;color:var(--muted,#6E675B);}
 .wx-close{position:absolute;top:6px;right:12px;border:none;background:none;font-size:24px;cursor:pointer;color:var(--muted,#6E675B);line-height:1;}
 </style>
-<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-<link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
-  <link rel="manifest" href="manifest.webmanifest">
+<link rel="manifest" href="manifest.webmanifest">
 
-<meta name="description" content="A weekly letter on books that change how you see — and what you do next. Join Reads with Colin.">
+<meta name="description" content="Reads with Colin — reading, thinking, growing. 读书分享网站：为大家带来全球更多更新的好书。">
 <link rel="canonical" href="https://www.readswithcolin.com/">
 <style>
   /* v13.1c: 导航「专栏」下拉（details 原生实现，触屏可点开） */
@@ -279,20 +290,22 @@
       <a href="#" data-set-lang="en" class="active">EN</a>
       <a href="#" data-set-lang="zh">中文</a>
     </div>
-    <a class="nav-cta" href="mailto:littlelinthinks@gmail.com"><span lang="en">Contact</span><span lang="zh">联系</span></a>
   </div>
 </nav>
 
 <!-- ======================= Hero ======================= -->
 <header class="hero">
   <div>
-    <span class="hero-kicker"><span lang="en">A Weekly Letter</span><span lang="zh">每周一封</span></span>
-    <h1><span lang="en">Read books that change<br>how you <span class="red">see the world.</span></span><span lang="zh">读懂世界的<br>几本<span class="red">好书</span>，每周一封。</span></h1>
-    <p class="hero-sub"><span lang="en">One idea, five minutes, every Thursday.</span><span lang="zh">读书不是逃避世界，是带上更好的眼睛再回来。</span></p>
+    <span class="hero-kicker"><span lang="en">Read yourself, surpass yourself, delight yourself.</span><span lang="zh">阅己，越己，悦己</span></span>
+    <h1><span lang="en">Read books that change<br>how you <span class="red">see the world.</span></span><span lang="zh">读懂世界的<br>几本<span class="red">好书</span>。</span></h1>
+    <p class="hero-sub"><span lang="en">Seek inward through countless pages; find sanctuary for your mind.</span><span lang="zh">向内求，读万卷书，安一处心。</span></p>
     <p class="hero-zh"><span lang="en">Learn to know; forget to transcend; practice to renew.</span><span lang="zh">学而知之 · 忘而破之 · 习而新之</span></p>
-      <a class="hero-cta" href="mailto:littlelinthinks@gmail.com"><span lang="en">Get in touch</span><span lang="zh">联系我</span></a>
+    <form class="hero-search" action="archive.html" method="get">
+      <input type="search" name="q" placeholder="搜索书评、作者、主题…" aria-label="搜索书评">
+      <button type="submit"><span lang="en">Search</span><span lang="zh">搜索</span></button>
+    </form>
     <div class="hero-social">
-      <p><b>35</b><span lang="en"> book notes published</span><span lang="zh"> 篇书评已发布</span> · <b>3</b><span lang="en"> columns</span><span lang="zh"> 个常设专栏</span> · <b>EN+中文</b></p>
+      <p><span lang="en">Reading · Thinking · Growing</span><span lang="zh">读书 · 思考 · 成长</span></p>
     </div>
   </div>
   <div class="hero-logo">
@@ -326,7 +339,7 @@
 <section class="band321">
   <div class="band321-panel">
   <div class="band321-inner">
-    <span class="band321-kicker"><span lang="en">New · Every Thursday</span><span lang="zh">新栏目 · 每周四早安</span></span>
+    <span class="band321-kicker"><span lang="en">New · 3-2-1 Thursday</span><span lang="zh">新栏目 · 3-2-1 读书通讯</span></span>
     <h2><span lang="en">Mind Fuel</span><span lang="zh">思维加油站</span></h2>
     <p class="band321-sub"><span lang="en">3 ideas, 2 quotes, 1 question every issue.</span><span lang="zh">每次 3 个观点、2 句名言、1 个提问。</span></p>
     <div class="band321-cards">
@@ -484,8 +497,8 @@
 <footer class="nf">
   <div class="nf-inner">
     <div>
-      <div class="nf-brand">Reads <em>with</em> Colin</div>
-      <p class="nf-tag"><span lang="en">Books that change how you see — and what you do next.</span><span lang="zh">读书不是逃避世界，是带上更好的眼睛再回来。</span></p>
+      <div class="nf-brand"><img src="img/logo-rwc.png" alt="" style="width:36px;height:36px;object-fit:contain;vertical-align:-11px;margin-right:10px">Reads <em>with</em> Colin</div>
+      <p class="nf-tag"><span lang="en">Seek inward through countless pages; find sanctuary for your mind.</span><span lang="zh">向内求，读万卷书，安一处心。</span></p>
       <div class="nf-social">
         <a href="https://x.com/readswithcolin" title="X" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
         <a href="https://www.instagram.com/readswithcolin?stkn=MXQ0b3N2bnNkaXRieg%3D%3D&amp;utm_source=qr" title="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.51.01-4.75.07-.99.04-1.53.21-1.89.35-.47.18-.81.4-1.17.76-.36.36-.58.7-.76 1.17-.14.36-.31.9-.35 1.89-.06 1.24-.07 1.6-.07 4.75s.01 3.51.07 4.75c.04.99.21 1.53.35 1.89.18.47.4.81.76 1.17.36.36.7.58 1.17.76.36.14.9.31 1.89.35 1.24.06 1.6.07 4.75.07s3.51-.01 4.75-.07c.99-.04 1.53-.21 1.89-.35.47-.18.81-.4 1.17-.76.36-.36.58-.7.76-1.17.14-.36.31-.9.35-1.89.06-1.24.07-1.6.07-4.75s-.01-3.51-.07-4.75c-.04-.99-.21-1.53-.35-1.89a3.14 3.14 0 00-.76-1.17 3.14 3.14 0 00-1.17-.76c-.36-.14-.9-.31-1.89-.35-1.24-.06-1.6-.07-4.75-.07zm0 2.76a5.46 5.46 0 110 10.92 5.46 5.46 0 010-10.92zm0 1.62a3.84 3.84 0 100 7.68 3.84 3.84 0 000-7.68zm5.65-2.96a1.28 1.28 0 11-2.56 0 1.28 1.28 0 012.56 0z"/></svg></a>
