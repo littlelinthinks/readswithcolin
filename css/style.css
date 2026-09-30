@@ -10,9 +10,9 @@
   --text-light: #77726a;     /* 次要文字 */
   --text-faint: #a8a29a;     /* 弱化文字 */
   --border: #e9e4db;         /* 分隔线 */
-  --accent: #2d5a3d;         /* 深绿（书卷气） */
-  --accent-dark: #214931;
-  --accent-soft: #eef3ef;    /* 绿色浅底 */
+  --accent: #C73E2C;         /* 深绿（书卷气） */
+  --accent-dark: #A53324;
+  --accent-soft: #F7E9E5;    /* 绿色浅底 */
   --quote-bg: #faf8f3;
 
   --serif: "Playfair Display", "Noto Serif SC", "Songti SC", "SimSun", Georgia, serif;
@@ -1432,3 +1432,10 @@ html[lang="zh"] .archive-card-slogan-text {
 @media (max-width: 540px) {
   .book-card .book-cover.bc-real { width: 110px; height: 154px; margin: 0 auto 4px; flex: none; }
 }
+
+/* 文章底部：关注公众号引导卡片 */
+.post-wx { display: flex; gap: 18px; align-items: center; margin: 38px 0 30px; padding: 22px 24px; background: var(--paper, #FAF7F0); border: 1px solid var(--line, #E7E0D2); border-radius: 14px; }
+.post-wx img { width: 108px; height: 108px; border-radius: 10px; flex: 0 0 108px; display: block; }
+.post-wx-txt h4 { font-family: var(--serif); font-size: 17px; margin: 0 0 7px; color: var(--ink, #14110C); }
+.post-wx-txt p { margin: 0; font-size: 14px; color: var(--muted, #6E675B); line-height: 1.6; }
+@media (max-width: 520px) { .post-wx { flex-direction: column; text-align: center; } .post-wx img { flex: 0 0 auto; } }
