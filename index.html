@@ -84,7 +84,6 @@
   .hero h1 .red { color: var(--red); font-style: italic; }
   .hero-sub { margin-top: 20px; font-size: 17.5px; color: var(--muted); max-width: 520px; }
   @media (max-width: 880px) { .hero-sub { margin-left: auto; margin-right: auto; } }
-  .hero-zh { margin-top: 8px; font-size: 14px; color: var(--muted); letter-spacing: 3px; }
   .hero-cta { display:inline-block; margin-top:32px; padding:13px 28px; background:var(--ink); color:#fff; border:1.5px solid var(--ink); border-radius:999px; font-size:14px; font-weight:700; text-decoration:none; font-family:var(--sans); transition:background .18s ease, border-color .18s ease; }
   .hero-cta:hover { background:var(--red); border-color:var(--red); }
   .hero-search { margin-top:32px; display:flex; align-items:center; max-width:420px; background:#fff; border:1.5px solid var(--ink); border-radius:999px; overflow:hidden; transition:border-color .18s ease; }
@@ -264,6 +263,10 @@
     .nav-drop .nav-menu { left: auto; right: 0; transform: none; }
   }
 </style>
+<style>/* sticky nav */
+.nav{position:sticky;top:0;z-index:900;}
+.nav::before{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background:rgba(251,250,247,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line,rgba(20,17,12,.1));z-index:-1;}
+</style>
 </head>
 <body>
 
@@ -299,7 +302,6 @@
     <span class="hero-kicker"><span lang="en">Read yourself, surpass yourself, delight yourself.</span><span lang="zh">阅己，越己，悦己</span></span>
     <h1><span lang="en">Read books that change<br>how you <span class="red">see the world.</span></span><span lang="zh">读懂世界的<br>几本<span class="red">好书</span>。</span></h1>
     <p class="hero-sub"><span lang="en">Seek inward through countless pages; find sanctuary for your mind.</span><span lang="zh">向内求，读万卷书，安一处心。</span></p>
-    <p class="hero-zh"><span lang="en">Learn to know; forget to transcend; practice to renew.</span><span lang="zh">学而知之 · 忘而破之 · 习而新之</span></p>
     <form class="hero-search" action="archive.html" method="get">
       <input type="search" name="q" placeholder="搜索书评、作者、主题…" aria-label="搜索书评">
       <button type="submit"><span lang="en">Search</span><span lang="zh">搜索</span></button>

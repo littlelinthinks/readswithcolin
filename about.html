@@ -413,6 +413,10 @@
   .nav-menu a:hover { background: rgba(20,17,12,.06); color: var(--red, #B03A2E); }
   @media (max-width: 720px) { .nav-drop .nav-menu { left: auto; right: 0; transform: none; } .nav-drop summary { display: none; } }
 </style>
+<style>/* sticky nav */
+.nav{position:sticky;top:0;z-index:900;}
+.nav::before{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background:rgba(251,250,247,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line,rgba(20,17,12,.1));z-index:-1;}
+</style>
 </head>
 <body>
 
@@ -493,25 +497,46 @@
     </section>
 
     <section class="about-section">
-      <h2><span class="num">03</span><span lang="en">BY THE NUMBERS</span><span lang="zh">一些数字</span></h2>
-      <p class="facts-note" style="font-family: var(--serif); font-size: 18px; line-height: 1.7; color: var(--ink); margin: 24px 0 8px; font-style: italic;">
-        <span lang="en">No likes. No view counts. No follower numbers — just honest writing about books worth keeping.</span>
-        <span lang="zh">没有点赞、没有阅读数、没有粉丝数 —— 只有认真写的读书分享。</span>
-      </p>
+      <h2><span class="num">03</span><span lang="en">WHAT'S INSIDE</span><span lang="zh">这里有什么</span></h2>
+      <div class="inside-list">
+        <a href="archive.html">
+          <b><span lang="en">The Archive</span><span lang="zh">书评档案</span></b>
+          <span><span lang="en">One note per book — each with a reason worth reading it.</span><span lang="zh">每本书一篇笔记，附上一句值得一读的理由。</span></span>
+        </a>
+        <a href="reading-321.html">
+          <b><span lang="en">3-2-1 Thursday</span><span lang="zh">3-2-1 读书通讯</span></b>
+          <span><span lang="en">3 ideas, 2 quotes, 1 question — what the reading turned into.</span><span lang="zh">3 条思考、2 段引文、1 个问题——读书长出来的东西。</span></span>
+        </a>
+        <a href="categories.html">
+          <b><span lang="en">Columns</span><span lang="zh">常设专栏</span></b>
+          <span><span lang="en">Themed shelves — including East-meets-West cross-reading.</span><span lang="zh">按主题深挖的书架，含中西互证系列。</span></span>
+        </a>
+      </div>
+      <style>
+        .inside-list{margin-top:24px;display:flex;flex-direction:column;gap:14px;}
+        .inside-list a{display:block;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line,rgba(20,17,12,.12));border-radius:12px;padding:18px 22px;transition:border-color .18s ease,transform .18s ease;}
+        .inside-list a:hover{border-color:var(--red);transform:translateY(-1px);}
+        .inside-list b{display:block;font-family:var(--serif);font-size:17px;margin-bottom:6px;}
+        .inside-list a>span{display:block;font-size:14px;color:var(--muted);line-height:1.7;}
+      </style>
     </section>
 
     <section class="about-section" id="contact">
       <h2><span class="num">04</span><span lang="en">STAY IN TOUCH</span><span lang="zh">保持联系</span></h2>
-      <div class="subscribe-card">
-        <h3>
-          <span lang="en">Let's talk books</span>
-          <span lang="zh">聊聊书</span>
+      <div class="subscribe-card" style="background:transparent;color:var(--ink);border:1.5px solid var(--line,rgba(20,17,12,.15));padding:34px 26px;">
+        <h3 style="color:var(--ink)">
+          <span lang="en">Write to me</span>
+          <span lang="zh">写信给我</span>
         </h3>
-        <p>
-          <span lang="en">I've paused email subscriptions for now. The easiest way to reach me is by email — a book tip, a collab idea, or just to say hi:</span>
-          <span lang="zh">我暂时暂停了邮件订阅。联系我最直接的方式是发邮件——推荐好书、合作想法，或只是打个招呼，都欢迎：</span>
+        <p style="color:var(--muted)">
+          <span lang="en">A book tip, a bad translation to flag, a collab idea, or just to say hi — all welcome:</span>
+          <span lang="zh">推荐好书、指出错译、合作想法，或只是打个招呼——都欢迎：</span>
         </p>
         <a class="contact-email" style="color:var(--gold)" href="mailto:littlelinthinks@gmail.com">littlelinthinks@gmail.com</a>
+        <p style="margin-top:18px;font-size:13.5px;color:var(--muted)">
+          <span lang="en">You can also find me on <a href="where-to-find-me.html" style="color:var(--red)">more platforms</a> — WeChat, X, Instagram, RED, RSS and more.</span>
+          <span lang="zh">也可以在<a href="where-to-find-me.html" style="color:var(--red)">更多平台</a>找到我——公众号「小Lin思考」、X、Instagram、小红书、RSS 等。</span>
+        </p>
       </div>
       <a class="back-link" href="index.html">
         <span lang="en">Back to Reads with Colin</span>

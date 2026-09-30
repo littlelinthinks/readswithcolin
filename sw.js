@@ -3,7 +3,7 @@
  *       静态资源（css/js/img/covers）「缓存优先」（离线可读）。
  * 部署新版时请把下方 CACHE 版本号 +1，旧缓存会在 activate 时自动清理。
  */
-const CACHE = 'rwc-pwa-v3';
+const CACHE = 'rwc-pwa-v4';
 const CORE = [
   './',
   './index.html',

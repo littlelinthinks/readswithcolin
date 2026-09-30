@@ -1,7 +1,7 @@
 {
   "name": "Reads with Colin",
-  "short_name": "RwC",
-  "description": "A weekly letter on books worth keeping — read with Colin, every Thursday.",
+  "short_name": "Reads with Colin",
+  "description": "A book-sharing site — reading, thinking, growing. 读书分享：阅己，越己，悦己。",
   "lang": "en",
   "start_url": ".",
   "scope": ".",
@@ -9,10 +9,29 @@
   "background_color": "#FAF7F0",
   "theme_color": "#14110C",
   "orientation": "portrait",
-  "categories": ["books", "education", "lifestyle"],
+  "categories": [
+    "books",
+    "education",
+    "lifestyle"
+  ],
   "icons": [
-    { "src": "./img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "./img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "./img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "./img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./img/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }
