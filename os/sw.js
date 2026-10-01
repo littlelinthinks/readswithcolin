@@ -2,7 +2,7 @@
  * 策略：App Shell 预缓存 + stale-while-revalidate
  * 目标：飞机上、地铁里、断网时依然能记录
  */
-const CACHE = 'rwc-os-v5';
+const CACHE = 'rwc-os-v6';
 const SHELL = [
   './', './index.html', './app.css', './manifest.webmanifest',
   './js/app.js', './js/db.js', './js/store.js', './js/views.js', './js/ui.js', './js/xlsxio.js', './js/seed.js',

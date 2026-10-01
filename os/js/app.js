@@ -622,6 +622,11 @@ document.addEventListener('click', async (e) => {
     });
     return;
   }
+  if (act === 'logout') {
+    localStorage.removeItem('rwc_auth');
+    location.reload();
+    return;
+  }
   if (act === 'demo-data') {
     document.querySelectorAll('.rwc-overlay').forEach((o) => {
       o.classList.remove('in'); setTimeout(() => o.remove(), 220);
@@ -694,8 +699,55 @@ function pickFile(accept, cb) {
 const go = (h) => { location.hash = h; };
 window.addEventListener('hashchange', route);
 
+/* ---------------------- 登录门禁 ---------------------- */
+const AUTH_KEY = 'rwc_auth';
+const AUTH_USER_SHA = 'd616e691ff6458623a137a77a521f2ec8877073ef9755ecc71efbccf19a4f476';
+const AUTH_PASS_SHA = 'd616e691ff6458623a137a77a521f2ec8877073ef9755ecc71efbccf19a4f476';
+
+async function sha256hex(s) {
+  const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+  return [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, '0')).join('');
+}
+
+function ensureAuth() {
+  if (localStorage.getItem(AUTH_KEY) === 'ok') return Promise.resolve(true);
+  return new Promise((resolve) => {
+    const ov = document.createElement('div');
+    ov.className = 'rwc-login';
+    ov.innerHTML = `<div class="rwc-login-card">
+      <img class="rwc-login-logo" src="./img/logo-rwc.png" alt="Reads with Colin">
+      <h2>READS WITH COLIN OS</h2>
+      <p class="rwc-login-sub">READING TO CHANGE YOURSELF</p>
+      <label>账号<input id="lg-user" autocomplete="username" placeholder=""></label>
+      <label>密码<input id="lg-pass" type="password" autocomplete="current-password" placeholder=""></label>
+      <p class="rwc-login-err" hidden>账号或密码不正确</p>
+      <button class="rwc-btn primary" id="lg-go">进入</button>
+    </div>`;
+    document.body.appendChild(ov);
+    requestAnimationFrame(() => ov.classList.add('in'));
+    const err = ov.querySelector('.rwc-login-err');
+    async function tryLogin() {
+      const u = ov.querySelector('#lg-user').value.trim();
+      const p = ov.querySelector('#lg-pass').value;
+      if (!crypto.subtle) { err.textContent = '浏览器过旧，请用现代浏览器打开'; err.hidden = false; return; }
+      if ((await sha256hex(u)) === AUTH_USER_SHA && (await sha256hex(p)) === AUTH_PASS_SHA) {
+        localStorage.setItem(AUTH_KEY, 'ok');
+        ov.classList.remove('in'); setTimeout(() => { ov.remove(); resolve(true); }, 220);
+      } else {
+        err.hidden = false;
+        ov.querySelector('#lg-pass').value = '';
+      }
+    }
+    ov.querySelector('#lg-go').onclick = tryLogin;
+    ov.addEventListener('keydown', (e) => { if (e.key === 'Enter') tryLogin(); });
+    setTimeout(() => ov.querySelector('#lg-user').focus(), 250);
+  });
+}
+
 /* ---------------------- 启动 ---------------------- */
 async function boot() {
+  const authed = await ensureAuth();
+  if (!authed) return;
   renderNav();
   await seedIfEmpty(async () => {
     const ov = document.createElement('div');

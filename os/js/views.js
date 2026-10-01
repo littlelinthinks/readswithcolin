@@ -493,6 +493,12 @@ export async function viewSettings() {
   </div>
 
   <div class="rwc-panel">
+    <h3>账号</h3>
+    <p class="rwc-note">本设备已登录。退出后需要重新输入账号密码才能进入。</p>
+    <button class="rwc-btn" data-act="logout">退出登录</button>
+  </div>
+
+  <div class="rwc-panel">
     <h3>危险操作</h3>
     <button class="rwc-btn danger" data-act="wipe">清空全部数据</button>
     <p class="rwc-note">会删除本设备上全部书籍、日志与思想，且不可撤销。请先导出 JSON。</p>
