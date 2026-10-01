@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>READS WITH COLIN OS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="READING TO CHANGE YOURSELF — 个人阅读 · 知识 · 行动 · 决策系统">
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#FBFAF7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="./img/icon-192.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./img/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="./img/icon-512.png">
+<link rel="stylesheet" href="./app.css">
+</head>
+<body>
+<div class="rwc-shell">
+  <aside class="rwc-sidebar">
+    <a class="rwc-brand" href="#/dashboard">
+      <span class="rwc-brand-mark"><img src="./img/logo-rwc.png" alt="Reads with Colin"></span>
+      <span class="rwc-brand-txt">
+        <b>Reads with Colin</b>
+        <em>OS · READING TO CHANGE YOURSELF</em>
+      </span>
+    </a>
+    <nav id="nav-main" class="rwc-nav"></nav>
+    <div class="rwc-nav-group">
+      <p class="rwc-nav-label">KNOWLEDGE</p>
+      <nav id="nav-mid" class="rwc-nav"></nav>
+    </div>
+    <div class="rwc-side-foot">
+      <nav id="nav-more" class="rwc-nav sub"></nav>
+      <p class="rwc-side-note">Phase 1–6 · 本地优先 · 离线可用</p>
+    </div>
+  </aside>
+
+  <main class="rwc-main">
+    <div id="app" class="rwc-app"></div>
+  </main>
+
+  <button class="rwc-fab" data-act="qc" aria-label="Quick Capture">+</button>
+
+  <nav id="tabbar" class="rwc-tabbar"></nav>
+</div>
+
+<div id="offline-badge" class="rwc-offline" hidden>离线模式 · 数据仍可记录</div>
+
+<script src="./vendor/xlsx.full.min.js"></script>
+<script src="./vendor/d3.v7.min.js"></script>
+<script type="module" src="./js/app.js"></script>
+<script>
+  window.addEventListener('online', () => document.getElementById('offline-badge').hidden = true);
+  window.addEventListener('offline', () => document.getElementById('offline-badge').hidden = false);
+  if (!navigator.onLine) document.getElementById('offline-badge').hidden = false;
+</script>
+</body>
+</html>
