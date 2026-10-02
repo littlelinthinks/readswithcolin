@@ -20,7 +20,7 @@
  * ============================================================= */
 
 export const DB_NAME = 'rwc-os';
-export const DB_VERSION = 1;
+export const DB_VERSION = 2;
 
 /* -------------------------------------------------------------
  * SCHEMA —— 九张核心表（对应 PRD 第五~十四条）
@@ -152,6 +152,24 @@ export const SCHEMA = {
     sample: {
       id: '', period: 'weekly', // daily | weekly | monthly | quarterly | yearly
       periodKey: '', content: {}, createdAt: '',
+    },
+  },
+
+  // 十六、发布草稿（复刻发布中台「起草→发布」流水线；与脑子里的 Ideas 分开存）
+  drafts: {
+    keyPath: 'id',
+    indexes: { status: 'status', updatedAt: 'updatedAt', createdAt: 'createdAt' },
+    sample: {
+      id: '',
+      title: '', titleEn: '', summary: '', summaryEn: '',
+      body: '', bodyEn: '',
+      status: 'draft',           // seed | draft | ready | published
+      lang: 'zh',                // zh | en | bi
+      slug: '',
+      series: '',
+      channels: ['thecolin'],    // thecolin | readswithcolin | wechat
+      publish: { status: 'none', publishedAt: '', urls: {}, error: '' },
+      createdAt: '', updatedAt: '',
     },
   },
 

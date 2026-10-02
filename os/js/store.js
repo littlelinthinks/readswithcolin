@@ -658,6 +658,16 @@ export async function evolutionTimeline(track) {
   return { entries, years };
 }
 
+/* ---------------------- 发布草稿（复刻发布中台流水线） ---------------------- */
+export const Drafts = {
+  all: () => db.all('drafts').then((r) => r.sort((a, b) => (b.updatedAt || '').localeCompare(a.updatedAt || ''))),
+  get: (id) => db.get('drafts', id),
+  getByStatus: (status) => db.byIndex('drafts', 'status', status),
+  create: (p) => create('drafts', p),
+  update: (id, p) => update('drafts', id, p),
+  remove: (id) => db.del('drafts', id),
+};
+
 /* ---------------------- 备份 / 恢复 / 导入 ---------------------- */
 export const Backup = {
   dump: () => db.dump(),

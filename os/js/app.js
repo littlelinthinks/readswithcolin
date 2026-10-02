@@ -37,8 +37,13 @@ const MORE = [
   ['#/assistant', 'AI 助手', 'AI'],
   ['#/search', 'Search', '搜索'],
   ['#/settings', 'Settings', '设置'],
+  ['#/publish', 'Publish', '发布'],
+  ['#/assets', 'Assets', '资产'],
 ];
 const ALL_NAV = [...NAV, ...MID, ...MORE];
+
+/* 发布流水线状态（复刻发布中台 os-pwa） */
+const PUB_STATUS = { seed: '起念', draft: '起草', ready: '待发', published: '已发' };
 
 let booksState = { q: '', status: '', sort: 'updated' };
 let searchState = { q: '', mode: 'full' };
@@ -126,8 +131,12 @@ async function route() {
     else if (seg[0] === 'assistant') app.innerHTML = await V.viewAssistant();
     else if (seg[0] === 'search') app.innerHTML = await V.viewSearch(searchState.q, searchState.mode);
     else if (seg[0] === 'settings') app.innerHTML = await V.viewSettings();
+    else if (seg[0] === 'publish') app.innerHTML = await V.viewPublish(params);
+    else if (seg[0] === 'assets') app.innerHTML = await V.viewAssets();
     else app.innerHTML = await V.viewDashboard();
     if (seg[0] === 'graph') await V.initGraph(graphState);
+    else if (seg[0] === 'publish') await V.initPublish(params);
+    else if (seg[0] === 'assets') await V.initAssets();
   } catch (e) {
     console.error(e);
     app.innerHTML = `<div class="rwc-panel"><h3>出错了</h3><p>${UI.esc(e.message)}</p></div>`;
@@ -234,6 +243,29 @@ async function captureForm(kind) {
 function currentBookIdMatch(books) {
   if (currentBookId && books.some((b) => b.id === currentBookId)) return currentBookId;
   return books[0]?.id || '';
+}
+
+async function syncOneBook(id, btnEl) {
+  const cfg = (await import('./publish.js')).getPublishConfig();
+  if (!cfg.token) { UI.toast('请先在 Publish → 发布设置 填发布口令', 'warn'); return; }
+  const book = await (await import('./store.js')).Books.get(id);
+  if (!book) { UI.toast('找不到这本书', 'warn'); return; }
+  if (btnEl) { btnEl.disabled = true; btnEl.textContent = '…同步中'; }
+  const r = await V.syncBookToSite(book);
+  if (r.ok) {
+    await (await import('./store.js')).Books.update(id, { syncedAt: new Date().toISOString() });
+    UI.toast(`已同步《${book.title}》→ 读书站`);
+    await V.initAssets();
+  } else if (r.error === 'no-token') {
+    UI.toast('请先在 Publish → 发布设置 填发布口令', 'warn');
+    if (btnEl) { btnEl.disabled = false; btnEl.textContent = '↥ 同步'; }
+  } else if (r.error === 'bad-token') {
+    UI.toast('发布口令不正确，请在发布设置重填', 'warn');
+    if (btnEl) { btnEl.disabled = false; btnEl.textContent = '↥ 同步'; }
+  } else {
+    UI.toast('同步失败：' + (r.error || '未知错误'), 'warn');
+    if (btnEl) { btnEl.disabled = false; btnEl.textContent = '↥ 同步'; }
+  }
 }
 
 const splitTags = (s) => String(s || '').split(/[；;，,]/).map((x) => x.trim()).filter(Boolean);
@@ -637,6 +669,164 @@ document.addEventListener('click', async (e) => {
     return;
   }
 
+  /* --- 发布（复刻发布中台 os-pwa：起草→发布→公众号草稿） --- */
+  if (act === 'publish-config-save') {
+    const { savePublishConfig } = await import('./publish.js');
+    savePublishConfig({
+      endpoint: document.getElementById('pub-endpoint')?.value?.trim() || '',
+      token: document.getElementById('pub-token')?.value?.trim() || '',
+    });
+    UI.toast('发布配置已保存'); route();
+    return;
+  }
+  if (act === 'publish-save') {
+    const data = V.getPublishFormData();
+    if (!data.title) { UI.toast('请先填标题', 'warn'); return; }
+    const form = document.getElementById('rwcPublishForm');
+    const editId = form?.dataset.edit || '';
+    const now = new Date().toISOString();
+    const existing = editId ? await S.Drafts.get(editId) : null;
+    const rec = {
+      id: editId || ('os-' + Date.now().toString(36)),
+      title: data.title, summary: data.summary, body: data.body, series: data.series,
+      status: data.status, slug: data.slug, lang: data.lang,
+      titleEn: data.titleEn, summaryEn: data.summaryEn, bodyEn: data.bodyEn, channels: data.channels,
+      publish: existing?.publish || { status: 'none', publishedAt: '', urls: {}, error: '' },
+      createdAt: existing?.createdAt || now, updatedAt: now,
+    };
+    if (!rec.slug) { const { slugify } = await import('./publish.js'); rec.slug = slugify(rec.titleEn || rec.title, rec.id); }
+    if (existing) await S.Drafts.update(rec.id, rec); else await S.Drafts.create(rec);
+    UI.toast(existing ? '已更新草稿' : '已保存到本机草稿'); route();
+    return;
+  }
+  if (act === 'publish-go' || act === 'publish-republish') {
+    const { publishDraft, slugify } = await import('./publish.js');
+    let draftId, payload;
+    if (act === 'publish-go') {
+      const data = V.getPublishFormData();
+      if (!data.title) { UI.toast('请先填标题', 'warn'); return; }
+      const form = document.getElementById('rwcPublishForm');
+      const editId = form?.dataset.edit || '';
+      const now = new Date().toISOString();
+      const existing = editId ? await S.Drafts.get(editId) : null;
+      const rec = {
+        id: editId || ('os-' + Date.now().toString(36)),
+        title: data.title, summary: data.summary, body: data.body, series: data.series,
+        status: 'ready', slug: data.slug, lang: data.lang,
+        titleEn: data.titleEn, summaryEn: data.summaryEn, bodyEn: data.bodyEn, channels: data.channels,
+        publish: existing?.publish || { status: 'none', publishedAt: '', urls: {}, error: '' },
+        createdAt: existing?.createdAt || now, updatedAt: now,
+      };
+      if (!rec.slug) rec.slug = slugify(rec.titleEn || rec.title, rec.id);
+      if (existing) await S.Drafts.update(rec.id, rec); else await S.Drafts.create(rec);
+      draftId = rec.id; payload = rec;
+    } else {
+      draftId = el.dataset.id;
+      const rec = await S.Drafts.get(draftId);
+      if (!rec) { UI.toast('找不到这条', 'warn'); return; }
+      if (!(rec.channels || []).some((c) => c !== 'wechat')) { UI.toast('请先勾选写作站 / 读书站', 'warn'); return; }
+      payload = rec;
+    }
+    if (!payload.title || !payload.body) { UI.toast('标题与正文必填', 'warn'); return; }
+    el.disabled = true; el.textContent = '… 发布中';
+    const r = await publishDraft(payload);
+    if (r.ok) {
+      await S.Drafts.update(draftId, {
+        status: 'published', updatedAt: new Date().toISOString(),
+        publish: { status: r.partial ? 'partial' : 'success', publishedAt: new Date().toISOString(), urls: r.urls || {}, error: r.error || '' },
+      });
+      UI.toast(r.partial ? '部分发布成功' : '发布成功 🎉'); route();
+    } else {
+      if (r.error === 'no-token') { UI.toast('请先在上方「发布设置」里填发布口令', 'warn'); route(); return; }
+      const cur = await S.Drafts.get(draftId);
+      await S.Drafts.update(draftId, { publish: { ...(cur?.publish || {}), status: 'error', error: r.error || 'fail' } });
+      UI.toast('发布失败：' + (r.error || '未知错误') + (r.status === 403 ? '（口令错误，请重填）' : ''), 'warn');
+      route();
+    }
+    return;
+  }
+  if (act === 'publish-wechat') {
+    const { copyForWechat } = await import('./publish.js');
+    let it;
+    if (el.dataset.id) it = await S.Drafts.get(el.dataset.id);
+    else { const data = V.getPublishFormData(); it = { title: data.title || '未命名', summary: data.summary, body: data.body }; }
+    if (!it) { UI.toast('找不到', 'warn'); return; }
+    const r = await copyForWechat(it);
+    if (r.ok) UI.toast(r.rich ? '富文本草稿已复制，去公众号粘贴' : '已复制（纯文本）');
+    else UI.toast('复制失败：' + (r.error || ''), 'warn');
+    return;
+  }
+  if (act === 'publish-open') { location.hash = '#/publish?id=' + encodeURIComponent(el.dataset.id); return; }
+  if (act === 'publish-adv') {
+    const order = ['seed', 'draft', 'ready', 'published'];
+    const d = await S.Drafts.get(el.dataset.id);
+    if (!d) return;
+    let i = order.indexOf(d.status); if (i < 0) return;
+    i = Math.min(order.length - 1, i + 1);
+    await S.Drafts.update(d.id, { status: order[i], updatedAt: new Date().toISOString() });
+    UI.toast('已推进到「' + (PUB_STATUS[order[i]] || order[i]) + '」'); route();
+    return;
+  }
+  if (act === 'publish-del') {
+    UI.confirmModal(`删除草稿「${(await S.Drafts.get(el.dataset.id))?.title || ''}」？仅删除本机草稿，不影响已发布的线上文章。`, async () => {
+      await S.Drafts.remove(el.dataset.id); UI.toast('已删除草稿'); route();
+    });
+    return;
+  }
+
+  /* --- 资产总览（Assets Hub）：刷新线上数据 --- */
+  if (act === 'assets-refresh') {
+    UI.toast('刷新中…');
+    try { await V.initAssets(); UI.toast('已刷新'); }
+    catch (e) { UI.toast('刷新失败：' + ((e && e.message) || e), 'warn'); }
+    return;
+  }
+  if (act === 'assets-book-more') {
+    V.loadMoreOnlineBooks();
+    return;
+  }
+  if (act === 'assets-book-featured') {
+    const on = V.toggleOnlineBookFeatured();
+    el.classList.toggle('active', on);
+    return;
+  }
+  if (act === 'assets-export-books') {
+    try {
+      const books = await V.exportLocalBooks();
+      if (!books.length) { UI.toast('本机还没有书籍', 'warn'); return; }
+      const blob = new Blob([JSON.stringify(books, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `rwc-os-books-${S.todayStr()}.json`;
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+      UI.toast(`已导出 ${books.length} 本书（JSON）`);
+    } catch (e) { UI.toast('导出失败：' + ((e && e.message) || e), 'warn'); }
+    return;
+  }
+  if (act === 'assets-sync-book') {
+    const id = el.dataset.id;
+    await syncOneBook(id, el);
+    return;
+  }
+  if (act === 'assets-sync-all-books') {
+    const books = await (await import('./store.js')).Books.all();
+    if (!books.length) { UI.toast('本机还没有书籍', 'warn'); return; }
+    const cfg = (await import('./publish.js')).getPublishConfig();
+    if (!cfg.token) { UI.toast('请先在 Publish → 发布设置 填发布口令', 'warn'); return; }
+    let ok = 0, fail = 0;
+    UI.toast(`同步中（0/${books.length}）…`);
+    for (let i = 0; i < books.length; i++) {
+      const r = await V.syncBookToSite(books[i]);
+      if (r.ok) { ok++; await (await import('./store.js')).Books.update(books[i].id, { syncedAt: new Date().toISOString() }); }
+      else fail++;
+      if ((i + 1) % 3 === 0 || i + 1 === books.length) UI.toast(`同步中（${i + 1}/${books.length}）…`);
+    }
+    await V.initAssets();
+    UI.toast(fail ? `同步完成：成功 ${ok}，失败 ${fail}` : `全部同步成功 🎉（${ok} 本）`);
+    return;
+  }
+
   /* --- Graph（Phase 3） --- */
   if (act === 'graph-filter-rel') { graphState.rel = el.dataset.v; route(); return; }
   if (act === 'graph-filter-type') { graphState.type = el.dataset.v; route(); return; }
@@ -661,6 +851,10 @@ document.addEventListener('input', (e) => {
   if (el.dataset.act === 'global-search') {
     clearTimeout(t1);
     t1 = setTimeout(() => { searchState.q = el.value; route(); }, 320);
+  }
+  if (el.dataset.act === 'assets-book-search') {
+    clearTimeout(t1);
+    t1 = setTimeout(() => { V.setOnlineBookQuery(el.value); }, 220);
   }
 });
 document.addEventListener('change', (e) => {
@@ -773,6 +967,12 @@ async function boot() {
   await route();   // 按当前 hash 渲染（刷新后仍停留在原来的书 / Tab）
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./sw.js').catch(() => {});
+    // 新版本安装完成并接管页面后，自动刷新一次，避免用户一直停留在旧缓存（旧版没有 Assets/Publish）
+    let _swReloaded = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (_swReloaded) return; _swReloaded = true;
+      location.reload();
+    });
   }
 }
 boot();

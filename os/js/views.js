@@ -4,7 +4,7 @@
  * ============================================================= */
 
 import {
-  Books, Logs, Ideas, Evidence, Actions, Decisions, Principles, Connections, Reviews,
+  Books, Logs, Ideas, Evidence, Actions, Decisions, Principles, Connections, Reviews, Drafts,
   stats, search, STATUS, Backup, todayStr,
   buildReview, periodKeyOf, PERIODS, connectionsWithContext, nodeOptions, buildGraphData,
   retrieve, hybridSearch, evolutionTracks, evolutionTimeline,
@@ -13,6 +13,9 @@ import { db } from './db.js';
 import { esc, empty, pill, progressBar, barChart, catBars, fmtDate } from './ui.js';
 import { aiEnabled, aiChat, safeJson, getAIConfig, saveAIConfig } from './ai.js';
 import { getSyncConfig, saveSyncConfig, syncEnabled } from './sync.js';
+import { getPublishConfig, publishEnabled, slugify, buildWechatHtml } from './publish.js';
+export { exportLocalBooks, syncBookToSite, SYNC_BOOK_ENDPOINT } from './assets.js';
+import { loadPipeline, loadOnlineBooks, loadLocalBooks, loadLocalDrafts, mergePipeline, channelUrls, bookOnlineUrl, coverUrl } from './assets.js';
 
 export const CATEGORIES = ['心智', '决策', '历史', '商业', '传记', '科学', '文学', '哲学', '心理', '其他'];
 export const FORMATS = ['纸质书', '电子书', '音频', '其他'];
@@ -1383,3 +1386,450 @@ function syncSettingsForm(s) {
     <label class="rwc-field"><span>Anon Key</span><input id="sync-key" type="password" value="${esc(s.anonKey)}" placeholder="eyJ..."></label>
     <label class="rwc-field"><span>Bucket 名</span><input id="sync-bucket" value="${esc(s.bucket)}" placeholder="rwc-os-backups"></label>`;
 }
+
+/* ==================== 发布（复刻发布中台 os-pwa 起草→发布流水线，Phase 6.5） ==================== */
+const PUB_STATUS = { seed: '起念', draft: '起草', ready: '待发', published: '已发' };
+const PUB_STATUS_HINT = { seed: '只有一句话', draft: '正在写', ready: '写完等发', published: '已上线' };
+const PUB_CHANNELS = { thecolin: '写作站', readswithcolin: '读书站', wechat: '公众号' };
+
+/* 发布态徽标 */
+function pubBadge(d) {
+  const p = d.publish || {};
+  if (p.status === 'success') return '<span class="rwc-pub-badge ok">✓ 已发布</span>';
+  if (p.status === 'partial') return `<span class="rwc-pub-badge part" title="${esc(p.error || '')}">◐ 部分成功</span>`;
+  if (p.status === 'error') return `<span class="rwc-pub-badge err" title="${esc(p.error || '')}">✕ 发布失败</span>`;
+  if (p.status === 'sending') return '<span class="rwc-pub-badge send">… 发布中</span>';
+  return '';
+}
+
+/* 从 DOM 读取起草表单（app.js 的 data-act 委托调用） */
+export function getPublishFormData() {
+  const v = (id) => (document.getElementById(id)?.value || '').trim();
+  const checked = Array.from(document.querySelectorAll('#rwcPublishForm .rwc-check input:checked')).map((c) => c.value);
+  return {
+    title: v('fTitle'),
+    summary: v('fSummary'),
+    body: v('fBody'),
+    series: v('fSeries'),
+    status: document.getElementById('fStatus')?.value || 'draft',
+    slug: v('fSlug'),
+    lang: document.getElementById('fLang')?.value || 'zh',
+    titleEn: v('fTitleEn'),
+    summaryEn: v('fSummaryEn'),
+    bodyEn: v('fBodyEn'),
+    channels: checked.length ? checked : ['thecolin'],
+  };
+}
+
+/* 起草表单 HTML（复刻 os-pwa new.html 字段） */
+function publishFormHTML(d = {}, isEdit = false) {
+  const v = (k) => esc(d[k] || '');
+  const chOn = (c) => (d.channels || ['thecolin']).includes(c) ? ' on' : '';
+  const chChk = (c) => (d.channels || ['thecolin']).includes(c) ? 'checked' : '';
+  const enShow = (d.lang === 'en' || d.lang === 'bi') ? '' : 'none';
+  const stOpt = (val, label) => `<option value="${val}" ${(d.status || 'draft') === val ? 'selected' : ''}>${label}</option>`;
+  return `
+  <form id="rwcPublishForm" class="rwc-form" data-edit="${esc(d.id || '')}">
+    <div class="rwc-field">
+      <label class="rwc-lbl" for="fTitle">标题 <span class="req">*</span></label>
+      <input class="rwc-input" type="text" id="fTitle" value="${v('title')}" placeholder="一句话说清你想说什么">
+    </div>
+    <div class="rwc-field">
+      <label class="rwc-lbl" for="fSummary">一句话摘要</label>
+      <input class="rwc-input" type="text" id="fSummary" value="${v('summary')}" placeholder="卡片上显示的那行字">
+    </div>
+    <div class="rwc-field">
+      <label class="rwc-lbl" for="fBody">正文</label>
+      <textarea class="rwc-textarea" id="fBody" placeholder="先把正文贴进来，格式不用管。写作站和读书站都读 Markdown。">${v('body')}</textarea>
+    </div>
+    <div class="rwc-field">
+      <label class="rwc-lbl">发布渠道</label>
+      <div class="rwc-checks">
+        <label class="rwc-check${chOn('thecolin')}"><input type="checkbox" value="thecolin" ${chChk('thecolin')}><span>写作站</span></label>
+        <label class="rwc-check${chOn('readswithcolin')}"><input type="checkbox" value="readswithcolin" ${chChk('readswithcolin')}><span>读书站</span></label>
+        <label class="rwc-check${chOn('wechat')}"><input type="checkbox" value="wechat" ${chChk('wechat')}><span>公众号</span></label>
+      </div>
+    </div>
+    <div class="rwc-row">
+      <div class="rwc-field" style="flex:1;min-width:140px">
+        <label class="rwc-lbl" for="fLang">语言版本</label>
+        <select class="rwc-input" id="fLang">
+          <option value="zh" ${(d.lang || 'zh') === 'zh' ? 'selected' : ''}>中文</option>
+          <option value="en" ${(d.lang || 'zh') === 'en' ? 'selected' : ''}>English</option>
+          <option value="bi" ${(d.lang || 'zh') === 'bi' ? 'selected' : ''}>双语（中 + EN）</option>
+        </select>
+      </div>
+      <div class="rwc-field" style="flex:2;min-width:200px">
+        <label class="rwc-lbl" for="fSlug">URL Slug（选填）</label>
+        <input class="rwc-input" type="text" id="fSlug" value="${v('slug')}" placeholder="留空自动生成，如 why-we-fear-change">
+        <div id="slugPreview" class="rwc-slug-preview"></div>
+      </div>
+    </div>
+    <div id="fEnBox" style="display:${enShow};border:1px dashed var(--line,#E5E1D8);border-radius:12px;padding:1rem 1rem .4rem;margin:.4rem 0 1rem;">
+      <div class="rwc-field"><label class="rwc-lbl" for="fTitleEn">英文标题 Title (EN)</label><input class="rwc-input" id="fTitleEn" value="${v('titleEn')}" placeholder="English title"></div>
+      <div class="rwc-field"><label class="rwc-lbl" for="fSummaryEn">英文摘要 Summary (EN)</label><input class="rwc-input" id="fSummaryEn" value="${v('summaryEn')}" placeholder="One-line English summary"></div>
+      <div class="rwc-field"><label class="rwc-lbl" for="fBodyEn">英文正文 Body (EN)</label><textarea class="rwc-textarea" id="fBodyEn" placeholder="English body (Markdown)">${v('bodyEn')}</textarea></div>
+    </div>
+    <div class="rwc-field">
+      <label class="rwc-lbl" for="fSeries">所属系列 / 标签（选填）</label>
+      <input class="rwc-input" type="text" id="fSeries" value="${v('series')}" placeholder="如 human-nature / western-classics">
+    </div>
+    <div class="rwc-field">
+      <label class="rwc-lbl" for="fStatus">当前状态</label>
+      <select class="rwc-input" id="fStatus">
+        ${stOpt('seed', '起念 — 只有一句话')}
+        ${stOpt('draft', '起草 — 正在写')}
+        ${stOpt('ready', '待发 — 写完等发')}
+        ${stOpt('published', '已发 — 已经上线')}
+      </select>
+    </div>
+    <div class="rwc-pub-btns">
+      <button class="rwc-btn" type="button" data-act="publish-save">保存</button>
+      <button class="rwc-btn primary" type="button" data-act="publish-go">🚀 保存并发布</button>
+      <button class="rwc-btn ghost" type="button" data-act="publish-wechat">💬 复制公众号草稿</button>
+    </div>
+  </form>`;
+}
+
+/* 看板卡片 */
+function pubCardHTML(d) {
+  const chans = (d.channels || []).map((c) => `<span class="rwc-chip ch-${esc(c)}">${esc(PUB_CHANNELS[c] || c)}</span>`).join('');
+  const langTag = d.lang === 'en' ? '<span class="rwc-lang-tag">EN</span>' : d.lang === 'bi' ? '<span class="rwc-lang-tag">双语</span>' : '';
+  const badge = pubBadge(d);
+  const advBtn = d.status !== 'published' ? `<button class="rwc-adv" title="推进到下一状态" data-act="publish-adv" data-id="${esc(d.id)}">→</button>` : '';
+  return `<article class="rwc-pub-card" data-act="publish-open" data-id="${esc(d.id)}" role="button" tabindex="0" title="点击编辑">
+    <h3 class="rwc-pub-card-title">${esc(d.title || '（无标题）')}${langTag}</h3>
+    <p class="rwc-pub-card-sum">${esc(d.summary || '（暂无摘要）')}</p>
+    <div class="rwc-pub-card-foot">${chans}</div>
+    ${badge ? `<div class="rwc-pub-row">${badge}</div>` : ''}
+    ${advBtn}
+  </article>`;
+}
+
+/* 已发作品库卡片 */
+function pubWorkHTML(d) {
+  const urls = Object.entries(d.publish?.urls || {});
+  const links = urls.length ? `<div class="rwc-pub-links">${urls.map(([c, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(PUB_CHANNELS[c] || c)} ↗</a>`).join('')}</div>` : '';
+  const hasApi = (d.channels || []).some((c) => c !== 'wechat');
+  const actions = `<div class="rwc-pub-actions">
+    ${hasApi ? `<button class="rwc-mini-btn" data-act="publish-republish" data-id="${esc(d.id)}">🚀 重新发布</button>` : ''}
+    ${(d.channels || []).includes('wechat') ? `<button class="rwc-mini-btn ghost" data-act="publish-wechat" data-id="${esc(d.id)}">💬 公众号草稿</button>` : ''}
+    <button class="rwc-mini-btn ghost" data-act="publish-open" data-id="${esc(d.id)}">✎ 编辑</button>
+    <button class="rwc-mini-btn ghost danger" data-act="publish-del" data-id="${esc(d.id)}">🗑 删除草稿</button>
+  </div>`;
+  return `<article class="rwc-pub-work">
+    <div>
+      <h3 class="rwc-pub-work-title">${esc(d.title)}</h3>
+      <div class="rwc-pub-work-meta">${esc((d.updatedAt || '').slice(0, 10))} · ${(d.channels || []).map((c) => `<span class="rwc-chip ch-${esc(c)}">${esc(PUB_CHANNELS[c] || c)}</span>`).join('')} ${pubBadge(d)}</div>
+      ${links}
+      ${actions}
+    </div>
+  </article>`;
+}
+
+export async function viewPublish(params) {
+  const editId = params ? params.get('id') : null;
+  const draft = (editId && await Drafts.get(editId)) || {};
+  const isEdit = !!(draft && draft.id);
+  const cfg = getPublishConfig();
+  const all = await Drafts.all(); // 已按 updatedAt 倒序
+  const boardCols = ['seed', 'draft', 'ready', 'published'].map((st) => {
+    const items = all.filter((d) => (d.status || 'draft') === st);
+    return `<section class="rwc-pub-col">
+      <div class="rwc-pub-col-head"><div><div class="rwc-pub-col-title"><span class="rwc-dot d-${st}"></span>${PUB_STATUS[st]}</div><div class="rwc-pub-col-hint">${PUB_STATUS_HINT[st]}</div></div><span class="rwc-pub-col-count">${items.length}</span></div>
+      ${items.length ? items.map(pubCardHTML).join('') : '<div class="rwc-empty">空</div>'}
+    </section>`;
+  }).join('');
+  const works = all.filter((d) => d.status === 'published' && ['success', 'partial'].includes((d.publish || {}).status));
+  const worksHTML = works.length ? works.map(pubWorkHTML).join('') : '<div class="rwc-empty">还没有已发表的内容</div>';
+  const cfgCard = `
+    <div class="rwc-pub-config rwc-panel">
+      <div class="rwc-pub-config-head">
+        <h3>发布设置</h3>
+        <span class="rwc-muted">后端：Vercel Serverless，已 CORS 放行；口令与 thecolin.vip/os 共用</span>
+      </div>
+      <label class="rwc-field"><span>发布端点</span><input id="pub-endpoint" value="${esc(cfg.endpoint)}" placeholder="https://www.thecolin.vip/api/publish"></label>
+      <label class="rwc-field"><span>发布口令（X-OS-Token）</span><input id="pub-token" type="${cfg.token ? 'password' : 'text'}" value="${esc(cfg.token)}" placeholder="填一次，存在本机"></label>
+      <button class="rwc-btn" type="button" data-act="publish-config-save">保存配置</button>
+    </div>`;
+  return `
+  <div class="rwc-pub">
+    <header class="rwc-pub-head">
+      <span class="rwc-kicker">Publish</span>
+      <h1>${isEdit ? '编辑内容' : '起草 <em>新内容</em>'}</h1>
+      <p>只填必要的东西。没有标签、没有分类、没有等级——那些是 Obsidian 的活，这里只管「发不发、发去哪」。</p>
+    </header>
+    ${cfgCard}
+    ${publishFormHTML(draft, isEdit)}
+    <h2 class="rwc-pub-section">本机草稿看板</h2>
+    <div class="rwc-pub-board">${boardCols}</div>
+    <h2 class="rwc-pub-section">已发作品库</h2>
+    <div class="rwc-pub-works">${worksHTML}</div>
+  </div>`;
+}
+
+/* 起草页交互初始化（渠道多选 / 英文区折叠 / slug 实时预览） */
+export function initPublish(params) {
+  const form = document.getElementById('rwcPublishForm');
+  if (!form) return;
+
+  // 渠道多选
+  form.querySelectorAll('.rwc-check').forEach((lab) => {
+    lab.addEventListener('click', (e) => {
+      e.preventDefault();
+      const cb = lab.querySelector('input');
+      cb.checked = !cb.checked;
+      lab.classList.toggle('on', cb.checked);
+    });
+  });
+
+  // 英文区折叠
+  const langSel = document.getElementById('fLang');
+  const enBox = document.getElementById('fEnBox');
+  const toggleEn = () => { if (enBox) enBox.style.display = (langSel && (langSel.value === 'en' || langSel.value === 'bi')) ? '' : 'none'; };
+  if (langSel) { langSel.addEventListener('change', toggleEn); toggleEn(); }
+
+  // slug 实时预览
+  const prev = document.getElementById('slugPreview');
+  const editId = params ? params.get('id') : null;
+  const sample = editId || 'os-xxxx';
+  const updateSlug = () => {
+    if (!prev) return;
+    const rawSlug = (document.getElementById('fSlug')?.value || '').trim();
+    const titleEn = (document.getElementById('fTitleEn')?.value || '').trim();
+    const title = (document.getElementById('fTitle')?.value || '').trim();
+    const computed = rawSlug || slugify(titleEn || title, sample);
+    const colin = `https://www.thecolin.vip/articles/${esc(computed)}/`;
+    const rwc = `https://readswithcolin.com/posts/${esc(computed)}.html`;
+    let note;
+    if (rawSlug) {
+      note = /^[a-z0-9][a-z0-9-]*$/i.test(rawSlug)
+        ? `将使用你填的 slug：<code>${esc(computed)}</code>`
+        : `<span style="color:#B3402F">⚠ 自定义 slug 只能含字母、数字、连字符</span>`;
+    } else if (computed !== sample) {
+      note = `由标题自动生成：<code>${esc(computed)}</code>`;
+    } else {
+      note = `将使用随机 ID：<code>${esc(computed)}</code>`;
+    }
+    prev.innerHTML = `${note}<br><span style="opacity:.75">写作站：${colin}</span><br><span style="opacity:.75">读书站：${rwc}</span>`;
+  };
+    ['input', 'change'].forEach((ev) => {
+      ['fTitle', 'fTitleEn', 'fSlug', 'fLang'].forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener(ev, updateSlug);
+      });
+    });
+    updateSlug();
+  }
+
+  /* ===================== 资产总览（Assets Hub） ===================== */
+  export async function viewAssets() {
+    return `
+    <section class="rwc-view">
+      <header class="rwc-view-head">
+        <span class="rwc-kicker">Asset Hub</span>
+        <h1>我的<em>资产总览</em></h1>
+        <p>一眼看清：两个网站发了哪些文章、读了多少书。线上数据实时拉取，本机数据来自这台设备。</p>
+      </header>
+
+      <div class="rwc-assets-stats" id="assetsStats"></div>
+
+      <div class="rwc-assets-toolbar">
+        <button class="rwc-btn sm" data-act="assets-refresh">↻ 刷新线上数据</button>
+        <span class="rwc-assets-note">线上：thecolin.vip · readswithcolin.com　|　本机：这台设备的读书库与草稿</span>
+      </div>
+
+      <div class="rwc-asset-section">
+        <h2 class="rwc-asset-h">① 两站文章台账 <small>发布中台台账 + 本机草稿</small></h2>
+        <div class="rwc-assets-pipeline" id="assetsPipeline"></div>
+      </div>
+
+      <div class="rwc-asset-section">
+        <h2 class="rwc-asset-h">② 我的书籍 <small>本机读书库（IndexedDB）</small></h2>
+        <div class="rwc-assets-toolbar">
+          <button class="rwc-btn sm" data-act="assets-export-books">⬇ 导出备份（JSON）</button>
+          <button class="rwc-btn sm primary" data-act="assets-sync-all-books">↥ 同步到读书站（全部）</button>
+          <span class="rwc-assets-note">导出零后端；同步需先在 Publish → 发布设置 填发布口令</span>
+        </div>
+        <div class="rwc-assets-books" id="assetsLocalBooks"></div>
+      </div>
+
+      <div class="rwc-asset-section">
+        <h2 class="rwc-asset-h">③ 读书站线上书籍 <small>readswithcolin.com 实时 · 可搜索/分页/筛选</small></h2>
+        <div class="rwc-assets-toolbar">
+          <input id="assetsBookSearch" class="rwc-input" data-act="assets-book-search" placeholder="搜索书名 / 作者 / 分类…（支持上千本）">
+          <button class="rwc-chip" data-act="assets-book-featured">★ 只看精选</button>
+        </div>
+        <div class="rwc-assets-books" id="assetsOnlineBooks"></div>
+      </div>
+    </section>`;
+  }
+
+  const ASSET_STATUS = { seed: '起念', draft: '起草', ready: '待发', published: '已发' };
+  const ASSET_CHAN = { thecolin: '写作站', readswithcolin: '读书站' };
+
+  export async function initAssets() {
+    const statsEl = document.getElementById('assetsStats');
+    const pipeEl = document.getElementById('assetsPipeline');
+    const localEl = document.getElementById('assetsLocalBooks');
+    const onlineEl = document.getElementById('assetsOnlineBooks');
+    if (!pipeEl) return;
+
+    const [pipe, onlineBooks, localBooks, localDrafts] = await Promise.all([
+      loadPipeline(), loadOnlineBooks(), loadLocalBooks(), loadLocalDrafts(),
+    ]);
+
+    const merged = mergePipeline(pipe.items || [], localDrafts || []);
+    renderPipeline(pipeEl, merged, pipe.ok, pipe.error);
+    renderLocalBooks(localEl, localBooks || []);
+    _onlineBooks = onlineBooks;
+    _obState = { page: 1, q: '', featuredOnly: false };
+    renderOnlineBooks();
+
+    if (statsEl) {
+      const published = merged.filter((i) => i.status === 'published').length;
+      const cards = [
+        ['两站文章台账', String(merged.length), pipe.ok ? '线上 + 本机' : '本机（线上暂不可达）'],
+        ['已发布', String(published), '含两站链接'],
+        ['本机书籍', String((localBooks || []).length), '这台设备'],
+        ['线上书籍', onlineBooks.ok ? String((onlineBooks.items || []).length) : '—', onlineBooks.ok ? 'readswithcolin.com' : '暂不可达'],
+      ];
+      statsEl.innerHTML = cards.map(([k, v, s]) => `
+        <div class="rwc-stat-card">
+          <div class="rwc-stat-v">${esc(v)}</div>
+          <div class="rwc-stat-k">${esc(k)}</div>
+          <div class="rwc-stat-s">${esc(s)}</div>
+        </div>`).join('');
+    }
+  }
+
+  function daysBetween(a, b) {
+    const pa = Date.parse(a), pb = Date.parse(b);
+    if (isNaN(pa) || isNaN(pb)) return 0;
+    return Math.max(0, Math.round((pb - pa) / 86400000));
+  }
+
+  function renderPipeline(el, items, ok, error) {
+    if (!ok) {
+      el.innerHTML = `<div class="rwc-assets-warn">⚠ 线上台账暂不可达（${esc(error || '网络')}）。已显示本机草稿；上线后可看到两站已发文章。</div>`;
+    }
+    const order = ['seed', 'draft', 'ready', 'published'];
+    el.innerHTML = order.map((st) => {
+      const list = items.filter((i) => i.status === st)
+        .sort((a, b) => (b.updated || '').localeCompare(a.updated || ''));
+      const cards = list.map((it) => {
+        const chans = (it.channels || []).map((c) => `<span class="rwc-chip ch-${esc(c)}">${esc(ASSET_CHAN[c] || c)}</span>`).join('');
+        const urls = channelUrls(it.publish);
+        const links = [
+          urls.thecolin ? `<a class="rwc-pub-badge" href="${esc(urls.thecolin)}" target="_blank" rel="noopener">写作站 ↗</a>` : '',
+          urls.readswithcolin ? `<a class="rwc-pub-badge" href="${esc(urls.readswithcolin)}" target="_blank" rel="noopener">读书站 ↗</a>` : '',
+        ].join('');
+        const age = daysBetween(it.created, todayStr());
+        const lang = it.lang === 'en' ? '<span class="rwc-lang-tag">EN</span>' : it.lang === 'bi' ? '<span class="rwc-lang-tag">双语</span>' : '';
+        return `
+        <article class="rwc-card rwc-pip-card">
+          <h3 class="rwc-card-title">${esc(it.title)}${lang}</h3>
+          <p class="rwc-card-sum">${esc(it.summary || '（暂无摘要）')}</p>
+          <div class="rwc-card-foot">${chans}<span class="rwc-age">${age}天</span></div>
+          ${links ? `<div class="rwc-pub-row">${links}</div>` : ''}
+        </article>`;
+      }).join('');
+      return `
+      <div class="rwc-pip-col">
+        <div class="rwc-pip-col-h">${esc(ASSET_STATUS[st])} <span class="rwc-pip-count">${list.length}</span></div>
+        <div class="rwc-pip-col-body">${cards || '<div class="rwc-pip-empty">—</div>'}</div>
+      </div>`;
+    }).join('');
+  }
+
+  function renderLocalBooks(el, books) {
+    if (!books.length) {
+      el.innerHTML = `<div class="rwc-assets-warn">本机还没有书籍记录。去「Books」添加你的读书笔记。</div>`;
+      return;
+    }
+    const statusLabel = { to_read: '想读', reading: '在读', completed: '读完', rereading: '重读' };
+    el.innerHTML = `<div class="rwc-book-grid">` + books.map((b) => {
+      const url = b.url ? `<a class="rwc-pub-badge" href="${esc(b.url)}" target="_blank" rel="noopener">打开 ↗</a>` : '';
+      const st = statusLabel[b.status] || b.status || '';
+      const synced = b.syncedAt ? `<span class="rwc-lang-tag" title="已同步 ${esc(b.syncedAt.slice(0, 10))}">已同步</span>` : '';
+      return `
+      <article class="rwc-card rwc-book-card">
+        <div class="rwc-book-top"><span class="rwc-chip">${esc(st)}</span>${b.category ? `<span class="rwc-book-cat">${esc(b.category)}</span>` : ''}${synced}</div>
+        <h3 class="rwc-card-title">${esc(b.title || '(无标题)')}</h3>
+        <p class="rwc-card-sum">${esc(b.author || '')}</p>
+        <div class="rwc-pub-row">
+          ${url ? `<a class="rwc-pub-badge" href="${esc(b.url)}" target="_blank" rel="noopener">打开 ↗</a>` : ''}
+          <button class="rwc-pub-badge act" data-act="assets-sync-book" data-id="${esc(b.id)}">↥ 同步</button>
+        </div>
+      </article>`;
+    }).join('') + `</div>`;
+  }
+
+  /* 线上书籍：分页 + 搜索 + 精选筛选（扛上千本） */
+  let _onlineBooks = null;          // loadOnlineBooks() 的原始结果 { ok, items, error }
+  const _OB_PAGE = 60;
+  let _obState = { page: 1, q: '', featuredOnly: false };
+
+  export function setOnlineBookQuery(q) {
+    _obState.q = q || '';
+    _obState.page = 1;
+    renderOnlineBooks();
+  }
+  export function loadMoreOnlineBooks() {
+    _obState.page += 1;
+    renderOnlineBooks();
+  }
+  export function toggleOnlineBookFeatured() {
+    _obState.featuredOnly = !_obState.featuredOnly;
+    _obState.page = 1;
+    renderOnlineBooks();
+    return _obState.featuredOnly;
+  }
+
+  function _onlineFiltered() {
+    const r = _onlineBooks;
+    if (!r || !r.ok) return [];
+    const q = (_obState.q || '').trim().toLowerCase();
+    return (r.items || []).filter((b) => {
+      if (_obState.featuredOnly && !b.featured) return false;
+      if (!q) return true;
+      const hay = [
+        b.titleZh, b.titleEn, b.authorZh, b.authorEn,
+        b.categoryLabelZh, b.categoryLabel, b.slug,
+      ].filter(Boolean).join(' ').toLowerCase();
+      return hay.includes(q);
+    });
+  }
+
+  export function renderOnlineBooks() {
+    const el = document.getElementById('assetsOnlineBooks');
+    if (!el) return;
+    const r = _onlineBooks;
+    if (!r || !r.ok) {
+      el.innerHTML = `<div class="rwc-assets-warn">⚠ 读书站线上书籍暂不可达（${esc(r && r.error || '网络')}）。请确认 readswithcolin.com/data/posts.json 可访问。</div>`;
+      return;
+    }
+    const all = _onlineFiltered();
+    const shown = all.slice(0, _obState.page * _OB_PAGE);
+    const more = all.length > shown.length;
+    const cards = shown.map((b) => {
+      const cover = coverUrl(b.cover);
+      const url = bookOnlineUrl(b.slug);
+      const title = b.titleZh || b.titleEn || '(无标题)';
+      const author = b.authorZh || b.authorEn || '';
+      const cat = b.categoryLabelZh || b.categoryLabel || '';
+      return `
+      <article class="rwc-card rwc-book-card">
+        ${cover ? `<img class="rwc-book-cover" src="${esc(cover)}" alt="${esc(title)}" loading="lazy">` : ''}
+        <h3 class="rwc-card-title">${esc(title)}</h3>
+        <p class="rwc-card-sum">${esc(author)}</p>
+        <div class="rwc-card-foot">${cat ? `<span class="rwc-chip">${esc(cat)}</span>` : ''}${b.featured ? '<span class="rwc-lang-tag">精选</span>' : ''}</div>
+        <div class="rwc-pub-row"><a class="rwc-pub-badge" href="${esc(url)}" target="_blank" rel="noopener">读书站 ↗</a></div>
+      </article>`;
+    }).join('');
+    el.innerHTML = `<div class="rwc-book-grid">` + (cards || '<div class="rwc-assets-warn">没有匹配的书籍。</div>') + `</div>` +
+      `<div class="rwc-assets-more">` +
+      `<span class="rwc-assets-note">共 ${all.length} 本 · 已显示 ${shown.length}</span>` +
+      (more ? `<button class="rwc-btn sm" data-act="assets-book-more">加载更多（剩 ${all.length - shown.length}）</button>` : '') +
+      `</div>`;
+  }
