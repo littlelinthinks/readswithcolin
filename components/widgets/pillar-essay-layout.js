@@ -30,6 +30,7 @@
     "  padding:24px;margin-bottom:30px;box-shadow:0 20px 50px rgba(0,0,0,.4);}",
     ".hero .tag{font-size:11px;letter-spacing:.16em;color:var(--gold-soft);text-transform:uppercase;margin-bottom:12px;}",
     ".hero .q{font-size:19px;font-weight:700;color:var(--text);line-height:1.7;quotes:'“' '”';}",
+    ".hero .qe{font-size:13px;font-style:italic;color:var(--muted);line-height:1.65;margin-top:10px;}",
     ".hero .src{font-size:12.5px;color:var(--muted);margin-top:12px;}",
     ".hero .src b{color:var(--gold-soft);font-weight:600;}",
     ".layers{margin-top:20px;border-top:1px dashed var(--border);padding-top:16px;}",
@@ -135,6 +136,7 @@
       '  <div class="hero">' +
       '    <div class="tag">Colin · 1-3-1 漏斗金句卡</div>' +
       '    <div class="q">“' + esc(h.quote) + '”</div>' +
+      (h.quoteEn ? '    <div class="qe">“' + esc(h.quoteEn) + '”</div>' : '') +
       '    <div class="src"><b>' + esc(sources) + '</b></div>' +
       '    <div class="layers"><div class="lh">1-3-1 · 三层解构</div>' + layers + '</div>' +
       (h.action ? '<div class="action"><div class="ah">微行动锚点</div><div class="at">' + esc(h.action) + '</div></div>' : '') +

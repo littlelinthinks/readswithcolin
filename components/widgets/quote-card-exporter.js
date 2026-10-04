@@ -25,6 +25,7 @@
     "  padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.45);}",
     ".tag{font-size:11px;letter-spacing:.16em;color:var(--gold-soft);text-transform:uppercase;margin-bottom:14px;}",
     ".q{font-size:19px;font-weight:700;color:var(--text);line-height:1.7;}",
+    ".qe{font-size:13px;font-style:italic;color:var(--muted);line-height:1.65;margin-top:10px;}",
     ".src{font-size:12.5px;color:var(--muted);margin-top:12px;}",
     ".src b{color:var(--gold-soft);}",
     ".layers{margin-top:18px;border-top:1px dashed var(--border);padding-top:14px;}",
@@ -86,6 +87,7 @@
       '<div class="card">' +
       '  <div class="tag">Colin · 1-3-1 Quote Card</div>' +
       '  <div class="q">“' + esc(h.quote) + '”</div>' +
+      (h.quoteEn ? '<div class="qe">“' + esc(h.quoteEn) + '”</div>' : '') +
       '  <div class="src"><b>' + esc(sources) + '</b></div>' +
       '  <div class="layers"><div class="lh">1-3-1 · 三层解构</div>' + layers + '</div>' +
       (h.action ? '<div class="action"><div class="ah">微行动锚点</div><div class="at">' + esc(h.action) + '</div></div>' : '') +
@@ -129,6 +131,11 @@
     // 金句
     ctx.fillStyle = "#e8e6e1"; ctx.font = "700 46px 'PingFang SC','Microsoft YaHei',serif";
     y = wrapText(ctx, "“" + (h.quote || "") + "”", cx, y, W - 2 * pad, 66) + 28;
+    // 英文金句（quoteEn，中英双语）
+    if (h.quoteEn) {
+      ctx.fillStyle = "#94a3b8"; ctx.font = "italic 30px Georgia,'Times New Roman',serif";
+      y = wrapText(ctx, '"' + h.quoteEn + '"', cx, y, W - 2 * pad, 42) + 24;
+    }
     // 出处
     ctx.fillStyle = "#94a3b8"; ctx.font = "500 28px 'PingFang SC','Microsoft YaHei',sans-serif";
     y = wrapText(ctx, (h.sources || []).join(" × "), cx, y, W - 2 * pad, 40) + 30;
