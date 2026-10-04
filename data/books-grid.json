@@ -1,0 +1,478 @@
+{
+  "title": "42 本图书 · 思维模型网格",
+  "en": "Colin's Reading Latticework",
+  "scenes": [
+    "全部",
+    "心智修炼",
+    "英文原著",
+    "思维方法",
+    "商业投资",
+    "小说文学",
+    "人物随笔",
+    "访谈互证"
+  ],
+  "grids": [
+    {
+      "icon": "📖",
+      "title": "习而新之：将查理·芒格与《资治通鉴》融为一体的阅读操作系统",
+      "en": "查理·芒格 × 司马光",
+      "desc": "西方由外而内地搭建思维栅格，东方借史书由内而外地折叠心智。两套阅读操作系统，同时运行。",
+      "detail": [
+        "在我的一生中，我认识的所有聪明人，没有一个不是在时刻阅读的——一个都没有。"
+      ],
+      "scene": "心智修炼",
+      "link": "posts/reading-os.html"
+    },
+    {
+      "icon": "📖",
+      "title": "当现代心理学撞上东方解脱道——重构高 Agency 的内在锚",
+      "en": "DOAC × 资治通鉴",
+      "desc": "现代人把“正念协议”当外部工具追逐；东方先贤把“定慧内求”当作存在方式修行。同样的焦虑，隔两千年，只是包装换了。",
+      "detail": [
+        "人不是被事物本身所扰，而是被他们对事物所持的看法所扰。"
+      ],
+      "scene": "心智修炼",
+      "link": "posts/internal-anchor.html"
+    },
+    {
+      "icon": "📖",
+      "title": "3-2-1 周四 · 第 001 期",
+      "en": "Reads with Colin 编辑部",
+      "desc": "3 种跨文化底层认知 · 2 句大咖金句深加工 · 1 个本周践行协议。拒绝碎片信息轰炸，回归心智底层稳态。",
+      "detail": [
+        "真正的高主体性，始于你不再对外部喧嚣应激反应，而是开始策展自己的内心环境。"
+      ],
+      "scene": "心智修炼",
+      "link": "posts/321-thursday-01.html"
+    },
+    {
+      "icon": "📖",
+      "title": "越过浅水区：拆解卡尔·纽波特的深度阅读框架",
+      "en": "卡尔·纽波特",
+      "desc": "在一个被 15 秒竖屏视频和算法多巴胺循环主宰的时代，我们与书的关系却矛盾地退化了：买得更多、翻得更多，记住的却更少。",
+      "detail": [
+        "无论你多么有才华或技能高超，如果你不持续输出，你就无法在这个时代繁荣。"
+      ],
+      "scene": "英文原著",
+      "link": "posts/beyond-shallows.html"
+    },
+    {
+      "icon": "📖",
+      "title": "思考，快与慢",
+      "en": "卡尼曼",
+      "desc": "三十多年的判断与决策研究，被压成一本可读的书。核心一句话：你的大脑是两套系统——快而直觉的一套，慢而审慎的一套。",
+      "detail": [
+        "生活里没有什么事，会像你以为的那么重要——至少在你正在想它的那一刻。"
+      ],
+      "scene": "思维方法",
+      "link": "posts/think-fast-slow.html"
+    },
+    {
+      "icon": "📖",
+      "title": "思考的框架",
+      "en": "帕里什",
+      "desc": "不是讲“什么是思维模型”的认知书，而是讲“哪些思维模型最值得收藏”的工具手册。",
+      "detail": [
+        "当你手里有把锤子，你看什么都像钉子。但首先看看是不是钉子。"
+      ],
+      "scene": "思维方法",
+      "link": "posts/great-mental-models.html"
+    },
+    {
+      "icon": "📖",
+      "title": "金字塔原理",
+      "en": "明托",
+      "desc": "教你把混乱的素材装进一个金字塔，让表达变得有效。",
+      "detail": [
+        "思考自顶向下：先给答案，再给支撑。"
+      ],
+      "scene": "思维方法",
+      "link": "posts/pyramid-principle.html"
+    },
+    {
+      "icon": "📖",
+      "title": "金线",
+      "en": "冯唐",
+      "desc": "中文学界少有的讲清楚如何把事做成的书。",
+      "detail": [
+        "结构化思维不是把话写漂亮——是把事做出来。"
+      ],
+      "scene": "思维方法",
+      "link": "posts/golden-thread.html"
+    },
+    {
+      "icon": "📖",
+      "title": "概括力",
+      "en": "山口拓朗",
+      "desc": "把\"表达不清\"这件事拆解到三个动作里。",
+      "detail": [
+        "说得清，是对自己最大的礼貌。"
+      ],
+      "scene": "思维方法",
+      "link": "posts/power-of-summarizing.html"
+    },
+    {
+      "icon": "📖",
+      "title": "乌合之众",
+      "en": "勒庞",
+      "desc": "一个世纪前的群体心理学预见，从弹幕到股价都还在证明它。",
+      "detail": [
+        "群体是激情的奴隶。"
+      ],
+      "scene": "思维方法",
+      "link": "posts/the-crowd.html"
+    },
+    {
+      "icon": "📖",
+      "title": "稀缺",
+      "en": "穆来纳森",
+      "desc": "从脑科学和经济学的双重视角证明——稀缺不是缺少，是注意力被占用。",
+      "detail": [
+        "稀缺不是缺什么——是缺乏脑力带宽。"
+      ],
+      "scene": "思维方法",
+      "link": "posts/scarcity.html"
+    },
+    {
+      "icon": "📖",
+      "title": "全新思维",
+      "en": "平克",
+      "desc": "从信息时代到概念时代的过渡——审美、故事与共情最被珍视。",
+      "detail": [
+        "我们正在进入一个珍惜右脑特质的时代。"
+      ],
+      "scene": "思维方法",
+      "link": "posts/a-whole-new-mind.html"
+    },
+    {
+      "icon": "📖",
+      "title": "穷查理宝典",
+      "en": "芒格",
+      "desc": "不是一本通常意义上的商业书。是一个九旬老人的讲话集。",
+      "detail": [
+        "我只想知道我会在哪里死，这样我就永远不会去那里。"
+      ],
+      "scene": "商业投资",
+      "link": "posts/poor-charlies-almanack.html"
+    },
+    {
+      "icon": "📖",
+      "title": "原则",
+      "en": "达利欧",
+      "desc": "表面是个人原则集，实质是一套让生活被审视、被迭代的方法。",
+      "detail": [
+        "痛苦加反思等于进步。"
+      ],
+      "scene": "商业投资",
+      "link": "posts/principles.html"
+    },
+    {
+      "icon": "📖",
+      "title": "乔布斯、禅与投资",
+      "en": "李国飞",
+      "desc": "从中文学界视角写的乔布斯传，把心性的哲学与高端商业嫁接起来。",
+      "detail": [
+        "投资是心性修炼。"
+      ],
+      "scene": "商业投资",
+      "link": "posts/jobs-zen-investing.html"
+    },
+    {
+      "icon": "📖",
+      "title": "贫穷的本质",
+      "en": "迪弗洛",
+      "desc": "重新审视贫穷是不是真的只缺钱。",
+      "detail": [
+        "贫穷是拦在小事前的大事。"
+      ],
+      "scene": "商业投资",
+      "link": "posts/poor-economics.html"
+    },
+    {
+      "icon": "📖",
+      "title": "硅谷钢铁侠",
+      "en": "万斯",
+      "desc": "马斯克火箭、电动车、脑机接口背后那个\"问为什么\"的人物侧写。",
+      "detail": [
+        "普通人也可以选择变得不普通。"
+      ],
+      "scene": "商业投资",
+      "link": "posts/elon-musk.html"
+    },
+    {
+      "icon": "📖",
+      "title": "特斯拉传：实现不可能",
+      "en": "麦肯齐",
+      "desc": "人、商业、技术三角并行的\"特斯拉制造史\"。",
+      "detail": [
+        "不可能只是我们还没分解的标签。"
+      ],
+      "scene": "商业投资",
+      "link": "posts/insane-mode.html"
+    },
+    {
+      "icon": "📖",
+      "title": "额尔古纳河右岸",
+      "en": "迟子建",
+      "desc": "茅奖作品。一个民族与最后一名记录者，在黑龙江梡木里。",
+      "detail": [
+        "我所说的事情，越古就越真实。"
+      ],
+      "scene": "小说文学",
+      "link": "posts/last-quarter-of-the-moon.html"
+    },
+    {
+      "icon": "📖",
+      "title": "生死瘦劳",
+      "en": "莫言",
+      "desc": "诺奖得主以轮回机巧穿梭五十年中国乡土。",
+      "detail": [
+        "一切都是高音调的事，独一个是声音。"
+      ],
+      "scene": "小说文学",
+      "link": "posts/life-death-wearing-me-out.html"
+    },
+    {
+      "icon": "📖",
+      "title": "五号屠场",
+      "en": "冯内古特",
+      "desc": "德律斯顿表炸之后，才子的生活崩塌。",
+      "detail": [
+        "事情就是这样。"
+      ],
+      "scene": "小说文学",
+      "link": "posts/slaughterhouse-five.html"
+    },
+    {
+      "icon": "📖",
+      "title": "窄门",
+      "en": "纪德",
+      "desc": "纪德获诺奖的小说。一个女子为完美主义拒绝爱情。",
+      "detail": [
+        "幸福不适宜拼凑。"
+      ],
+      "scene": "小说文学",
+      "link": "posts/strait-is-the-gate.html"
+    },
+    {
+      "icon": "📖",
+      "title": "遥远的救世主",
+      "en": "豆豆",
+      "desc": "丁元英是一个\"只能被谈论的人物\"。多谈市场、私募、信任。",
+      "detail": [
+        "授人鱼不如授人以渔。"
+      ],
+      "scene": "小说文学",
+      "link": "posts/distant-savior.html"
+    },
+    {
+      "icon": "📖",
+      "title": "天幕红尘",
+      "en": "豆豆",
+      "desc": "最被低估的豆豆三部曲之一。",
+      "detail": [
+        "见路不走。"
+      ],
+      "scene": "小说文学",
+      "link": "posts/beyond-dust-world.html"
+    },
+    {
+      "icon": "📖",
+      "title": "背叛",
+      "en": "豆豆",
+      "desc": "豆豆三部曲的中间一部。事业与\"出卖\"的论。",
+      "detail": [
+        "有道无术，术尚可求也。"
+      ],
+      "scene": "小说文学",
+      "link": "posts/betrayal.html"
+    },
+    {
+      "icon": "📖",
+      "title": "死比活着容易",
+      "en": "豆豆",
+      "desc": "豆豆\"闭上股找个狗\"——作者不完全照作者人设谈人生的第一本。",
+      "detail": [
+        "人出走问题是逃避的根源。"
+      ],
+      "scene": "小说文学",
+      "link": "posts/dying-easier-living.html"
+    },
+    {
+      "icon": "📖",
+      "title": "在峡江的转弯处",
+      "en": "陈行甲",
+      "desc": "陈行甲退到转身人生所有不甘。",
+      "detail": [
+        "身正不怕影子歪。"
+      ],
+      "scene": "人物随笔",
+      "link": "posts/bend-of-the-river.html"
+    },
+    {
+      "icon": "📖",
+      "title": "刚刚说过",
+      "en": "郭德纲",
+      "desc": "老郭五十写过的\"人间世\"。",
+      "detail": [
+        "江湖不是打打杀杀，江湖是人情世故。"
+      ],
+      "scene": "人物随笔",
+      "link": "posts/just-said.html"
+    },
+    {
+      "icon": "📖",
+      "title": "过得刚好",
+      "en": "郭德纲",
+      "desc": "老郭相声三十多年的人文集。",
+      "detail": [
+        "不受苦中苦，难为人上人。"
+      ],
+      "scene": "人物随笔",
+      "link": "posts/living-just-fine.html"
+    },
+    {
+      "icon": "📖",
+      "title": "郭论",
+      "en": "郭德纲",
+      "desc": "老郭真正抱着\"捡就拘了·讲德位\"的书。",
+      "detail": [
+        "说话是艺术。"
+      ],
+      "scene": "人物随笔",
+      "link": "posts/guos-discourse.html"
+    },
+    {
+      "icon": "📖",
+      "title": "心流",
+      "en": "契克森米哈赖",
+      "desc": "三十多年前的书，预见了互联网时代的\"注意力问题\"。",
+      "detail": [
+        "最优体验是心流。"
+      ],
+      "scene": "心智修炼",
+      "link": "posts/flow.html"
+    },
+    {
+      "icon": "📖",
+      "title": "禅者的初心",
+      "en": "铃木俊隆",
+      "desc": "佛门弟子讲\"开始心\"，说\"准备子在世能被联在生活中\"。",
+      "detail": [
+        "初心的意思是什么都不会。"
+      ],
+      "scene": "心智修炼",
+      "link": "posts/zen-mind-beginners-mind.html"
+    },
+    {
+      "icon": "📖",
+      "title": "贪婪的多巴胺",
+      "en": "利伯曼",
+      "desc": "拆解欲望、快乐、遗憾的脑科学书。",
+      "detail": [
+        "欲望不是快乐。"
+      ],
+      "scene": "心智修炼",
+      "link": "posts/molecule-of-more.html"
+    },
+    {
+      "icon": "📖",
+      "title": "认同自己",
+      "en": "斯塔尔",
+      "desc": "一本能读得懂的心理书。",
+      "detail": [
+        "不背扣我不。下不被别人扣就够了。"
+      ],
+      "scene": "心智修炼",
+      "link": "posts/self-acceptance.html"
+    },
+    {
+      "icon": "📖",
+      "title": "万物原理",
+      "en": "维尔切克",
+      "desc": "关于\"为什么会是这样\"的书。从\"看上去那个样\"出发。",
+      "detail": [
+        "为什么会是这样，本来只是问问题。"
+      ],
+      "scene": "心智修炼",
+      "link": "posts/fundamentals.html"
+    },
+    {
+      "icon": "📖",
+      "title": "史蒂夫·乔布斯",
+      "en": "艾萨克森",
+      "desc": "艾萨克森写乔布斯、爱因斯坦、富兰克林、达·芬奇。",
+      "detail": [
+        "努力成为一个有价值的人。"
+      ],
+      "scene": "英文原著",
+      "link": "posts/steve-jobs.html"
+    },
+    {
+      "icon": "📖",
+      "title": "马斯克之书",
+      "en": "乔根森",
+      "desc": "与其说是马斯克传记，不如说是\"用马斯克讲方法论\"。",
+      "detail": [
+        "第一性原理是一个动作。"
+      ],
+      "scene": "英文原著",
+      "link": "posts/book-of-elon.html"
+    },
+    {
+      "icon": "📖",
+      "title": "纯商业：郭令明的故事",
+      "en": "（新加坡商业传记）",
+      "desc": "新加坡酒店、百货、置业的商业家族史。",
+      "detail": [
+        "你不能变机。但你能预付。"
+      ],
+      "scene": "英文原著",
+      "link": "posts/strictly-business-kwek.html"
+    },
+    {
+      "icon": "📖",
+      "title": "纳瓦尔宝典：财富与幸福指南",
+      "en": "埃里克·乔根森",
+      "desc": "财富是睡着时还在赚钱的资产；幸福是想要自己已有的东西。把两者都当技能来练。",
+      "detail": [
+        "欲望，是你和自己签的一份合同：在得到想要的东西之前，你同意一直不快乐。"
+      ],
+      "scene": "英文原著",
+      "link": "posts/the-almanack-naval.html"
+    },
+    {
+      "icon": "📖",
+      "title": "解构 Y Combinator 的「第一性原理」与东方哲学的「不作伪」",
+      "en": "Y Combinator × 资治通鉴",
+      "desc": "硅谷撞出来的创业第一公理，翻成四个字古人早写好了：实事求是。YC 与《资治通鉴》的互证。",
+      "detail": [
+        "做人们真正需要的东西。"
+      ],
+      "scene": "访谈互证",
+      "link": "posts/yc-first-principles.html"
+    },
+    {
+      "icon": "📖",
+      "title": "狂飙与定力：从 Grant Cardone 的 10X 看东方的「借势与修身」",
+      "en": "Grant Cardone × 资治通鉴",
+      "desc": "一个靠「拒绝局部最优」垒起数十亿的高主体性操盘手——放进《资治通鉴》乱世求存的策略里对照着读。",
+      "detail": [
+        "要么痴迷，要么平庸。"
+      ],
+      "scene": "访谈互证",
+      "link": "posts/cardone-10x.html"
+    },
+    {
+      "icon": "📖",
+      "title": "常青心智模型：从 TKP 看东方的「博学而约取」",
+      "en": "The Knowledge Project × 诸子百家",
+      "desc": "为什么最会做决定的人广读、用心智模型思考——以及它如何对应「博学之，审问之」。",
+      "detail": [
+        "你脑子里得装着模型，并把经验挂到这张心智模型的格栅上。"
+      ],
+      "scene": "访谈互证",
+      "link": "posts/tkp-mindset.html"
+    }
+  ]
+}

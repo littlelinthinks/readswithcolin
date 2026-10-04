@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>readswithcolin · 智库组件展示（演示页，请勿覆盖 index.html）</title>
+<style>
+  :root{ --bg:#020617; --panel:#0b1120; --gold:#f59e0b; --gold-soft:#fbbf24; --text:#e8e6e1; --muted:#94a3b8; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;
+    -webkit-font-smoothing:antialiased; line-height:1.6; padding:32px 20px 80px; }
+  .wrap{ max-width:1100px; margin:0 auto; }
+  h1{ color:var(--gold-soft); font-size:24px; margin-bottom:6px; }
+  .sub{ color:var(--muted); font-size:13px; margin-bottom:28px; }
+  .note{ background:rgba(245,158,11,.06); border:1px solid rgba(245,158,11,.3); border-radius:12px;
+    padding:12px 16px; color:var(--muted); font-size:13px; margin-bottom:30px; }
+  .note b{ color:var(--gold-soft); }
+  h2{ color:var(--gold-soft); font-size:17px; margin:40px 0 14px; padding-left:12px; border-left:3px solid var(--gold); }
+  .essays{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; }
+  .essays a{ display:block; background:var(--panel); border:1px solid #1e293b; border-radius:14px;
+    padding:16px 18px; color:var(--text); text-decoration:none; transition:all .15s; }
+  .essays a:hover{ border-color:var(--gold); transform:translateY(-2px); }
+  .essays .n{ color:var(--gold-soft); font-size:12px; letter-spacing:.1em; }
+  .essays .t{ font-size:15px; font-weight:700; margin-top:6px; }
+  .essays .s{ color:var(--muted); font-size:12px; margin-top:6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>readswithcolin · 深度思想微型智库 · 组件展示</h1>
+  <div class="sub">这是演示页，仅用于预览组件效果。上传时<b>请勿用它覆盖你的 index.html</b>。</div>
+  <div class="note">⚠️ 底线：本包只往仓库新增 <b>components/</b>、<b>data/</b>、<b>posts/</b> 三个目录与文件，不改动你任何老代码 / 路由 / 全局样式。</div>
+
+  <h2>① 4 篇 3000 字基石长文（点击进入独立页）</h2>
+  <div class="essays">
+    <a href="posts/essay1-zizhitongjian.html"><div class="n">ESSAY 01</div><div class="t">智伯之亡与权力的复利极限</div><div class="s">《资治通鉴》· 千年决策案例库</div></a>
+    <a href="posts/essay2-jianyubuzou.html"><div class="n">ESSAY 02</div><div class="t">为什么绝大多数人学不会“见路不走”</div><div class="s">《天道 / 豆豆三部曲》</div></a>
+    <a href="posts/essay3-maoxuan.html"><div class="n">ESSAY 03</div><div class="t">实事求是与主要矛盾</div><div class="s">《毛泽东选集》</div></a>
+    <a href="posts/essay4-interviews.html"><div class="n">ESSAY 04</div><div class="t">从 YC 第一性原理到东方诸子百家</div><div class="s">《访谈互证专栏》</div></a>
+  </div>
+
+  <h2>② 42 本图书 · 思维模型网格（点开卡片看金句，按分类筛选）</h2>
+  <mental-model-latticework src="data/books-grid.json"></mental-model-latticework>
+
+  <h2>③ 暗黑金 1-3-1 闪卡导出（金句 → 朋友圈 PNG）</h2>
+  <div style="max-width:420px;margin:0 auto;">
+    <quote-card-exporter slug="zizhitongjian-zhibo-zhi-wang" src="data/pillar-essays-data.json"></quote-card-exporter>
+  </div>
+</div>
+
+<script src="components/widgets/pillar-essay-layout.js"></script>
+<script src="components/widgets/quote-card-exporter.js"></script>
+<script src="components/widgets/mental-model-latticework.js"></script>
+</body>
+</html>
