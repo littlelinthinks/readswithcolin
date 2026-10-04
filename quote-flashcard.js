@@ -130,35 +130,41 @@
     self._base = "posts/";
     return self;
   }
-  QuoteFlashcard.prototype = Object.create(HTMLElement.prototype, {
-    connectedCallback: {
-      value: function () {
-        var self = this;
-        var root = this.attachShadow({ mode: "open" });
-        root.appendChild(template.content.cloneNode(true));
+  QuoteFlashcard.prototype = Object.create(HTMLElement.prototype);
+  QuoteFlashcard.prototype.connectedCallback = function () {
+    var self = this;
+    var root = this.attachShadow({ mode: "open" });
+    root.appendChild(template.content.cloneNode(true));
 
-        var b = this.getAttribute("base");
-        if (b) this._base = b;
+    var b = this.getAttribute("base");
+    if (b) this._base = b;
 
-        this._strip = root.querySelector(".strip");
-        this._qt = root.querySelector(".qt");
-        this._full = root.querySelector(".full");
-        this._src = root.querySelector(".src");
-        this._link = root.querySelector(".read");
+    this._strip = root.querySelector(".strip");
+    this._qt = root.querySelector(".qt");
+    this._full = root.querySelector(".full");
+    this._src = root.querySelector(".src");
+    this._link = root.querySelector(".read");
 
-        this._render();
+    this._render();
 
-        // 点击横条 = 展开/收起；点链接/按钮不触发展开切换
-        this._strip.addEventListener("click", function (e) {
-          if (e.target.closest(".read") || e.target.closest(".next")) return;
-          self._strip.classList.toggle("open");
-        });
-        root.querySelector(".next").addEventListener("click", function () {
-          self._i = (self._i + 1) % CARDS.length;
-          self._render();
-        });
-      }
-    }
-  });
+    // 点击横条 = 展开/收起；点链接/按钮不触发展开切换
+    this._strip.addEventListener("click", function (e) {
+      if (e.target.closest(".read") || e.target.closest(".next")) return;
+      self._strip.classList.toggle("open");
+    });
+    root.querySelector(".next").addEventListener("click", function () {
+      self._i = (self._i + 1) % CARDS.length;
+      self._render();
+    });
+  };
+  QuoteFlashcard.prototype._render = function () {
+    var c = CARDS[this._i];
+    this._qt.textContent = c.quote;
+    this._full.textContent = "\u201C" + c.quote + "\u201D";
+    this._src.textContent = "\u2014 " + c.src;
+    this._link.href = this._base + c.slug + ".html";
+    this._link.title = c.title;
+    this._strip.classList.remove("open");
+  };
   customElements.define("quote-flashcard", QuoteFlashcard);
 })();
