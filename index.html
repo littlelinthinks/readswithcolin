@@ -630,5 +630,18 @@
 </script>
 <!-- 组件 A 脚本：删除本行即恢复原样 -->
 <script src="quote-flashcard.js"></script>
+
+<!-- ===== 深度思想微型智库 · Web Components 挂载（撤下 = 删除本段，零改老代码） ===== -->
+<script src="components/widgets/mental-model-latticework.js"></script>
+
+<section class="rwc-knowledge" style="max-width:1200px;margin:64px auto;padding:0 20px;">
+  <h2 style="text-align:center;margin:0 0 28px;">🧠 200 大跨学科思维模型 · 痛点诊所</h2>
+  <mental-model-latticework src="data/mental-models-200.json"></mental-model-latticework>
+
+  <h2 style="text-align:center;margin:72px 0 28px;">📚 35 本精选图书 · 思维模型网格</h2>
+  <mental-model-latticework src="data/books-grid.json"></mental-model-latticework>
+</section>
+<!-- ===== 智库挂载结束 ===== -->
+
 </body>
 </html>
