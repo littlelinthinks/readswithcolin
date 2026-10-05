@@ -1,167 +1,283 @@
 /**
- * <mental-model-latticework> — Colin 智库 · 思维模型网格（暗金风，数据驱动）
- * ============================================================
- * 独立组件（Web Component + Shadow DOM，零依赖，不碰老站任何代码/样式）。
- * 默认渲染内置 5 大决策网格；若提供 src 属性则异步拉取 JSON 渲染，
- * JSON 含 scenes 时自动渲染「场景过滤器」chip，点击按场景筛选项。
+ * <mental-model-latticework> — Colin 智库 · 全模式思维模型网格
+ * ====================================================================
+ * Web Component + Shadow DOM，零依赖、零编译、零样式污染。
+ * 自动识别数据源并切换渲染模式：
+ *   - data.models + data.levels  → MODELS：L1/L2/L3 三级 Tab + 搜索 + 领域胶囊 + 平滑展开【核心原理拆解】【微行动沙箱】
+ *   - data.principles           → PRINCIPLES：3 大 Tag 极速筛选 + 卡片折叠
+ *   - data.books                → BOOKS：分类胶囊 + 双语图书网格
+ *   - data.grids                → LEGACY：场景胶囊 + 卡片
+ * 含异步 fetch 与 Fallback 容错，防白屏。
  *
- * 数据格式（data/xxx.json）：
- * {
- *   "title": "思维模型网格", "en": "Mental Model Latticework",
- *   "scenes": ["全部", "投资", "创业", "决策"],          // 可选；>1 时显示过滤器
- *   "grids": [
- *     { "icon":"📖", "title":"...", "en":"...", "desc":"...",
- *       "detail":["...","..."], "scene":"投资", "link":"posts/x.html" }  // scene/link 可选
- *   ]
- * }
- *
- * 嵌入步骤（2 行代码）：
- *   1) 想放的位置放：<mental-model-latticework src="data/books-grid.json"></mental-model-latticework>
- *   2) </body> 前放：<script src="components/widgets/mental-model-latticework.js"></script>
+ * 用法：
+ *   <mental-model-latticework src="data/mental-models-200.json"></mental-model-latticework>
  */
 (function () {
   "use strict";
   if (customElements.get("mental-model-latticework")) return;
 
-  // 内置回退数据（无 src 或拉取失败时渲染）
-  var FALLBACK = {
-    title: "思维模型网格", en: "Mental Model Latticework", scenes: null, grids: [
-      { icon: "🔍", title: "认知审计", en: "Cognitive Audit", scene: "心智",
-        desc: "用卡尼曼系统 1 / 系统 2 框架，定期审计你的决策是否被直觉偏见劫持——确认偏误、锚定效应、损失厌恶。",
-        detail: ["列出近 3 个重大决定，标注哪些是「系统 1 快思考」的产物", "为每个决定补一份「反方论据清单」，强制逆向思考", "建立「延迟 24 小时再下注」的硬性冷却规则"] },
-      { icon: "⛓️", title: "因果律", en: "First Principles", scene: "决策",
-        desc: "马斯克式第一性原理：砍掉一切经验类比，直接基于物理与经济底牌推演因果链，而非套用别人走过的路。",
-        detail: ["把「别人都这么做」的所有假设单独标红、逐一推翻", "追问：去掉行业惯例后，这件事的最小可行单元是什么", "用单元经济（Unit Economics）验证能否独立存活"] },
-      { icon: "🔄", title: "系统反馈", en: "System Feedback", scene: "决策",
-        desc: "把事业与人生当成反馈系统：识别增强回路与调节回路，避免线性外推的致命错觉。",
-        detail: ["画出你的核心增强回路（投入 → 产出 → 再投入）", "找出系统中被忽略的时间延迟与滞后指标", "为关键回路设置领先指标而非只看结果"] },
-      { icon: "📜", title: "历史博弈", en: "Historical Game", scene: "投资",
-        desc: "《资治通鉴》式案例库：在他人已付过代价的史实中预演你的决策，借势与风控双修。",
-        detail: ["为每个重大决策找 1 个可对照的历史案例", "追问：我的「智伯陷阱」（杠杆过载）藏在哪里", "建立「事前剖析 Pre-mortem」复盘习惯"] },
-      { icon: "💰", title: "复利杠杆", en: "Compounding Leverage", scene: "创业",
-        desc: "Naval 式零边际成本杠杆：用代码与媒体放大认知资产，让正确的决策产生非线性回报。",
-        detail: ["把一次性劳动转化为可复用数字资产（内容 / 代码 / SOP）", "清晰区分线性收入与复利资产", "在优势赛道上持续下注，让时间成为盟友"] }
-    ]
-  };
-
   var STYLE = [
-    ":host{display:block;max-width:1100px;margin:0 auto;",
+    ":host{display:block;max-width:1180px;margin:0 auto;",
     "  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;",
-    "  --bg:#020617;--panel:#0b1120;--border:#1e293b;--gold:#f59e0b;--gold-soft:#fbbf24;",
-    "  --text:#e8e6e1;--muted:#94a3b8;}",
+    "  --bg:#020617;--panel:#0b1120;--panel2:#111827;--border:#1e293b;--gold:#f59e0b;--gold-soft:#fbbf24;",
+    "  --text:#e8e6e1;--muted:#94a3b8;--chip:#1e293b;}",
     "*{box-sizing:border-box;margin:0;padding:0;}",
-    ".wrap{padding:8px 4px;}",
-    ".head{display:flex;align-items:baseline;gap:10px;margin-bottom:14px;flex-wrap:wrap;}",
-    ".head h2{color:var(--gold-soft);font-size:18px;font-weight:700;letter-spacing:.04em;}",
-    ".head .en{color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase;}",
-    ".filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}",
-    ".chip{font-size:12.5px;color:var(--muted);border:1px solid var(--border);background:transparent;",
-    "  border-radius:999px;padding:6px 14px;cursor:pointer;transition:all .15s;}",
-    ".chip:hover{border-color:rgba(245,158,11,.5);color:var(--text);}",
-    ".chip.on{border-color:var(--gold);background:rgba(245,158,11,.14);color:var(--gold-soft);font-weight:600;}",
-    ".grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;}",
-    ".card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px;",
-    "  cursor:pointer;transition:border-color .18s ease,transform .18s ease,box-shadow .18s ease;}",
-    ".card:hover{border-color:rgba(245,158,11,.4);transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.35);}",
+    ".loading,.error{padding:40px;text-align:center;color:var(--muted);font-size:14px;}",
+    ".error{color:#fba5a5;}",
+    ".wrap{background:linear-gradient(160deg,#0b1120,#111827);border:1px solid rgba(245,158,11,.35);border-radius:20px;padding:26px;box-shadow:0 24px 60px rgba(0,0,0,.4);}",
+    ".head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:6px;}",
+    ".head h2{font-size:22px;font-weight:800;color:var(--text);}",
+    ".head .en{font-size:12px;color:var(--gold-soft);letter-spacing:.06em;}",
+    ".sub{font-size:13px;color:var(--muted);margin-bottom:16px;}",
+    /* 三级 Tab */
+    ".tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;}",
+    ".tab{cursor:pointer;border:1px solid var(--border);background:var(--chip);color:var(--muted);",
+    "  padding:9px 16px;border-radius:999px;font-size:13px;font-weight:700;transition:.15s;user-select:none;}",
+    ".tab .ic{margin-right:6px;}",
+    ".tab.on{color:#020617;background:var(--gold);border-color:var(--gold);}",
+    ".tab:hover{color:var(--text);}",
+    ".tab.on:hover{color:#020617;}",
+    ".tab .rng{opacity:.7;font-weight:500;font-size:11px;margin-left:5px;}",
+    /* 搜索与胶囊 */
+    ".bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px;}",
+    ".search{flex:1;min-width:200px;display:flex;align-items:center;gap:8px;background:var(--panel2);",
+    "  border:1px solid var(--border);border-radius:10px;padding:9px 12px;}",
+    ".search input{flex:1;background:transparent;border:none;outline:none;color:var(--text);font-size:13px;}",
+    ".search input::placeholder{color:#64748b;}",
+    ".pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}",
+    ".chip{cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--muted);",
+    "  padding:6px 12px;border-radius:999px;font-size:12px;transition:.15s;user-select:none;}",
+    ".chip.on{color:var(--gold-soft);border-color:var(--gold);background:rgba(245,158,11,.1);}",
+    ".chip:hover{color:var(--text);}",
+    /* 网格 */
+    ".grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}",
+    ".card{background:var(--panel2);border:1px solid var(--border);border-radius:14px;padding:16px;cursor:pointer;transition:.18s;}",
+    ".card:hover{border-color:var(--gold);transform:translateY(-2px);}",
     ".card.open{border-color:var(--gold);}",
     ".top{display:flex;align-items:center;gap:10px;}",
-    ".ic{font-size:22px;line-height:1;}",
-    ".t{font-size:15px;font-weight:700;color:var(--text);}",
-    ".en{font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:2px;}",
-    ".desc{color:var(--muted);font-size:12.5px;line-height:1.65;margin-top:10px;}",
-    ".detail{overflow:hidden;max-height:0;opacity:0;transition:max-height .25s ease,opacity .2s ease,margin .2s ease;}",
-    ".card.open .detail{max-height:600px;opacity:1;margin-top:12px;}",
-    ".detail ol{list-style:none;counter-reset:step;}",
-    ".detail li{counter-increment:step;position:relative;padding-left:22px;color:var(--text);font-size:12.5px;",
-    "  line-height:1.6;margin-bottom:8px;}",
-    ".detail li::before{content:counter(step);position:absolute;left:0;top:0;width:16px;height:16px;",
-    "  border-radius:50%;background:rgba(245,158,11,.15);color:var(--gold-soft);font-size:10px;",
-    "  display:flex;align-items:center;justify-content:center;font-weight:700;}",
-    ".lk{display:inline-block;margin-top:10px;color:var(--gold-soft);font-size:12.5px;font-weight:600;",
-    "  text-decoration:none;border:1px solid rgba(245,158,11,.4);border-radius:8px;padding:6px 12px;}",
-    ".lk:hover{background:rgba(245,158,11,.12);}",
-    ".chev{margin-left:auto;color:var(--muted);font-size:12px;transition:transform .2s ease;}",
-    ".card.open .chev{transform:rotate(180deg);color:var(--gold-soft);}",
-    ".loading,.error{padding:30px;text-align:center;color:var(--muted);font-size:13px;}",
-    ".error{color:#fca5a5;}"
+    ".top .ic{font-size:20px;flex:none;}",
+    ".top .tt{font-size:15.5px;font-weight:700;color:var(--text);line-height:1.4;}",
+    ".top .en{font-size:11px;color:var(--muted);margin-top:2px;}",
+    ".badge{margin-left:auto;font-size:10px;color:var(--gold-soft);border:1px solid rgba(245,158,11,.3);",
+    "  padding:3px 8px;border-radius:999px;white-space:nowrap;}",
+    ".desc{font-size:13px;color:var(--muted);line-height:1.65;margin-top:10px;}",
+    ".meta{font-size:11px;color:#64748b;margin-top:8px;}",
+    /* 展开区（平滑） */
+    ".detail{max-height:0;overflow:hidden;transition:max-height .35s ease;}",
+    ".card.open .detail{max-height:520px;}",
+    ".block{margin-top:12px;border-top:1px dashed var(--border);padding-top:11px;}",
+    ".bh{font-size:11px;font-weight:700;color:var(--gold-soft);letter-spacing:.08em;margin-bottom:5px;}",
+    ".bt{font-size:13px;color:var(--text);line-height:1.7;}",
+    ".ba{font-size:12.5px;color:var(--muted);line-height:1.7;background:rgba(245,158,11,.07);",
+    "  border-left:3px solid var(--gold);border-radius:8px;padding:9px 11px;margin-top:10px;}",
+    ".chev{transition:transform .25s;color:var(--muted);font-size:12px;}",
+    ".card.open .chev{transform:rotate(180deg);}",
+    /* 图书模式 */
+    ".book .at{font-size:13px;color:var(--muted);line-height:1.7;margin-top:6px;}",
+    ".book .au{font-size:12px;color:var(--gold-soft);margin-top:8px;}",
+    ".count{font-size:12px;color:#64748b;margin-left:auto;}",
+    ".ba b{color:var(--gold-soft);}",
+    "@media(max-width:600px){.grid{grid-template-columns:1fr;}}"
   ].join("");
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
 
-  function MentalModelLatticework() {
-    var self = Reflect.construct(HTMLElement, [], MentalModelLatticework);
-    return self;
-  }
-  MentalModelLatticework.prototype = Object.create(HTMLElement.prototype);
+  // 极简回退数据（仅防止白屏）
+  var FALLBACK = {
+    title: "思维模型", en: "Mental Models", subtitle: "",
+    levels: [{ key: "L1", label: "通用", icon: "🔹", range: "", desc: "" }],
+    domains: ["通用"],
+    models: [{ id: "x", no: "001", level: "L1", levelLabel: "通用", domain: "通用", icon: "🔹",
+      title: "示例模型", en: "Example", desc: "网络异常，已载入内置示例。", principle: "——", action: "——", tags: ["通用"] }],
+    decisionGrids: []
+  };
 
-  MentalModelLatticework.prototype.connectedCallback = function () {
-    var src = this.getAttribute("src");
+  function Lattice() { return Reflect.construct(HTMLElement, [], Lattice); }
+  Lattice.prototype = Object.create(HTMLElement.prototype);
+
+  Lattice.prototype.connectedCallback = function () {
+    var src = this.getAttribute("src") || "data/mental-models-200.json";
     var root = this.attachShadow({ mode: "open" });
     root.innerHTML = '<style>' + STYLE + '</style><div class="loading">载入思维模型网格中…</div>';
     var self = this;
-    if (!src) { render(root, FALLBACK); return; }
     fetch(src).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-      .then(function (data) { render(root, data && data.grids ? data : FALLBACK); })
+      .then(function (data) { self._render(root, data); })
       .catch(function (err) {
-        var el = root.querySelector(".loading");
-        el.className = "error";
-        el.textContent = "载入失败：" + err.message + "（将回退内置网格）";
-        render(root, FALLBACK);
+        self._render(root, FALLBACK);
+        var l = root.querySelector(".loading"); if (l) { l.className = "error"; l.textContent = "载入失败，已用内置示例：" + err.message; }
       });
   };
 
-  function render(root, data) {
-    var grids = data.grids || [];
-    var scenes = data.scenes && data.scenes.length > 1 ? data.scenes : null;
-    var head =
-      '<div class="head"><h2>' + esc(data.title || "思维模型网格") + '</h2>' +
-      '<span class="en">' + esc(data.en || "Mental Model Latticework") + '</span></div>';
-    var filters = scenes
-      ? '<div class="filters">' + scenes.map(function (s, i) {
-          return '<button class="chip' + (i === 0 ? " on" : "") + '" data-scene="' + esc(s) + '">' + esc(s) + '</button>';
-        }).join("") + '</div>'
-      : '';
-    root.innerHTML = '<style>' + STYLE + '</style><div class="wrap">' + head + filters + '<div class="grid"></div></div>';
+  Lattice.prototype._render = function (root, data) {
+    if (data.models && data.levels) return renderModels(root, data);
+    if (data.principles) return renderPrinciples(root, data);
+    if (data.books) return renderBooks(root, data);
+    if (data.grids) return renderLegacy(root, data);
+    renderModels(root, FALLBACK);
+  };
 
-    var grid = root.querySelector(".grid");
-    grids.forEach(function (g) {
-      var card = document.createElement("div");
-      card.className = "card";
-      card.setAttribute("data-scene", esc(g.scene || ""));
-      var linkHTML = g.link
-        ? '<a class="lk" href="' + esc(g.link) + '" target="_blank" rel="noopener">📖 阅读全文 →</a>'
-        : '';
-      card.innerHTML =
-        '<div class="top"><span class="ic">' + esc(g.icon || "🔹") + '</span>' +
-        '<div><div class="t">' + esc(g.title) + '</div>' + (g.en ? '<div class="en">' + esc(g.en) + '</div>' : '') + '</div>' +
-        '<span class="chev">▾</span></div>' +
-        '<div class="desc">' + esc(g.desc) + '</div>' +
-        '<div class="detail"><ol>' + (g.detail || []).map(function (d) { return '<li>' + esc(d) + '</li>'; }).join("") +
-        '</ol>' + linkHTML + '</div>';
-      card.addEventListener("click", function (e) {
-        if (e.target && e.target.closest(".lk")) return; // 点链接不触发展开
-        card.classList.toggle("open");
+  // ============ MODELS 模式 ============
+  function renderModels(root, data) {
+    var levels = data.levels || [];
+    var domains = data.domains || [];
+    var state = { level: levels[0] ? levels[0].key : null, domain: "全部", q: "" };
+
+    root.innerHTML = '<style>' + STYLE + '</style><div class="wrap">' +
+      '<div class="head"><h2>' + esc(data.title || "思维模型") + '</h2><span class="en">' + esc(data.en || "") + '</span></div>' +
+      (data.subtitle ? '<div class="sub">' + esc(data.subtitle) + '</div>' : '') +
+      (levels.length > 1 ? '<div class="tabs">' + levels.map(function (l, i) {
+        return '<span class="tab' + (i === 0 ? " on" : "") + '" data-level="' + esc(l.key) + '"><span class="ic">' + esc(l.icon || "🔹") + '</span>' + esc(l.label) + '<span class="rng">' + esc(l.range || "") + '</span></span>';
+      }).join("") + '</div>' : '') +
+      '<div class="bar"><div class="search">🔍<input type="text" placeholder="搜索模型 / 英文 / 原理 / 行动…" /></div></div>' +
+      '<div class="pills" id="pills"></div>' +
+      '<div class="grid" id="grid"></div>' +
+      '</div>';
+
+    var pillsEl = root.querySelector("#pills");
+    var gridEl = root.querySelector("#grid");
+
+    function drawPills() {
+      var p = ['<span class="chip' + (state.domain === "全部" ? " on" : "") + '" data-d="全部">全部</span>'];
+      domains.forEach(function (d) {
+        p.push('<span class="chip' + (state.domain === d ? " on" : "") + '" data-d="' + esc(d) + '">' + esc(d) + '</span>');
       });
-      grid.appendChild(card);
-    });
-
-    if (scenes) {
-      var chips = root.querySelectorAll(".chip");
-      chips.forEach(function (chip) {
-        chip.addEventListener("click", function () {
-          chips.forEach(function (c) { c.classList.remove("on"); });
-          chip.classList.add("on");
-          var scene = chip.getAttribute("data-scene");
-          root.querySelectorAll(".card").forEach(function (card) {
-            var s = card.getAttribute("data-scene");
-            card.style.display = (scene === "全部" || !scene || s === scene) ? "" : "none";
-          });
-        });
+      pillsEl.innerHTML = p.join("");
+      pillsEl.querySelectorAll(".chip").forEach(function (c) {
+        c.addEventListener("click", function () { state.domain = c.getAttribute("data-d"); drawPills(); drawGrid(); });
       });
     }
+
+    function drawGrid() {
+      var q = state.q.trim().toLowerCase();
+      var list = (data.models || []).filter(function (m) {
+        if (state.level && m.level !== state.level) return false;
+        if (state.domain !== "全部" && m.domain !== state.domain) return false;
+        if (q) {
+          var hay = (m.title + " " + (m.en || "") + " " + (m.desc || "") + " " + (m.principle || "") + " " + (m.action || "") + " " + m.tags.join(" ")).toLowerCase();
+          if (hay.indexOf(q) === -1) return false;
+        }
+        return true;
+      });
+      gridEl.innerHTML = list.map(function (m) {
+        return '<div class="card" data-id="' + esc(m.id) + '">' +
+          '<div class="top"><span class="ic">' + esc(m.icon || "🔹") + '</span><div><div class="tt">' + esc(m.title) + '</div><div class="en">' + esc(m.en || "") + '</div></div>' +
+          '<span class="badge">' + esc(m.domain) + '</span><span class="chev" style="margin-left:6px">▾</span></div>' +
+          '<div class="desc">' + esc(m.desc) + '</div>' +
+          '<div class="detail"><div class="block"><div class="bh">核心原理拆解</div><div class="bt">' + esc(m.principle) + '</div></div>' +
+          '<div class="ba"><b>微行动沙箱：</b>' + esc(m.action) + '</div></div></div>';
+      }).join("") || '<div class="desc" style="padding:20px">没有匹配的模型，换个关键词试试。</div>';
+      gridEl.querySelectorAll(".card").forEach(function (c) {
+        c.addEventListener("click", function () { c.classList.toggle("open"); });
+      });
+    }
+
+    root.querySelectorAll(".tab").forEach(function (t) {
+      t.addEventListener("click", function () {
+        root.querySelectorAll(".tab").forEach(function (x) { x.classList.remove("on"); });
+        t.classList.add("on"); state.level = t.getAttribute("data-level"); drawGrid();
+      });
+    });
+    root.querySelector(".search input").addEventListener("input", function (e) { state.q = e.target.value; drawGrid(); });
+    drawPills(); drawGrid();
   }
 
-  customElements.define("mental-model-latticework", MentalModelLatticework);
+  // ============ PRINCIPLES 模式（thecolin） ============
+  function renderPrinciples(root, data) {
+    var cats = data.categories || [];
+    var state = { cat: "all", q: "" };
+    root.innerHTML = '<style>' + STYLE + '</style><div class="wrap">' +
+      '<div class="head"><h2>' + esc(data.title || "原则系统") + '</h2><span class="en">' + esc(data.en || "") + '</span></div>' +
+      (data.subtitle ? '<div class="sub">' + esc(data.subtitle) + '</div>' : '') +
+      '<div class="bar"><div class="search">🔍<input type="text" placeholder="搜索原则 / 人物 / 行动…" /></div></div>' +
+      '<div class="pills" id="pills"></div>' +
+      '<div class="grid" id="grid"></div></div>';
+
+    var pillsEl = root.querySelector("#pills"), gridEl = root.querySelector("#grid");
+    function drawPills() {
+      var p = ['<span class="chip' + (state.cat === "all" ? " on" : "") + '" data-c="all">全部</span>'];
+      cats.forEach(function (c) { p.push('<span class="chip' + (state.cat === c.id ? " on" : "") + '" data-c="' + esc(c.id) + '">' + esc(c.name) + '</span>'); });
+      pillsEl.innerHTML = p.join("");
+      pillsEl.querySelectorAll(".chip").forEach(function (x) { x.addEventListener("click", function () { state.cat = x.getAttribute("data-c"); drawPills(); drawGrid(); }); });
+    }
+    function drawGrid() {
+      var q = state.q.trim().toLowerCase();
+      var list = (data.principles || []).filter(function (p) {
+        if (state.cat !== "all" && p.category !== state.cat) return false;
+        if (q) { var hay = (p.name + " " + (p.en || "") + " " + (p.author || "") + " " + (p.quote || "") + " " + (p.action || "")).toLowerCase(); if (hay.indexOf(q) === -1) return false; }
+        return true;
+      });
+      gridEl.innerHTML = list.map(function (p) {
+        return '<div class="card" data-id="' + esc(p.id) + '">' +
+          '<div class="top"><span class="ic">📜</span><div><div class="tt">' + esc(p.name) + '</div><div class="en">' + esc(p.en || "") + '</div></div>' +
+          '<span class="badge">' + esc(p.tag || p.category) + '</span><span class="chev" style="margin-left:6px">▾</span></div>' +
+          '<div class="desc"><b>' + esc(p.author || "") + '</b>：' + esc(p.quote) + '</div>' +
+          '<div class="detail"><div class="ba"><b>微行动：</b>' + esc(p.action) + '</div></div></div>';
+      }).join("") || '<div class="desc" style="padding:20px">没有匹配的原则。</div>';
+      gridEl.querySelectorAll(".card").forEach(function (c) { c.addEventListener("click", function () { c.classList.toggle("open"); }); });
+    }
+    root.querySelector(".search input").addEventListener("input", function (e) { state.q = e.target.value; drawGrid(); });
+    drawPills(); drawGrid();
+  }
+
+  // ============ BOOKS 模式（readswithcolin 图书网格） ============
+  function renderBooks(root, data) {
+    var cats = data.categories || [];
+    var state = { cat: "全部", q: "" };
+    root.innerHTML = '<style>' + STYLE + '</style><div class="wrap">' +
+      '<div class="head"><h2>' + esc(data.title || "图书网格") + '</h2><span class="en">' + esc(data.en || "") + '</span>' +
+      '<span class="count">' + (data.total_books || (data.books ? data.books.length : 0)) + ' 本</span></div>' +
+      (data.subtitle ? '<div class="sub">' + esc(data.subtitle) + '</div>' : '') +
+      '<div class="bar"><div class="search">🔍<input type="text" placeholder="搜索书名 / 作者 / 摘要…" /></div></div>' +
+      '<div class="pills" id="pills"></div><div class="grid" id="grid"></div></div>';
+    var pillsEl = root.querySelector("#pills"), gridEl = root.querySelector("#grid");
+    function drawPills() {
+      var p = ['<span class="chip' + (state.cat === "全部" ? " on" : "") + '" data-c="全部">全部</span>'];
+      cats.forEach(function (c) { p.push('<span class="chip' + (state.cat === c ? " on" : "") + '" data-c="' + esc(c) + '">' + esc(c) + '</span>'); });
+      pillsEl.innerHTML = p.join("");
+      pillsEl.querySelectorAll(".chip").forEach(function (x) { x.addEventListener("click", function () { state.cat = x.getAttribute("data-c"); drawPills(); drawGrid(); }); });
+    }
+    function drawGrid() {
+      var q = state.q.trim().toLowerCase();
+      var list = (data.books || []).filter(function (b) {
+        if (state.cat !== "全部" && b.category !== state.cat) return false;
+        if (q) { var hay = (b.title + " " + (b.en || "") + " " + (b.author || "") + " " + (b.summary || "")).toLowerCase(); if (hay.indexOf(q) === -1) return false; }
+        return true;
+      });
+      gridEl.innerHTML = list.map(function (b) {
+        return '<div class="card book"><div class="top"><span class="ic">📖</span><div><div class="tt">' + esc(b.title) + '</div><div class="en">' + esc(b.en || "") + '</div></div>' +
+          '<span class="badge">' + esc(b.category) + '</span></div>' +
+          '<div class="at">' + esc(b.summary || "") + '</div><div class="au">✍️ ' + esc(b.author || "") + '</div></div>';
+      }).join("") || '<div class="desc" style="padding:20px">没有匹配的图书。</div>';
+    }
+    root.querySelector(".search input").addEventListener("input", function (e) { state.q = e.target.value; drawGrid(); });
+    drawPills(); drawGrid();
+  }
+
+  // ============ LEGACY 模式 ============
+  function renderLegacy(root, data) {
+    var scenes = data.scenes || [];
+    var state = { scene: scenes[0] || "全部", q: "" };
+    root.innerHTML = '<style>' + STYLE + '</style><div class="wrap">' +
+      '<div class="head"><h2>' + esc(data.title || "网格") + '</h2><span class="en">' + esc(data.en || "") + '</span></div>' +
+      '<div class="pills" id="pills"></div><div class="grid" id="grid"></div></div>';
+    var pillsEl = root.querySelector("#pills"), gridEl = root.querySelector("#grid");
+    function drawPills() {
+      var all = ["全部"].concat(scenes);
+      pillsEl.innerHTML = all.map(function (s) { return '<span class="chip' + (state.scene === s ? " on" : "") + '" data-s="' + esc(s) + '">' + esc(s) + '</span>'; }).join("");
+      pillsEl.querySelectorAll(".chip").forEach(function (x) { x.addEventListener("click", function () { state.scene = x.getAttribute("data-s"); drawPills(); drawGrid(); }); });
+    }
+    function drawGrid() {
+      var list = (data.grids || []).filter(function (g) { return state.scene === "全部" || g.scene === state.scene; });
+      gridEl.innerHTML = list.map(function (g) {
+        var detail = (g.detail || []).map(function (d) { return '<li>' + esc(d) + '</li>'; }).join("");
+        return '<div class="card"><div class="top"><span class="ic">' + esc(g.icon || "🔹") + '</span><div><div class="tt">' + esc(g.title) + '</div><div class="en">' + esc(g.en || "") + '</div></div></div>' +
+          '<div class="desc">' + esc(g.desc) + '</div>' + (detail ? '<div class="detail" style="max-height:520px"><div class="block"><ol class="bt" style="padding-left:18px">' + detail + '</ol></div></div>' : '') + '</div>';
+      }).join("") || '<div class="desc" style="padding:20px">暂无内容。</div>';
+    }
+    drawPills(); drawGrid();
+  }
+
+  customElements.define("mental-model-latticework", Lattice);
 })();
