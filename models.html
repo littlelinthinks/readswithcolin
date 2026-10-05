@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>200 跨学科思维模型智库 · readswithcolin</title>
+  <meta name="description" content="200 大跨学科思维模型 · 痛点诊所 · 阶梯付费墙 · 35 本精选图书。先选一个你最痛的问题，直达匹配的模型与案例。" />
+  <style>
+    body{margin:0;background:#020617;color:#e8e6e1;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;}
+    .top{max-width:1180px;margin:0 auto;padding:34px 20px 6px;}
+    .top h1{font-size:26px;font-weight:800;color:#fbbf24;margin:0 0 6px;}
+    .top a{color:#94a3b8;text-decoration:none;font-size:13px;}
+    .top a:hover{color:#fbbf24;}
+    .sec{max-width:1180px;margin:30px auto;padding:0 20px;}
+    .sec h2{font-size:20px;color:#e8e6e1;margin:0 0 4px;}
+    .sec .hint{font-size:13px;color:#94a3b8;margin-bottom:12px;}
+  </style>
+</head>
+<body>
+  <div class="top">
+    <h1>📚 200 跨学科思维模型智库</h1>
+    <a href="/index.html">← 返回首页</a>
+  </div>
+
+  <section class="sec">
+    <h2>🔍 痛点诊所 · 200 大思维模型</h2>
+    <div class="hint">下拉选择你最痛的问题 → 直达匹配模型；🟢 L1 免费公开，🔵 L2 ￥29.9，🟣 L3 ￥49.9 阶梯解锁。</div>
+    <script src="components/widgets/mental-model-latticework.js"></script>
+    <mental-model-latticework src="/data/mental-models-200-v7-tiered.json"></mental-model-latticework>
+  </section>
+
+  <section class="sec">
+    <h2>📖 35 本精选图书 · 思维模型网格</h2>
+    <div class="hint">点击图书卡片 → 右侧滑出深度抽屉（3-5 条感悟、关联模型、购书/专栏跳转）。</div>
+    <mental-model-latticework src="/data/books-grid-35-v3.json"></mental-model-latticework>
+  </section>
+
+  <footer style="text-align:center;color:#475569;font-size:12px;padding:40px 20px;">© readswithcolin · 深度思想微型智库</footer>
+</body>
+</html>
