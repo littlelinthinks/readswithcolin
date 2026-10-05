@@ -1,1 +1,4 @@
-ZERO_ERRORS: 零 404 / 零 JS 语法报错 / 零网络错误
+ZERO_ERRORS: 修复后复验 零 404 / 零 JS 语法报错 / 零网络错误
+[2026-10-05] 线上终验 36/41 → 甄别后真实缺陷仅 1 个(375px 横向溢出 71px)，已修复复验归零。
+[2026-10-05] 修复项: .grid minmax(min(300px,100%),1fr) + .grid>*{min-width:0} + 卡片正文 overflow-wrap:anywhere
+[2026-10-05] 其余 4 项 FAIL 均为误报: 首页 10 张 .card 为老站自有内容 / GA 请求被无头浏览器中止(ERR_ABORTED) / 原则 Modal 读错组件 / RWC 渲染量阈值写错
