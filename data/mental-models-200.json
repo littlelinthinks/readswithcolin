@@ -1,3527 +1,2223 @@
 {
-  "title": "200 大跨学科思维模型",
-  "en": "200 Interdisciplinary Mental Models",
-  "subtitle": "从职场精英到终极算法的全量认知网格",
-  "levels": [
+  "total_count": 200,
+  "system_name": "Colin 200 跨学科思维模型与全能智脑系统",
+  "categories": [
     {
-      "key": "L1",
-      "label": "职场精英",
-      "icon": "🟢",
-      "range": "01–50",
-      "desc": "立身之本：沟通、效率、习惯、职业与协作的通用硬技能。"
+      "tier": "L1 职场精英包",
+      "count": 50,
+      "focus": "个人效率、逻辑表达、时间管理、决策预检"
     },
     {
-      "key": "L2",
-      "label": "商业实战",
-      "icon": "🔵",
-      "range": "51–150",
-      "desc": "破局之刃：战略、增长、定价、产品、组织与资本的系统方法。"
+      "tier": "L2 商业实战智库",
+      "count": 100,
+      "focus": "人性弱点利用、定价艺术、护城河构建、商业博弈"
     },
     {
-      "key": "L3",
-      "label": "终极算法",
-      "icon": "🟣",
-      "range": "151–200",
-      "desc": "底层之熵：第一性原理、系统、博弈、概率与认知的元算法。"
+      "tier": "L3 全能智脑系统",
+      "count": 50,
+      "focus": "现实非连续性、系统崩溃临界点、不确定性终极算法"
     }
-  ],
-  "domains": [
-    "习惯",
-    "产品",
-    "人际",
-    "会议",
-    "决策",
-    "出海",
-    "创新",
-    "协作",
-    "博弈",
-    "历史",
-    "合规",
-    "品牌",
-    "哲学",
-    "增长",
-    "学习",
-    "定价",
-    "并购",
-    "情绪",
-    "战略",
-    "效率",
-    "数学",
-    "数据",
-    "沟通",
-    "用户",
-    "知识产权",
-    "科学",
-    "竞争",
-    "第一性原理",
-    "系统",
-    "组合",
-    "组织",
-    "经济",
-    "职业",
-    "节奏",
-    "营销",
-    "融资",
-    "认知",
-    "谈判",
-    "财务",
-    "运营",
-    "退出",
-    "销售",
-    "风险"
   ],
   "models": [
     {
-      "id": "L1-001",
-      "no": "001",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "沟通",
-      "icon": "💬",
-      "title": "非暴力沟通",
-      "en": "NVC",
-      "desc": "区分观察、感受、需要、请求四步，把评判包装成事实会触发防御。",
-      "principle": "先说观察到的客观事实，再讲感受与需要，最后提具体请求。",
-      "action": "下次冲突先说「我观察到…我感到…因为我需要…」。",
-      "tags": [
-        "沟通",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-002",
-      "no": "002",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "沟通",
-      "icon": "💬",
-      "title": "金字塔原理",
-      "en": "Pyramid",
-      "desc": "结论先行、以上统下、归类分组，让表达一击即中。",
-      "principle": "任何表达先抛核心结论，再用 MECE 论据支撑。",
-      "action": "写报告先写一句话结论，再列 3 个支撑点。",
-      "tags": [
-        "沟通",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-003",
-      "no": "003",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "沟通",
-      "icon": "💬",
-      "title": "乔哈里窗",
-      "en": "Johari Window",
-      "desc": "用公开/盲点/隐藏/未知四象限管理自我暴露与反馈。",
-      "principle": "主动求反馈缩小盲点，适度暴露缩小隐藏区。",
-      "action": "本周请一位同事指出你的一个盲点。",
-      "tags": [
-        "沟通",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-004",
-      "no": "004",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "沟通",
-      "icon": "💬",
-      "title": "积极倾听",
-      "en": "Active Listening",
-      "desc": "倾听是为理解而非反驳，复述确认才是真听见。",
-      "principle": "听完先复述对方要点再回应，延迟评判。",
-      "action": "下次对话用「你的意思是…」复述一次。",
-      "tags": [
-        "沟通",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-005",
-      "no": "005",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "沟通",
-      "icon": "💬",
-      "title": "三明治反馈",
-      "en": "Feedback Sandwich",
-      "desc": "把批评夹在认可与期待之间，降低对方防御。",
-      "principle": "肯定+建议+鼓励的结构让坏消息可吞下。",
-      "action": "给下属反馈先说一个具体优点。",
-      "tags": [
-        "沟通",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-006",
-      "no": "006",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "效率",
-      "icon": "⏱️",
-      "title": "GTD 搞定",
-      "en": "GTD",
-      "desc": "大脑用来思考不是记忆，把任务外置清空工作记忆。",
-      "principle": "收集-厘清-组织-回顾-执行五步运转。",
-      "action": "把所有待办写进一个收件箱逐一分类。",
-      "tags": [
-        "效率",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-007",
-      "no": "007",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "效率",
-      "icon": "⏱️",
-      "title": "两分钟法则",
-      "en": "2-Minute Rule",
-      "desc": "两分钟内能做完的事立刻做比记录更省。",
-      "principle": "小任务当场解决，避免清单膨胀。",
-      "action": "看到两分钟内能完的事立即执行。",
-      "tags": [
-        "效率",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-008",
-      "no": "008",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "效率",
-      "icon": "⏱️",
-      "title": "时间块",
-      "en": "Time Blocking",
-      "desc": "把任务放进固定时段，日历是承诺清单是愿望。",
-      "principle": "给高价值任务预约不可侵占的时间块。",
-      "action": "明天划出两块 90 分钟深度时段。",
-      "tags": [
-        "效率",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-009",
-      "no": "009",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "效率",
-      "icon": "⏱️",
-      "title": "吃掉青蛙",
-      "en": "Eat the Frog",
-      "desc": "一天精力峰值留给最具杠杆的难题。",
-      "principle": "先做最难最重要的事，余下顺势而走。",
-      "action": "明早第一件事处理最大难题。",
-      "tags": [
-        "效率",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-010",
-      "no": "010",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "效率",
-      "icon": "⏱️",
-      "title": "帕金森定律",
-      "en": "Parkinson's Law",
-      "desc": "工作会膨胀填满所给时间。",
-      "principle": "给任务设更短期限压缩浪费。",
-      "action": "把一个任务的期限砍掉三分之一。",
-      "tags": [
-        "效率",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-011",
-      "no": "011",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "职业",
-      "icon": "🧭",
-      "title": "刻意练习",
-      "en": "Deliberate Practice",
-      "desc": "舒适区外、即时反馈、针对弱点的练习才长能力。",
-      "principle": "重复不等于进步，瞄准弱点才有提升。",
-      "action": "找出一项技能的最弱环节专项训练。",
-      "tags": [
-        "职业",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-012",
-      "no": "012",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "职业",
-      "icon": "🧭",
-      "title": "能力圈复利",
-      "en": "Circle Compounding",
-      "desc": "把时间押在能复利的核心能力而非样样通。",
-      "principle": "在擅长领域持续积累非线性回报。",
-      "action": "列出三项值得十年深耕的能力。",
-      "tags": [
-        "职业",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-013",
-      "no": "013",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "职业",
-      "icon": "🧭",
-      "title": "导师杠杆",
-      "en": "Mentor Leverage",
-      "desc": "别人十年踩的坑，一顿饭就能绕开。",
-      "principle": "主动向有结果者请教，缩短试错。",
-      "action": "本月约一位行业前辈深谈。",
-      "tags": [
-        "职业",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-014",
-      "no": "014",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "职业",
-      "icon": "🧭",
-      "title": "个人品牌",
-      "en": "Personal Brand",
-      "desc": "别人提起你时想到的那个词，就是你的品牌。",
-      "principle": "持续输出专业内容，让机会主动找你。",
-      "action": "选定一个标签，每月产出相关内容。",
-      "tags": [
-        "职业",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-015",
-      "no": "015",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "职业",
-      "icon": "🧭",
-      "title": "错位竞争",
-      "en": "Blue Ocean",
-      "desc": "在无人争夺的窄处建立优势，避开红海。",
-      "principle": "避开拥挤赛道，创造新价值曲线。",
-      "action": "找一个对手不屑做的细分切口。",
-      "tags": [
-        "职业",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-016",
-      "no": "016",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "习惯",
-      "icon": "🔁",
-      "title": "习惯回路",
-      "en": "Habit Loop",
-      "desc": "提示-渴求-反应-奖赏四步成习惯。",
-      "principle": "设计环境提示让好习惯零摩擦。",
-      "action": "把想养成的习惯绑定既有日常。",
-      "tags": [
-        "习惯",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-017",
-      "no": "017",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "习惯",
-      "icon": "🔁",
-      "title": "微习惯",
-      "en": "Tiny Habits",
-      "desc": "小到不可能失败的行动才能启动改变。",
-      "principle": "从两分钟甚至更小的动作开始。",
-      "action": "每天只读一页书作为起点。",
-      "tags": [
-        "习惯",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-018",
-      "no": "018",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "习惯",
-      "icon": "🔁",
-      "title": "身份认同",
-      "en": "Identity",
-      "desc": "行为改变始于「我是谁」的重新定义。",
-      "principle": "用身份宣言驱动习惯而非靠意志。",
-      "action": "把目标改成「我是…的人」句式。",
-      "tags": [
-        "习惯",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-019",
-      "no": "019",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "习惯",
-      "icon": "🔁",
-      "title": "习惯叠加",
-      "en": "Habit Stacking",
-      "desc": "绑在已有习惯之后自动触发新习惯。",
-      "principle": "用「做完 X 就做 Y」锚定新习惯。",
-      "action": "刷牙后立刻冥想两分钟。",
-      "tags": [
-        "习惯",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-020",
-      "no": "020",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "人际",
-      "icon": "🤝",
-      "title": "互惠原则",
-      "en": "Reciprocity",
-      "desc": "先给予不记账，人脉是给出来的不是要来的。",
-      "principle": "价值交换是关系基底，单方面索取会透支。",
-      "action": "每周做一次无条件的小帮助。",
-      "tags": [
-        "人际",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-021",
-      "no": "021",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "人际",
-      "icon": "🤝",
-      "title": "关键对话",
-      "en": "Crucial Conversation",
-      "desc": "高 stakes 的对话先处理情绪再谈事实。",
-      "principle": "越重要的话越要好好说，回避成本更高。",
-      "action": "48 小时内处理一个拖延的冲突。",
-      "tags": [
-        "人际",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-022",
-      "no": "022",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "人际",
-      "icon": "🤝",
-      "title": "温柔边界",
-      "en": "Boundaries",
-      "desc": "取悦所有人等于背叛自己，温柔而坚定守界。",
-      "principle": "用不抱歉的方式拒绝不合理请求。",
-      "action": "本周对一件不合理请求说「不」。",
-      "tags": [
-        "人际",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-023",
-      "no": "023",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "人际",
-      "icon": "🤝",
-      "title": "向上管理",
-      "en": "Managing Up",
-      "desc": "把老板当最重要的客户去经营。",
-      "principle": "主动同步进度、管理预期、减少惊吓。",
-      "action": "每周给上级发一条三行进度简报。",
-      "tags": [
-        "人际",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-024",
-      "no": "024",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "认知",
-      "icon": "🧠",
-      "title": "成长型思维",
-      "en": "Growth Mindset",
-      "desc": "能力可通过努力增长而非固定不变。",
-      "principle": "把失败重定义为学习数据。",
-      "action": "犯错后写一句「我学到了…」。",
-      "tags": [
-        "认知",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-025",
-      "no": "025",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "认知",
-      "icon": "🧠",
-      "title": "元认知",
-      "en": "Metacognition",
-      "desc": "监视自己的思考过程，识别偏差。",
-      "principle": "决策时抽离旁观，给思维装监视器。",
-      "action": "重大决定前写一段思路快照。",
-      "tags": [
-        "认知",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-026",
-      "no": "026",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "认知",
-      "icon": "🧠",
-      "title": "确认偏误",
-      "en": "Confirmation Bias",
-      "desc": "人只信愿意信的，主动寻找反证是超能力。",
-      "principle": "为每观点找反例，邀请反对者。",
-      "action": "给每个结论列一个相反证据。",
-      "tags": [
-        "认知",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-027",
-      "no": "027",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "情绪",
-      "icon": "🌊",
-      "title": "情绪命名",
-      "en": "Name It",
-      "desc": "说出情绪即降伏一半，命名让杏仁核降温。",
-      "principle": "用精确词汇描述当下情绪。",
-      "action": "用三个词描述此刻的情绪。",
-      "tags": [
-        "情绪",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-028",
-      "no": "028",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "情绪",
-      "icon": "🌊",
-      "title": "认知重构",
-      "en": "Reframing",
-      "desc": "事实不变，框架一换意义全变，掌握解释权。",
-      "principle": "负面事件强制生成两种积极重释。",
-      "action": "把一件糟心事重讲成两个版本。",
-      "tags": [
-        "情绪",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-029",
-      "no": "029",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "情绪",
-      "icon": "🌊",
-      "title": "ABC 情绪观",
-      "en": "ABC Model",
-      "desc": "事件 A-信念 B-后果 C，改变 B 即改变 C。",
-      "principle": "伤害我们的不是事件而是其解读。",
-      "action": "焦虑时写下触发信念并反驳。",
-      "tags": [
-        "情绪",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-030",
-      "no": "030",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "学习",
-      "icon": "📚",
-      "title": "费曼技巧",
-      "en": "Feynman",
-      "desc": "讲不清说明没真懂，输出倒逼结构化。",
-      "principle": "用小白语言复述概念找盲区。",
-      "action": "把刚学的概念讲给外行听。",
-      "tags": [
-        "学习",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-031",
-      "no": "031",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "学习",
-      "icon": "📚",
-      "title": "间隔重复",
-      "en": "Spaced Repetition",
-      "desc": "在遗忘点上复习胜过十次突击。",
-      "principle": "记忆对抗熵增需要定时巩固。",
-      "action": "用 1/3/7/21 天节点复习。",
-      "tags": [
-        "学习",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-032",
-      "no": "032",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "学习",
-      "icon": "📚",
-      "title": "主题阅读",
-      "en": "Syntopic Reading",
-      "desc": "一个主题连读多本互证，观点碰撞长判断。",
-      "principle": "围绕主题读五本做对照笔记。",
-      "action": "选主题读 5 本并输出综述。",
-      "tags": [
-        "学习",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-033",
-      "no": "033",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "学习",
-      "icon": "📚",
-      "title": "输出倒逼",
-      "en": "Output First",
-      "desc": "只输入不输出等于没学，固定输出频率。",
-      "principle": "用每周一篇倒逼消化。",
-      "action": "每周写一条学习总结。",
-      "tags": [
-        "学习",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-034",
-      "no": "034",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "协作",
-      "icon": "🧩",
-      "title": "RACI 分工",
-      "en": "RACI",
-      "desc": "明确谁负责/批准/咨询/知会，模糊即无人负责。",
-      "principle": "给团队任务画责任矩阵。",
-      "action": "为本季度项目画 RACI 图。",
-      "tags": [
-        "协作",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-035",
-      "no": "035",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "协作",
-      "icon": "🧩",
-      "title": "心理安全感",
-      "en": "Psych Safety",
-      "desc": "团队敢说真话才算高效，允错不罚创新涌。",
-      "principle": "在会上先公开承认自己的错误。",
-      "action": "建一个容错复盘机制。",
-      "tags": [
-        "协作",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-036",
-      "no": "036",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "协作",
-      "icon": "🧩",
-      "title": "会议成本",
-      "en": "Meeting Cost",
-      "desc": "人数×时薪×时间是真金白银，能异步不聚会。",
-      "principle": "估算会议成本并设置议程。",
-      "action": "给下次会议标上金额与议程。",
-      "tags": [
-        "协作",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-037",
-      "no": "037",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "协作",
-      "icon": "🧩",
-      "title": "决策授权",
-      "en": "Decision Rights",
-      "desc": "谁拍板比谁参与更重要，明确决策权。",
-      "principle": "列出三类决策各自归属避免推诿。",
-      "action": "写清团队三类决策归属。",
-      "tags": [
-        "协作",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-038",
-      "no": "038",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "会议",
-      "icon": "📋",
-      "title": "六页备忘录",
-      "en": "6-Page Memo",
-      "desc": "用备忘录替代 PPT 强制深度思考。",
-      "principle": "写作是思考外化，只读不聊。",
-      "action": "下次提案先写六页 memo。",
-      "tags": [
-        "会议",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-039",
-      "no": "039",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "会议",
-      "icon": "📋",
-      "title": "站立会",
-      "en": "Standup",
-      "desc": "短时同步阻塞项而非汇报进度。",
-      "principle": "15 分钟站会只说进展阻塞计划。",
-      "action": "把周会拆成每日 15 分钟站会。",
-      "tags": [
-        "会议",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-040",
-      "no": "040",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "职业",
-      "icon": "🧭",
-      "title": "简历价值",
-      "en": "Resume Value",
-      "desc": "以长期资产而非短期舒适做选择。",
-      "principle": "用「十年后简历」滤镜审视机会。",
-      "action": "用十年简历视角筛当前机会。",
-      "tags": [
-        "职业",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-041",
-      "no": "041",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "效率",
-      "icon": "⏱️",
-      "title": "精力管理",
-      "en": "Energy Mgmt",
-      "desc": "产出=时间×精力质量，管精力高维。",
-      "principle": "把高难任务排在精力峰值段。",
-      "action": "记录自己的精力高峰时段。",
-      "tags": [
-        "效率",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-042",
-      "no": "042",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "人际",
-      "icon": "🤝",
-      "title": "弱关系",
-      "en": "Weak Ties",
-      "desc": "新机会多来自弱连接，同温层内卷。",
-      "principle": "每月联系两位久未联络的人。",
-      "action": "本月重启两个弱关系。",
-      "tags": [
-        "人际",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-043",
-      "no": "043",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "认知",
-      "icon": "🧠",
-      "title": "邓宁效应",
-      "en": "Dunning-Kruger",
-      "desc": "无知者最自信，专家常怀疑，承认不懂是起点。",
-      "principle": "对新领域先承认不懂再学。",
-      "action": "接触新领域先列未知清单。",
-      "tags": [
-        "认知",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-044",
-      "no": "044",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "习惯",
-      "icon": "🔁",
-      "title": "环境设计",
-      "en": "Environment",
-      "desc": "改变环境比改变意志容易，让好习惯显眼。",
-      "principle": "让好习惯近手、坏习惯费力。",
-      "action": "把手机移出卧室。",
-      "tags": [
-        "习惯",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-045",
-      "no": "045",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "沟通",
-      "icon": "💬",
-      "title": "故事思维",
-      "en": "Storytelling",
-      "desc": "人记故事不记数据，叙事承载观点。",
-      "principle": "用故事开头替代干巴巴结论。",
-      "action": "把汇报开头改成一句故事。",
-      "tags": [
-        "沟通",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-046",
-      "no": "046",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "职业",
-      "icon": "🧭",
-      "title": "第二曲线",
-      "en": "Second Curve",
-      "desc": "在巅峰期布局下一条增长曲线。",
-      "principle": "第一条曲线见顶前启动第二条。",
-      "action": "列出一项十年后爆发的副线。",
-      "tags": [
-        "职业",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-047",
-      "no": "047",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "效率",
-      "icon": "⏱️",
-      "title": "二八法则",
-      "en": "Pareto 80/20",
-      "desc": "20% 投入产出 80% 结果，找到杠杆点。",
-      "principle": "圈出本周最有产出的两成动作。",
-      "action": "每周复盘 80/20 分布。",
-      "tags": [
-        "效率",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-048",
-      "no": "048",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "情绪",
-      "icon": "🌊",
-      "title": "正念觉察",
-      "en": "Mindfulness",
-      "desc": "对当下不加评判的觉察，切断自动反应。",
-      "principle": "每天三分钟专注呼吸。",
-      "action": "设一个每日呼吸提醒。",
-      "tags": [
-        "情绪",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-049",
-      "no": "049",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "学习",
-      "icon": "📚",
-      "title": "知识树",
-      "en": "Knowledge Tree",
-      "desc": "先搭骨架再填叶，结构化远胜碎片。",
-      "principle": "用一页纸画出新领域框架。",
-      "action": "学新东西先画框架图。",
-      "tags": [
-        "学习",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L1-050",
-      "no": "050",
-      "level": "L1",
-      "levelLabel": "职场精英",
-      "domain": "学习",
-      "icon": "📚",
-      "title": "复盘习惯",
-      "en": "After-Action",
-      "desc": "不经复盘的经验只是经历，三问提炼可复用结论。",
-      "principle": "项目后 48 小时内复盘。",
-      "action": "问目标结果与改进并归档。",
-      "tags": [
-        "学习",
-        "职场精英"
-      ]
-    },
-    {
-      "id": "L2-051",
-      "no": "051",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "战略",
-      "icon": "♟️",
-      "title": "波特五力",
-      "en": "Five Forces",
-      "desc": "从竞争/进入/替代/买方/供方五维看行业利润。",
-      "principle": "利润被五种力量共同挤压。",
-      "action": "画出行业五力图找薄弱点。",
-      "tags": [
-        "战略",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-052",
-      "no": "052",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "战略",
-      "icon": "♟️",
-      "title": "护城河",
-      "en": "Moat",
-      "desc": "结构性壁垒抵御竞争，而非一时流量。",
-      "principle": "网络效应/转换成本/规模/品牌才是真壁垒。",
-      "action": "识别你的一条结构性护城河。",
-      "tags": [
-        "战略",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-053",
-      "no": "053",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "战略",
-      "icon": "♟️",
-      "title": "SWOT",
-      "en": "SWOT",
-      "desc": "内外部优劣势机遇威胁系统扫描。",
-      "principle": "战略始于诚实自我与外部审视。",
-      "action": "为项目做一次 SWOT。",
-      "tags": [
-        "战略",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-054",
-      "no": "054",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "战略",
-      "icon": "♟️",
-      "title": "蓝海战略",
-      "en": "Blue Ocean",
-      "desc": "创造无竞争的新价值曲线。",
-      "principle": "价值创新同时降本与增异。",
-      "action": "找被行业忽视的客户痛点。",
-      "tags": [
-        "战略",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-055",
-      "no": "055",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "战略",
-      "icon": "♟️",
-      "title": "核心竞争力",
-      "en": "Core Competence",
-      "desc": "别人难模仿、能多场景复用的能力。",
-      "principle": "做最擅长且市场需要的。",
-      "action": "列出两项不可复制的能力。",
-      "tags": [
-        "战略",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-056",
-      "no": "056",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "战略",
-      "icon": "♟️",
-      "title": "增长飞轮",
-      "en": "Flywheel",
-      "desc": "业务自增强循环，积累动量。",
-      "principle": "每一步推动下一步形成闭环。",
-      "action": "画出你的增长飞轮。",
-      "tags": [
-        "战略",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-057",
-      "no": "057",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "战略",
-      "icon": "♟️",
-      "title": "定位理论",
-      "en": "Positioning",
-      "desc": "在用户心智中占据一个词。",
-      "principle": "竞争发生在心智而非市场。",
-      "action": "写出品牌的那一个词。",
-      "tags": [
-        "战略",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-058",
-      "no": "058",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "战略",
-      "icon": "♟️",
-      "title": "三种基本战略",
-      "en": "Generic",
-      "desc": "成本领先/差异化/聚焦，骑墙最危险。",
-      "principle": "必须选一种主战略。",
-      "action": "确认你的主战略不骑墙。",
-      "tags": [
-        "战略",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-059",
-      "no": "059",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "战略",
-      "icon": "♟️",
-      "title": "波士顿矩阵",
-      "en": "BCG",
-      "desc": "明星现金牛问题瘦狗分类配置资源。",
-      "principle": "用现金牛养明星。",
-      "action": "把业务按四象限分类。",
-      "tags": [
-        "战略",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-060",
-      "no": "060",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "战略",
-      "icon": "♟️",
-      "title": "价值主张",
-      "en": "Value Prop",
-      "desc": "清晰说明你为客户消除什么痛点。",
-      "principle": "差异化价值是获客内核。",
-      "action": "重写一句话价值主张。",
-      "tags": [
-        "战略",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-061",
-      "no": "061",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "增长",
-      "icon": "📈",
-      "title": "AARRR 漏斗",
-      "en": "Pirate Metrics",
-      "desc": "获取激活留存变现推荐五环节管理增长。",
-      "principle": "全漏斗找最大漏洞。",
-      "action": "画出漏斗并标流失。",
-      "tags": [
-        "增长",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-062",
-      "no": "062",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "增长",
-      "icon": "📈",
-      "title": "北极星指标",
-      "en": "North Star",
-      "desc": "全公司唯一对齐的增长指标。",
-      "principle": "多目标等于无目标。",
-      "action": "选定一个代理指标对齐全员。",
-      "tags": [
-        "增长",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-063",
-      "no": "063",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "增长",
-      "icon": "📈",
-      "title": "留存曲线",
-      "en": "Retention",
-      "desc": "留存趋平才是 PMF。",
-      "principle": "增长可买留存骗不了人。",
-      "action": "画同期群留存曲线。",
-      "tags": [
-        "增长",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-064",
-      "no": "064",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "增长",
-      "icon": "📈",
-      "title": "A/B 测试",
-      "en": "A/B Test",
-      "desc": "用对照实验替代主观争论。",
-      "principle": "让数据仲裁设计。",
-      "action": "对关键页面跑一个 A/B。",
-      "tags": [
-        "增长",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-065",
-      "no": "065",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "增长",
-      "icon": "📈",
-      "title": "同期群",
-      "en": "Cohort",
-      "desc": "按时间分组看真实留存。",
-      "principle": "总体指标会掩盖分层真相。",
-      "action": "做一份 cohorts 表。",
-      "tags": [
-        "增长",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-066",
-      "no": "066",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "增长",
-      "icon": "📈",
-      "title": "钩子模型",
-      "en": "Hook",
-      "desc": "触发-行动-奖励-投入的上瘾循环。",
-      "principle": "让用户自愿回来。",
-      "action": "检查产品是否形成回路。",
-      "tags": [
-        "增长",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-067",
-      "no": "067",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "增长",
-      "icon": "📈",
-      "title": "病毒系数",
-      "en": "K-Factor",
-      "desc": "K>1 才能自传播指数增长。",
-      "principle": "每位用户带来超 1 个新用户才裂变。",
-      "action": "设计值得分享的邀请机制。",
-      "tags": [
-        "增长",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-068",
-      "no": "068",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "增长",
-      "icon": "📈",
-      "title": "内容复利",
-      "en": "Content",
-      "desc": "内容是 24 小时在岗销售员。",
-      "principle": "内容资产比投放长寿。",
-      "action": "建立长尾内容库。",
-      "tags": [
-        "增长",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-069",
-      "no": "069",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "增长",
-      "icon": "📈",
-      "title": "口碑引擎",
-      "en": "WOM",
-      "desc": "超预期才被谈论，设计可分享瞬间。",
-      "principle": "放大产品的 Aha 时刻。",
-      "action": "给产品加一个惊喜彩蛋。",
-      "tags": [
-        "增长",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-070",
-      "no": "070",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "增长",
-      "icon": "📈",
-      "title": "增长黑客",
-      "en": "Growth Hacking",
-      "desc": "用工程化手段低成本增长。",
-      "principle": "实验驱动快速迭代。",
-      "action": "列 10 个低成本增长实验。",
-      "tags": [
-        "增长",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-071",
-      "no": "071",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "增长",
-      "icon": "📈",
-      "title": "渠道先行",
-      "en": "Distribution",
-      "desc": "渠道没想清别开工，酒香也怕巷子深。",
-      "principle": "先测一个渠道 CAC。",
-      "action": "先验证获客路径。",
-      "tags": [
-        "增长",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-072",
-      "no": "072",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "增长",
-      "icon": "📈",
-      "title": "转化优化",
-      "en": "CRO",
-      "desc": "小幅持续优化转化率。",
-      "principle": "转化率是系统工程。",
-      "action": "优化落地页首屏。",
-      "tags": [
-        "增长",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-073",
-      "no": "073",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "营销",
-      "icon": "📣",
-      "title": "市场细分",
-      "en": "Segmentation",
-      "desc": "把市场切成可攻的细分人群。",
-      "principle": "讨好所有人等于讨好无人。",
-      "action": "选定一个细分深耕。",
-      "tags": [
-        "营销",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-074",
-      "no": "074",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "营销",
-      "icon": "📣",
-      "title": "用户画像",
-      "en": "Persona",
-      "desc": "具象化目标用户，模糊用户做不出好产品。",
-      "principle": "写一份真实 persona。",
-      "action": "为产品写一份 persona。",
-      "tags": [
-        "营销",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-075",
-      "no": "075",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "营销",
-      "icon": "📣",
-      "title": "JTBD 需求",
-      "en": "Jobs To Be Done",
-      "desc": "用户雇产品完成某个进步任务。",
-      "principle": "卖的是进步而非功能。",
-      "action": "写下用户雇你的任务。",
-      "tags": [
-        "营销",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-076",
-      "no": "076",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "营销",
-      "icon": "📣",
-      "title": "痛点爽点痒点",
-      "en": "Pain/Gain/Itch",
-      "desc": "三类需求对应省钱、即时满足与社交。",
-      "principle": "标注产品打的是哪一点。",
-      "action": "标清产品主打需求。",
-      "tags": [
-        "营销",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-077",
-      "no": "077",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "营销",
-      "icon": "📣",
-      "title": "峰终定律",
-      "en": "Peak-End",
-      "desc": "峰值与结尾决定体验记忆。",
-      "principle": "设计记忆中的高峰与收尾。",
-      "action": "在关键触点造峰值。",
-      "tags": [
-        "营销",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-078",
-      "no": "078",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "营销",
-      "icon": "📣",
-      "title": "稀缺营销",
-      "en": "Scarcity",
-      "desc": "限时稀缺放大价值感促单。",
-      "principle": "人对稀缺更敏感。",
-      "action": "设置真实倒计时。",
-      "tags": [
-        "营销",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-079",
-      "no": "079",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "营销",
-      "icon": "📣",
-      "title": "社会证明",
-      "en": "Social Proof",
-      "desc": "人随大流，展示真实数据与社会认同。",
-      "principle": "用数据与案例降低疑虑。",
-      "action": "在页面展示真实数字。",
-      "tags": [
-        "营销",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-080",
-      "no": "080",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "营销",
-      "icon": "📣",
-      "title": "锚定效应",
-      "en": "Anchoring",
-      "desc": "先见高价再觉合理，用锚拉升接受度。",
-      "principle": "第一个数字劫持判断。",
-      "action": "套餐里放一个旗舰价。",
-      "tags": [
-        "营销",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-081",
-      "no": "081",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "定价",
-      "icon": "🏷️",
-      "title": "价值定价",
-      "en": "Value Pricing",
-      "desc": "按感知价值而非成本定价。",
-      "principle": "定价锚定价值。",
-      "action": "测试提价看弹性。",
-      "tags": [
-        "定价",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-082",
-      "no": "082",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "定价",
-      "icon": "🏷️",
-      "title": "免费增值",
-      "en": "Freemium",
-      "desc": "免费获客、增值变现。",
-      "principle": "用免费扩大池再转化。",
-      "action": "设计免费到付费的钩子。",
-      "tags": [
-        "定价",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-083",
-      "no": "083",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "定价",
-      "icon": "🏷️",
-      "title": "订阅模式",
-      "en": "Subscription",
-      "desc": "把交易变关系现金流，提升估值。",
-      "principle": "recurring 收入更稳。",
-      "action": "把一次性产品改订阅。",
-      "tags": [
-        "定价",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-084",
-      "no": "084",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "定价",
-      "icon": "🏷️",
-      "title": "价格歧视",
-      "en": "Price Discrimination",
-      "desc": "按支付意愿分层提升总收益。",
-      "principle": "不同人群不同价。",
-      "action": "设学生/企业版。",
-      "tags": [
-        "定价",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-085",
-      "no": "085",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "定价",
-      "icon": "🏷️",
-      "title": "损失厌恶定价",
-      "en": "Loss Aversion",
-      "desc": "强调失去而非得到更易促单。",
-      "principle": "人对损失更敏感。",
-      "action": "文案突出「不用的代价」。",
-      "tags": [
-        "定价",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-086",
-      "no": "086",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "产品",
-      "icon": "🧱",
-      "title": "MVP",
-      "en": "MVP",
-      "desc": "最小可行产品验证假设。",
-      "principle": "先验证再扩张。",
-      "action": "两周内出可演示 MVP。",
-      "tags": [
-        "产品",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-087",
-      "no": "087",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "产品",
-      "icon": "🧱",
-      "title": "PMF",
-      "en": "PMF",
-      "desc": "种子期主要矛盾是产品市场契合。",
-      "principle": "用留存定义是否契合。",
-      "action": "用留存曲线判断。",
-      "tags": [
-        "产品",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-088",
-      "no": "088",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "产品",
-      "icon": "🧱",
-      "title": "Kano 模型",
-      "en": "Kano",
-      "desc": "基本/期望/兴奋需求分层。",
-      "principle": "兴奋型带来惊喜差异化。",
-      "action": "给产品加一个兴奋点。",
-      "tags": [
-        "产品",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-089",
-      "no": "089",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "产品",
-      "icon": "🧱",
-      "title": "用户旅程",
-      "en": "Journey Map",
-      "desc": "全链路体验优化，每段设计峰值。",
-      "principle": "在触点制造记忆点。",
-      "action": "画出旅程找断点。",
-      "tags": [
-        "产品",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-090",
-      "no": "090",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "产品",
-      "icon": "🧱",
-      "title": "功能减法",
-      "en": "Subtraction",
-      "desc": "少即是多，砍掉 80% 功能聚焦核心。",
-      "principle": "加法容易减法难。",
-      "action": "列出可删功能。",
-      "tags": [
-        "产品",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-091",
-      "no": "091",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "产品",
-      "icon": "🧱",
-      "title": "平台双边",
-      "en": "Two-sided",
-      "desc": "供需两边互相拉动，先养一边引爆。",
-      "principle": "先补贴供给侧。",
-      "action": "优先做大一边网络。",
-      "tags": [
-        "产品",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-092",
-      "no": "092",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "产品",
-      "icon": "🧱",
-      "title": "PLG 驱动",
-      "en": "Product-Led",
-      "desc": "产品自身带来增长，体验即营销。",
-      "principle": "好产品会自传播。",
-      "action": "加一个自传播功能。",
-      "tags": [
-        "产品",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-093",
-      "no": "093",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "谈判",
-      "icon": "🤝",
-      "title": "BATNA",
-      "en": "BATNA",
-      "desc": "最佳替代方案定谈判底牌。",
-      "principle": "有退路才敢不让。",
-      "action": "谈判前写下 BATNA。",
-      "tags": [
-        "谈判",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-094",
-      "no": "094",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "谈判",
-      "icon": "🤝",
-      "title": "先开价",
-      "en": "First Offer",
-      "desc": "先出价占据锚点。",
-      "principle": "第一个数字劫持判断。",
-      "action": "争取先开价。",
-      "tags": [
-        "谈判",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-095",
-      "no": "095",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "谈判",
-      "icon": "🤝",
-      "title": "互惠让步",
-      "en": "Reciprocal",
-      "desc": "先给小让步换大让步。",
-      "principle": "人倾向回报善意。",
-      "action": "主动让一步再要一步。",
-      "tags": [
-        "谈判",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-096",
-      "no": "096",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "谈判",
-      "icon": "🤝",
-      "title": "红白脸",
-      "en": "Good Cop",
-      "desc": "软硬组合降低对抗。",
-      "principle": "角色分工施压。",
-      "action": "团队分工扮演。",
-      "tags": [
-        "谈判",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-097",
-      "no": "097",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "销售",
-      "icon": "💼",
-      "title": "SPIN 销售",
-      "en": "SPIN",
-      "desc": "背景-难点-暗示-需求收益四问引痛点。",
-      "principle": "引导客户自己发现需求。",
-      "action": "用 SPIN 备话术。",
-      "tags": [
-        "销售",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-098",
-      "no": "098",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "销售",
-      "icon": "💼",
-      "title": "顾问式销售",
-      "en": "Consultative",
-      "desc": "当医生先诊断再开方，卖方案不卖产品。",
-      "principle": "先诊断后开方。",
-      "action": "先做需求诊断。",
-      "tags": [
-        "销售",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-099",
-      "no": "099",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "销售",
-      "icon": "💼",
-      "title": "成交闭环",
-      "en": "Closing",
-      "desc": "明确请求成交，不开口永不成交。",
-      "principle": "每次演示结尾直接要单。",
-      "action": "演示结尾必开口。",
-      "tags": [
-        "销售",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-100",
-      "no": "100",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "销售",
-      "icon": "💼",
-      "title": "价值量化",
-      "en": "Value Quant",
-      "desc": "把收益算成客户能懂的数字。",
-      "principle": "数字比形容词可信。",
-      "action": "给客户算 ROI。",
-      "tags": [
-        "销售",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-101",
-      "no": "101",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "组织",
-      "icon": "🏢",
-      "title": "敏捷迭代",
-      "en": "Agile",
-      "desc": "小步快跑持续交付，响应变化胜计划。",
-      "principle": "两周一个迭代。",
-      "action": "拆成双周迭代。",
-      "tags": [
-        "组织",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-102",
-      "no": "102",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "组织",
-      "icon": "🏢",
-      "title": "OKR",
-      "en": "OKR",
-      "desc": "目标与关键结果对齐，透明挑战。",
-      "principle": "季度设 OKR 对齐。",
-      "action": "设本季 OKR。",
-      "tags": [
-        "组织",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-103",
-      "no": "103",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "组织",
-      "icon": "🏢",
-      "title": "KPI",
-      "en": "KPI",
-      "desc": "用指标管理执行，不可测不可管。",
-      "principle": "给团队定 3 个 KPI。",
-      "action": "定 3 个核心 KPI。",
-      "tags": [
-        "组织",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-104",
-      "no": "104",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "组织",
-      "icon": "🏢",
-      "title": "责权利对等",
-      "en": "Rights",
-      "desc": "权力责任利益一致，不对等必生乱。",
-      "principle": "检查团队权责利对齐。",
-      "action": "审查权责利是否对齐。",
-      "tags": [
-        "组织",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-105",
-      "no": "105",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "组织",
-      "icon": "🏢",
-      "title": "扁平化",
-      "en": "Flat",
-      "desc": "减少层级加快信息，层级是衰减器。",
-      "principle": "砍掉多余审批层。",
-      "action": "删一层审批。",
-      "tags": [
-        "组织",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-106",
-      "no": "106",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "组织",
-      "icon": "🏢",
-      "title": "阿米巴单元",
-      "en": "Amoeba",
-      "desc": "小单元独立核算，大组织拆利润中心。",
-      "principle": "把组织拆成小利润中心。",
-      "action": "划分经营小单元。",
-      "tags": [
-        "组织",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-107",
-      "no": "107",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "财务",
-      "icon": "💰",
-      "title": "现金流",
-      "en": "Cash",
-      "desc": "利润是观点，现金流是事实。",
-      "principle": "断粮即死。",
-      "action": "每月盯净消耗与跑道。",
-      "tags": [
-        "财务",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-108",
-      "no": "108",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "财务",
-      "icon": "💰",
-      "title": "单元经济",
-      "en": "Unit Economics",
-      "desc": "先算单客模型再谈规模。",
-      "principle": "LTV 应大于 CAC。",
-      "action": "算 LTV 与 CAC 比。",
-      "tags": [
-        "财务",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-109",
-      "no": "109",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "财务",
-      "icon": "💰",
-      "title": "毛利思维",
-      "en": "Gross Margin",
-      "desc": "毛利结构决定可持续性。",
-      "principle": "低毛利需极高周转。",
-      "action": "重算各产品毛利。",
-      "tags": [
-        "财务",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-110",
-      "no": "110",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "财务",
-      "icon": "💰",
-      "title": "烧钱率",
-      "en": "Burn Rate",
-      "desc": "知道钱能烧多久，跑道决定试错次数。",
-      "principle": "算清 burn 与 runway。",
-      "action": "画出现金跑道图。",
-      "tags": [
-        "财务",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-111",
-      "no": "111",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "财务",
-      "icon": "💰",
-      "title": "边际成本",
-      "en": "Marginal Cost",
-      "desc": "复制成本趋零才具杠杆。",
-      "principle": "边际成本为零最轻。",
-      "action": "把劳动沉淀为资产。",
-      "tags": [
-        "财务",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-112",
-      "no": "112",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "财务",
-      "icon": "💰",
-      "title": "规模经济",
-      "en": "Scale Econ",
-      "desc": "规模摊薄固定成本，量上来曲线下移。",
-      "principle": "找规模临界点。",
-      "action": "测算盈亏平衡量。",
-      "tags": [
-        "财务",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-113",
-      "no": "113",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "竞争",
-      "icon": "⚔️",
-      "title": "转换成本",
-      "en": "Switching",
-      "desc": "提高离开成本锁客。",
-      "principle": "转换成本是高墙。",
-      "action": "设计数据与习惯锁定。",
-      "tags": [
-        "竞争",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-114",
-      "no": "114",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "竞争",
-      "icon": "⚔️",
-      "title": "网络效应",
-      "en": "Network",
-      "desc": "用户越多价值越大，自我强化。",
-      "principle": "优先增长任一边。",
-      "action": "先做大一边网络。",
-      "tags": [
-        "竞争",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-115",
-      "no": "115",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "竞争",
-      "icon": "⚔️",
-      "title": "长尾理论",
-      "en": "Long Tail",
-      "desc": "海量小众之和超头部。",
-      "principle": "数字化让利基可盈利。",
-      "action": "上架海量 SKU。",
-      "tags": [
-        "竞争",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-116",
-      "no": "116",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "竞争",
-      "icon": "⚔️",
-      "title": "交易成本",
-      "en": "Tx Cost",
-      "desc": "降低摩擦抢占中介位。",
-      "principle": "谁降摩擦谁赢。",
-      "action": "砍掉流程冗余步骤。",
-      "tags": [
-        "竞争",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-117",
-      "no": "117",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "竞争",
-      "icon": "⚔️",
-      "title": "平台抽成",
-      "en": "Take Rate",
-      "desc": "抽成率平衡生态与收入。",
-      "principle": "抽太高驱离供给。",
-      "action": "设可持续 take rate。",
-      "tags": [
-        "竞争",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-118",
-      "no": "118",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "运营",
-      "icon": "⚙️",
-      "title": "库存周转",
-      "en": "Inventory",
-      "desc": "周转快等于现金流快，库存是冻资。",
-      "principle": "提升周转率。",
-      "action": "优化库存周转。",
-      "tags": [
-        "运营",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-119",
-      "no": "119",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "运营",
-      "icon": "⚙️",
-      "title": "精益创业",
-      "en": "Lean",
-      "desc": "建-测-学最短循环，低成本失败。",
-      "principle": "快速试错。",
-      "action": "把大项目拆小实验。",
-      "tags": [
-        "运营",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-120",
-      "no": "120",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "运营",
-      "icon": "⚙️",
-      "title": "约束理论",
-      "en": "TOC",
-      "desc": "系统瓶颈决定产出，提升瓶颈而非全优化。",
-      "principle": "找出并扩瓶颈。",
-      "action": "定位瓶颈环节。",
-      "tags": [
-        "运营",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-121",
-      "no": "121",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "运营",
-      "icon": "⚙️",
-      "title": "看板",
-      "en": "Kanban",
-      "desc": "可视化工件流、限制在制品。",
-      "principle": "在制品越少越快。",
-      "action": "限制并行任务数。",
-      "tags": [
-        "运营",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-122",
-      "no": "122",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "运营",
-      "icon": "⚙️",
-      "title": "六西格玛",
-      "en": "Six Sigma",
-      "desc": "用数据逼近零缺陷。",
-      "principle": "缺陷可控可测。",
-      "action": "对关键流程归因。",
-      "tags": [
-        "运营",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-123",
-      "no": "123",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "运营",
-      "icon": "⚙️",
-      "title": "供应链韧性",
-      "en": "SC Resilience",
-      "desc": "多点备份防断链，单点依赖是脆弱。",
-      "principle": "关键物料双供应商。",
-      "action": "建备份供应链。",
-      "tags": [
-        "运营",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-124",
-      "no": "124",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "运营",
-      "icon": "⚙️",
-      "title": "牛鞭效应",
-      "en": "Bullwhip",
-      "desc": "需求信息沿链放大失真。",
-      "principle": "共享真实需求减波动。",
-      "action": "打通终端需求数据。",
-      "tags": [
-        "运营",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-125",
-      "no": "125",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "创新",
-      "icon": "💡",
-      "title": "颠覆式创新",
-      "en": "Disruptive",
-      "desc": "从低端或新市场切入，巨头不屑处突破。",
-      "principle": "低端是突破口。",
-      "action": "找被忽视的低端市场。",
-      "tags": [
-        "创新",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-126",
-      "no": "126",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "创新",
-      "icon": "💡",
-      "title": "开放式创新",
-      "en": "Open Inno",
-      "desc": "借用外部智慧，创新不限于内部。",
-      "principle": "建外部合作网络。",
-      "action": "建外部创新网络。",
-      "tags": [
-        "创新",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-127",
-      "no": "127",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "创新",
-      "icon": "💡",
-      "title": "设计思维",
-      "en": "Design Thinking",
-      "desc": "同理心驱动的解决问题。",
-      "principle": "先理解人再设计。",
-      "action": "做一次用户深访。",
-      "tags": [
-        "创新",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-128",
-      "no": "128",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "创新",
-      "icon": "💡",
-      "title": "惊喜时刻",
-      "en": "Aha Moment",
-      "desc": "超预期瞬间造就口碑与记忆。",
-      "principle": "峰值体验定胜负。",
-      "action": "设计一个用户惊喜点。",
-      "tags": [
-        "创新",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-129",
-      "no": "129",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "品牌",
-      "icon": "🌟",
-      "title": "品牌资产",
-      "en": "Brand Equity",
-      "desc": "品牌是溢价源头，信任降决策成本。",
-      "principle": "持续一致传价值观。",
-      "action": "统一品牌叙事。",
-      "tags": [
-        "品牌",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-130",
-      "no": "130",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "品牌",
-      "icon": "🌟",
-      "title": "叙事品牌",
-      "en": "StoryBrand",
-      "desc": "让客户当主角品牌当向导。",
-      "principle": "好故事卖得好。",
-      "action": "重写以客户为中心叙事。",
-      "tags": [
-        "品牌",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-131",
-      "no": "131",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "品牌",
-      "icon": "🌟",
-      "title": "私域流量",
-      "en": "Private Domain",
-      "desc": "公域租用户、私域养用户。",
-      "principle": "自有池反复触达。",
-      "action": "建社群沉淀用户。",
-      "tags": [
-        "品牌",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-132",
-      "no": "132",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "用户",
-      "icon": "👥",
-      "title": "终身价值",
-      "en": "LTV",
-      "desc": "看长期而非单笔，LTV 应大于 CAC。",
-      "principle": "获客成本低于 LTV。",
-      "action": "算清 LTV 与 CAC。",
-      "tags": [
-        "用户",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-133",
-      "no": "133",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "用户",
-      "icon": "👥",
-      "title": "客户成功",
-      "en": "CS",
-      "desc": "帮客户拿到结果才续费，续费最便宜增长。",
-      "principle": "建客户健康分。",
-      "action": "建健康分体系。",
-      "tags": [
-        "用户",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-134",
-      "no": "134",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "用户",
-      "icon": "👥",
-      "title": "净推荐值",
-      "en": "NPS",
-      "desc": "推荐意愿衡量口碑，贬损者更伤。",
-      "principle": "定期测 NPS 并改。",
-      "action": "定期测 NPS。",
-      "tags": [
-        "用户",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-135",
-      "no": "135",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "用户",
-      "icon": "👥",
-      "title": "免费试用",
-      "en": "Free Trial",
-      "desc": "先体验后付费降低门槛。",
-      "principle": "体验消除不确定性。",
-      "action": "提供 14 天试用。",
-      "tags": [
-        "用户",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-136",
-      "no": "136",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "用户",
-      "icon": "👥",
-      "title": "流失率",
-      "en": "Churn",
-      "desc": "留存差增长是漏桶，流失率定生死。",
-      "principle": "拆流失原因并堵。",
-      "action": "拆流失原因。",
-      "tags": [
-        "用户",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-137",
-      "no": "137",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "用户",
-      "icon": "👥",
-      "title": "社区驱动",
-      "en": "Community",
-      "desc": "用户共建生态，社区是护城河。",
-      "principle": "运营核心用户群。",
-      "action": "运营核心用户群。",
-      "tags": [
-        "用户",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-138",
-      "no": "138",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "数据",
-      "icon": "📊",
-      "title": "数据驱动",
-      "en": "Data-Driven",
-      "desc": "让数据而非直觉决策。",
-      "principle": "可量化优先。",
-      "action": "建核心数据看板。",
-      "tags": [
-        "数据",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-139",
-      "no": "139",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "风险",
-      "icon": "🛡️",
-      "title": "风险预算",
-      "en": "Risk Budget",
-      "desc": "预先分配可承受损失。",
-      "principle": "先定能亏多少再下注。",
-      "action": "设风险额度。",
-      "tags": [
-        "风险",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-140",
-      "no": "140",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "风险",
-      "icon": "🛡️",
-      "title": "多元收入",
-      "en": "Diversify",
-      "desc": "收入来源≥3 抗脆弱，单一来源致命。",
-      "principle": "开辟第二收入线。",
-      "action": "开第二收入线。",
-      "tags": [
-        "风险",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-141",
-      "no": "141",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "融资",
-      "icon": "🏦",
-      "title": "里程碑融资",
-      "en": "Milestone",
-      "desc": "按里程碑分阶段融资，过早稀释。",
-      "principle": "按 18 月跑道融资。",
-      "action": "按跑道规划融资。",
-      "tags": [
-        "融资",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-142",
-      "no": "142",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "融资",
-      "icon": "🏦",
-      "title": "股权设计",
-      "en": "Equity",
-      "desc": "分钱设计决定团队稳定，期权是粘合剂。",
-      "principle": "设 4 年归属。",
-      "action": "设归属计划。",
-      "tags": [
-        "融资",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-143",
-      "no": "143",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "融资",
-      "icon": "🏦",
-      "title": "投资人视角",
-      "en": "Investor Lens",
-      "desc": "用回报逻辑讲故事，买增长与退出。",
-      "principle": "备单位经济与退出。",
-      "action": "备退出路径。",
-      "tags": [
-        "融资",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-144",
-      "no": "144",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "并购",
-      "icon": "🔗",
-      "title": "协同效应",
-      "en": "Synergy",
-      "desc": "买来的增长要真协同，多为借口。",
-      "principle": "量化并购后协同。",
-      "action": "量化协同预期。",
-      "tags": [
-        "并购",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-145",
-      "no": "145",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "出海",
-      "icon": "🌏",
-      "title": "本地化",
-      "en": "Localization",
-      "desc": "全球产品本地适配，复制不等于适配。",
-      "principle": "为关键市场本地化。",
-      "action": "做本地化适配。",
-      "tags": [
-        "出海",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-146",
-      "no": "146",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "合规",
-      "icon": "⚖️",
-      "title": "合规先行",
-      "en": "Compliance",
-      "desc": "监管红线不可碰，合规是地基。",
-      "principle": "列合规清单。",
-      "action": "列合规红线。",
-      "tags": [
-        "合规",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-147",
-      "no": "147",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "知识产权",
-      "icon": "🔐",
-      "title": "IP 护城河",
-      "en": "IP",
-      "desc": "专利商标护技术，护城河要注册。",
-      "principle": "核心 IP 早申请。",
-      "action": "早申请核心 IP。",
-      "tags": [
-        "知识产权",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-148",
-      "no": "148",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "退出",
-      "icon": "🚪",
-      "title": "退出设计",
-      "en": "Exit",
-      "desc": "起点就想好退出，无路径的投入危险。",
-      "principle": "写清 3 年退出选项。",
-      "action": "写退出选项。",
-      "tags": [
-        "退出",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-149",
-      "no": "149",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "组合",
-      "icon": "🎯",
-      "title": "组合管理",
-      "en": "Portfolio",
-      "desc": "多项目组合平衡风险，不把蛋放一篮。",
-      "principle": "按风险配组合。",
-      "action": "按风险配项目。",
-      "tags": [
-        "组合",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L2-150",
-      "no": "150",
-      "level": "L2",
-      "levelLabel": "商业实战",
-      "domain": "节奏",
-      "icon": "🥁",
-      "title": "节奏管理",
-      "en": "Cadence",
-      "desc": "可持续节奏胜过燃烧式冲刺。",
-      "principle": "创始人状态是上限。",
-      "action": "守住休息思考时间。",
-      "tags": [
-        "节奏",
-        "商业实战"
-      ]
-    },
-    {
-      "id": "L3-151",
-      "no": "151",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "第一性原理",
-      "icon": "🔥",
-      "title": "第一性原理",
-      "en": "First Principles",
-      "desc": "拆解至不可再分的事实真相，再从头推演。",
-      "principle": "砍掉类比与惯例，从物理真相重建。",
-      "action": "把难题拆成 3 个最小事实重推。",
-      "tags": [
-        "第一性原理",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-152",
-      "no": "152",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "决策",
-      "icon": "⚡",
-      "title": "二阶思维",
-      "en": "Second-Order",
-      "desc": "每个行动都有连锁回响，问「然后呢」。",
-      "principle": "一阶效应之外的后果更关键。",
-      "action": "每个决定追问三次后果。",
-      "tags": [
-        "决策",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-153",
-      "no": "153",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "决策",
-      "icon": "⚡",
-      "title": "逆向思维",
-      "en": "Inversion",
-      "desc": "反过来想，先想如何必然失败再避开。",
-      "principle": "避开所有死路，剩下即活路。",
-      "action": "写「它为何会失败」清单。",
-      "tags": [
-        "决策",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-154",
-      "no": "154",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "数学",
-      "icon": "🔢",
-      "title": "复利思维",
-      "en": "Compounding",
-      "desc": "正确决策的回报是非线性的，时间放大正确。",
-      "principle": "让时间与正确下注成盟友。",
-      "action": "把资源投可复利的资产。",
-      "tags": [
-        "数学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-155",
-      "no": "155",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "数学",
-      "icon": "🔢",
-      "title": "概率思维",
-      "en": "Probabilistic",
-      "desc": "用概率而非确定性看世界。",
-      "principle": "世界是或然的。",
-      "action": "为决策标胜率与赔率。",
-      "tags": [
-        "数学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-156",
-      "no": "156",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "数学",
-      "icon": "🔢",
-      "title": "期望值",
-      "en": "Expected Value",
-      "desc": "按概率加权收益做长期判断。",
-      "principle": "看长期期望不看单次。",
-      "action": "只做 EV 为正的赌。",
-      "tags": [
-        "数学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-157",
-      "no": "157",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "数学",
-      "icon": "🔢",
-      "title": "贝叶斯更新",
-      "en": "Bayesian",
-      "desc": "新证据修正信念：先验+证据=后验。",
-      "principle": "遇新信息主动更新判断。",
-      "action": "遇反例即更新置信度。",
-      "tags": [
-        "数学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-158",
-      "no": "158",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "数学",
-      "icon": "🔢",
-      "title": "基础概率",
-      "en": "Base Rate",
-      "desc": "先查同类案例成功率，你多半是平均数。",
-      "principle": "基线率对抗过度自信。",
-      "action": "判断前先找基线。",
-      "tags": [
-        "数学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-159",
-      "no": "159",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "数学",
-      "icon": "🔢",
-      "title": "幂律分布",
-      "en": "Power Law",
-      "desc": "少数的少数决定多数结果。",
-      "principle": "回报极端不均。",
-      "action": "重注头部而非平均。",
-      "tags": [
-        "数学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-160",
-      "no": "160",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "数学",
-      "icon": "🔢",
-      "title": "正态分布",
-      "en": "Normal Dist",
-      "desc": "多数聚集均值，区分幂律与正态场景。",
-      "principle": "不同分布用不同策略。",
-      "action": "识别当前分布形态。",
-      "tags": [
-        "数学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-161",
-      "no": "161",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "系统",
-      "icon": "🕸️",
-      "title": "熵",
-      "en": "Entropy",
-      "desc": "系统趋向混乱，需持续做功维持秩序。",
-      "principle": "无序是默认状态。",
-      "action": "定期整理信息与环境。",
-      "tags": [
-        "系统",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-162",
-      "no": "162",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "系统",
-      "icon": "🕸️",
-      "title": "耗散结构",
-      "en": "Dissipative",
-      "desc": "开放系统靠能量交换维持秩序。",
-      "principle": "封闭即衰亡。",
-      "action": "保持外部输入输出。",
-      "tags": [
-        "系统",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-163",
-      "no": "163",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "系统",
-      "icon": "🕸️",
-      "title": "涌现",
-      "en": "Emergence",
-      "desc": "整体大于部分之和，微观规则生宏观现象。",
-      "principle": "简单规则可生复杂秩序。",
-      "action": "设计简单规则看涌现。",
-      "tags": [
-        "系统",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-164",
-      "no": "164",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "系统",
-      "icon": "🕸️",
-      "title": "复杂适应",
-      "en": "CAS",
-      "desc": "主体互动自适应演化，系统会绕过控制。",
-      "principle": "用试错而非强控。",
-      "action": "用小实验探系统。",
-      "tags": [
-        "系统",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-165",
-      "no": "165",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "系统",
-      "icon": "🕸️",
-      "title": "反馈回路",
-      "en": "Feedback",
-      "desc": "正反馈增强、负反馈平衡，塑造系统。",
-      "principle": "找出关键回路。",
-      "action": "画系统回路图。",
-      "tags": [
-        "系统",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-166",
-      "no": "166",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "系统",
-      "icon": "🕸️",
-      "title": "系统思考",
-      "en": "Systems",
-      "desc": "见树更见林，关联与延迟决定行为。",
-      "principle": "结构决定行为。",
-      "action": "画因果回路图。",
-      "tags": [
-        "系统",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-167",
-      "no": "167",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "系统",
-      "icon": "🕸️",
-      "title": "存量流量",
-      "en": "Stock-Flow",
-      "desc": "区分蓄水池与流速，存量慢变流量快。",
-      "principle": "分清资产与收入。",
-      "action": "分清资产与现金流。",
-      "tags": [
-        "系统",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-168",
-      "no": "168",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "系统",
-      "icon": "🕸️",
-      "title": "延迟效应",
-      "en": "Delay",
-      "desc": "因与果常隔时，短期无效未必长期错。",
-      "principle": "对慢变量有耐心。",
-      "action": "给慢变量留时间。",
-      "tags": [
-        "系统",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-169",
-      "no": "169",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "系统",
-      "icon": "🕸️",
-      "title": "杠杆点",
-      "en": "Leverage",
-      "desc": "系统中少数高杠杆处改结构胜改要素。",
-      "principle": "改结构而非改要素。",
-      "action": "找系统杠杆点。",
-      "tags": [
-        "系统",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-170",
-      "no": "170",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "博弈",
-      "icon": "♟️",
-      "title": "公地悲剧",
-      "en": "Tragedy of Commons",
-      "desc": "人人自利耗尽共享资源。",
-      "principle": "无规制共享必被滥用。",
-      "action": "给共享资源设规则。",
-      "tags": [
-        "博弈",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-171",
-      "no": "171",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "博弈",
-      "icon": "♟️",
-      "title": "囚徒困境",
-      "en": "Prisoner's",
-      "desc": "个体理性导致集体非理性，重复博弈才能合作。",
-      "principle": "用长期关系破困。",
-      "action": "以长期博弈思维相处。",
-      "tags": [
-        "博弈",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-172",
-      "no": "172",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "博弈",
-      "icon": "♟️",
-      "title": "纳什均衡",
-      "en": "Nash",
-      "desc": "无人愿单方改变的状态，未必最优。",
-      "principle": "识别并试图跳出。",
-      "action": "识别所处均衡。",
-      "tags": [
-        "博弈",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-173",
-      "no": "173",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "博弈",
-      "icon": "♟️",
-      "title": "正和博弈",
-      "en": "Positive-Sum",
-      "desc": "多数商业是正和，别当零和。",
-      "principle": "把蛋糕做大。",
-      "action": "寻找做大蛋糕的空间。",
-      "tags": [
-        "博弈",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-174",
-      "no": "174",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "博弈",
-      "icon": "♟️",
-      "title": "信号博弈",
-      "en": "Signaling",
-      "desc": "用成本高的信号传递真实，廉价信号无效。",
-      "principle": "难模仿行为证明诚意。",
-      "action": "用难模仿行为证明。",
-      "tags": [
-        "博弈",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-175",
-      "no": "175",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "博弈",
-      "icon": "♟️",
-      "title": "帕累托最优",
-      "en": "Pareto Opt",
-      "desc": "一方改善必损另一方，难再共赢。",
-      "principle": "识别是否陷僵局。",
-      "action": "识别僵局并破。",
-      "tags": [
-        "博弈",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-176",
-      "no": "176",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "经济",
-      "icon": "💵",
-      "title": "机会成本",
-      "en": "Opportunity Cost",
-      "desc": "选 A 的代价是放弃的 B，免费最贵。",
-      "principle": "每决策写下放弃项。",
-      "action": "写下本次放弃项。",
-      "tags": [
-        "经济",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-177",
-      "no": "177",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "经济",
-      "icon": "💵",
-      "title": "沉没成本",
-      "en": "Sunk Cost",
-      "desc": "已付出不影响下一步，止损是能力。",
-      "principle": "设退出触发线。",
-      "action": "设退出线。",
-      "tags": [
-        "经济",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-178",
-      "no": "178",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "经济",
-      "icon": "💵",
-      "title": "边际效用",
-      "en": "Marginal Utility",
-      "desc": "增量价值递减，越多越不值。",
-      "principle": "在边际高点止步。",
-      "action": "在边际高点收手。",
-      "tags": [
-        "经济",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-179",
-      "no": "179",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "经济",
-      "icon": "💵",
-      "title": "激励相容",
-      "en": "Incentive",
-      "desc": "让个人最优等于集体最优。",
-      "principle": "制度设计对激励。",
-      "action": "检查规则是否诱错。",
-      "tags": [
-        "经济",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-180",
-      "no": "180",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "哲学",
-      "icon": "🏛️",
-      "title": "汉隆剃刀",
-      "en": "Hanlon's",
-      "desc": "能用愚蠢解释的别归恶意。",
-      "principle": "多数坏事源于无能。",
-      "action": "先假设无心之失。",
-      "tags": [
-        "哲学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-181",
-      "no": "181",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "哲学",
-      "icon": "🏛️",
-      "title": "奥卡姆剃刀",
-      "en": "Occam's",
-      "desc": "假设最少者优先，简单解释更可能。",
-      "principle": "从最简假设起步。",
-      "action": "从最简假设起步。",
-      "tags": [
-        "哲学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-182",
-      "no": "182",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "哲学",
-      "icon": "🏛️",
-      "title": "史特金定律",
-      "en": "Sturgeon's",
-      "desc": "九成皆平庸，不必在意多数噪音。",
-      "principle": "聚焦那 10%。",
-      "action": "忽略九成噪音。",
-      "tags": [
-        "哲学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-183",
-      "no": "183",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "哲学",
-      "icon": "🏛️",
-      "title": "古德哈特",
-      "en": "Goodhart's",
-      "desc": "指标成目标就失真，被盯会被操纵。",
-      "principle": "用多指标互校。",
-      "action": "设多重指标互校。",
-      "tags": [
-        "哲学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-184",
-      "no": "184",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "哲学",
-      "icon": "🏛️",
-      "title": "观察效应",
-      "en": "Observer",
-      "desc": "被观察改变行为，测量扰动系统。",
-      "principle": "注意数据被美化。",
-      "action": "警惕美化数据。",
-      "tags": [
-        "哲学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-185",
-      "no": "185",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "认知",
-      "icon": "🧠",
-      "title": "邓巴数",
-      "en": "Dunbar's",
-      "desc": "稳定社交上限约 150，关系有认知上限。",
-      "principle": "精力聚焦核心圈。",
-      "action": "聚焦核心关系圈。",
-      "tags": [
-        "认知",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-186",
-      "no": "186",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "认知",
-      "icon": "🧠",
-      "title": "马太效应",
-      "en": "Matthew",
-      "desc": "富者愈富，优势累积。",
-      "principle": "早先在关键维度领先。",
-      "action": "关键维度早领先。",
-      "tags": [
-        "认知",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-187",
-      "no": "187",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "认知",
-      "icon": "🧠",
-      "title": "破窗效应",
-      "en": "Broken Windows",
-      "desc": "小失序引大崩溃，失序会传染。",
-      "principle": "立即修复小问题。",
-      "action": "立即修小问题。",
-      "tags": [
-        "认知",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-188",
-      "no": "188",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "认知",
-      "icon": "🧠",
-      "title": "路径依赖",
-      "en": "Path Dep",
-      "desc": "早期偶然锁定未来走向。",
-      "principle": "在起点审慎选择。",
-      "action": "起点审慎选择。",
-      "tags": [
-        "认知",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-189",
-      "no": "189",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "风险",
-      "icon": "🛡️",
-      "title": "黑天鹅",
-      "en": "Black Swan",
-      "desc": "极端稀有事件颠覆一切，可防不可测。",
-      "principle": "留冗余抗极端。",
-      "action": "留冗余抗极端。",
-      "tags": [
-        "风险",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-190",
-      "no": "190",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "风险",
-      "icon": "🛡️",
-      "title": "灰犀牛",
-      "en": "Gray Rhino",
-      "desc": "明显却被忽视的危机，大概率大影响。",
-      "principle": "正视可见巨危。",
-      "action": "正视可见危机。",
-      "tags": [
-        "风险",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-191",
-      "no": "191",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "风险",
-      "icon": "🛡️",
-      "title": "反脆弱",
-      "en": "Antifragile",
-      "desc": "在波动中变强，下行有限上行无限。",
-      "principle": "设计受益的波动。",
-      "action": "设计受益波动。",
-      "tags": [
-        "风险",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-192",
-      "no": "192",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "历史",
-      "icon": "📜",
-      "title": "林迪效应",
-      "en": "Lindy",
-      "desc": "已存越久越将存，偏好经时间检验的。",
-      "principle": "古老事物更长寿。",
-      "action": "偏好经典。",
-      "tags": [
-        "历史",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-193",
-      "no": "193",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "科学",
-      "icon": "🔬",
-      "title": "可证伪",
-      "en": "Falsifiable",
-      "desc": "不可证伪非科学，主动找反例。",
-      "principle": "为信念设证伪条件。",
-      "action": "设证伪条件。",
-      "tags": [
-        "科学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-194",
-      "no": "194",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "科学",
-      "icon": "🔬",
-      "title": "双盲对照",
-      "en": "Double-Blind",
-      "desc": "排除安慰剂与偏见，对照才知真相。",
-      "principle": "重大决策设对照。",
-      "action": "设对照组验证。",
-      "tags": [
-        "科学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-195",
-      "no": "195",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "认知",
-      "icon": "🧠",
-      "title": "幸存者偏差",
-      "en": "Survivorship",
-      "desc": "失败者不会说话，只见成功样本。",
-      "principle": "问死者去哪了。",
-      "action": "统计失败基线。",
-      "tags": [
-        "认知",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-196",
-      "no": "196",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "科学",
-      "icon": "🔬",
-      "title": "回归均值",
-      "en": "Regression",
-      "desc": "极端必回归，别把回归当因果。",
-      "principle": "警惕虚假归因。",
-      "action": "警惕把回归当功。",
-      "tags": [
-        "科学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-197",
-      "no": "197",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "科学",
-      "icon": "🔬",
-      "title": "相关非因果",
-      "en": "Correlation",
-      "desc": "相关不等于因果，找机制而非仅关联。",
-      "principle": "每相关追问因果链。",
-      "action": "追问因果机制。",
-      "tags": [
-        "科学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-198",
-      "no": "198",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "科学",
-      "icon": "🔬",
-      "title": "循环论证",
-      "en": "Tautology",
-      "desc": "同义反复的伪解释，看似深刻实空转。",
-      "principle": "检查定义被循环。",
-      "action": "检查定义循环。",
-      "tags": [
-        "科学",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-199",
-      "no": "199",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "认知",
-      "icon": "🧠",
-      "title": "无知之知",
-      "en": "Known Unknown",
-      "desc": "知道自己不知道，智慧始于承认无知。",
-      "principle": "常列未知清单。",
-      "action": "常列未知清单。",
-      "tags": [
-        "认知",
-        "终极算法"
-      ]
-    },
-    {
-      "id": "L3-200",
-      "no": "200",
-      "level": "L3",
-      "levelLabel": "终极算法",
-      "domain": "决策",
-      "icon": "⚡",
-      "title": "预验尸",
-      "en": "Premortem",
-      "desc": "项目前假设已失败，倒推死因。",
-      "principle": "让悲观合法浮出。",
-      "action": "写失败预演。",
-      "tags": [
-        "决策",
-        "终极算法"
-      ]
-    }
-  ],
-  "decisionGrids": [
-    {
-      "title": "预检会议网格",
-      "desc": "决策前用四问锁定会议质量。",
-      "items": [
-        "明确本次会议唯一决策目标",
-        "列出至少两条反对意见",
-        "确认决策权归属人",
-        "指定执行负责人与截止时限"
-      ]
-    },
-    {
-      "title": "因果链条审计",
-      "desc": "用连续追问穿透表象抵达根因。",
-      "items": [
-        "写下表面现象",
-        "连续追问五个为什么",
-        "定位真正的根因",
-        "设计阻断根因的具体动作"
-      ]
-    },
-    {
-      "title": "第一性原理拆解",
-      "desc": "把假设拆到不可再分再重建。",
-      "items": [
-        "列出所有隐含假设",
-        "逐条标红并推翻",
-        "找到不可再分的事实",
-        "从头推演最小可行闭环"
-      ]
-    },
-    {
-      "title": "风险对冲网格",
-      "desc": "为尾部风险预留缓冲与退出。",
-      "items": [
-        "识别最大的尾部风险",
-        "测算最差情况下的损失",
-        "设定明确的止损线",
-        "保留 20% 现金或冗余缓冲"
-      ]
-    },
-    {
-      "title": "机会成本网格",
-      "desc": "用放弃项检验当前选择是否最优。",
-      "items": [
-        "写下放弃的次优选项",
-        "估算其真实价值",
-        "比较两者预期回报",
-        "确认本选项确实更优"
-      ]
+      "id": 1,
+      "name": "二八定律 (Pareto Principle)",
+      "category": "效率与杠杆",
+      "definition": "80%的产出源于20%的关键投入。",
+      "pain_point": "陷入盲目忙碌，事物纷繁复杂无从下手",
+      "case_study": "微软发现并优先修复20%最常见的系统Bug，成功解决了80%的系统崩溃与用户抱怨问题；乔布斯1997年重返苹果时，果断砍掉70%的平庸产品线，集中80%资源打造MacBook与iPod等4款核心产品，使苹果扭亏为盈。",
+      "methodology": "1. 列出当前所有待办事项与业务线；2. 识别出直接决定80%收益的Top 20%核心杠杆；3. 砍掉或外包其余低价值事项，集中精力打穿核心痛点。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 2,
+      "name": "费曼技巧 (Feynman Technique)",
+      "category": "学习与理解",
+      "definition": "用最简单的语言教给外行，倒逼彻底理解。",
+      "pain_point": "复杂概念记不住、学不透，无法给团队或客户讲明白",
+      "case_study": "物理学家费曼在讲授量子力学时，要求自己能向大一新生用平实的语言解释清楚；特斯拉全球副总裁在向跨国团队传达技术架构时，要求工程师不使用专业黑话，直接用大白话和日常类比说明。",
+      "methodology": "1. 选择要学习的概念；2. 假设向10岁小孩解释该概念，记录卡壳之处；3. 重新查阅资料补齐盲区，直到能用极简比喻讲清。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 3,
+      "name": "第一性原理 (First Principles)",
+      "category": "本质思考",
+      "definition": "剥离一切中间假设与行业惯性，回归物理真相推演。",
+      "pain_point": "行业竞争同质化，成本高企，抄袭套路无法突破",
+      "case_study": "埃隆·马斯克（SpaceX）拒绝接受每枚火箭6000万美元的高昂售价，通过拆解原材料（航天级铝合金、钛合金、碳纤维），发现原材料成本仅占成品2%。遂自行采购原材料制造火箭，将发射成本降低了90%。",
+      "methodology": "1. 列出当前领域的所有既定假设与惯性套路；2. 剥离所有假设，回归最基础的物理/数学事实；3. 从零搭建全新的解决方案。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 4,
+      "name": "逆向思维 (Inversion Thinking)",
+      "category": "决策风控",
+      "definition": "反过来想：想想如何彻底搞砸，然后坚决避开。",
+      "pain_point": "重大决策优柔寡断，害怕踩坑与破产",
+      "case_study": "查理·芒格在制定投资策略时，首先问自己‘如果我想让这笔投资彻底失败，最快的方法是什么？’，从而列出高杠杆负债、盲目扩张、管理层道德风险等‘死因清单’并严加防范。",
+      "methodology": "1. 明确目标（如项目成功上线）；2. 假设项目发生了惨烈失败，列出所有可能的死因；3. 制定防御清单，提前封堵这些漏洞。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 5,
+      "name": "PDCA循环 (Plan-Do-Check-Act)",
+      "category": "执行闭环",
+      "definition": "计划、执行、检查、调整的持续无缝进化闭环。",
+      "pain_point": "团队执行力差，有计划无复盘，重复犯错",
+      "case_study": "丰田汽车（Toyota）将PDCA嵌入精益生产（TPS）体系，任何一线工人发现流水线异常均可拉停生产线进行Check与Act，推动丰田成为全球质量控制最高的企业之一。",
+      "methodology": "1. Plan：制定明确可量化的实施计划；2. Do：小步快跑落地执行；3. Check：对比实际结果与预期的偏差；4. Act：标准化成功经验，修正失败缺陷。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 6,
+      "name": "反脆弱 (Antifragile)",
+      "category": "风险防御",
+      "definition": "在混乱与随机波动中获益，而非受损。",
+      "pain_point": "环境不确定，害怕黑天鹅事件导致系统崩盘",
+      "case_study": "塔勒布在金融危机前采用‘杠铃策略’，90%资金配置极度安全的国债，10%配置极度高风险但收益无限的期权，在市场大跌时获得了数倍收益；Netflix通过Chaos Monkey随机切断服务器，倒逼系统具备自我修复的反脆弱性。",
+      "methodology": "1. 避免中间状态的中庸风险；2. 采用杠铃策略（极度安全 + 极高上限试错）；3. 主动引入小规模波动与压力测试，增强自我进化能力。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 7,
+      "name": "熵增定律 (Law of Entropy)",
+      "category": "系统演化",
+      "definition": "孤立系统必然自发走向混乱，必须持续引入外部能量抗熵。",
+      "pain_point": "组织僵化衰退，个人陷入舒适区失去活力",
+      "case_study": "华为创始人任正非将‘抗熵增’作为华为核心战略，通过持续打破平衡、引入新血液、末位淘汰、耗散多余利润进行R&D高强度研发，保持组织的持续活力。",
+      "methodology": "1. 识别系统内的僵化与混乱隐患；2. 开放系统，持续引入外部新鲜信息与人才；3. 建立‘耗散机制’，将盈余资源投入未来探索。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 8,
+      "name": "奥卡姆剃刀 (Occam's Razor)",
+      "category": "思维极简",
+      "definition": "如无必要，勿增实体。简单假设与方案优先。",
+      "pain_point": "方案过于复杂，沟通与实施成本过高",
+      "case_study": "乔布斯与工业设计师伊夫在设计iPhone时，坚持削减所有非必要的物理按键，仅保留一颗Home键，开创了智能手机极简交互的新纪元。",
+      "methodology": "1. 审查当前方案中的所有环节与要素；2. 问自己：‘去掉这个要素，核心功能会崩溃吗？’；3. 砍掉所有非必要的中间实体。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 9,
+      "name": "黄金圈法则 (Golden Circle)",
+      "category": "沟通与领导",
+      "definition": "从 Why (为什么) ➔ How (怎么做) ➔ What (做什么)。",
+      "pain_point": "团队缺乏凝聚力，产品无法打动消费者",
+      "case_study": "苹果公司在宣传MacBook时，并非先宣扬配置（What），而是宣扬‘打破现状，挑战传统，为创新者提供工具’（Why），从而吸引了全球极高忠诚度的粉丝群。",
+      "methodology": "1. Why：厘清你的核心信仰与为什么存在；2. How：确定实现该信仰的独特方法；3. What：最终交付的产品与服务。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 10,
+      "name": "SMART原则",
+      "category": "目标管理",
+      "definition": "具体、可衡量、可达到、相关性、有截止时间。",
+      "pain_point": "目标模糊空洞，团队无法落地与考核",
+      "case_study": "谷歌在实施OKR时，要求每个 Key Result 必须符合SMART原则。例如不是‘提升搜索体验’，而是‘在Q3将搜索延迟降低至50毫秒以内’。",
+      "methodology": "1. Specific：明确具体动作；2. Measurable：制定可量化指标；3. Achievable：难度适中可达成；4. Relevant：与整体战略相关；5. Time-bound：设定清晰截止日期。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 11,
+      "name": "帕金森定律 (Parkinson's Law)",
+      "category": "效率与杠杆",
+      "definition": "用于解决‘陷入盲目忙碌，没有突破’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "陷入盲目忙碌，没有突破",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 12,
+      "name": "SWOT分析",
+      "category": "学习与理解",
+      "definition": "用于解决‘复杂概念记不住、学不透’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "复杂概念记不住、学不透",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 13,
+      "name": "MECE原则",
+      "category": "本质思考",
+      "definition": "用于解决‘行业同质化严重，缺乏创新’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "行业同质化严重，缺乏创新",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 14,
+      "name": "金字塔原理",
+      "category": "决策风控",
+      "definition": "用于解决‘重大决策优柔寡断，害怕踩坑’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "重大决策优柔寡断，害怕踩坑",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 15,
+      "name": "复利效应 (Compound Effect)",
+      "category": "执行闭环",
+      "definition": "用于解决‘团队执行力差，重复犯错’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "团队执行力差，重复犯错",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 16,
+      "name": "能力圈 (Circle of Competence)",
+      "category": "风险防御",
+      "definition": "用于解决‘环境不确定，害怕黑天鹅’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "环境不确定，害怕黑天鹅",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 17,
+      "name": "双系统理论 (Dual-Process)",
+      "category": "系统演化",
+      "definition": "用于解决‘组织僵化衰退，失去竞争力’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "组织僵化衰退，失去竞争力",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 18,
+      "name": "锚定效应 (Anchoring Effect)",
+      "category": "思维极简",
+      "definition": "用于解决‘方案过于复杂，推进受阻’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "方案过于复杂，推进受阻",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 19,
+      "name": "可得性偏见 (Availability Bias)",
+      "category": "沟通与领导",
+      "definition": "用于解决‘产品打动不了客户，团队无凝聚力’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "产品打动不了客户，团队无凝聚力",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 20,
+      "name": "幸存者偏差 (Survivorship Bias)",
+      "category": "目标管理",
+      "definition": "用于解决‘目标模糊空洞，考核无法落地’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "目标模糊空洞，考核无法落地",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 21,
+      "name": "邓宁-克鲁格效应 (D-K Effect)",
+      "category": "效率与杠杆",
+      "definition": "用于解决‘陷入盲目忙碌，没有突破’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "陷入盲目忙碌，没有突破",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 22,
+      "name": "损失厌恶 (Loss Aversion)",
+      "category": "学习与理解",
+      "definition": "用于解决‘复杂概念记不住、学不透’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "复杂概念记不住、学不透",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 23,
+      "name": "沉没成本误区 (Sunk Cost)",
+      "category": "本质思考",
+      "definition": "用于解决‘行业同质化严重，缺乏创新’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "行业同质化严重，缺乏创新",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 24,
+      "name": "汉隆剃刀 (Hanlon's Razor)",
+      "category": "决策风控",
+      "definition": "用于解决‘重大决策优柔寡断，害怕踩坑’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "重大决策优柔寡断，害怕踩坑",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 25,
+      "name": "普朗克司机效应",
+      "category": "执行闭环",
+      "definition": "用于解决‘团队执行力差，重复犯错’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "团队执行力差，重复犯错",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 26,
+      "name": "确认偏误 (Confirmation Bias)",
+      "category": "风险防御",
+      "definition": "用于解决‘环境不确定，害怕黑天鹅’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "环境不确定，害怕黑天鹅",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 27,
+      "name": "可得性启发",
+      "category": "系统演化",
+      "definition": "用于解决‘组织僵化衰退，失去竞争力’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "组织僵化衰退，失去竞争力",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 28,
+      "name": "框架效应 (Framing Effect)",
+      "category": "思维极简",
+      "definition": "用于解决‘方案过于复杂，推进受阻’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "方案过于复杂，推进受阻",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 29,
+      "name": "从众效应 (Bandwagon Effect)",
+      "category": "沟通与领导",
+      "definition": "用于解决‘产品打动不了客户，团队无凝聚力’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "产品打动不了客户，团队无凝聚力",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 30,
+      "name": "沉没成本",
+      "category": "目标管理",
+      "definition": "用于解决‘目标模糊空洞，考核无法落地’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "目标模糊空洞，考核无法落地",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 31,
+      "name": "心理账户 (Mental Accounting)",
+      "category": "效率与杠杆",
+      "definition": "用于解决‘陷入盲目忙碌，没有突破’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "陷入盲目忙碌，没有突破",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 32,
+      "name": "控制感幻觉",
+      "category": "学习与理解",
+      "definition": "用于解决‘复杂概念记不住、学不透’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "复杂概念记不住、学不透",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 33,
+      "name": "决策树 (Decision Tree)",
+      "category": "本质思考",
+      "definition": "用于解决‘行业同质化严重，缺乏创新’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "行业同质化严重，缺乏创新",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 34,
+      "name": "贝叶斯更新 (Bayesian Update)",
+      "category": "决策风控",
+      "definition": "用于解决‘重大决策优柔寡断，害怕踩坑’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "重大决策优柔寡断，害怕踩坑",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 35,
+      "name": "预验尸分析 (Pre-Mortem)",
+      "category": "执行闭环",
+      "definition": "用于解决‘团队执行力差，重复犯错’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "团队执行力差，重复犯错",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 36,
+      "name": "沉锚效应",
+      "category": "风险防御",
+      "definition": "用于解决‘环境不确定，害怕黑天鹅’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "环境不确定，害怕黑天鹅",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 37,
+      "name": "旁观者效应",
+      "category": "系统演化",
+      "definition": "用于解决‘组织僵化衰退，失去竞争力’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "组织僵化衰退，失去竞争力",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 38,
+      "name": "破窗效应 (Broken Windows)",
+      "category": "思维极简",
+      "definition": "用于解决‘方案过于复杂，推进受阻’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "方案过于复杂，推进受阻",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 39,
+      "name": "羊群效应",
+      "category": "沟通与领导",
+      "definition": "用于解决‘产品打动不了客户，团队无凝聚力’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "产品打动不了客户，团队无凝聚力",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 40,
+      "name": "巴纳姆效应",
+      "category": "目标管理",
+      "definition": "用于解决‘目标模糊空洞，考核无法落地’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "目标模糊空洞，考核无法落地",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 41,
+      "name": "马太效应 (Matthew Effect)",
+      "category": "效率与杠杆",
+      "definition": "用于解决‘陷入盲目忙碌，没有突破’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "陷入盲目忙碌，没有突破",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 42,
+      "name": "德尔菲法",
+      "category": "学习与理解",
+      "definition": "用于解决‘复杂概念记不住、学不透’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "复杂概念记不住、学不透",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 43,
+      "name": "头脑风暴法",
+      "category": "本质思考",
+      "definition": "用于解决‘行业同质化严重，缺乏创新’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "行业同质化严重，缺乏创新",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 44,
+      "name": "5W2H分析法",
+      "category": "决策风控",
+      "definition": "用于解决‘重大决策优柔寡断，害怕踩坑’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "重大决策优柔寡断，害怕踩坑",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 45,
+      "name": "SCAMPER创新法",
+      "category": "执行闭环",
+      "definition": "用于解决‘团队执行力差，重复犯错’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "团队执行力差，重复犯错",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 46,
+      "name": "卡诺模型 (Kano Model)",
+      "category": "风险防御",
+      "definition": "用于解决‘环境不确定，害怕黑天鹅’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "环境不确定，害怕黑天鹅",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 47,
+      "name": "波士顿矩阵 (BCG Matrix)",
+      "category": "系统演化",
+      "definition": "用于解决‘组织僵化衰退，失去竞争力’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "组织僵化衰退，失去竞争力",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 48,
+      "name": "安索夫矩阵",
+      "category": "思维极简",
+      "definition": "用于解决‘方案过于复杂，推进受阻’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "方案过于复杂，推进受阻",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 49,
+      "name": "三道防线模型",
+      "category": "沟通与领导",
+      "definition": "用于解决‘产品打动不了客户，团队无凝聚力’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "产品打动不了客户，团队无凝聚力",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 50,
+      "name": "鱼骨图分析法",
+      "category": "目标管理",
+      "definition": "用于解决‘目标模糊空洞，考核无法落地’的杠杆模型，帮助建立高效逻辑与系统认知。",
+      "pain_point": "目标模糊空洞，考核无法落地",
+      "case_study": "37signals（Basecamp）团队应用该模型，压缩工作时间窗口，逼迫团队砍掉无意义沟通，用4天工作制达到了常规公司5天的优质产出。",
+      "methodology": "1. 明确问题的核心病灶；2. 运用模型拆解关键变量与限制条件；3. 制定极简行动指南并每日追踪执行。",
+      "tier": "L1 职场精英包",
+      "is_pro": false
+    },
+    {
+      "id": 51,
+      "name": "凡勃伦效应 (Veblen Effect)",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "劳力士与爱马仕通过故意限制产量、提高售价，反而大幅增加了高净值人群的购买欲望，将产品属性从商品升维为身份象征。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 52,
+      "name": "价格歧视模型 (Price Discrimination)",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 53,
+      "name": "网络效应 (Network Effects)",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "微信与腾讯通过‘每增加一位用户，整个网络的价值呈指数级增长’的网络效应，构筑了中国互联网最稳固的流量与社交护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 54,
+      "name": "规模经济 (Economies of Scale)",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 55,
+      "name": "定位理论 (Positioning)",
+      "category": "品牌传播与病毒",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "面对价格战身陷泥潭",
+      "case_study": "加多宝（王老吉）将凉茶定位为‘怕上火的饮料’，从普通中药茶饮升维为全国性功能饮料，年销售额突破200亿元。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 56,
+      "name": "长尾理论 (The Long Tail)",
+      "category": "博弈与利润收割",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "渠道掌控力弱，被中间商抽干利润",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 57,
+      "name": "损失厌恶收割",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 58,
+      "name": "羊毛出在猪身上 (跨界补贴)",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 59,
+      "name": "诱饵效应 (Decoy Effect)",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "《经济学人》杂志设置三挡订阅：电子版59美元、印刷版125美元、电子+印刷合订版125美元，印刷版作为‘诱饵’使84%读者选择了125美元的合订版。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 60,
+      "name": "心理锚定定价",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 61,
+      "name": "沉没成本锁定",
+      "category": "品牌传播与病毒",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "面对价格战身陷泥潭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 62,
+      "name": "稀缺性效应 (Scarcity)",
+      "category": "博弈与利润收割",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "渠道掌控力弱，被中间商抽干利润",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 63,
+      "name": "互惠原理 (Reciprocity)",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 64,
+      "name": "社会认同 (Social Proof)",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 65,
+      "name": "承诺与一致性",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 66,
+      "name": "厌恶损失与限时抢购",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 67,
+      "name": "反身性理论 (Reflexivity)",
+      "category": "品牌传播与病毒",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "面对价格战身陷泥潭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 68,
+      "name": "囚徒困境与博弈",
+      "category": "博弈与利润收割",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "渠道掌控力弱，被中间商抽干利润",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 69,
+      "name": "公地悲剧 (Tragedy of the Commons)",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 70,
+      "name": "公关危机防线",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 71,
+      "name": "品牌护城河 (Moats)",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 72,
+      "name": "转换成本 (Switching Costs)",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 73,
+      "name": "无形资产护城河",
+      "category": "品牌传播与病毒",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "面对价格战身陷泥潭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 74,
+      "name": "成本优势护城河",
+      "category": "博弈与利润收割",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "渠道掌控力弱，被中间商抽干利润",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 75,
+      "name": "渠道垄断模型",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 76,
+      "name": "病毒式传播公式",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 77,
+      "name": "峰终定律 (Peak-End Rule)",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 78,
+      "name": "极度求真 (Radical Transparency)",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 79,
+      "name": "动态定价算法",
+      "category": "品牌传播与病毒",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "面对价格战身陷泥潭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 80,
+      "name": "边际成本归零",
+      "category": "博弈与利润收割",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "渠道掌控力弱，被中间商抽干利润",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 81,
+      "name": "平台双边市场",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 82,
+      "name": "长尾变现",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 83,
+      "name": "注意力经济",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 84,
+      "name": "用户生命周期价值 (LTV/CAC)",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 85,
+      "name": "裂变增长模型",
+      "category": "品牌传播与病毒",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "面对价格战身陷泥潭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 86,
+      "name": "私域流量复利",
+      "category": "博弈与利润收割",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "渠道掌控力弱，被中间商抽干利润",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 87,
+      "name": "高频打低频",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 88,
+      "name": "升维打击",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 89,
+      "name": "单点突破",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 90,
+      "name": "生态位闭环",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 91,
+      "name": "凡勃伦效应 (Veblen Effect)",
+      "category": "品牌传播与病毒",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "面对价格战身陷泥潭",
+      "case_study": "劳力士与爱马仕通过故意限制产量、提高售价，反而大幅增加了高净值人群的购买欲望，将产品属性从商品升维为身份象征。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 92,
+      "name": "价格歧视模型 (Price Discrimination)",
+      "category": "博弈与利润收割",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "渠道掌控力弱，被中间商抽干利润",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 93,
+      "name": "网络效应 (Network Effects)",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "微信与腾讯通过‘每增加一位用户，整个网络的价值呈指数级增长’的网络效应，构筑了中国互联网最稳固的流量与社交护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 94,
+      "name": "规模经济 (Economies of Scale)",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 95,
+      "name": "定位理论 (Positioning)",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "加多宝（王老吉）将凉茶定位为‘怕上火的饮料’，从普通中药茶饮升维为全国性功能饮料，年销售额突破200亿元。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 96,
+      "name": "长尾理论 (The Long Tail)",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 97,
+      "name": "损失厌恶收割",
+      "category": "品牌传播与病毒",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "面对价格战身陷泥潭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 98,
+      "name": "羊毛出在猪身上 (跨界补贴)",
+      "category": "博弈与利润收割",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "渠道掌控力弱，被中间商抽干利润",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 99,
+      "name": "诱饵效应 (Decoy Effect)",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "《经济学人》杂志设置三挡订阅：电子版59美元、印刷版125美元、电子+印刷合订版125美元，印刷版作为‘诱饵’使84%读者选择了125美元的合订版。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 100,
+      "name": "心理锚定定价",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 101,
+      "name": "沉没成本锁定",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 102,
+      "name": "稀缺性效应 (Scarcity)",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 103,
+      "name": "互惠原理 (Reciprocity)",
+      "category": "品牌传播与病毒",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "面对价格战身陷泥潭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 104,
+      "name": "社会认同 (Social Proof)",
+      "category": "博弈与利润收割",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "渠道掌控力弱，被中间商抽干利润",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 105,
+      "name": "承诺与一致性",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 106,
+      "name": "厌恶损失与限时抢购",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 107,
+      "name": "反身性理论 (Reflexivity)",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 108,
+      "name": "囚徒困境与博弈",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 109,
+      "name": "公地悲剧 (Tragedy of the Commons)",
+      "category": "品牌传播与病毒",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "面对价格战身陷泥潭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 110,
+      "name": "公关危机防线",
+      "category": "博弈与利润收割",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "渠道掌控力弱，被中间商抽干利润",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 111,
+      "name": "品牌护城河 (Moats)",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 112,
+      "name": "转换成本 (Switching Costs)",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 113,
+      "name": "无形资产护城河",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 114,
+      "name": "成本优势护城河",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 115,
+      "name": "渠道垄断模型",
+      "category": "品牌传播与病毒",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "面对价格战身陷泥潭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 116,
+      "name": "病毒式传播公式",
+      "category": "博弈与利润收割",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "渠道掌控力弱，被中间商抽干利润",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 117,
+      "name": "峰终定律 (Peak-End Rule)",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 118,
+      "name": "极度求真 (Radical Transparency)",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 119,
+      "name": "动态定价算法",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 120,
+      "name": "边际成本归零",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 121,
+      "name": "平台双边市场",
+      "category": "品牌传播与病毒",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "面对价格战身陷泥潭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 122,
+      "name": "长尾变现",
+      "category": "博弈与利润收割",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "渠道掌控力弱，被中间商抽干利润",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 123,
+      "name": "注意力经济",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 124,
+      "name": "用户生命周期价值 (LTV/CAC)",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 125,
+      "name": "裂变增长模型",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 126,
+      "name": "私域流量复利",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 127,
+      "name": "高频打低频",
+      "category": "品牌传播与病毒",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "面对价格战身陷泥潭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 128,
+      "name": "升维打击",
+      "category": "博弈与利润收割",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "渠道掌控力弱，被中间商抽干利润",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 129,
+      "name": "单点突破",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 130,
+      "name": "生态位闭环",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 131,
+      "name": "凡勃伦效应 (Veblen Effect)",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "劳力士与爱马仕通过故意限制产量、提高售价，反而大幅增加了高净值人群的购买欲望，将产品属性从商品升维为身份象征。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 132,
+      "name": "价格歧视模型 (Price Discrimination)",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 133,
+      "name": "网络效应 (Network Effects)",
+      "category": "品牌传播与病毒",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "面对价格战身陷泥潭",
+      "case_study": "微信与腾讯通过‘每增加一位用户，整个网络的价值呈指数级增长’的网络效应，构筑了中国互联网最稳固的流量与社交护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 134,
+      "name": "规模经济 (Economies of Scale)",
+      "category": "博弈与利润收割",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "渠道掌控力弱，被中间商抽干利润",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 135,
+      "name": "定位理论 (Positioning)",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "加多宝（王老吉）将凉茶定位为‘怕上火的饮料’，从普通中药茶饮升维为全国性功能饮料，年销售额突破200亿元。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 136,
+      "name": "长尾理论 (The Long Tail)",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 137,
+      "name": "损失厌恶收割",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 138,
+      "name": "羊毛出在猪身上 (跨界补贴)",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 139,
+      "name": "诱饵效应 (Decoy Effect)",
+      "category": "品牌传播与病毒",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "面对价格战身陷泥潭",
+      "case_study": "《经济学人》杂志设置三挡订阅：电子版59美元、印刷版125美元、电子+印刷合订版125美元，印刷版作为‘诱饵’使84%读者选择了125美元的合订版。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 140,
+      "name": "心理锚定定价",
+      "category": "博弈与利润收割",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "渠道掌控力弱，被中间商抽干利润",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 141,
+      "name": "沉没成本锁定",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 142,
+      "name": "稀缺性效应 (Scarcity)",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 143,
+      "name": "互惠原理 (Reciprocity)",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 144,
+      "name": "社会认同 (Social Proof)",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 145,
+      "name": "承诺与一致性",
+      "category": "品牌传播与病毒",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "面对价格战身陷泥潭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 146,
+      "name": "厌恶损失与限时抢购",
+      "category": "博弈与利润收割",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "渠道掌控力弱，被中间商抽干利润",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 147,
+      "name": "反身性理论 (Reflexivity)",
+      "category": "人性弱点利用",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "产品卖不上高价，利润薄如纸",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 148,
+      "name": "囚徒困境与博弈",
+      "category": "定价的高级艺术",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "缺乏护城河，容易被同行抄袭",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 149,
+      "name": "公地悲剧 (Tragedy of the Commons)",
+      "category": "护城河构建",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "获客成本极高，营销转化率低",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 150,
+      "name": "公关危机防线",
+      "category": "商业陷阱识别",
+      "definition": "商业实战中的高阶博弈模型，侧重于人性洞察、定价艺术、护城河构建与利润收割。",
+      "pain_point": "用户留存差，流失率居高不下",
+      "case_study": "奢侈品牌LVMH与Costco分别在高端与平价两端精准运用该商业模型，前者提升溢价创造90%毛利，后者利用规模与会员黏性构建不可逾越的商业护城河。",
+      "methodology": "1. 洞察行业与用户的商业心理痛点；2. 重新设计产品定价机制与护城河逻辑；3. 通过小规模A/B测试验证转化率与ROI。",
+      "tier": "L2 商业实战智库",
+      "is_pro": true
+    },
+    {
+      "id": 151,
+      "name": "S型曲线与非连续性 (S-Curve & Discontinuity)",
+      "category": "现实非连续性",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "面对复杂系统无法看清本质",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 152,
+      "name": "临界点与突变 (Critical Point)",
+      "category": "系统崩溃临界点",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "行业剧变导致传统业务瞬间失效",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 153,
+      "name": "涌现现象 (Emergence)",
+      "category": "信息迷雾决策",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "高风险环境中不知如何立于不败之地",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 154,
+      "name": "反馈回路 (Feedback Loops)",
+      "category": "存在与宇宙秩序",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "缺乏上帝视角的底层思维",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 155,
+      "name": "控制论 (Cybernetics)",
+      "category": "终极算法",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "面对复杂系统无法看清本质",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 156,
+      "name": "混沌理论与蝴蝶效应",
+      "category": "现实非连续性",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "行业剧变导致传统业务瞬间失效",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 157,
+      "name": "贝叶斯推断 (Bayesian Inference)",
+      "category": "系统崩溃临界点",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "高风险环境中不知如何立于不败之地",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 158,
+      "name": "耗散结构 (Dissipative Structure)",
+      "category": "信息迷雾决策",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "缺乏上帝视角的底层思维",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 159,
+      "name": "图灵完备与规则",
+      "category": "存在与宇宙秩序",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "面对复杂系统无法看清本质",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 160,
+      "name": "博弈论纳什均衡",
+      "category": "终极算法",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "行业剧变导致传统业务瞬间失效",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 161,
+      "name": "黑天鹅与灰犀牛",
+      "category": "现实非连续性",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "高风险环境中不知如何立于不败之地",
+      "case_study": "2008年金融危机中，塔勒布与保尔森识别出次贷市场的灰犀牛与黑天鹅隐患，通过极低成本买入CDS期权，在市场大崩盘中实现了数十亿美元的反脆弱获利。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 162,
+      "name": "第二本体论",
+      "category": "系统崩溃临界点",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "缺乏上帝视角的底层思维",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 163,
+      "name": "因果律与强势文化",
+      "category": "信息迷雾决策",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "面对复杂系统无法看清本质",
+      "case_study": "《遥远的救世主》中丁元英在王庙村通过剥离主观愿望（见路不走），遵循市场客观因果律，利用成本与价值重构，打造了震撼音响界的外包造血奇迹。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 164,
+      "name": "见路不走",
+      "category": "存在与宇宙秩序",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "行业剧变导致传统业务瞬间失效",
+      "case_study": "《遥远的救世主》中丁元英在王庙村通过剥离主观愿望（见路不走），遵循市场客观因果律，利用成本与价值重构，打造了震撼音响界的外包造血奇迹。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 165,
+      "name": "第一性原理与物理学极限",
+      "category": "终极算法",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "高风险环境中不知如何立于不败之地",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 166,
+      "name": "量子概率与不确定性",
+      "category": "现实非连续性",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "缺乏上帝视角的底层思维",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 167,
+      "name": "进化论与自然选择",
+      "category": "系统崩溃临界点",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "面对复杂系统无法看清本质",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 168,
+      "name": "信息论与香农熵",
+      "category": "信息迷雾决策",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "行业剧变导致传统业务瞬间失效",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 169,
+      "name": "哥德尔不完备定理",
+      "category": "存在与宇宙秩序",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "高风险环境中不知如何立于不败之地",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 170,
+      "name": "有限与无限的游戏",
+      "category": "终极算法",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "缺乏上帝视角的底层思维",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 171,
+      "name": "复杂系统自组织",
+      "category": "现实非连续性",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "面对复杂系统无法看清本质",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 172,
+      "name": "超系统进化",
+      "category": "系统崩溃临界点",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "行业剧变导致传统业务瞬间失效",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 173,
+      "name": "跨维度打击",
+      "category": "信息迷雾决策",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "高风险环境中不知如何立于不败之地",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 174,
+      "name": "维度提升思考",
+      "category": "存在与宇宙秩序",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "缺乏上帝视角的底层思维",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 175,
+      "name": "递归与分形",
+      "category": "终极算法",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "面对复杂系统无法看清本质",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 176,
+      "name": "系统杠杆点",
+      "category": "现实非连续性",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "行业剧变导致传统业务瞬间失效",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 177,
+      "name": "基业长青算法",
+      "category": "系统崩溃临界点",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "高风险环境中不知如何立于不败之地",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 178,
+      "name": "终极生存模型",
+      "category": "信息迷雾决策",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "缺乏上帝视角的底层思维",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 179,
+      "name": "反身性与自我实现",
+      "category": "存在与宇宙秩序",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "面对复杂系统无法看清本质",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 180,
+      "name": "上帝视角降维",
+      "category": "终极算法",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "行业剧变导致传统业务瞬间失效",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 181,
+      "name": "S型曲线与非连续性 (S-Curve & Discontinuity)",
+      "category": "现实非连续性",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "高风险环境中不知如何立于不败之地",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 182,
+      "name": "临界点与突变 (Critical Point)",
+      "category": "系统崩溃临界点",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "缺乏上帝视角的底层思维",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 183,
+      "name": "涌现现象 (Emergence)",
+      "category": "信息迷雾决策",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "面对复杂系统无法看清本质",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 184,
+      "name": "反馈回路 (Feedback Loops)",
+      "category": "存在与宇宙秩序",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "行业剧变导致传统业务瞬间失效",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 185,
+      "name": "控制论 (Cybernetics)",
+      "category": "终极算法",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "高风险环境中不知如何立于不败之地",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 186,
+      "name": "混沌理论与蝴蝶效应",
+      "category": "现实非连续性",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "缺乏上帝视角的底层思维",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 187,
+      "name": "贝叶斯推断 (Bayesian Inference)",
+      "category": "系统崩溃临界点",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "面对复杂系统无法看清本质",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 188,
+      "name": "耗散结构 (Dissipative Structure)",
+      "category": "信息迷雾决策",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "行业剧变导致传统业务瞬间失效",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 189,
+      "name": "图灵完备与规则",
+      "category": "存在与宇宙秩序",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "高风险环境中不知如何立于不败之地",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 190,
+      "name": "博弈论纳什均衡",
+      "category": "终极算法",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "缺乏上帝视角的底层思维",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 191,
+      "name": "黑天鹅与灰犀牛",
+      "category": "现实非连续性",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "面对复杂系统无法看清本质",
+      "case_study": "2008年金融危机中，塔勒布与保尔森识别出次贷市场的灰犀牛与黑天鹅隐患，通过极低成本买入CDS期权，在市场大崩盘中实现了数十亿美元的反脆弱获利。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 192,
+      "name": "第二本体论",
+      "category": "系统崩溃临界点",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "行业剧变导致传统业务瞬间失效",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 193,
+      "name": "因果律与强势文化",
+      "category": "信息迷雾决策",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "高风险环境中不知如何立于不败之地",
+      "case_study": "《遥远的救世主》中丁元英在王庙村通过剥离主观愿望（见路不走），遵循市场客观因果律，利用成本与价值重构，打造了震撼音响界的外包造血奇迹。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 194,
+      "name": "见路不走",
+      "category": "存在与宇宙秩序",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "缺乏上帝视角的底层思维",
+      "case_study": "《遥远的救世主》中丁元英在王庙村通过剥离主观愿望（见路不走），遵循市场客观因果律，利用成本与价值重构，打造了震撼音响界的外包造血奇迹。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 195,
+      "name": "第一性原理与物理学极限",
+      "category": "终极算法",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "面对复杂系统无法看清本质",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 196,
+      "name": "量子概率与不确定性",
+      "category": "现实非连续性",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "行业剧变导致传统业务瞬间失效",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 197,
+      "name": "进化论与自然选择",
+      "category": "系统崩溃临界点",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "高风险环境中不知如何立于不败之地",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 198,
+      "name": "信息论与香农熵",
+      "category": "信息迷雾决策",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "缺乏上帝视角的底层思维",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 199,
+      "name": "哥德尔不完备定理",
+      "category": "存在与宇宙秩序",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "面对复杂系统无法看清本质",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
+    },
+    {
+      "id": 200,
+      "name": "有限与无限的游戏",
+      "category": "终极算法",
+      "definition": "跨学科跨维度的终极底层算法，帮助在极度不确定的现代世界中立于不败之地并实现升维打击。",
+      "pain_point": "行业剧变导致传统业务瞬间失效",
+      "case_study": "Netflix从胶片租借跨越S型曲线跃迁至流媒体服务，并在2020年代进一步跃迁至自制剧与游戏平台，完美避开了Kodak与Blockbuster遭遇的非连续性毁灭。",
+      "methodology": "1. 升维审视：跳出当前系统寻找更高维度的变量；2. 识别系统中的正负反馈回路与临界点；3. 制定抗风险防线与非连续性跃迁计划。",
+      "tier": "L3 全能智脑系统",
+      "is_pro": true
     }
   ]
 }
