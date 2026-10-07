@@ -1,671 +1,671 @@
 {
-  "total_books": 35,
-  "version": "2.0-final",
-  "categories": [
-    "科技、商业与领袖传记",
-    "认知思维与心理",
-    "商业框架与投资",
-    "哲学修持与科学",
-    "文学经典与命运沉思"
-  ],
-  "books": [
-    {
-      "id": 1,
-      "title": "Strict Business (公事公办)",
-      "en_title": "Strictly Business",
-      "author": "O. Henry / Rick Wolff",
-      "category": "科技、商业与领袖传记",
-      "summary": "探讨商业与职场中的理性边界、公私分界与创业生存法则。",
-      "insights": [
-        "职场与商业需要“公私分界”的清醒与底线，但生活离不开温情。",
-        "保持理性与专业是立足之本，懂得节制与底线是长久之基。"
-      ],
-      "models_linked": [
-        "二八定律",
-        "MECE原则"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/55372984-strictly-business",
-        "douban": "https://book.douban.com/"
-      }
-    },
-    {
-      "id": 2,
-      "title": "The Book of Elon (马斯克之书)",
-      "en_title": "The Book of Elon",
-      "author": "Eric",
-      "category": "科技、商业与领袖传记",
-      "summary": "系统梳理马斯克核心工作法：第一性原理、傻瓜指数与极限压缩成本。",
-      "insights": [
-        "不要把潜力消耗在常规轨道上。用第一性原理拆解难题。",
-        "心怀宏大愿景并付出极致执行力。"
-      ],
-      "models_linked": [
-        "第一性原理",
-        "反脆弱"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com",
-        "douban": "https://book.douban.com/subject/38392258/"
-      }
-    },
-    {
-      "id": 3,
-      "title": "史蒂夫·乔布斯传",
-      "en_title": "Steve Jobs",
-      "author": "Walter Isaacson",
-      "category": "科技、商业与领袖传记",
-      "summary": "官方授权传记，记录乔布斯现实扭曲力场、极简设计美学与人文科技交融。",
-      "insights": [
-        "“活着就是为了改变世界”。专注与极致能缔造传奇。",
-        "听从内心的声音，做自己真正热爱的事。"
-      ],
-      "models_linked": [
-        "第一性原理",
-        "奥卡姆剃刀"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/11084145-steve-jobs",
-        "douban": "https://book.douban.com/subject/6798611/"
-      }
-    },
-    {
-      "id": 4,
-      "title": "特斯拉传：实现不可能",
-      "en_title": "Tesla: Powering the Future",
-      "author": "Charles Morris",
-      "category": "科技、商业与领袖传记",
-      "summary": "复盘特斯拉汽车崛起历程、电动车革命与马斯克的商业生存哲学。",
-      "insights": [
-        "颠覆传统必然伴随着质疑，保持信念将不可能落地为现实。"
-      ],
-      "models_linked": [
-        "第一性原理",
-        "S型曲线"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com",
-        "douban": "https://book.douban.com/subject/35384639/"
-      }
-    },
-    {
-      "id": 5,
-      "title": "硅谷钢铁侠",
-      "en_title": "Elon Musk: Tesla, SpaceX",
-      "author": "Ashlee Vance",
-      "category": "科技、商业与领袖传记",
-      "summary": "记录马斯克创办 PayPal、SpaceX、Tesla 的疯狂冒险与高压管理。",
-      "insights": [
-        "敢于做宏大的梦，并拥有承受惨痛失败与绝境重生的承受力。"
-      ],
-      "models_linked": [
-        "第一性原理",
-        "逆向思维"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/25541015-elon-musk",
-        "douban": "https://book.douban.com/subject/26745943/"
-      }
-    },
-    {
-      "id": 6,
-      "title": "认同自己：如何超越弱点",
-      "en_title": "S'accepter comme on est",
-      "author": "Stéphanie Hahusseau",
-      "category": "认知思维与心理",
-      "summary": "帮助读者摆脱自卑与完美主义，接纳自我不完美，重建内心秩序。",
-      "insights": [
-        "接纳自己是一切改变的起点，不必讨好世界，拥抱真实的自己。"
-      ],
-      "models_linked": [
-        "接纳承诺",
-        "元认知"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com",
-        "douban": "https://book.douban.com/subject/35191060/"
-      }
-    },
-    {
-      "id": 7,
-      "title": "贪婪的多巴胺",
-      "en_title": "The Molecule of More",
-      "author": "Daniel Z. Lieberman",
-      "category": "认知思维与心理",
-      "summary": "解密多巴胺如何掌控欲望与创造力，以及与“当下分子”的博弈。",
-      "insights": [
-        "多巴胺带来渴望而非持久幸福。学会享受“当下”，平衡欲望。"
-      ],
-      "models_linked": [
-        "多巴胺回路",
-        "延迟满足"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/38728977-the-molecule-of-more",
-        "douban": "https://book.douban.com/subject/35532588/"
-      }
-    },
-    {
-      "id": 8,
-      "title": "心流：最佳体验心理学",
-      "en_title": "Flow",
-      "author": "Mihaly Csikszentmihalyi",
-      "category": "认知思维与心理",
-      "summary": "阐述幸福本质在于进入“心流”状态——全身心投入获得高度专注。",
-      "insights": [
-        "幸福不是被动享受，而是在全神贯注克服有难度任务时的生命体验。"
-      ],
-      "models_linked": [
-        "心流通道",
-        "刻意练习"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/66354.Flow",
-        "douban": "https://book.douban.com/subject/27186106/"
-      }
-    },
-    {
-      "id": 9,
-      "title": "概括力：三步学会精准表达",
-      "en_title": "Summarizing Power",
-      "author": "山口拓朗",
-      "category": "认知思维与心理",
-      "summary": "实用沟通指南，通过收集➔整理➔传达三步法精简沟通、高效表达。",
-      "insights": [
-        "越能把复杂问题一句话讲清楚，越说明思考的深刻与通透。"
-      ],
-      "models_linked": [
-        "费曼技巧",
-        "金字塔原理"
-      ],
-      "links": {
-        "douban": "https://book.douban.com/subject/35639695/"
-      }
-    },
-    {
-      "id": 10,
-      "title": "全新思维",
-      "en_title": "A Whole New Mind",
-      "author": "Daniel H. Pink",
-      "category": "认知思维与心理",
-      "summary": "剖析右脑6大能力（设计感、故事力、交响力等）将决定未来核心竞争力。",
-      "insights": [
-        "机械重复将被AI取代，唯有温度、创造力与情感共鸣不可替代。"
-      ],
-      "models_linked": [
-        "右脑右力",
-        "跨界思维"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/109312.A_Whole_New_Mind",
-        "douban": "https://book.douban.com/subject/2042548/"
-      }
-    },
-    {
-      "id": 11,
-      "title": "稀缺：我们是如何陷入贫穷与忙碌的",
-      "en_title": "Scarcity",
-      "author": "Sendhil Mullainathan",
-      "category": "认知思维与心理",
-      "summary": "揭示稀缺心理俘获大脑注意力、降低“心理带宽”与短视陷阱。",
-      "insights": [
-        "留出余量（Slack）是防范危机的核心；保护好心理带宽与长期规划。"
-      ],
-      "models_linked": [
-        "稀缺效应",
-        "带宽限制"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/17333336-scarcity",
-        "douban": "https://book.douban.com/subject/25959166/"
-      }
-    },
-    {
-      "id": 12,
-      "title": "乌合之众：大众心理研究",
-      "en_title": "The Crowd",
-      "author": "Gustave Le Bon",
-      "category": "认知思维与心理",
-      "summary": "剖析个人融入群体后如何丧失理性、情绪化与盲从。",
-      "insights": [
-        "保持独立思考是极其珍贵的品质；警惕情绪绑架与群体狂欢。"
-      ],
-      "models_linked": [
-        "从众效应",
-        "群体盲思"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/679728.The_Crowd",
-        "douban": "https://book.douban.com/subject/1012611/"
-      }
-    },
-    {
-      "id": 13,
-      "title": "思考的框架",
-      "en_title": "The Great Mental Models",
-      "author": "Shane Parrish",
-      "category": "认知思维与心理",
-      "summary": "总结普适思维模型（第一性原理、奥卡姆剃刀、逆向思维等）。",
-      "insights": [
-        "思维模型是理解世界的地图；拥有多样化工具箱，才不会手握锤子看什么都是钉子。"
-      ],
-      "models_linked": [
-        "多元思维模型",
-        "逆向思维"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/41558238-the-great-mental-models",
-        "douban": "https://book.douban.com/subject/35360661/"
-      }
-    },
-    {
-      "id": 14,
-      "title": "思考，快与慢",
-      "en_title": "Thinking, Fast and Slow",
-      "author": "Daniel Kahneman",
-      "category": "认知思维与心理",
-      "summary": "剖析系统1（直觉快思考）与系统2（理性慢思考）的决策偏差。",
-      "insights": [
-        "人类远没有想象的那么理性；重大决策放慢脚步启动系统2。"
-      ],
-      "models_linked": [
-        "双系统理论",
-        "锚定效应"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow",
-        "douban": "https://book.douban.com/subject/10785583/"
-      }
-    },
-    {
-      "id": 15,
-      "title": "贫穷的本质",
-      "en_title": "Poor Economics",
-      "author": "Abhijit V. Banerjee",
-      "category": "认知思维与心理",
-      "summary": "基于15年田野试验，揭示贫困人群在健康、教育、储蓄上的认知陷阱。",
-      "insights": [
-        "贫穷不仅是缺乏资金，更是缺乏信息与长期选择空间。"
-      ],
-      "models_linked": [
-        "复利效应",
-        "决策陷阱"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/10245602-poor-economics",
-        "douban": "https://book.douban.com/subject/20470359/"
-      }
-    },
-    {
-      "id": 16,
-      "title": "原则",
-      "en_title": "Principles: Life and Work",
-      "author": "Ray Dalio",
-      "category": "商业框架与投资",
-      "summary": "桥水基金创始人总结人生与管理的几百条原则：极度求真、极度透明。",
-      "insights": [
-        "痛苦 + 反思 = 进步；建立属于自己的原则体系对待挫折。"
-      ],
-      "models_linked": [
-        "极度求真",
-        "检查清单"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/34361530-principles",
-        "douban": "https://book.douban.com/subject/27608239/"
-      }
-    },
-    {
-      "id": 17,
-      "title": "穷查理宝典",
-      "en_title": "Poor Charlie's Almanack",
-      "author": "Charlie Munger",
-      "category": "商业框架与投资",
-      "summary": "查理·芒格演讲合集，涵盖多元思维模型、逆向思考与误判心理学。",
-      "insights": [
-        "“反过来想，总是反过来想”；终身学习，跨学科构建思维模型。"
-      ],
-      "models_linked": [
-        "多元思维模型",
-        "逆向思维",
-        "安全边际"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/93980.Poor_Charlie_s_Almanack",
-        "douban": "https://book.douban.com/subject/2164410/"
-      }
-    },
-    {
-      "id": 18,
-      "title": "金线",
-      "en_title": "The Golden Thread",
-      "author": "冯唐",
-      "category": "商业框架与投资",
-      "summary": "成事学与结构化解题思维方法论：用一条金线穿透复杂问题。",
-      "insights": [
-        "抓不住主线，再努力也是无头苍蝇；用逻辑金线穿透迷雾。"
-      ],
-      "models_linked": [
-        "金字塔原理",
-        "MECE原则"
-      ],
-      "links": {
-        "douban": "https://book.douban.com/subject/36142750/"
-      }
-    },
-    {
-      "id": 19,
-      "title": "金字塔原理",
-      "en_title": "The Minto Pyramid Principle",
-      "author": "Barbara Minto",
-      "category": "商业框架与投资",
-      "summary": "麦肯锡经典逻辑工具：结论先行、以上统下、归类分组、MECE。",
-      "insights": [
-        "清楚的表达源于清晰的思考；先给答案再给理由，节省沟通成本。"
-      ],
-      "models_linked": [
-        "MECE原则",
-        "金字塔原理"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/219985.The_Minto_Pyramid_Principle",
-        "douban": "https://book.douban.com/subject/1020644/"
-      }
-    },
-    {
-      "id": 20,
-      "title": "乔布斯、禅与投资",
-      "en_title": "Steve Jobs, Zen and Investment",
-      "author": "李国飞",
-      "category": "商业框架与投资",
-      "summary": "将禅宗哲理（缘起性空、专注力）与乔布斯及价值投资结合。",
-      "insights": [
-        "工作与投资皆是修行的道场；清空执念、聚焦本质。"
-      ],
-      "models_linked": [
-        "第一性原理",
-        "禅修心法"
-      ],
-      "links": {
-        "douban": "https://book.douban.com/subject/36404314/"
-      }
-    },
-    {
-      "id": 21,
-      "title": "万物原理",
-      "en_title": "Fundamentals: Ten Keys to Reality",
-      "author": "Frank Wilczek",
-      "category": "哲学修持与科学",
-      "summary": "诺奖得主以十个基本洞见梳理宇宙法则与互补性思维。",
-      "insights": [
-        "宇宙至简至美；学会“互补性思维”，打通认知任督二脉。"
-      ],
-      "models_linked": [
-        "第一性原理",
-        "互补思维"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/53404289-fundamentals",
-        "douban": "https://book.douban.com/subject/35688537/"
-      }
-    },
-    {
-      "id": 22,
-      "title": "禅者的初心",
-      "en_title": "Zen Mind, Beginner's Mind",
-      "author": "Shunryu Suzuki",
-      "category": "哲学修持与科学",
-      "summary": "阐述“初心”（初学者之心，充满无限可能）的修持方法。",
-      "insights": [
-        "“初者的心中有许多可能，专家的心中只有少数”；保持好奇与清空。"
-      ],
-      "models_linked": [
-        "初心思维",
-        "清空杯子"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/402843.Zen_Mind_Beginner_s_Mind",
-        "douban": "https://book.douban.com/subject/4815456/"
-      }
-    },
-    {
-      "id": 23,
-      "title": "郭论",
-      "en_title": "Guo Lun",
-      "author": "郭德纲",
-      "category": "哲学修持与科学",
-      "summary": "随笔集，以世俗智慧剖析中国历史人物与人情世故。",
-      "insights": [
-        "看透世态炎凉而不冷漠，懂规矩、识人心；活得通透才是硬道理。"
-      ],
-      "models_linked": [
-        "人性洞察",
-        "世俗智慧"
-      ],
-      "links": {
-        "douban": "https://book.douban.com/subject/30366405/"
-      }
-    },
-    {
-      "id": 24,
-      "title": "过得刚好",
-      "en_title": "Just Right",
-      "author": "郭德纲",
-      "category": "哲学修持与科学",
-      "summary": "自传与感悟，记录北漂辛酸与“不求圆满，但求刚好”的从容。",
-      "insights": [
-        "人生哪有事事顺心，过得刚好便是大幸；挫折是滋养人生的养料。"
-      ],
-      "models_linked": [
-        "反脆弱",
-        "接纳现实"
-      ],
-      "links": {
-        "douban": "https://book.douban.com/subject/24719263/"
-      }
-    },
-    {
-      "id": 25,
-      "title": "刚刚说过",
-      "en_title": "Just Said",
-      "author": "郭德纲",
-      "category": "哲学修持与科学",
-      "summary": "围绕处世、人情与情商展开，充满市井生活中的现实哲学。",
-      "insights": [
-        "说话有分寸，做事留余地；人生的功力体现在言语间的分寸感。"
-      ],
-      "models_linked": [
-        "情商分寸",
-        "博弈边界"
-      ],
-      "links": {
-        "douban": "https://book.douban.com/subject/35212595/"
-      }
-    },
-    {
-      "id": 26,
-      "title": "在峡江的转弯处",
-      "en_title": "At the Turn of the River",
-      "author": "陈行甲",
-      "category": "文学经典与命运沉思",
-      "summary": "前全国优秀县委书记陈行甲自传，记录扶贫抗腐与转战公益的心路。",
-      "insights": [
-        "干净地做人，清白地做事；真正的勇气是在艰难中选择善良。"
-      ],
-      "models_linked": [
-        "良知底线",
-        "使命驱动"
-      ],
-      "links": {
-        "douban": "https://book.douban.com/subject/35300057/"
-      }
-    },
-    {
-      "id": 27,
-      "title": "死比活着容易",
-      "en_title": "Dying is Easier Than Living",
-      "author": "豆豆",
-      "category": "文学经典与命运沉思",
-      "summary": "豆豆处女作，探讨生存法则、人性底线与利益交织下的抉择。",
-      "insights": [
-        "放弃容易，坚持活着并守住灵魂底线才是真英雄。"
-      ],
-      "models_linked": [
-        "底线思维",
-        "生存法则"
-      ],
-      "links": {
-        "douban": "https://book.douban.com/subject/14266507/"
-      }
-    },
-    {
-      "id": 28,
-      "title": "背叛",
-      "en_title": "Betrayal",
-      "author": "豆豆",
-      "category": "文学经典与命运沉思",
-      "summary": "策划大师宋一坤在人性与利益面前的计算、救赎与悲剧。",
-      "insights": [
-        "背叛他人最终也是背叛自己；良知才是人在世间最后的救赎。"
-      ],
-      "models_linked": [
-        "商业博弈",
-        "道德底线"
-      ],
-      "links": {
-        "douban": "https://book.douban.com/subject/1077747/"
-      }
-    },
-    {
-      "id": 29,
-      "title": "天幕红尘",
-      "en_title": "Red Dust of Heaven",
-      "author": "豆豆",
-      "category": "文学经典与命运沉思",
-      "summary": "豆豆三部曲终章，提出“见路不走”的核心哲学——实事求是。",
-      "insights": [
-        "“见路不走”，不抄经验也不拘泥教条，一切从客观实际出发。"
-      ],
-      "models_linked": [
-        "见路不走",
-        "实事求是"
-      ],
-      "links": {
-        "douban": "https://book.douban.com/subject/24700085/"
-      }
-    },
-    {
-      "id": 30,
-      "title": "遥远的救世主",
-      "en_title": "Ransom of the Savior",
-      "author": "豆豆",
-      "category": "文学经典与命运沉思",
-      "summary": "《天道》原著，深刻剖析文化属性（强势文化 vs 弱势文化）与规律。",
-      "insights": [
-        "没有救世主，唯一的救世主是你自己；摆脱“等靠要”弱势文化。"
-      ],
-      "models_linked": [
-        "强势文化",
-        "见路不走",
-        "因果律"
-      ],
-      "links": {
-        "douban": "https://book.douban.com/subject/1309838/"
-      }
-    },
-    {
-      "id": 31,
-      "title": "窄门",
-      "en_title": "Strait is the Gate",
-      "author": "André Gide",
-      "category": "文学经典与命运沉思",
-      "summary": "诺奖得主巨作，探讨宗教虔诚、精神追求与人间情感的冲突。",
-      "insights": [
-        "“你们要进窄门”；过于执着于极致的崇高，有时会毁灭切近的幸福。"
-      ],
-      "models_linked": [
-        "窄门法则",
-        "执念与和解"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/80000.Strait_Is_the_Gate",
-        "douban": "https://book.douban.com/subject/1079361/"
-      }
-    },
-    {
-      "id": 32,
-      "title": "五号屠场",
-      "en_title": "Slaughterhouse-Five",
-      "author": "Kurt Vonnegut",
-      "category": "文学经典与命运沉思",
-      "summary": "黑色幽默反战高峰，记录二战大轰炸的惨烈与命运无常。",
-      "insights": [
-        "“事情就是这样” (So it goes)；面对残酷无常，幽默是最后的盾牌。"
-      ],
-      "models_linked": [
-        "接纳无常",
-        "黑色幽默"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/4981.Slaughterhouse_Five",
-        "douban": "https://book.douban.com/subject/1043922/"
-      }
-    },
-    {
-      "id": 33,
-      "title": "生死疲劳",
-      "en_title": "Life and Death Are Wearing Me Out",
-      "author": "莫言",
-      "category": "文学经典与命运沉思",
-      "summary": "莫言魔幻现实主义，讲述西门闹经历六道轮回见证乡村半个世纪变迁。",
-      "insights": [
-        "生死疲劳，皆由贪欲与执念起；放慢执念、学会宽恕。"
-      ],
-      "models_linked": [
-        "六道轮回",
-        "宽恕与解脱"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/1721014.Life_and_Death_Are_Wearing_Me_Out",
-        "douban": "https://book.douban.com/subject/1932370/"
-      }
-    },
-    {
-      "id": 34,
-      "title": "额尔古纳河右岸",
-      "en_title": "The Right Bank of the Erguna River",
-      "author": "迟子建",
-      "category": "文学经典与命运沉思",
-      "summary": "茅盾文学奖作品，鄂温克族酋长妻子自述游猎民族百年生死与信仰。",
-      "insights": [
-        "敬畏自然、尊重生命节律；在大风面前，人类的爱是宝贵的史诗。"
-      ],
-      "models_linked": [
-        "敬畏自然",
-        "生命节律"
-      ],
-      "links": {
-        "goodreads": "https://www.goodreads.com/book/show/18776605-the-right-bank-of-the-erguna-river",
-        "douban": "https://book.douban.com/subject/1480112/"
-      }
-    },
-    {
-      "id": 35,
-      "title": "人生海海",
-      "en_title": "Life Sea",
-      "author": "麦家",
-      "category": "文学经典与命运沉思",
-      "summary": "讲述奇人“上校”在时代洪流中的传奇与屈辱，以及最终与苦难和解。",
-      "insights": [
-        "“人生海海，敢死不叫勇者，敢活才是英雄”；原谅生活不完美。"
-      ],
-      "models_linked": [
-        "英雄主义",
-        "苦难和解"
-      ],
-      "links": {
-        "douban": "https://book.douban.com/subject/33413982/"
-      }
-    }
-  ]
+ "total_books": 35,
+ "version": "2.0-final",
+ "categories": [
+  "科技、商业与领袖传记",
+  "认知思维与心理",
+  "商业框架与投资",
+  "哲学修持与科学",
+  "文学经典与命运沉思"
+ ],
+ "books": [
+  {
+   "id": 1,
+   "title": "Strict Business (公事公办)",
+   "en_title": "Strictly Business",
+   "author": "O. Henry / Rick Wolff",
+   "category": "科技、商业与领袖传记",
+   "summary": "探讨商业与职场中的理性边界、公私分界与创业生存法则。",
+   "insights": [
+    "职场与商业需要“公私分界”的清醒与底线，但生活离不开温情。",
+    "保持理性与专业是立足之本，懂得节制与底线是长久之基。"
+   ],
+   "models_linked": [
+    "二八定律",
+    "MECE原则"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/55372984-strictly-business",
+    "douban": "https://book.douban.com/"
+   }
+  },
+  {
+   "id": 2,
+   "title": "The Book of Elon (马斯克之书)",
+   "en_title": "The Book of Elon",
+   "author": "Eric",
+   "category": "科技、商业与领袖传记",
+   "summary": "系统梳理马斯克核心工作法：第一性原理、傻瓜指数与极限压缩成本。",
+   "insights": [
+    "不要把潜力消耗在常规轨道上。用第一性原理拆解难题。",
+    "心怀宏大愿景并付出极致执行力。"
+   ],
+   "models_linked": [
+    "第一性原理",
+    "反脆弱"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com",
+    "douban": "https://book.douban.com/subject/38392258/"
+   }
+  },
+  {
+   "id": 3,
+   "title": "史蒂夫·乔布斯传",
+   "en_title": "Steve Jobs",
+   "author": "Walter Isaacson",
+   "category": "科技、商业与领袖传记",
+   "summary": "官方授权传记，记录乔布斯现实扭曲力场、极简设计美学与人文科技交融。",
+   "insights": [
+    "“活着就是为了改变世界”。专注与极致能缔造传奇。",
+    "听从内心的声音，做自己真正热爱的事。"
+   ],
+   "models_linked": [
+    "第一性原理",
+    "奥卡姆剃刀"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/11084145-steve-jobs",
+    "douban": "https://book.douban.com/subject/6798611/"
+   }
+  },
+  {
+   "id": 4,
+   "title": "特斯拉传：实现不可能",
+   "en_title": "Tesla: Powering the Future",
+   "author": "Charles Morris",
+   "category": "科技、商业与领袖传记",
+   "summary": "复盘特斯拉汽车崛起历程、电动车革命与马斯克的商业生存哲学。",
+   "insights": [
+    "颠覆传统必然伴随着质疑，保持信念将不可能落地为现实。"
+   ],
+   "models_linked": [
+    "第一性原理",
+    "S型曲线"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com",
+    "douban": "https://book.douban.com/subject/35384639/"
+   }
+  },
+  {
+   "id": 5,
+   "title": "硅谷钢铁侠",
+   "en_title": "Elon Musk: Tesla, SpaceX",
+   "author": "Ashlee Vance",
+   "category": "科技、商业与领袖传记",
+   "summary": "记录马斯克创办 PayPal、SpaceX、Tesla 的疯狂冒险与高压管理。",
+   "insights": [
+    "敢于做宏大的梦，并拥有承受惨痛失败与绝境重生的承受力。"
+   ],
+   "models_linked": [
+    "第一性原理",
+    "逆向思维"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/25541015-elon-musk",
+    "douban": "https://book.douban.com/subject/26745943/"
+   }
+  },
+  {
+   "id": 6,
+   "title": "认同自己：如何超越弱点",
+   "en_title": "S'accepter comme on est",
+   "author": "Stéphanie Hahusseau",
+   "category": "认知思维与心理",
+   "summary": "帮助读者摆脱自卑与完美主义，接纳自我不完美，重建内心秩序。",
+   "insights": [
+    "接纳自己是一切改变的起点，不必讨好世界，拥抱真实的自己。"
+   ],
+   "models_linked": [
+    "接纳承诺",
+    "元认知"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com",
+    "douban": "https://book.douban.com/subject/35191060/"
+   }
+  },
+  {
+   "id": 7,
+   "title": "贪婪的多巴胺",
+   "en_title": "The Molecule of More",
+   "author": "Daniel Z. Lieberman",
+   "category": "认知思维与心理",
+   "summary": "解密多巴胺如何掌控欲望与创造力，以及与“当下分子”的博弈。",
+   "insights": [
+    "多巴胺带来渴望而非持久幸福。学会享受“当下”，平衡欲望。"
+   ],
+   "models_linked": [
+    "多巴胺回路",
+    "延迟满足"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/38728977-the-molecule-of-more",
+    "douban": "https://book.douban.com/subject/35532588/"
+   }
+  },
+  {
+   "id": 8,
+   "title": "心流：最佳体验心理学",
+   "en_title": "Flow",
+   "author": "Mihaly Csikszentmihalyi",
+   "category": "认知思维与心理",
+   "summary": "阐述幸福本质在于进入“心流”状态——全身心投入获得高度专注。",
+   "insights": [
+    "幸福不是被动享受，而是在全神贯注克服有难度任务时的生命体验。"
+   ],
+   "models_linked": [
+    "心流通道",
+    "刻意练习"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/66354.Flow",
+    "douban": "https://book.douban.com/subject/27186106/"
+   }
+  },
+  {
+   "id": 9,
+   "title": "概括力：三步学会精准表达",
+   "en_title": "Summarizing Power",
+   "author": "山口拓朗",
+   "category": "认知思维与心理",
+   "summary": "实用沟通指南，通过收集➔整理➔传达三步法精简沟通、高效表达。",
+   "insights": [
+    "越能把复杂问题一句话讲清楚，越说明思考的深刻与通透。"
+   ],
+   "models_linked": [
+    "费曼技巧",
+    "金字塔原理"
+   ],
+   "links": {
+    "douban": "https://book.douban.com/subject/35639695/"
+   }
+  },
+  {
+   "id": 10,
+   "title": "全新思维",
+   "en_title": "A Whole New Mind",
+   "author": "Daniel H. Pink",
+   "category": "认知思维与心理",
+   "summary": "剖析右脑6大能力（设计感、故事力、交响力等）将决定未来核心竞争力。",
+   "insights": [
+    "机械重复将被AI取代，唯有温度、创造力与情感共鸣不可替代。"
+   ],
+   "models_linked": [
+    "右脑右力",
+    "跨界思维"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/109312.A_Whole_New_Mind",
+    "douban": "https://book.douban.com/subject/2042548/"
+   }
+  },
+  {
+   "id": 11,
+   "title": "稀缺：我们是如何陷入贫穷与忙碌的",
+   "en_title": "Scarcity",
+   "author": "Sendhil Mullainathan",
+   "category": "认知思维与心理",
+   "summary": "揭示稀缺心理俘获大脑注意力、降低“心理带宽”与短视陷阱。",
+   "insights": [
+    "留出余量（Slack）是防范危机的核心；保护好心理带宽与长期规划。"
+   ],
+   "models_linked": [
+    "稀缺效应",
+    "带宽限制"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/17333336-scarcity",
+    "douban": "https://book.douban.com/subject/25959166/"
+   }
+  },
+  {
+   "id": 12,
+   "title": "乌合之众：大众心理研究",
+   "en_title": "The Crowd",
+   "author": "Gustave Le Bon",
+   "category": "认知思维与心理",
+   "summary": "剖析个人融入群体后如何丧失理性、情绪化与盲从。",
+   "insights": [
+    "保持独立思考是极其珍贵的品质；警惕情绪绑架与群体狂欢。"
+   ],
+   "models_linked": [
+    "从众效应",
+    "群体盲思"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/679728.The_Crowd",
+    "douban": "https://book.douban.com/subject/1012611/"
+   }
+  },
+  {
+   "id": 13,
+   "title": "思考的框架",
+   "en_title": "The Great Mental Models",
+   "author": "Shane Parrish",
+   "category": "认知思维与心理",
+   "summary": "总结普适思维模型（第一性原理、奥卡姆剃刀、逆向思维等）。",
+   "insights": [
+    "思维模型是理解世界的地图；拥有多样化工具箱，才不会手握锤子看什么都是钉子。"
+   ],
+   "models_linked": [
+    "多元思维模型",
+    "逆向思维"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/41558238-the-great-mental-models",
+    "douban": "https://book.douban.com/subject/35360661/"
+   }
+  },
+  {
+   "id": 14,
+   "title": "思考，快与慢",
+   "en_title": "Thinking, Fast and Slow",
+   "author": "Daniel Kahneman",
+   "category": "认知思维与心理",
+   "summary": "剖析系统1（直觉快思考）与系统2（理性慢思考）的决策偏差。",
+   "insights": [
+    "人类远没有想象的那么理性；重大决策放慢脚步启动系统2。"
+   ],
+   "models_linked": [
+    "双系统理论",
+    "锚定效应"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow",
+    "douban": "https://book.douban.com/subject/10785583/"
+   }
+  },
+  {
+   "id": 15,
+   "title": "贫穷的本质",
+   "en_title": "Poor Economics",
+   "author": "Abhijit V. Banerjee",
+   "category": "认知思维与心理",
+   "summary": "基于15年田野试验，揭示贫困人群在健康、教育、储蓄上的认知陷阱。",
+   "insights": [
+    "贫穷不仅是缺乏资金，更是缺乏信息与长期选择空间。"
+   ],
+   "models_linked": [
+    "复利效应",
+    "决策陷阱"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/10245602-poor-economics",
+    "douban": "https://book.douban.com/subject/20470359/"
+   }
+  },
+  {
+   "id": 16,
+   "title": "原则",
+   "en_title": "Principles: Life and Work",
+   "author": "Ray Dalio",
+   "category": "商业框架与投资",
+   "summary": "桥水基金创始人总结人生与管理的几百条原则：极度求真、极度透明。",
+   "insights": [
+    "痛苦 + 反思 = 进步；建立属于自己的原则体系对待挫折。"
+   ],
+   "models_linked": [
+    "极度求真",
+    "检查清单"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/34361530-principles",
+    "douban": "https://book.douban.com/subject/27608239/"
+   }
+  },
+  {
+   "id": 17,
+   "title": "穷查理宝典",
+   "en_title": "Poor Charlie's Almanack",
+   "author": "Charlie Munger",
+   "category": "商业框架与投资",
+   "summary": "查理·芒格演讲合集，涵盖多元思维模型、逆向思考与误判心理学。",
+   "insights": [
+    "“反过来想，总是反过来想”；终身学习，跨学科构建思维模型。"
+   ],
+   "models_linked": [
+    "多元思维模型",
+    "逆向思维",
+    "安全边际"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/93980.Poor_Charlie_s_Almanack",
+    "douban": "https://book.douban.com/subject/2164410/"
+   }
+  },
+  {
+   "id": 18,
+   "title": "金线",
+   "en_title": "The Golden Thread",
+   "author": "冯唐",
+   "category": "商业框架与投资",
+   "summary": "成事学与结构化解题思维方法论：用一条金线穿透复杂问题。",
+   "insights": [
+    "抓不住主线，再努力也是无头苍蝇；用逻辑金线穿透迷雾。"
+   ],
+   "models_linked": [
+    "金字塔原理",
+    "MECE原则"
+   ],
+   "links": {
+    "douban": "https://book.douban.com/subject/36142750/"
+   }
+  },
+  {
+   "id": 19,
+   "title": "金字塔原理",
+   "en_title": "The Minto Pyramid Principle",
+   "author": "Barbara Minto",
+   "category": "商业框架与投资",
+   "summary": "麦肯锡经典逻辑工具：结论先行、以上统下、归类分组、MECE。",
+   "insights": [
+    "清楚的表达源于清晰的思考；先给答案再给理由，节省沟通成本。"
+   ],
+   "models_linked": [
+    "MECE原则",
+    "金字塔原理"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/219985.The_Minto_Pyramid_Principle",
+    "douban": "https://book.douban.com/subject/1020644/"
+   }
+  },
+  {
+   "id": 20,
+   "title": "乔布斯、禅与投资",
+   "en_title": "Steve Jobs, Zen and Investment",
+   "author": "李国飞",
+   "category": "商业框架与投资",
+   "summary": "将禅宗哲理（缘起性空、专注力）与乔布斯及价值投资结合。",
+   "insights": [
+    "工作与投资皆是修行的道场；清空执念、聚焦本质。"
+   ],
+   "models_linked": [
+    "第一性原理",
+    "禅修心法"
+   ],
+   "links": {
+    "douban": "https://book.douban.com/subject/36404314/"
+   }
+  },
+  {
+   "id": 21,
+   "title": "万物原理",
+   "en_title": "Fundamentals: Ten Keys to Reality",
+   "author": "Frank Wilczek",
+   "category": "哲学修持与科学",
+   "summary": "诺奖得主以十个基本洞见梳理宇宙法则与互补性思维。",
+   "insights": [
+    "宇宙至简至美；学会“互补性思维”，打通认知任督二脉。"
+   ],
+   "models_linked": [
+    "第一性原理",
+    "互补思维"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/53404289-fundamentals",
+    "douban": "https://book.douban.com/subject/35688537/"
+   }
+  },
+  {
+   "id": 22,
+   "title": "禅者的初心",
+   "en_title": "Zen Mind, Beginner's Mind",
+   "author": "Shunryu Suzuki",
+   "category": "哲学修持与科学",
+   "summary": "阐述“初心”（初学者之心，充满无限可能）的修持方法。",
+   "insights": [
+    "“初者的心中有许多可能，专家的心中只有少数”；保持好奇与清空。"
+   ],
+   "models_linked": [
+    "初心思维",
+    "清空杯子"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/402843.Zen_Mind_Beginner_s_Mind",
+    "douban": "https://book.douban.com/subject/4815456/"
+   }
+  },
+  {
+   "id": 23,
+   "title": "郭论",
+   "en_title": "Guo Lun",
+   "author": "郭德纲",
+   "category": "哲学修持与科学",
+   "summary": "随笔集，以世俗智慧剖析中国历史人物与人情世故。",
+   "insights": [
+    "看透世态炎凉而不冷漠，懂规矩、识人心；活得通透才是硬道理。"
+   ],
+   "models_linked": [
+    "人性洞察",
+    "世俗智慧"
+   ],
+   "links": {
+    "douban": "https://book.douban.com/subject/30366405/"
+   }
+  },
+  {
+   "id": 24,
+   "title": "过得刚好",
+   "en_title": "Just Right",
+   "author": "郭德纲",
+   "category": "哲学修持与科学",
+   "summary": "自传与感悟，记录北漂辛酸与“不求圆满，但求刚好”的从容。",
+   "insights": [
+    "人生哪有事事顺心，过得刚好便是大幸；挫折是滋养人生的养料。"
+   ],
+   "models_linked": [
+    "反脆弱",
+    "接纳现实"
+   ],
+   "links": {
+    "douban": "https://book.douban.com/subject/24719263/"
+   }
+  },
+  {
+   "id": 25,
+   "title": "刚刚说过",
+   "en_title": "Just Said",
+   "author": "郭德纲",
+   "category": "哲学修持与科学",
+   "summary": "围绕处世、人情与情商展开，充满市井生活中的现实哲学。",
+   "insights": [
+    "说话有分寸，做事留余地；人生的功力体现在言语间的分寸感。"
+   ],
+   "models_linked": [
+    "情商分寸",
+    "博弈边界"
+   ],
+   "links": {
+    "douban": "https://book.douban.com/subject/35212595/"
+   }
+  },
+  {
+   "id": 26,
+   "title": "在峡江的转弯处",
+   "en_title": "At the Turn of the River",
+   "author": "陈行甲",
+   "category": "文学经典与命运沉思",
+   "summary": "前全国优秀县委书记陈行甲自传，记录扶贫抗腐与转战公益的心路。",
+   "insights": [
+    "干净地做人，清白地做事；真正的勇气是在艰难中选择善良。"
+   ],
+   "models_linked": [
+    "良知底线",
+    "使命驱动"
+   ],
+   "links": {
+    "douban": "https://book.douban.com/subject/35300057/"
+   }
+  },
+  {
+   "id": 27,
+   "title": "死比活着容易",
+   "en_title": "Dying is Easier Than Living",
+   "author": "豆豆",
+   "category": "文学经典与命运沉思",
+   "summary": "豆豆处女作，探讨生存法则、人性底线与利益交织下的抉择。",
+   "insights": [
+    "放弃容易，坚持活着并守住灵魂底线才是真英雄。"
+   ],
+   "models_linked": [
+    "底线思维",
+    "生存法则"
+   ],
+   "links": {
+    "douban": "https://book.douban.com/subject/14266507/"
+   }
+  },
+  {
+   "id": 28,
+   "title": "背叛",
+   "en_title": "Betrayal",
+   "author": "豆豆",
+   "category": "文学经典与命运沉思",
+   "summary": "策划大师宋一坤在人性与利益面前的计算、救赎与悲剧。",
+   "insights": [
+    "背叛他人最终也是背叛自己；良知才是人在世间最后的救赎。"
+   ],
+   "models_linked": [
+    "商业博弈",
+    "道德底线"
+   ],
+   "links": {
+    "douban": "https://book.douban.com/subject/1077747/"
+   }
+  },
+  {
+   "id": 29,
+   "title": "天幕红尘",
+   "en_title": "Red Dust of Heaven",
+   "author": "豆豆",
+   "category": "文学经典与命运沉思",
+   "summary": "豆豆三部曲终章，提出“见路不走”的核心哲学——实事求是。",
+   "insights": [
+    "“见路不走”，不抄经验也不拘泥教条，一切从客观实际出发。"
+   ],
+   "models_linked": [
+    "见路不走",
+    "实事求是"
+   ],
+   "links": {
+    "douban": "https://book.douban.com/subject/24700085/"
+   }
+  },
+  {
+   "id": 30,
+   "title": "遥远的救世主",
+   "en_title": "Ransom of the Savior",
+   "author": "豆豆",
+   "category": "文学经典与命运沉思",
+   "summary": "《天道》原著，深刻剖析文化属性（强势文化 vs 弱势文化）与规律。",
+   "insights": [
+    "没有救世主，唯一的救世主是你自己；摆脱“等靠要”弱势文化。"
+   ],
+   "models_linked": [
+    "强势文化",
+    "文化属性",
+    "因果律"
+   ],
+   "links": {
+    "douban": "https://book.douban.com/subject/1309838/"
+   }
+  },
+  {
+   "id": 31,
+   "title": "窄门",
+   "en_title": "Strait is the Gate",
+   "author": "André Gide",
+   "category": "文学经典与命运沉思",
+   "summary": "诺奖得主巨作，探讨宗教虔诚、精神追求与人间情感的冲突。",
+   "insights": [
+    "“你们要进窄门”；过于执着于极致的崇高，有时会毁灭切近的幸福。"
+   ],
+   "models_linked": [
+    "窄门法则",
+    "执念与和解"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/80000.Strait_Is_the_Gate",
+    "douban": "https://book.douban.com/subject/1079361/"
+   }
+  },
+  {
+   "id": 32,
+   "title": "五号屠场",
+   "en_title": "Slaughterhouse-Five",
+   "author": "Kurt Vonnegut",
+   "category": "文学经典与命运沉思",
+   "summary": "黑色幽默反战高峰，记录二战大轰炸的惨烈与命运无常。",
+   "insights": [
+    "“事情就是这样” (So it goes)；面对残酷无常，幽默是最后的盾牌。"
+   ],
+   "models_linked": [
+    "接纳无常",
+    "黑色幽默"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/4981.Slaughterhouse_Five",
+    "douban": "https://book.douban.com/subject/1043922/"
+   }
+  },
+  {
+   "id": 33,
+   "title": "生死疲劳",
+   "en_title": "Life and Death Are Wearing Me Out",
+   "author": "莫言",
+   "category": "文学经典与命运沉思",
+   "summary": "莫言魔幻现实主义，讲述西门闹经历六道轮回见证乡村半个世纪变迁。",
+   "insights": [
+    "生死疲劳，皆由贪欲与执念起；放慢执念、学会宽恕。"
+   ],
+   "models_linked": [
+    "六道轮回",
+    "宽恕与解脱"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/1721014.Life_and_Death_Are_Wearing_Me_Out",
+    "douban": "https://book.douban.com/subject/1932370/"
+   }
+  },
+  {
+   "id": 34,
+   "title": "额尔古纳河右岸",
+   "en_title": "The Right Bank of the Erguna River",
+   "author": "迟子建",
+   "category": "文学经典与命运沉思",
+   "summary": "茅盾文学奖作品，鄂温克族酋长妻子自述游猎民族百年生死与信仰。",
+   "insights": [
+    "敬畏自然、尊重生命节律；在大风面前，人类的爱是宝贵的史诗。"
+   ],
+   "models_linked": [
+    "敬畏自然",
+    "生命节律"
+   ],
+   "links": {
+    "goodreads": "https://www.goodreads.com/book/show/18776605-the-right-bank-of-the-erguna-river",
+    "douban": "https://book.douban.com/subject/1480112/"
+   }
+  },
+  {
+   "id": 35,
+   "title": "人生海海",
+   "en_title": "Life Sea",
+   "author": "麦家",
+   "category": "文学经典与命运沉思",
+   "summary": "讲述奇人“上校”在时代洪流中的传奇与屈辱，以及最终与苦难和解。",
+   "insights": [
+    "“人生海海，敢死不叫勇者，敢活才是英雄”；原谅生活不完美。"
+   ],
+   "models_linked": [
+    "英雄主义",
+    "苦难和解"
+   ],
+   "links": {
+    "douban": "https://book.douban.com/subject/33413982/"
+   }
+  }
+ ]
 }

@@ -1,40 +1,85 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>200 跨学科思维模型智库 · readswithcolin</title>
-  <meta name="description" content="200 大跨学科思维模型 · 痛点诊所 · 阶梯付费墙 · 35 本精选图书。先选一个你最痛的问题，直达匹配的模型与案例。" />
-  <style>
-    body{margin:0;background:#020617;color:#e8e6e1;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;}
-    .top{max-width:1180px;margin:0 auto;padding:34px 20px 6px;}
-    .top h1{font-size:26px;font-weight:800;color:#fbbf24;margin:0 0 6px;}
-    .top a{color:#94a3b8;text-decoration:none;font-size:13px;}
-    .top a:hover{color:#fbbf24;}
-    .sec{max-width:1180px;margin:30px auto;padding:0 20px;}
-    .sec h2{font-size:20px;color:#e8e6e1;margin:0 0 4px;}
-    .sec .hint{font-size:13px;color:#94a3b8;margin-bottom:12px;}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Colin智库 · 200 跨学科思维模型与精选图书 | Reads with Colin</title>
+<meta name="description" content="200 大跨学科思维模型 + 35 本精选图书。按痛点分类折叠展示，点击直达深度解析。">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;min-width:0;}
+html,body{max-width:100%;overflow-x:hidden;}
+body{background:#020617;color:#e8e6e1;min-height:100vh;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;}
+a{color:#fbbf24;}
+.hd{max-width:1180px;margin:0 auto;padding:24px 20px 12px;}
+.hd .back{font-size:13px;color:#94a3b8;text-decoration:none;display:inline-block;margin-bottom:12px;}
+.hd .back:hover{color:#fbbf24;}
+.hd h1{font-size:22px;font-weight:800;color:#e8e6e1;line-height:1.35;}
+.hd h1 b{color:#f59e0b;}
+.hd p{font-size:13px;color:#94a3b8;margin-top:6px;line-height:1.6;}
+.tabs{position:sticky;top:0;z-index:100;background:rgba(2,6,23,.94);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid #1e293b;margin-top:14px;}
+.tabs-in{max-width:1180px;margin:0 auto;display:flex;gap:8px;padding:10px 20px;overflow-x:auto;}
+.vt{cursor:pointer;border:1px solid #1e293b;background:#111827;color:#94a3b8;
+  padding:10px 20px;border-radius:999px;font-size:14px;font-weight:700;white-space:nowrap;transition:.15s;}
+.vt:hover{color:#e8e6e1;border-color:#f59e0b;}
+.vt.on{color:#020617;background:linear-gradient(135deg,#f59e0b,#fbbf24);border-color:#f59e0b;box-shadow:0 4px 14px rgba(245,158,11,.35);}
+main{max-width:1180px;margin:0 auto;padding:18px 20px 70px;}
+[hidden]{display:none!important;}
+@media(max-width:600px){
+  .hd{padding:18px 14px 8px;}
+  .hd h1{font-size:18px;}
+  main{padding:14px 14px 60px;}
+  .tabs-in{padding:8px 14px;}
+  .vt{padding:9px 16px;font-size:13px;}
+}
+</style>
 </head>
 <body>
-  <div class="top">
-    <h1>📚 200 跨学科思维模型智库</h1>
-    <a href="/index.html">← 返回首页</a>
-  </div>
+<div class="hd">
+  <a class="back" href="/">← 返回首页</a>
+  <h1><b>Colin智库</b> · 200 跨学科思维模型 × 精选图书</h1>
+  <p>按痛点分类折叠 · 点击分类展开 · 点击卡片查看深度解析（L1 免费公开 / L2 ￥29.9 / L3 ￥49.9 阶梯解锁）</p>
+</div>
 
-  <section class="sec">
-    <h2>🔍 痛点诊所 · 200 大思维模型</h2>
-    <div class="hint">下拉选择你最痛的问题 → 直达匹配模型；🟢 L1 免费公开，🔵 L2 ￥29.9，🟣 L3 ￥49.9 阶梯解锁。</div>
-    <script src="components/widgets/mental-model-latticework.js"></script>
+<div class="tabs"><div class="tabs-in">
+  <button class="vt on" data-t="models" type="button">思维模型 · 200</button>
+  <button class="vt" data-t="books" type="button">精选图书 · 35</button>
+</div></div>
+
+<main>
+  <section id="pane-models">
     <mental-model-latticework src="/data/mental-models-200-v7-tiered.json"></mental-model-latticework>
   </section>
-
-  <section class="sec">
-    <h2>📖 35 本精选图书 · 思维模型网格</h2>
-    <div class="hint">点击图书卡片 → 右侧滑出深度抽屉（3-5 条感悟、关联模型、购书/专栏跳转）。</div>
+  <section id="pane-books" hidden>
     <mental-model-latticework src="/data/books-grid-35-v3.json"></mental-model-latticework>
   </section>
+</main>
 
-  <footer style="text-align:center;color:#475569;font-size:12px;padding:40px 20px;">© readswithcolin · 深度思想微型智库</footer>
+<script src="/components/widgets/mental-model-latticework.js" defer></script>
+<script>
+(function () {
+  var panes = { models: document.getElementById("pane-models"), books: document.getElementById("pane-books") };
+  var btns = document.querySelectorAll(".vt");
+  function showTab(t, push) {
+    if (!panes[t]) t = "models";
+    Object.keys(panes).forEach(function (k) { panes[k].hidden = (k !== t); });
+    btns.forEach(function (b) { b.classList.toggle("on", b.getAttribute("data-t") === t); });
+    if (push !== false) {
+      var h = t === "books" ? "#books" : "#models";
+      if (location.hash !== h) { try { history.replaceState(null, "", h); } catch (e) {} }
+    }
+  }
+  btns.forEach(function (b) {
+    b.addEventListener("click", function () { showTab(b.getAttribute("data-t")); window.scrollTo({ top: 0 }); });
+  });
+  function fromHash() {
+    var h = location.hash.replace("#", "");
+    if (h === "books") showTab("books", false);
+  }
+  window.addEventListener("hashchange", fromHash);
+  fromHash();
+})();
+</script>
 </body>
 </html>
